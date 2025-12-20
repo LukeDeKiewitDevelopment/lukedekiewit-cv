@@ -1,6 +1,6 @@
 "use client";
 
-import { Download, Printer, Share } from 'lucide-react';
+import { CheckCircle, Download, Printer, Share } from 'lucide-react';
 import { toast } from 'sonner';
 
 import { AvatarFallback } from '@radix-ui/react-avatar';
@@ -26,9 +26,22 @@ export const InteractiveCVPageHeader = ({
 }: InteractiveCVPageHeaderProps) => {
   const copyLink = () => {
     navigator.clipboard.writeText(shareLink);
-    toast.custom(()=>{
-      
-    });
+    toast(
+      <div className="flex flex-col">
+        <div>
+          <span className="text-primary uppercase">{shareLink}</span>
+          <div className="flex items-center gap-2">
+            <i>
+              <CheckCircle />
+            </i>
+
+            <span className="text-foreground/60">
+              Link copied to clipboard!
+            </span>
+          </div>
+        </div>
+      </div>,
+    );
   };
 
   return (
