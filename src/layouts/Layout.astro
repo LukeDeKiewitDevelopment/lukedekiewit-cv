@@ -20,12 +20,42 @@ import { InteractiveCVPageHeader } from "@/components/custom/InteractiveCVPageHe
     <meta name="bingbot" content="noindex" />
     <link rel="canonical" href="https://example.com/" />
     <link rel="icon" href="/images/favicon.ico" />
+    <script is:inline>
+      const getThemePreference = () => {
+        if (
+          typeof localStorage !== "undefined" &&
+          localStorage.getItem("theme")
+        ) {
+          return localStorage.getItem("theme");
+        }
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      };
+      const isDark = getThemePreference() === "dark";
+      document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+
+      if (typeof localStorage !== "undefined") {
+        const observer = new MutationObserver(() => {
+          const isDark = document.documentElement.classList.contains("dark");
+          localStorage.setItem("theme", isDark ? "dark" : "light");
+        });
+        observer.observe(document.documentElement, {
+          attributes: true,
+          attributeFilter: ["class"],
+        });
+      }
+    </script>
   </head>
   <body>
     <InteractiveCVPageHeader
-      avatar={{
-        src: "/images/ldk_matrix_avatar_1024px.png",
-        alt: "Luke De Kiewit profile picture",
+      lightModeLogo={{
+        src: "/images/logos/ldk_logo_black_tilted_724px.png",
+        alt: "Luke De Kiewit logo",
+      }}
+      darkModeLogo={{
+        src: "/images/logos/ldk_logo_atomwave_tilted_724px.png",
+        alt: "Luke De Kiewit logo",
       }}
       lastUpdated="20/12/2025"
       shareLink="https://cv.lukedekiewit.co.za/"
