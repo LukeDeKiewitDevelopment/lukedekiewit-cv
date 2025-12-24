@@ -100,7 +100,7 @@ export const InteractiveCVPageHeader = ({
             </Avatar>
           )}
           {darkModeLogo && (
-            <Avatar className="border-primary pointer-events-none hidden border-2 p-0.75 shadow-black delay-200 duration-150 select-none sm:hidden md:flex md:size-10">
+            <Avatar className="border-primary pointer-events-none hidden border-2 p-0.75 shadow-black select-none sm:hidden md:flex md:size-10">
               <AvatarImage
                 loading="eager"
                 src={darkModeLogo.src}
