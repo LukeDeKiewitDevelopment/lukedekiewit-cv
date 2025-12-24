@@ -5,19 +5,19 @@ import {
   DownloadIcon,
   PrinterIcon,
   ShareIcon,
-  SmileIcon,
 } from "lucide-react";
 import { toast } from "sonner";
 import { Avatar, AvatarImage } from "../ui/avatar";
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
-import { ThemeSwitcher } from "./ThemeToggle";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 interface InteractiveCVPageHeaderProps {
   lightModeLogo?: InteractiveCVPageHeaderLogo;
   darkModeLogo?: InteractiveCVPageHeaderLogo;
   lastUpdated: string;
   shareLink: string;
+  pdfDownloadLink: string;
 }
 
 interface InteractiveCVPageHeaderLogo {
@@ -67,19 +67,10 @@ const copyLink = async (shareLink: string) => {
 const printPage = async () => {
   if (typeof window === "undefined") {
     console.error("Could not open print dialog: window is undefined");
-    return await toast.error(
-      <span className="font-mono">Error: Could not open print dialog</span>,
-    );
   }
 
   try {
     await window.print();
-    toast(
-      <div className="flex items-center gap-2">
-        <SmileIcon className="size-4" />
-        <span>Thank you!</span>
-      </div>,
-    );
   } catch (error) {
     console.error("Could not open print dialog:", error);
     toast.error(
@@ -93,6 +84,7 @@ export const InteractiveCVPageHeader = ({
   darkModeLogo,
   lastUpdated,
   shareLink,
+  pdfDownloadLink,
 }: InteractiveCVPageHeaderProps) => {
   return (
     <div className="bg-card flex flex-col print:hidden">
@@ -100,12 +92,20 @@ export const InteractiveCVPageHeader = ({
         <div className="flex items-center gap-2">
           {lightModeLogo && (
             <Avatar className="border-primary hidden-in-dark-mode pointer-events-none hidden border-2 p-0.75 shadow-black select-none sm:hidden md:flex md:size-10">
-              <AvatarImage src={lightModeLogo.src} alt={lightModeLogo.alt} />
+              <AvatarImage
+                loading="eager"
+                src={lightModeLogo.src}
+                alt={lightModeLogo.alt}
+              />
             </Avatar>
           )}
           {darkModeLogo && (
-            <Avatar className="border-primary hidden-in-lightmode pointer-events-none hidden border-2 p-0.75 shadow-black select-none sm:hidden md:flex md:size-10">
-              <AvatarImage src={darkModeLogo.src} alt={darkModeLogo.alt} />
+            <Avatar className="border-primary pointer-events-none hidden border-2 p-0.75 shadow-black delay-200 duration-150 select-none sm:hidden md:flex md:size-10">
+              <AvatarImage
+                loading="eager"
+                src={darkModeLogo.src}
+                alt={darkModeLogo.alt}
+              />
             </Avatar>
           )}
           <div
@@ -119,9 +119,15 @@ export const InteractiveCVPageHeader = ({
           </div>
         </div>
         <div className="flex gap-2">
-          <Button variant={"default"} title="Download this CV in PDF format">
-            <DownloadIcon />
-            <span className="hidden sm:hidden md:inline-flex">Download</span>
+          <Button
+            variant={"default"}
+            title="Download this CV in PDF format"
+            asChild
+          >
+            <a href={pdfDownloadLink} download>
+              <DownloadIcon />
+              <span className="hidden sm:hidden md:inline-flex">Download</span>
+            </a>
           </Button>
           <Button
             variant={"outline"}
