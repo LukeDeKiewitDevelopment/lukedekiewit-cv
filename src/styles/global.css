@@ -149,6 +149,25 @@
   }
 }
 
+::selection,
+::-moz-selection {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--background);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+}
+
 html.dark .hidden-in-dark-mode,
 html:not(.dark) .hidden-in-lightmode {
   display: none !important;

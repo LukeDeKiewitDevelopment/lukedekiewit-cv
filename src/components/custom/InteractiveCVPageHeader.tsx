@@ -88,7 +88,7 @@ export const InteractiveCVPageHeader = ({
   pdfDownloadLink,
 }: InteractiveCVPageHeaderProps) => {
   return (
-    <div className="bg-card flex flex-col print:hidden">
+    <div className="bg-card relative z-50 flex flex-col print:hidden shadow-md">
       <div className="flex items-center justify-between gap-4 p-4 sm:p-4 md:flex-row md:p-6 lg:flex-row lg:p-8">
         <div className="flex items-center gap-2">
           {lightModeLogo && (
