@@ -11,6 +11,7 @@ import { Avatar, AvatarImage } from "../ui/avatar";
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
 import { ThemeSwitcher } from "./ThemeSwitcher";
+import { EncryptedText } from "../ui/encrypted-text";
 
 interface InteractiveCVPageHeaderProps {
   lightModeLogo?: InteractiveCVPageHeaderLogo;
@@ -41,7 +42,7 @@ const copyLink = async (shareLink: string) => {
 
       if (clipboardContent === shareLink) {
         toast(
-          <div className="flex flex-col gap-1 font-mono">
+          <div className="flex flex-col gap-1.5 font-mono">
             <span className="text-primary uppercase select-all">
               {shareLink}
             </span>
@@ -93,6 +94,7 @@ export const InteractiveCVPageHeader = ({
           {lightModeLogo && (
             <Avatar className="border-primary hidden-in-dark-mode pointer-events-none hidden border-2 p-0.75 shadow-black select-none sm:hidden md:flex md:size-10">
               <AvatarImage
+                className="animate-in zoom-in duration-200"
                 loading="eager"
                 src={lightModeLogo.src}
                 alt={lightModeLogo.alt}
@@ -100,8 +102,9 @@ export const InteractiveCVPageHeader = ({
             </Avatar>
           )}
           {darkModeLogo && (
-            <Avatar className="border-primary pointer-events-none hidden border-2 p-0.75 shadow-black select-none sm:hidden md:flex md:size-10">
+            <Avatar className="border-primary hidden-in-lightmode pointer-events-none hidden border-2 p-0.75 shadow-black select-none sm:hidden md:flex md:size-10">
               <AvatarImage
+                className="animate-in zoom-in duration-200"
                 loading="eager"
                 src={darkModeLogo.src}
                 alt={darkModeLogo.alt}
@@ -109,13 +112,20 @@ export const InteractiveCVPageHeader = ({
             </Avatar>
           )}
           <div
-            className="text-foreground/60 flex flex-col"
+            className="flex flex-col"
             style={{
               fontSize: "clamp(0.7rem, 0.8rem, 0.9rem)",
             }}
           >
-            <span className="align-middle">Last Updated:</span>
-            <time className="align-middle">{lastUpdated}</time>
+            <span className="text-foreground/60">Last Updated:</span>
+            <time>
+              <EncryptedText
+                text={lastUpdated}
+                encryptedClassName="text-foreground/40"
+                revealedClassName="text-foreground/60"
+                revealDelayMs={0}
+              />
+            </time>
           </div>
         </div>
         <div className="flex gap-2">
@@ -129,6 +139,7 @@ export const InteractiveCVPageHeader = ({
               <span className="hidden sm:hidden md:inline-flex">Download</span>
             </a>
           </Button>
+
           <Button
             variant={"outline"}
             title="Click to copy the link to this page to your clipboard"
@@ -147,7 +158,7 @@ export const InteractiveCVPageHeader = ({
             }}
           >
             <PrinterIcon />
-            <span className="hidden sm:hidden md:inline-flex">Print</span>
+            <span className="sr-only">Print page</span>
           </Button>
           <ThemeSwitcher />
         </div>

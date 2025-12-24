@@ -9,53 +9,11 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { toast } from "sonner";
 
 type Themes = "theme-light" | "dark" | "system";
 
 export const ThemeSwitcher = () => {
   const [currentTheme, setCurrentTheme] = useState<Themes>("theme-light");
-
-  const switchTheme = (theme: Themes) => {
-    setCurrentTheme(theme);
-    if (theme === currentTheme) {
-      return;
-    }
-    switch (theme) {
-      case "theme-light":
-        toast(
-          <div>
-            <div className="flex items-center gap-2">
-              <PaintbrushIcon className="text-primary size-4" />
-              <span>Theme: Light</span>
-            </div>
-          </div>,
-        );
-        break;
-
-      case "dark":
-        toast(
-          <div>
-            <div className="flex items-center gap-2">
-              <PaintbrushIcon className="text-primary size-4" />
-              <span>Theme: Dark</span>
-            </div>
-          </div>,
-        );
-        break;
-
-      case "system":
-        toast(
-          <div>
-            <div className="flex items-center gap-2">
-              <PaintbrushIcon className="text-primary size-4" />
-              <span>Theme: System</span>
-            </div>
-          </div>,
-        );
-        break;
-    }
-  };
 
   useEffect(() => {
     const isDarkMode = document.documentElement.classList.contains("dark");
@@ -86,7 +44,7 @@ export const ThemeSwitcher = () => {
       <DropdownMenuContent align="end">
         <DropdownMenuItem
           className="cursor-pointer text-sm"
-          onClick={() => switchTheme("theme-light")}
+          onClick={() => setCurrentTheme("theme-light")}
           title="Light theme"
         >
           <SunIcon className="text-primary" />
@@ -94,14 +52,14 @@ export const ThemeSwitcher = () => {
         </DropdownMenuItem>
         <DropdownMenuItem
           className="cursor-pointer text-sm"
-          onClick={() => switchTheme("dark")}
+          onClick={() => setCurrentTheme("dark")}
           title="Dark theme"
         >
           <MoonIcon className="text-primary" /> <span>Dark</span>
         </DropdownMenuItem>
         <DropdownMenuItem
           className="cursor-pointer text-sm"
-          onClick={() => switchTheme("system")}
+          onClick={() => setCurrentTheme("system")}
           title="System theme"
         >
           <LaptopIcon className="text-primary" /> <span>System</span>
