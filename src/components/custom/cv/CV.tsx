@@ -9,6 +9,25 @@ import { CVSeparator } from "./CVSeperator";
 import { CVSidebar } from "./CVSidebar";
 import { EncryptedText } from "@/components/ui/encrypted-text";
 import { CVPageSection } from "./CVPageSection";
+import {
+  GithubIcon,
+  Globe2Icon,
+  GlobeIcon,
+  LinkedinIcon,
+  Mail,
+  MailIcon,
+  MapPinIcon,
+  PhoneIcon,
+  Youtube,
+} from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 export const CV = () => {
   const [caretBlink, setCaretBlink] = useState(false);
@@ -63,15 +82,144 @@ export const CV = () => {
           </CVPageSection>
           <CVSeparator className="mt-[4.2333333333mm]" />
           <CVPageSection>
-            <address className="">
+            <h3 className="mt-[2.1166666667mm] text-sm uppercase">SUMMARY</h3>
+            <CVSeparator className="bg-border mt-[2.1166666667mm]" />
+            <p className="text-muted-foreground mt-[2.1166666667mm] block w-full text-[7pt] text-pretty">
+              Highly motivated and passionate web developer from Bloemfontein.
+              Eager and willing to learn new things and find my place in the
+              industry, working with technologies that I am passionate about. I
+              aim to provide flexible, dynamic, stylish and responsive solutions
+              for my clients, while adhering to industry standards, including
+              accessibility and best practices. I'm a problem-solving enthusiast
+              with a knack for creating sleek and user-friendly websites and UI
+              components.
+            </p>
+          </CVPageSection>
+          <CVSeparator className="mt-[4.2333333333mm]" />
+          <CVPageSection>
+            <h3 className="mt-[2.1166666667mm] text-sm uppercase">
+              Contact Information
+            </h3>
+            <CVSeparator className="bg-border mt-[2.1166666667mm]" />
+            <address className="mt-[2.1166666667mm] not-italic">
               <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li className="flex items-center justify-between">
+                  <MapPinIcon className="text-foreground/90 size-[4.2333333333mm] shrink-0" />
+                  <span
+                    title="Bloemfontein, Free State, South Africa, 9301 🇿🇦"
+                    className="text-muted-foreground cursor-help text-[7pt]"
+                  >
+                    Bloemfontein, FS
+                  </span>
+                </li>
+                <li className="mt-[2.1166666667mm] flex items-center justify-between">
+                  <PhoneIcon className="text-foreground/90 size-[4.2333333333mm] shrink-0" />
+                  <a
+                    href="tel:+27738782766"
+                    className="text-muted-foreground hover:text-primary text-[7pt] transition-all duration-200"
+                  >
+                    +27738782766
+                  </a>
+                </li>
+                <li className="mt-[2.1166666667mm] flex items-center justify-between">
+                  <MailIcon className="text-foreground/90 size-[4.2333333333mm] shrink-0" />
+                  <a
+                    href="mailto:luke.dekiewit@yahoo.com"
+                    title="Bloemfontein, Free State, South Africa, 9301 🇿🇦"
+                    className="text-muted-foreground hover:text-primary text-[7pt] hover:underline"
+                  >
+                    luke.dekiewit@yahoo.com
+                  </a>
+                </li>
+                <li className="mt-[2.1166666667mm] flex items-center justify-between">
+                  <GithubIcon className="text-foreground/90 size-[4.2333333333mm] shrink-0" />
+                  <a
+                    href="https://github.com/lukedekiewit"
+                    target="_blank"
+                    className="text-muted-foreground hover:text-primary text-[7pt] hover:underline"
+                  >
+                    @lukedekiewit
+                  </a>
+                </li>
+                <li className="mt-[2.1166666667mm] flex items-center justify-between">
+                  <LinkedinIcon className="text-foreground/90 size-[4.2333333333mm] shrink-0" />
+                  <a
+                    href="https://lukedekiewit.co.za/"
+                    className="text-muted-foreground hover:text-primary text-[7pt] hover:underline"
+                  >
+                    @lukedekiewit
+                  </a>
+                </li>
+                <li className="mt-[2.1166666667mm] flex items-center justify-between">
+                  <GlobeIcon className="text-foreground/90 size-[4.2333333333mm] shrink-0" />
+                  <a
+                    href="https://lukedekiewit.co.za/"
+                    className="text-muted-foreground hover:text-primary text-[7pt] hover:underline"
+                  >
+                    lukedekiewit.co.za
+                  </a>
+                </li>
               </ul>
             </address>
+          </CVPageSection>
+          <CVSeparator className="mt-[4.2333333333mm]" />
+          <CVPageSection>
+            <h3 className="mt-[2.1166666667mm] text-sm uppercase">
+              Personal Information
+            </h3>
+            <CVSeparator className="bg-border mt-[2.1166666667mm]" />
+            <div className="mt-[2.1166666667mm]">
+              <ul>
+                <li className="flex items-center justify-between text-[7pt]">
+                  <span className="text-foreground/90">Age</span>
+                  <span className="text-muted-foreground">25</span>
+                </li>
+                <li className="mt-[2.1166666667mm] flex items-center justify-between text-[7pt]">
+                  <span className="text-foreground/90">Languages</span>
+                  <span className="text-muted-foreground">
+                    English, Afrikaans
+                  </span>
+                </li>
+                <li className="mt-[2.1166666667mm] flex items-center justify-between text-[7pt]">
+                  <span className="text-foreground/90">Driving License</span>
+                  <span className="text-muted-foreground">Code B</span>
+                </li>
+                <li className="mt-[2.1166666667mm] flex items-center justify-between text-[7pt]">
+                  <span className="text-foreground/90">Own transport</span>
+                  <span className="text-muted-foreground">Yes</span>
+                </li>
+                <li className="mt-[2.1166666667mm] flex items-center justify-between text-[7pt]">
+                  <span className="text-foreground/90">
+                    Willing to relocate
+                  </span>
+                  <span className="text-muted-foreground">Yes</span>
+                </li>
+                <li className="mt-[2.1166666667mm] flex items-center justify-between text-[7pt]">
+                  <span className="text-foreground/90">
+                    Open to remote work
+                  </span>
+                  <span className="text-muted-foreground">Yes</span>
+                </li>
+              </ul>
+            </div>
+          </CVPageSection>
+          <CVSeparator className="mt-[4.2333333333mm]" />
+          <CVPageSection>
+            <h3 className="mt-[2.1166666667mm] text-sm uppercase">
+              Core Tech Stack
+            </h3>
+            <CVSeparator className="bg-border mt-[2.1166666667mm]" />
+            <div className="mt-[2.1166666667mm]">
+              <legend className="flex flex-wrap gap-[1.0583333333mm]">
+                <Badge>HTML</Badge>
+                <Badge>CSS</Badge>
+                <Badge>JavaScript</Badge>
+                <Badge>TypeScript</Badge>
+                <Badge>React</Badge>
+                <Badge>Astro</Badge>
+                <Badge>Shopify</Badge>
+              </legend>
+            </div>
           </CVPageSection>
         </CVSidebar>
         <CVPageContent>
@@ -124,20 +272,20 @@ export const CV = () => {
             lightModeLogo={{
               src: "/images/logos/ldk_logo_black_tilted_724px.png",
               alt: "",
-              height: 64,
-              width: 64,
+              height: 200,
+              width: 200,
               loading: "lazy",
               "aria-hidden": "true",
-              className: "opacity-20",
+              className: "opacity-20 shrink-0",
             }}
             darkModeLogo={{
               src: "/images/logos/ldk_logo_white_tilted_724px.png",
               alt: "",
-              height: 64,
-              width: 64,
+              height: 300,
+              width: 3200,
               loading: "lazy",
               "aria-hidden": "true",
-              className: "opacity-20",
+              className: "opacity-20 shrink-0",
             }}
           ></CVPageHeader>
           <CVSeparator className="mt-[4.2333333333mm]" />
