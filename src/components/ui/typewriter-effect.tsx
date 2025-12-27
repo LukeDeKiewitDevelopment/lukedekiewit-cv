@@ -1,9 +1,8 @@
 "use client";
 
-import { motion, stagger, useAnimate, useInView } from 'motion/react';
-import { useEffect } from 'react';
-
-import { cn } from '@/lib/utils';
+import { cn } from "@lib/utils";
+import { motion, stagger, useAnimate, useInView } from "motion/react";
+import { useEffect } from "react";
 
 export const TypewriterEffect = ({
   words,

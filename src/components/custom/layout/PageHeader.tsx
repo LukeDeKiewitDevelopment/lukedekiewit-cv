@@ -1,30 +1,36 @@
 "use client";
 
+import { Avatar, AvatarImage } from "@ui/avatar";
+import { Button } from "@ui/button";
+import { EncryptedText } from "@ui/encrypted-text";
 import {
   CheckCircle,
   DownloadIcon,
   PrinterIcon,
   ShareIcon,
 } from "lucide-react";
-import { toast } from "sonner";
-import { Avatar, AvatarImage } from "../ui/avatar";
-import { Button } from "../ui/button";
-import { Separator } from "../ui/separator";
 import { ThemeSwitcher } from "./ThemeSwitcher";
-import { EncryptedText } from "../ui/encrypted-text";
+import { Separator } from "@ui/separator";
+import { toast } from "sonner";
+import type { ComponentPropsWithoutRef } from "react";
 
-interface InteractiveCVPageHeaderProps {
-  lightModeLogo?: InteractiveCVPageHeaderLogo;
-  darkModeLogo?: InteractiveCVPageHeaderLogo;
+export type PageHeaderProps = {
+  lightModeLogo?: PageHeaderLogo;
+  darkModeLogo?: PageHeaderLogo;
   lastUpdated: string;
   shareLink: string;
   pdfDownloadLink: string;
-}
+};
 
-interface InteractiveCVPageHeaderLogo {
+type PageHeaderLogo = Omit<
+  ComponentPropsWithoutRef<"img">,
+  "src" | "alt" | "height" | "width"
+> & {
   src: string;
   alt: string;
-}
+  height: number;
+  width: number;
+};
 
 const copyLink = async (shareLink: string) => {
   if (typeof window === "undefined") {
@@ -80,34 +86,41 @@ const printPage = async () => {
   }
 };
 
-export const InteractiveCVPageHeader = ({
+export const PageHeader = ({
   lightModeLogo,
   darkModeLogo,
   lastUpdated,
   shareLink,
   pdfDownloadLink,
-}: InteractiveCVPageHeaderProps) => {
+}: PageHeaderProps) => {
   return (
-    <div className="bg-card relative z-50 flex flex-col print:hidden shadow-md">
+    <nav
+      data-slot="page-header"
+      className="bg-card relative z-50 flex flex-col overflow-hidden shadow-md print:hidden"
+    >
       <div className="flex items-center justify-between gap-4 p-4 sm:p-4 md:flex-row md:p-6 lg:flex-row lg:p-8">
         <div className="flex items-center gap-2">
           {lightModeLogo && (
-            <Avatar className="border-primary hidden-in-dark-mode pointer-events-none hidden border-2 p-0.75 shadow-black select-none sm:hidden md:flex md:size-10">
+            <Avatar className="border-primary hidden-in-darkmode hidden border-2 p-0.75 shadow-black select-none sm:hidden md:flex md:size-10">
               <AvatarImage
                 className="animate-in zoom-in duration-200"
-                loading="eager"
+                {...lightModeLogo}
                 src={lightModeLogo.src}
                 alt={lightModeLogo.alt}
+                height={lightModeLogo.height}
+                width={lightModeLogo.width}
               />
             </Avatar>
           )}
           {darkModeLogo && (
-            <Avatar className="border-primary hidden-in-lightmode pointer-events-none hidden border-2 p-0.75 shadow-black select-none sm:hidden md:flex md:size-10">
+            <Avatar className="border-primary hidden-in-lightmode hidden border-2 p-0.75 shadow-black select-none sm:hidden md:flex md:size-10">
               <AvatarImage
                 className="animate-in zoom-in duration-200"
-                loading="eager"
+                {...darkModeLogo}
                 src={darkModeLogo.src}
                 alt={darkModeLogo.alt}
+                height={darkModeLogo.height}
+                width={darkModeLogo.width}
               />
             </Avatar>
           )}
@@ -163,7 +176,7 @@ export const InteractiveCVPageHeader = ({
           <ThemeSwitcher />
         </div>
       </div>
-      <Separator className="bg-muted border" decorative />
-    </div>
+      <Separator decorative />
+    </nav>
   );
 };

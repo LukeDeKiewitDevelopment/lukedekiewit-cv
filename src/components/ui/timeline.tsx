@@ -1,6 +1,6 @@
 "use client";
-import { motion, useMotionValueEvent, useScroll, useTransform } from 'motion/react';
-import React, { useEffect, useRef, useState } from 'react';
+import { motion, useScroll, useTransform } from "motion/react";
+import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
   title: string;

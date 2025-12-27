@@ -11,8 +11,20 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-sans: "Martian Mono";
   --font-mono: "Martian Mono";
+  --text-xs: 9pt;
+  --text-sm: 10.5pt;
+  --text-base: 12pt;
+  --text-lg: 13.5pt;
+  --text-xl: 15pt;
+  --text-2xl: 18pt;
+  --text-3xl: 22pt;
+  --text-4xl: 27pt;
+  --text-5xl: 36pt;
+  --text-6xl: 45pt;
+  --text-7xl: 54pt;
+  --text-8xl: 60pt;
+  --text-9xl: 96pt;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -167,9 +179,16 @@
   color: var(--primary-foreground);
 }
 
-html.dark .hidden-in-dark-mode,
+html.dark .hidden-in-darkmode,
 html:not(.dark) .hidden-in-lightmode {
   display: none !important;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-size: var(--text-sm);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -194,5 +213,16 @@ html:not(.dark) .hidden-in-lightmode {
   * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
+  }
+}
+
+@keyframes caretBlink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
   }
 }

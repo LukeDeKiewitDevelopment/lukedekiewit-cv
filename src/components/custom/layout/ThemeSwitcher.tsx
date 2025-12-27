@@ -1,14 +1,14 @@
 "use client";
 
-import { LaptopIcon, MoonIcon, PaintbrushIcon, SunIcon } from "lucide-react";
-import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@ui/dropdown-menu";
+import { LaptopIcon, MoonIcon, SunIcon } from "lucide-react";
+import { useEffect, useState } from "react";
 
 type Themes = "theme-light" | "dark" | "system";
 
@@ -29,7 +29,7 @@ export const ThemeSwitcher = () => {
   }, [currentTheme]);
 
   return (
-    <DropdownMenu>
+    <DropdownMenu data-slot="theme-switcher">
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
@@ -41,7 +41,7 @@ export const ThemeSwitcher = () => {
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent align="end" className="">
         <DropdownMenuItem
           className="cursor-pointer text-sm"
           onClick={() => setCurrentTheme("theme-light")}
