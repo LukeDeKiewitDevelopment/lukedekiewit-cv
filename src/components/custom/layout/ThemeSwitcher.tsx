@@ -1,12 +1,8 @@
 "use client";
 
-import { Button } from "@ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@ui/dropdown-menu";
+
+import { Button } from "@/components/ui/button";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { LaptopIcon, MoonIcon, SunIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 

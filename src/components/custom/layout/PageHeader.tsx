@@ -1,8 +1,8 @@
 "use client";
 
-import { Avatar, AvatarImage } from "@ui/avatar";
-import { Button } from "@ui/button";
-import { EncryptedText } from "@ui/encrypted-text";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { EncryptedText } from "@/components/ui/encrypted-text";
 import {
   CheckCircle,
   DownloadIcon,
@@ -10,7 +10,7 @@ import {
   ShareIcon,
 } from "lucide-react";
 import { ThemeSwitcher } from "./ThemeSwitcher";
-import { Separator } from "@ui/separator";
+import { Separator } from "@/components/ui/separator";
 import { toast } from "sonner";
 import type { ComponentPropsWithoutRef } from "react";
 

@@ -1,4 +1,4 @@
-import { cn } from "@lib/utils";
+import { cn } from "@/lib/utils";
 import clsx from "clsx";
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
 

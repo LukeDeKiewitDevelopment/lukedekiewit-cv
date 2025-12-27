@@ -7,10 +7,7 @@
     "jsxImportSource": "react",
     "baseUrl": ".",
     "paths": {
-      "@ui/*": ["./src/components/ui/*"],
-      "@cv/*": ["./src/components/custom/cv/*"],
-      "@layout/*": ["./src/components/layout/*"],
-      "@lib/*": ["./src/lib/*"]
+      "@/*": ["./src/*"]
     }
   }
 }
