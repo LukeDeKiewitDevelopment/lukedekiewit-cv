@@ -27,8 +27,6 @@ export const CVPageHeader = ({
   titleNode,
   subtitleString,
   subtitleNode,
-  lightModeLogo,
-  darkModeLogo,
   children,
 }: CVPageHeaderProps) => {
   return (
@@ -40,24 +38,6 @@ export const CVPageHeader = ({
           </h1>
         )}
         {titleNode && !titleString && <>{titleNode}</>}
-        {lightModeLogo && lightModeLogo.src && (
-          <img
-            {...lightModeLogo}
-            className={clsx(
-              "hidden-in-darkmode pointer-events-none block h-auto max-w-[10mm] text-xs italic select-none",
-              lightModeLogo.className,
-            )}
-          />
-        )}
-        {darkModeLogo && darkModeLogo.src && (
-          <img
-            {...darkModeLogo}
-            className={clsx(
-              "hidden-in-lightmode pointer-events-none block h-auto max-w-[10mm] text-xs italic select-none",
-              darkModeLogo.className,
-            )}
-          />
-        )}
       </div>
       {subtitleString && !subtitleNode && (
         <span className="text-muted-foreground block w-fit">

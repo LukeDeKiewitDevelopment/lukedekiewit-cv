@@ -77,12 +77,15 @@ const printPage = async () => {
   }
 
   try {
+    window.addEventListener("afterprint", () => self.close);
     await window.print();
   } catch (error) {
     console.error("Could not open print dialog:", error);
     toast.error(
       <span className="font-mono">Error: Could not open print dialog</span>,
     );
+  } finally {
+    window.removeEventListener("afterprint", () => self.close);
   }
 };
 
