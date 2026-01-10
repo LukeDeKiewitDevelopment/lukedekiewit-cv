@@ -136,6 +136,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                     </a>
                   </li>
                   <li className="mt-[2.1166666667mm] flex items-center justify-between">
+                    <SimpleIcon
                     <GithubIcon className="text-foreground/90 size-[4.2333333333mm] shrink-0" />
                     <a
                       href="https://github.com/lukedekiewit"
