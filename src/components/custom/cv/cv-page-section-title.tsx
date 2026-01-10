@@ -1,9 +1,8 @@
 import clsx from "clsx";
-import type { ReactNode } from "react";
+import type { ComponentPropsWithoutRef, ReactNode } from "react";
 
-export type CVPageSectionProps = {
+export type CVPageSectionProps = ComponentPropsWithoutRef<"h3"> & {
   children?: ReactNode;
-  className?: string;
 };
 
 export const CVPageSectionTitle = ({

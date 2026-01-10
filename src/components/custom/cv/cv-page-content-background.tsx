@@ -1,9 +1,7 @@
 import clsx from "clsx";
 import type { ComponentPropsWithoutRef } from "react";
 
-export type CVPageContentBackgroundProps = ComponentPropsWithoutRef<"img"> & {
-  className?: string;
-};
+export type CVPageContentBackgroundProps = ComponentPropsWithoutRef<"img">
 
 export const CVPageContentBackground = ({
   className,
