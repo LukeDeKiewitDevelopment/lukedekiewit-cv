@@ -9,7 +9,7 @@ import {
   PrinterIcon,
   ShareIcon,
 } from "lucide-react";
-import { ThemeSwitcher } from "./ThemeSwitcher";
+import { ThemeSwitcher } from "./theme-switcher";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "sonner";
 import type { ComponentPropsWithoutRef } from "react";
@@ -36,7 +36,9 @@ const copyLink = async (shareLink: string) => {
   if (typeof window === "undefined") {
     console.error("Could not open copy link: window is undefined");
     toast.error(
-      <span className="font-mono">Error: Could not open print dialog</span>,
+      <span role="alert" className="font-mono">
+        Error: Could not copy link
+      </span>,
     );
   }
 
@@ -62,12 +64,18 @@ const copyLink = async (shareLink: string) => {
     } catch (error) {
       console.error("Could not copy link:", error);
       toast.error(
-        <span className="font-mono">Error: Could not copy link</span>,
+        <span role="alert" className="font-mono">
+          Error: Could not copy link
+        </span>,
       );
     }
   } catch (error) {
     console.error("Could not copy link:", error);
-    toast.error(<span className="font-mono">Error: Could not copy link</span>);
+    toast.error(
+      <span role="alert" className="font-mono">
+        Error: Could not copy link
+      </span>,
+    );
   }
 };
 
@@ -82,7 +90,9 @@ const printPage = async () => {
   } catch (error) {
     console.error("Could not open print dialog:", error);
     toast.error(
-      <span className="font-mono">Error: Could not open print dialog</span>,
+      <span role="alert" className="font-mono">
+        Error: Could not open print dialog
+      </span>,
     );
   } finally {
     window.removeEventListener("afterprint", () => self.close);
@@ -102,11 +112,11 @@ export const PageHeader = ({
       className="bg-card relative z-50 flex flex-col overflow-hidden shadow-md print:hidden"
     >
       <div className="flex items-center justify-between gap-4 p-4 sm:p-4 md:flex-row md:p-6 lg:flex-row lg:p-8">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 duration-100">
           {lightModeLogo && (
             <Avatar className="border-primary hidden-in-darkmode hidden border-2 p-0.75 shadow-black select-none sm:hidden md:flex md:size-10">
               <AvatarImage
-                className="animate-in zoom-in duration-200"
+                className="animate-in zoom-in fade-in blur-in duration-200"
                 {...lightModeLogo}
                 src={lightModeLogo.src}
                 alt={lightModeLogo.alt}
@@ -118,7 +128,7 @@ export const PageHeader = ({
           {darkModeLogo && (
             <Avatar className="border-primary hidden-in-lightmode hidden border-2 p-0.75 shadow-black select-none sm:hidden md:flex md:size-10">
               <AvatarImage
-                className="animate-in zoom-in duration-200"
+                className="animate-in zoom-in fade-in blur-in duration-200"
                 {...darkModeLogo}
                 src={darkModeLogo.src}
                 alt={darkModeLogo.alt}
@@ -137,10 +147,13 @@ export const PageHeader = ({
             <time>
               <EncryptedText
                 text={lastUpdated}
-                encryptedClassName="text-foreground/40"
-                revealedClassName="text-foreground/60"
+                encryptedClassName="text-muted-foreground/60"
+                revealedClassName="text-muted-foreground/80"
                 revealDelayMs={0}
               />
+            </time>
+            <time className="text-muted-foreground/80 hidden motion-reduce:inline">
+              {lastUpdated}
             </time>
           </div>
         </div>
@@ -155,7 +168,6 @@ export const PageHeader = ({
               <span className="hidden sm:hidden md:inline-flex">Download</span>
             </a>
           </Button>
-
           <Button
             variant={"outline"}
             title="Click to copy the link to this page to your clipboard"

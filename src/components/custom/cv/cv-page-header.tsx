@@ -1,25 +1,13 @@
-import { cn } from "@/lib/utils";
 import clsx from "clsx";
-import type { ComponentPropsWithoutRef, ReactNode } from "react";
+import type { ReactNode } from "react";
 
 export type CVPageHeaderProps = {
   titleString?: string;
   titleNode?: ReactNode;
   subtitleString?: ReactNode;
   subtitleNode?: ReactNode;
-  lightModeLogo?: CVPageHeaderLogo;
-  darkModeLogo?: CVPageHeaderLogo;
   children?: ReactNode;
-};
-
-type CVPageHeaderLogo = Omit<
-  ComponentPropsWithoutRef<"img">,
-  "src" | "alt" | "height" | "width"
-> & {
-  src: string;
-  alt: string;
-  height: number;
-  width: number;
+  className?: string;
 };
 
 export const CVPageHeader = ({
@@ -28,9 +16,13 @@ export const CVPageHeader = ({
   subtitleString,
   subtitleNode,
   children,
+  className,
 }: CVPageHeaderProps) => {
   return (
-    <header data-slot="cv-page-header" className="flex flex-col">
+    <header
+      data-slot="cv-page-header"
+      className={clsx("flex flex-col", className)}
+    >
       <div className="flex items-center justify-between">
         {titleString && !titleNode && (
           <h1 className="text-primary w-fit text-3xl uppercase">

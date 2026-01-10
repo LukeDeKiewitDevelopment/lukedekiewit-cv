@@ -1,15 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { CVAvatar, CVAvatarFallback, CVAvatarImage } from "./CVAvatar";
-import { CVPage } from "./CVPage";
-import { CVPageContent } from "./CVPageContent";
-import { CVPageHeader } from "./CVPageHeader";
-import { CVSeparator } from "./CVSeperator";
-import { CVSidebar } from "./CVSidebar";
+import { useEffect, useState, type ComponentPropsWithoutRef } from "react";
+import { CVAvatar, CVAvatarFallback, CVAvatarImage } from "./cv-avatar";
+import { CVPage } from "./cv-page";
+import { CVPageContent } from "./cv-page-content";
+import { CVPageHeader } from "./cv-page-header";
+import { CVSeparator } from "./cv-separator";
+import { CVSidebar } from "./cv-sidebar";
 import { EncryptedText } from "@/components/ui/encrypted-text";
-import { CVPageSection } from "./CVPageSection";
+import { CVPageSection } from "./cv-page-section";
 import {
+  CheckIcon,
   GithubIcon,
   GlobeIcon,
   LinkedinIcon,
@@ -21,8 +22,12 @@ import {
 
 import { Badge } from "@/components/ui/badge";
 import clsx from "clsx";
+import { CVPageSectionTitle } from "./cv-page-section-title";
+import { CVPageContentBackground } from "./cv-page-content-background";
 
-export const CV = () => {
+export type CVProps = ComponentPropsWithoutRef<"main">;
+
+export const CV = ({ className, ...props }: CVProps) => {
   const [caretBlink, setCaretBlink] = useState(false);
 
   const startCaretBlinking = () => {
@@ -39,46 +44,51 @@ export const CV = () => {
   return (
     <>
       <main
+        {...props}
         data-slot="cv-interactive"
         data-cv-type="interactive"
-        className="flex break-after-page justify-center gap-4 p-4 md:p-6 lg:p-8 print:gap-0 print:p-0 print:[data-cv-type='interactive']:hidden!"
+        className={clsx(
+          "flex break-after-page justify-center gap-4 p-4 md:p-6 lg:p-8 print:gap-0 print:p-0 print:[data-cv-type='interactive']:hidden!",
+          className,
+        )}
       >
         <CVPage>
           <CVSidebar>
             <CVPageSection className="flex items-center justify-center">
               <CVAvatar
+                className="bg-primary hidden-in-darkmode border-2 border-transparent shadow-sm shadow-black/20 select-none"
+                title="Luke De Kiewit profile picture"
+              >
+                <CVAvatarImage
+                  className="animate-in fade-in blur-in duration-200"
+                  src="/images/ldk_selfie_pfp.jpg"
+                  alt="Profile picture"
+                  height={128}
+                  width={128}
+                  loading="eager"
+                />
+                <CVAvatarFallback />
+              </CVAvatar>
+              <CVAvatar
                 className="border-primary bg-primary hidden-in-lightmode hover:shadow-primary/60 border-2 shadow-black transition-shadow duration-500 ease-in-out select-none hover:shadow-[0px_0px_2px_2px]"
                 title="Welcome to the Matrix, Neo."
               >
                 <CVAvatarImage
-                  className="animate-in zoom-in fade-in duration-200"
+                  className="animate-in fade-in blur-in duration-200"
                   src="/images/ldk_matrix_avatar_1024px.png"
                   alt="Profile picture"
                   height={128}
                   width={128}
                   loading="eager"
                 />
-                <CVAvatarFallback className="animate-pulse" />
-              </CVAvatar>
-              <CVAvatar
-                className="border-primary bg-primary hidden-in-darkmode border-2 shadow-sm shadow-black/40 select-none"
-                title="Luke De Kiewit profile picture"
-              >
-                <CVAvatarImage
-                  className="animate-in zoom-in fade-in duration-200"
-                  src="/images/ldk_matrix_avatar_1024px.png"
-                  alt="Profile picture"
-                  height={128}
-                  width={128}
-                  loading="eager"
-                />
-                <CVAvatarFallback className="animate-pulse" />
+                <CVAvatarFallback />
               </CVAvatar>
             </CVPageSection>
             <CVSeparator className="mt-[4.2333333333mm]" />
             <CVPageSection>
-              <h3 className="mt-[2.1166666667mm] text-sm uppercase">SUMMARY</h3>
-              <CVSeparator className="bg-border mt-[2.1166666667mm]" />
+              <CVPageSectionTitle className="text-sm">
+                Summary
+              </CVPageSectionTitle>
               <p className="text-muted-foreground mt-[2.1166666667mm] block w-full text-[7pt] text-pretty">
                 Highly motivated and passionate web developer from Bloemfontein.
                 Eager and willing to learn new things and find my place in the
@@ -90,12 +100,11 @@ export const CV = () => {
                 user-friendly websites and UI components.
               </p>
             </CVPageSection>
-            <CVSeparator className="mt-[4.2333333333mm]" />
+            <CVSeparator className="bg-border mt-[2.1166666667mm]" />
             <CVPageSection>
-              <h3 className="mt-[2.1166666667mm] text-sm uppercase">
-                Contact Information
-              </h3>
-              <CVSeparator className="bg-border mt-[2.1166666667mm]" />
+              <CVPageSectionTitle className="text-sm">
+                Contact information
+              </CVPageSectionTitle>
               <address className="mt-[2.1166666667mm] not-italic">
                 <ul>
                   <li className="flex items-center justify-between">
@@ -159,10 +168,9 @@ export const CV = () => {
             </CVPageSection>
             <CVSeparator className="mt-[4.2333333333mm]" />
             <CVPageSection>
-              <h3 className="mt-[2.1166666667mm] text-sm uppercase">
-                Personal Information
-              </h3>
-              <CVSeparator className="bg-border mt-[2.1166666667mm]" />
+              <CVPageSectionTitle className="text-sm">
+                Personal information
+              </CVPageSectionTitle>
               <div className="mt-[2.1166666667mm]">
                 <ul>
                   <li className="flex items-center justify-between text-[7pt]">
@@ -181,29 +189,28 @@ export const CV = () => {
                   </li>
                   <li className="mt-[2.1166666667mm] flex items-center justify-between text-[7pt]">
                     <span className="text-foreground/90">Own transport</span>
-                    <span className="text-muted-foreground">Yes</span>
+                    <CheckIcon className="text-muted-foreground size-[9.5pt]" />
                   </li>
                   <li className="mt-[2.1166666667mm] flex items-center justify-between text-[7pt]">
                     <span className="text-foreground/90">
                       Willing to relocate
                     </span>
-                    <span className="text-muted-foreground">Yes</span>
+                    <CheckIcon className="text-muted-foreground size-[9.5pt]" />
                   </li>
                   <li className="mt-[2.1166666667mm] flex items-center justify-between text-[7pt]">
                     <span className="text-foreground/90">
                       Open to remote work
                     </span>
-                    <span className="text-muted-foreground">Yes</span>
+                    <CheckIcon className="text-muted-foreground size-[9.5pt]" />
                   </li>
                 </ul>
               </div>
             </CVPageSection>
             <CVSeparator className="mt-[4.2333333333mm]" />
             <CVPageSection>
-              <h3 className="mt-[2.1166666667mm] text-sm uppercase">
-                Core Tech Stack
-              </h3>
-              <CVSeparator className="bg-border mt-[2.1166666667mm]" />
+              <CVPageSectionTitle className="text-sm">
+                Tech stack
+              </CVPageSectionTitle>
               <div className="mt-[2.1166666667mm]">
                 <legend className="flex flex-wrap gap-[1.0583333333mm]">
                   <Badge>HTML</Badge>
@@ -226,7 +233,7 @@ export const CV = () => {
                     className="motion-reduce:hidden"
                     encryptedClassName="text-muted-foreground/80 select-none"
                     revealedClassName="text-primary select-text"
-                    revealDelayMs={30}
+                    revealDelayMs={0}
                     flipDelayMs={0}
                   />
                   <span className="hidden motion-reduce:inline">
@@ -235,28 +242,28 @@ export const CV = () => {
                 </h1>
               }
               subtitleNode={
-                <div className="text-muted-foreground flex items-center gap-[1.0583333333mm] font-mono text-lg uppercase">
+                <div className="text-muted-foreground flex items-center gap-[1.0583333333mm] font-mono uppercase">
                   <span
                     className="text-muted-foreground pointer-events-none text-lg not-italic select-none"
                     aria-hidden="true"
                   >
                     {"<"}
                   </span>
-                  <i className="inline h-5 w-0.5 bg-transparent print:hidden"></i>
+                  <i className="inline size-0.5 bg-transparent text-lg print:hidden"></i>
                   <EncryptedText
                     text={"Front-End Developer"}
                     className="motion-reduce:hidden"
                     encryptedClassName="text-muted-foreground/60 select-none text-lg"
                     revealedClassName="text-muted-foreground select-text text-lg"
-                    revealDelayMs={40}
-                    flipDelayMs={10}
+                    revealDelayMs={10}
+                    flipDelayMs={0}
                   />
                   <h2 className="text-muted-foreground hidden text-lg motion-reduce:block">
                     Front-End Developer
                   </h2>
                   <i
                     className={clsx(
-                      "bg-primary inline h-5 w-0.5 motion-reduce:hidden print:hidden",
+                      "bg-primary inline h-4.5 w-0.5 motion-reduce:hidden print:hidden",
                       !caretBlink && "invisible",
                     )}
                     style={{
@@ -274,27 +281,17 @@ export const CV = () => {
                   </span>
                 </div>
               }
-              lightModeLogo={{
-                src: "/images/logos/ldk_logo_black_tilted_724px.png",
-                alt: "",
-                height: 200,
-                width: 200,
-                loading: "lazy",
-                "aria-hidden": "true",
-                className: "opacity-20 shrink-0",
-              }}
-              darkModeLogo={{
-                src: "/images/logos/ldk_logo_white_tilted_724px.png",
-                alt: "",
-                height: 300,
-                width: 3200,
-                loading: "lazy",
-                "aria-hidden": "true",
-                className: "opacity-20 shrink-0",
-              }}
             ></CVPageHeader>
             <CVSeparator className="mt-[4.2333333333mm]" />
-            <CVPageSection></CVPageSection>
+            <CVPageSection className="mt-[4.2333333333mm]">
+              <div className="relative w-full overflow-clip">
+                <h3 className="uppercase">Professional experience</h3>
+              </div>
+            </CVPageSection>
+            <CVPageContentBackground
+              className="opacity-10 grayscale"
+              src="/images/backgrounds/laptop_code_3.jpg"
+            />
           </CVPageContent>
         </CVPage>
       </main>

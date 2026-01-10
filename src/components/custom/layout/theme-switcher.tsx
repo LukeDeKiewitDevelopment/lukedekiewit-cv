@@ -1,8 +1,12 @@
 "use client";
 
-
 import { Button } from "@/components/ui/button";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { LaptopIcon, MoonIcon, SunIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -32,8 +36,8 @@ export const ThemeSwitcher = () => {
           size="icon"
           title="Click to choose a different theme"
         >
-          <SunIcon className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-          <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+          <SunIcon className="size-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+          <MoonIcon className="absolute size-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
