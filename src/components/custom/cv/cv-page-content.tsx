@@ -1,14 +1,18 @@
 import clsx from "clsx";
-import type { ReactNode } from "react";
+import type { ComponentPropsWithoutRef, ReactNode } from "react";
 
-export type CVPageContentProps = {
+export type CVPageContentProps = ComponentPropsWithoutRef<"div"> & {
   children?: ReactNode;
-  className?: string;
 };
 
-export const CVPageContent = ({ children, className }: CVPageContentProps) => {
+export const CVPageContent = ({
+  children,
+  className,
+  ...props
+}: CVPageContentProps) => {
   return (
     <div
+      {...props}
       data-slot="cv-page-content"
       className={clsx(
         "relative min-w-[135mm] overflow-x-hidden overflow-y-auto p-[4.2333333333mm]",

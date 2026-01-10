@@ -1,13 +1,12 @@
 import clsx from "clsx";
-import type { ReactNode } from "react";
+import type { ComponentPropsWithoutRef, ReactNode } from "react";
 
-export type CVPageHeaderProps = {
+export type CVPageHeaderProps = ComponentPropsWithoutRef<"header"> & {
   titleString?: string;
   titleNode?: ReactNode;
   subtitleString?: ReactNode;
   subtitleNode?: ReactNode;
   children?: ReactNode;
-  className?: string;
 };
 
 export const CVPageHeader = ({
@@ -17,9 +16,11 @@ export const CVPageHeader = ({
   subtitleNode,
   children,
   className,
+  ...props
 }: CVPageHeaderProps) => {
   return (
     <header
+      {...props}
       data-slot="cv-page-header"
       className={clsx("flex flex-col", className)}
     >
