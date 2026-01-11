@@ -11,19 +11,19 @@ import { EncryptedText } from "@/components/ui/encrypted-text";
 import { CVPageSection } from "./cv-page-section";
 import {
   CheckIcon,
-  GithubIcon,
   GlobeIcon,
   LinkedinIcon,
   MailIcon,
   MapPinIcon,
   PhoneIcon,
-  Youtube,
 } from "lucide-react";
+import { siGithub } from "simple-icons";
 
 import { Badge } from "@/components/ui/badge";
 import clsx from "clsx";
 import { CVPageSectionTitle } from "./cv-page-section-title";
 import { CVPageContentBackground } from "./cv-page-content-background";
+import { SkillBadgeIcon } from "../skill-badge-icon";
 
 export type CVProps = ComponentPropsWithoutRef<"main">;
 
@@ -48,7 +48,7 @@ export const CV = ({ className, ...props }: CVProps) => {
         data-slot="cv-interactive"
         data-cv-type="interactive"
         className={clsx(
-          "flex break-after-page justify-center gap-4 p-4 md:p-6 lg:p-8 print:gap-0 print:p-0 print:[data-cv-type='interactive']:hidden!",
+          "relative z-1 flex flex-[1_0_auto] break-after-page justify-center gap-4 p-4 md:p-6 lg:p-8 print:gap-0 print:p-0 print:[data-cv-type='interactive']:hidden!",
           className,
         )}
       >
@@ -108,7 +108,7 @@ export const CV = ({ className, ...props }: CVProps) => {
               <address className="mt-[2.1166666667mm] not-italic">
                 <ul>
                   <li className="flex items-center justify-between">
-                    <MapPinIcon className="text-foreground/90 size-[4.2333333333mm] shrink-0" />
+                    <MapPinIcon className="size-[4.2333333333mm] shrink-0" />
                     <span
                       title="Bloemfontein, Free State, South Africa, 9301 🇿🇦"
                       className="text-muted-foreground cursor-help text-[7pt]"
@@ -117,18 +117,20 @@ export const CV = ({ className, ...props }: CVProps) => {
                     </span>
                   </li>
                   <li className="mt-[2.1166666667mm] flex items-center justify-between">
-                    <PhoneIcon className="text-foreground/90 size-[4.2333333333mm] shrink-0" />
+                    <PhoneIcon className="size-[4.2333333333mm] shrink-0" />
                     <a
                       href="tel:+27738782766"
+                      rel="noopener noreferrer nofollow"
                       className="text-muted-foreground hover:text-primary text-[7pt] transition-all duration-200"
                     >
                       +27738782766
                     </a>
                   </li>
                   <li className="mt-[2.1166666667mm] flex items-center justify-between">
-                    <MailIcon className="text-foreground/90 size-[4.2333333333mm] shrink-0" />
+                    <MailIcon className="size-[4.2333333333mm] shrink-0" />
                     <a
                       href="mailto:luke.dekiewit@yahoo.com"
+                      rel="noopener noreferrer nofollow"
                       title="Bloemfontein, Free State, South Africa, 9301 🇿🇦"
                       className="text-muted-foreground hover:text-primary text-[7pt] hover:underline"
                     >
@@ -136,10 +138,15 @@ export const CV = ({ className, ...props }: CVProps) => {
                     </a>
                   </li>
                   <li className="mt-[2.1166666667mm] flex items-center justify-between">
-                    <SimpleIcon
-                    <GithubIcon className="text-foreground/90 size-[4.2333333333mm] shrink-0" />
+                    <SkillBadgeIcon
+                      title="GitHub"
+                      hex="var(--sidebar-foreground)"
+                      path={siGithub.path}
+                      className="size-[4.2333333333mm] shrink-0"
+                    />
                     <a
                       href="https://github.com/lukedekiewit"
+                      rel="noopener noreferrer nofollow"
                       target="_blank"
                       className="text-muted-foreground hover:text-primary text-[7pt] hover:underline"
                     >
@@ -147,18 +154,20 @@ export const CV = ({ className, ...props }: CVProps) => {
                     </a>
                   </li>
                   <li className="mt-[2.1166666667mm] flex items-center justify-between">
-                    <LinkedinIcon className="text-foreground/90 size-[4.2333333333mm] shrink-0" />
+                    <LinkedinIcon className="size-[4.2333333333mm] shrink-0" />
                     <a
                       href="https://lukedekiewit.co.za/"
+                      rel="noopener noreferrer nofollow"
                       className="text-muted-foreground hover:text-primary text-[7pt] hover:underline"
                     >
                       @lukedekiewit
                     </a>
                   </li>
                   <li className="mt-[2.1166666667mm] flex items-center justify-between">
-                    <GlobeIcon className="text-foreground/90 size-[4.2333333333mm] shrink-0" />
+                    <GlobeIcon className="size-[4.2333333333mm] shrink-0" />
                     <a
                       href="https://lukedekiewit.co.za/"
+                      rel="noopener noreferrer nofollow"
                       className="text-muted-foreground hover:text-primary text-[7pt] hover:underline"
                     >
                       lukedekiewit.co.za
@@ -175,33 +184,29 @@ export const CV = ({ className, ...props }: CVProps) => {
               <div className="mt-[2.1166666667mm]">
                 <ul>
                   <li className="flex items-center justify-between text-[7pt]">
-                    <span className="text-foreground/90">Age</span>
+                    <span>Age</span>
                     <span className="text-muted-foreground">25</span>
                   </li>
                   <li className="mt-[2.1166666667mm] flex items-center justify-between text-[7pt]">
-                    <span className="text-foreground/90">Languages</span>
+                    <span>Languages</span>
                     <span className="text-muted-foreground">
                       English, Afrikaans
                     </span>
                   </li>
                   <li className="mt-[2.1166666667mm] flex items-center justify-between text-[7pt]">
-                    <span className="text-foreground/90">Driving License</span>
+                    <span>Driving License</span>
                     <span className="text-muted-foreground">Code B</span>
                   </li>
                   <li className="mt-[2.1166666667mm] flex items-center justify-between text-[7pt]">
-                    <span className="text-foreground/90">Own transport</span>
+                    <span>Own transport</span>
                     <CheckIcon className="text-muted-foreground size-[9.5pt]" />
                   </li>
                   <li className="mt-[2.1166666667mm] flex items-center justify-between text-[7pt]">
-                    <span className="text-foreground/90">
-                      Willing to relocate
-                    </span>
+                    <span>Willing to relocate</span>
                     <CheckIcon className="text-muted-foreground size-[9.5pt]" />
                   </li>
                   <li className="mt-[2.1166666667mm] flex items-center justify-between text-[7pt]">
-                    <span className="text-foreground/90">
-                      Open to remote work
-                    </span>
+                    <span>Open to remote work</span>
                     <CheckIcon className="text-muted-foreground size-[9.5pt]" />
                   </li>
                 </ul>
@@ -225,14 +230,14 @@ export const CV = ({ className, ...props }: CVProps) => {
               </div>
             </CVPageSection>
           </CVSidebar>
-          <CVPageContent>
+          <CVPageContent className="text-card-foreground">
             <CVPageHeader
               titleNode={
                 <h1 className="text-primary text-4xl uppercase">
                   <EncryptedText
                     text={"Luke De Kiewit"}
                     className="motion-reduce:hidden"
-                    encryptedClassName="text-muted-foreground/80 select-none"
+                    encryptedClassName="text-muted-foreground select-none"
                     revealedClassName="text-primary select-text"
                     revealDelayMs={0}
                     flipDelayMs={0}
@@ -254,7 +259,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                   <EncryptedText
                     text={"Front-End Developer"}
                     className="motion-reduce:hidden"
-                    encryptedClassName="text-muted-foreground/60 select-none text-lg"
+                    encryptedClassName="text-muted-foreground select-none text-lg"
                     revealedClassName="text-muted-foreground select-text text-lg"
                     revealDelayMs={10}
                     flipDelayMs={0}
@@ -290,7 +295,7 @@ export const CV = ({ className, ...props }: CVProps) => {
               </div>
             </CVPageSection>
             <CVPageContentBackground
-              className="opacity-10 grayscale"
+              className="opacity-0 grayscale dark:opacity-5"
               src="/images/backgrounds/laptop_code_3.jpg"
             />
           </CVPageContent>

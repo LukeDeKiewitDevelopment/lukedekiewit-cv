@@ -1,11 +1,13 @@
 ---
 import "../../../styles/global.css";
 import { Toaster } from "@/components/ui/sonner";
-import { PageHeader } from "./page-header";
+import { Header } from "./header";
+import { Footer } from "./footer";
+import { SiteBackground } from "./site-background";
 ---
 
 <!doctype html>
-<html lang="en" class="dark antialiased">
+<html lang="en" class="dark antialiased h-full">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -48,8 +50,8 @@ import { PageHeader } from "./page-header";
       }
     </script>
   </head>
-  <body class="font-mono">
-    <PageHeader
+  <body class="h-full flex flex-col">
+    <Header
       lightModeLogo={{
         src: "/images/logos/ldk_logo_black_tilted_724px.png",
         alt: "Luke De Kiewit logo",
@@ -72,6 +74,14 @@ import { PageHeader } from "./page-header";
       client:load
     />
     <slot />
-    <Toaster client:load position="bottom-center" />
+    <Footer client:load />
+    <Toaster client:load position="bottom-center" className="print:hidden" />
+    <SiteBackground
+      client:load
+      backgroundImage={{
+        className: "grayscale opacity-10 hidden dark:block",
+        src: "/images/backgrounds/code_3.jpg",
+      }}
+    />
   </body>
 </html>

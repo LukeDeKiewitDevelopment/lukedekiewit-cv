@@ -18,7 +18,7 @@ export const CVPage = ({
       data-slot="cv-page"
       data-page-number={pageNumber}
       className={clsx(
-        "border-border flex h-[297mm] max-h-[297mm] min-h-[297mm] w-full max-w-[210mm] min-w-[210mm] overflow-hidden rounded-sm border-2 shadow-md print:rounded-none print:border-none print:shadow-none",
+        "border-border flex h-[297mm] max-h-[297mm] min-h-[297mm] w-full max-w-[210mm] min-w-[210mm] overflow-hidden rounded-sm border-2 shadow-md shadow-black/50 print:rounded-none print:border-none print:shadow-none",
         className,
       )}
     >

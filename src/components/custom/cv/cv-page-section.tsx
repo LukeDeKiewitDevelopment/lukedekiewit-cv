@@ -1,8 +1,7 @@
-import type { ReactNode } from "react";
+import type { ComponentPropsWithoutRef, ReactNode } from "react";
 
-export type CVPageSectionProps = {
+export type CVPageSectionProps = ComponentPropsWithoutRef<"div"> & {
   children?: ReactNode;
-  className?: string;
 };
 
 export const CVPageSection = ({ children, className }: CVPageSectionProps) => {

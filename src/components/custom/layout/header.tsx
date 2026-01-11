@@ -14,23 +14,15 @@ import { Separator } from "@/components/ui/separator";
 import { toast } from "sonner";
 import type { ComponentPropsWithoutRef } from "react";
 
-export type PageHeaderProps = {
-  lightModeLogo?: PageHeaderLogo;
-  darkModeLogo?: PageHeaderLogo;
+export type HeaderProps = {
+  lightModeLogo?: HeaderLogo;
+  darkModeLogo?: HeaderLogo;
   lastUpdated: string;
   shareLink: string;
   pdfDownloadLink: string;
 };
 
-type PageHeaderLogo = Omit<
-  ComponentPropsWithoutRef<"img">,
-  "src" | "alt" | "height" | "width"
-> & {
-  src: string;
-  alt: string;
-  height: number;
-  width: number;
-};
+type HeaderLogo = ComponentPropsWithoutRef<"img">;
 
 const copyLink = async (shareLink: string) => {
   if (typeof window === "undefined") {
@@ -99,20 +91,20 @@ const printPage = async () => {
   }
 };
 
-export const PageHeader = ({
+export const Header = ({
   lightModeLogo,
   darkModeLogo,
   lastUpdated,
   shareLink,
   pdfDownloadLink,
-}: PageHeaderProps) => {
+}: HeaderProps) => {
   return (
     <nav
-      data-slot="page-header"
-      className="bg-card relative z-50 flex flex-col overflow-hidden shadow-md print:hidden"
+      data-slot="header"
+      className="bg-card flex flex-[1_0_auto] flex-col shadow-md print:hidden"
     >
-      <div className="flex items-center justify-between gap-4 p-4 sm:p-4 md:flex-row md:p-6 lg:flex-row lg:p-8">
-        <div className="flex items-center gap-2 duration-100">
+      <div className="flex items-center justify-between gap-4 p-4 md:p-6 lg:p-8">
+        <div className="flex items-center gap-2">
           {lightModeLogo && (
             <Avatar className="border-primary hidden-in-darkmode hidden border-2 p-0.75 shadow-black select-none sm:hidden md:flex md:size-10">
               <AvatarImage
@@ -143,16 +135,16 @@ export const PageHeader = ({
               fontSize: "clamp(0.7rem, 0.8rem, 0.9rem)",
             }}
           >
-            <span className="text-foreground/60">Last Updated:</span>
+            <span className="text-muted-foreground">Last Updated:</span>
             <time>
               <EncryptedText
                 text={lastUpdated}
                 encryptedClassName="text-muted-foreground/60"
-                revealedClassName="text-muted-foreground/80"
+                revealedClassName="text-muted-foreground/60"
                 revealDelayMs={0}
               />
             </time>
-            <time className="text-muted-foreground/80 hidden motion-reduce:inline">
+            <time className="text-muted-foreground/60 hidden motion-reduce:inline">
               {lastUpdated}
             </time>
           </div>
@@ -163,7 +155,11 @@ export const PageHeader = ({
             title="Download this CV in PDF format"
             asChild
           >
-            <a href={pdfDownloadLink} download>
+            <a
+              href={pdfDownloadLink}
+              rel="noopener noreferrer nofollow"
+              download
+            >
               <DownloadIcon />
               <span className="hidden sm:hidden md:inline-flex">Download</span>
             </a>

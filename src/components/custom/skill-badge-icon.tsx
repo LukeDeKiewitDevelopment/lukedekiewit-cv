@@ -1,11 +1,19 @@
 import { validateCSSColor } from "@/lib/validate-css-color";
 import type { SimpleIcon } from "simple-icons";
 
+export type SkillBadgeIconProps = Omit<
+  SimpleIcon,
+  "slug" | "svg" | "source" | "guidelines" | "license"
+> & {
+  className?: string;
+};
+
 export const SkillBadgeIcon = ({
   hex,
   title,
   path,
-}: Omit<SimpleIcon, "slug" | "svg" | "source" | "guidelines" | "license">) => {
+  className,
+}: SkillBadgeIconProps) => {
   const fill = validateCSSColor(hex);
   return (
     <svg
@@ -15,6 +23,7 @@ export const SkillBadgeIcon = ({
       height={24}
       fill={fill}
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <title>{title}</title>
       <path d={path} />
