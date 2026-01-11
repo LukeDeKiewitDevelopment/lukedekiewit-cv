@@ -10,12 +10,18 @@ import { CVSidebar } from "./cv-sidebar";
 import { EncryptedText } from "@/components/ui/encrypted-text";
 import { CVPageSection } from "./cv-page-section";
 import {
+  Briefcase,
   CheckIcon,
+  FolderCodeIcon,
   GlobeIcon,
+  GraduationCap,
   LinkedinIcon,
   MailIcon,
   MapPinIcon,
+  NotebookPenIcon,
   PhoneIcon,
+  UniversityIcon,
+  User2Icon,
 } from "lucide-react";
 import { siGithub } from "simple-icons";
 
@@ -108,26 +114,32 @@ export const CV = ({ className, ...props }: CVProps) => {
               <address className="mt-[2.1166666667mm] not-italic">
                 <ul>
                   <li className="flex items-center justify-between">
-                    <MapPinIcon className="size-[4.2333333333mm] shrink-0" />
+                    <i title="Location">
+                      <MapPinIcon className="size-[4.2333333333mm] shrink-0" />
+                    </i>
                     <span
                       title="Bloemfontein, Free State, South Africa, 9301 🇿🇦"
                       className="text-muted-foreground cursor-help text-[7pt]"
                     >
-                      Bloemfontein, FS
+                      Bloemfontein, Free State <i className="not-italic text-[7.5pt]">🇿🇦</i>
                     </span>
                   </li>
                   <li className="mt-[2.1166666667mm] flex items-center justify-between">
-                    <PhoneIcon className="size-[4.2333333333mm] shrink-0" />
+                    <i title="Phone number">
+                      <PhoneIcon className="size-[4.2333333333mm] shrink-0" />
+                    </i>
                     <a
                       href="tel:+27738782766"
                       rel="noopener noreferrer nofollow"
-                      className="text-muted-foreground hover:text-primary text-[7pt] transition-all duration-200"
+                      className="text-muted-foreground hover:text-primary text-[7pt] transition-all hover:underline"
                     >
                       +27738782766
                     </a>
                   </li>
                   <li className="mt-[2.1166666667mm] flex items-center justify-between">
-                    <MailIcon className="size-[4.2333333333mm] shrink-0" />
+                    <i title="Email">
+                      <MailIcon className="size-[4.2333333333mm] shrink-0" />
+                    </i>
                     <a
                       href="mailto:luke.dekiewit@yahoo.com"
                       rel="noopener noreferrer nofollow"
@@ -154,7 +166,9 @@ export const CV = ({ className, ...props }: CVProps) => {
                     </a>
                   </li>
                   <li className="mt-[2.1166666667mm] flex items-center justify-between">
-                    <LinkedinIcon className="size-[4.2333333333mm] shrink-0" />
+                    <i title="LinkedIn">
+                      <LinkedinIcon className="size-[4.2333333333mm] shrink-0" />
+                    </i>
                     <a
                       href="https://lukedekiewit.co.za/"
                       rel="noopener noreferrer nofollow"
@@ -164,7 +178,9 @@ export const CV = ({ className, ...props }: CVProps) => {
                     </a>
                   </li>
                   <li className="mt-[2.1166666667mm] flex items-center justify-between">
-                    <GlobeIcon className="size-[4.2333333333mm] shrink-0" />
+                    <i title="Website">
+                      <GlobeIcon className="size-[4.2333333333mm] shrink-0" />
+                    </i>
                     <a
                       href="https://lukedekiewit.co.za/"
                       rel="noopener noreferrer nofollow"
@@ -215,7 +231,7 @@ export const CV = ({ className, ...props }: CVProps) => {
             <CVSeparator className="mt-[4.2333333333mm]" />
             <CVPageSection>
               <CVPageSectionTitle className="text-sm">
-                Tech stack
+                Core tech stack
               </CVPageSectionTitle>
               <div className="mt-[2.1166666667mm]">
                 <legend className="flex flex-wrap gap-[1.0583333333mm]">
@@ -290,10 +306,142 @@ export const CV = ({ className, ...props }: CVProps) => {
             ></CVPageHeader>
             <CVSeparator className="mt-[4.2333333333mm]" />
             <CVPageSection className="mt-[4.2333333333mm]">
-              <div className="relative w-full overflow-clip">
-                <h3 className="uppercase">Professional experience</h3>
+              <div>
+                <h3 className="flex items-center gap-2 text-sm uppercase">
+                  <i title="Professional experience">
+                    <Briefcase className="size-[13pt]" />
+                  </i>
+                  <span>Professional experience</span>
+                </h3>
+                <ol className="text-foreground/80 mt-[2.1166666667mm] flex flex-col gap-[2pt] text-[7pt]">
+                  <li>
+                    <div>
+                      <h4 className="uppercase">Junior Developer • Bitcube</h4>
+                      <span className="text-foreground/60">
+                        May 2024 - Present
+                      </span>
+                      <div></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <h4 className="uppercase">
+                        Junior Front-End Developer • SOCO_ED
+                      </h4>
+                      <span className="text-foreground/60">
+                        January 2023 - March 2024
+                      </span>
+                      <div></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <h4 className="uppercase">
+                        Development • Intern Condensation
+                      </h4>
+                      <span className="text-foreground/60">
+                        September 2022 - October 2022
+                      </span>
+                      <div></div>
+                    </div>
+                  </li>
+                </ol>
               </div>
             </CVPageSection>
+            <CVSeparator className="mt-[4.2333333333mm]" />
+            <CVPageSection className="mt-[4.2333333333mm]">
+              <div>
+                <h3 className="text-sm uppercase"></h3>
+                <h3 className="flex items-center gap-2 text-sm uppercase">
+                  <i title="Projects">
+                    <FolderCodeIcon className="size-[13pt]" />
+                  </i>
+                  <span>Projects</span>
+                </h3>
+                <div className="mt-[2.1166666667mm]"></div>
+              </div>
+            </CVPageSection>
+            <CVSeparator className="mt-[4.2333333333mm]" />
+            <CVPageSection className="mt-[4.2333333333mm]">
+              <div>
+                <h3 className="flex items-center gap-2 text-sm uppercase">
+                  <i title="Education">
+                    <GraduationCap className="size-[13pt]" />
+                  </i>
+                  <span>Education</span>
+                </h3>
+                <ol className="text-foreground/80 mt-[2.1166666667mm] flex flex-col gap-[2pt] text-[7pt]">
+                  <li>
+                    <div>
+                      <h4 className="uppercase">
+                        CTU Training Solutions • 2022
+                      </h4>
+                      <a
+                        href="https://allqs.saqa.org.za/showQualification.php?id=48872"
+                        rel="noopener noreferrer nofollow"
+                        className="text-muted-foreground hover:text-primary text-[7pt] hover:underline"
+                      >
+                        National Certificate: IT Systems Development (NQF 6)
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <h4 className="uppercase">
+                        CTU Training Solutions • 2021
+                      </h4>
+                      <a
+                        href="https://regqs.saqa.org.za/viewQualification.php?id=78965"
+                        rel="noopener noreferrer nofollow"
+                        className="text-muted-foreground hover:text-primary text-[7pt] hover:underline"
+                      >
+                        FET Certificate: IT Systems Development (NQF 5)
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <h4 className="uppercase">
+                        CTU Training Solutions • 2020
+                      </h4>
+                      <a
+                        target="_blank"
+                        href="https://regqs.saqa.org.za/viewQualification.php?id=71850"
+                        rel="noopener noreferrer nofollow"
+                        className="text-muted-foreground hover:text-primary text-[7pt] hover:underline"
+                      >
+                        FET Certificate: IT Database Development (NQF 4)
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <h4 className="uppercase">
+                        Grey College Secondary • 2019
+                      </h4>
+                      <p className="text-muted-foreground">
+                        National Senior Certificate
+                      </p>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </CVPageSection>
+            <CVSeparator className="mt-[4.2333333333mm]" />
+            <CVPageSection className="mt-[4.2333333333mm]">
+              <div>
+                <h3 className="flex items-center gap-2 text-sm uppercase">
+                  <i title="References">
+                    <User2Icon className="size-[13pt]" />
+                  </i>
+                  <span>References</span>
+                </h3>
+                <p className="text-muted-foreground mt-[2.1166666667mm] text-[7pt]">
+                  For privacy reasons, references are available upon request.
+                </p>
+              </div>
+            </CVPageSection>
+
             <CVPageContentBackground
               className="opacity-0 grayscale dark:opacity-5"
               src="/images/backgrounds/laptop_code_3.jpg"
