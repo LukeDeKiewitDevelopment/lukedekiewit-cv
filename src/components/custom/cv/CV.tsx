@@ -247,6 +247,23 @@ export const CV = ({ className, ...props }: CVProps) => {
                 </legend>
               </div>
             </CVPageSection>
+               <CVSeparator className="mt-[4.2333333333mm]" />
+            <CVPageSection>
+              <CVPageSectionTitle className="text-sm">
+                Skills
+              </CVPageSectionTitle>
+              <div className="mt-[2.1166666667mm]">
+                <legend className="flex flex-wrap gap-[1.0583333333mm]">
+                  <Badge>HTML</Badge>
+                  <Badge>CSS</Badge>
+                  <Badge>JavaScript</Badge>
+                  <Badge>TypeScript</Badge>
+                  <Badge>React</Badge>
+                  <Badge>Astro</Badge>
+                  <Badge>Shopify</Badge>
+                </legend>
+              </div>
+            </CVPageSection>
           </CVSidebar>
           <CVPageContent className="text-card-foreground">
             <CVPageHeader
