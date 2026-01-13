@@ -275,7 +275,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                   </span>
                   <i className="inline size-0.5 bg-transparent text-lg print:hidden"></i>
                   <EncryptedText
-                    text={"Front-End Developer"}
+                    text={"Front-End Engineer"}
                     className="motion-reduce:hidden"
                     encryptedClassName="text-muted-foreground select-none text-lg"
                     revealedClassName="text-muted-foreground select-text text-lg"
@@ -283,7 +283,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                     flipDelayMs={0}
                   />
                   <h2 className="text-muted-foreground hidden text-lg motion-reduce:block">
-                    Front-End Developer
+                    Front-End Engineer
                   </h2>
                   <i
                     className={clsx(
@@ -319,18 +319,39 @@ export const CV = ({ className, ...props }: CVProps) => {
                   <li>
                     <div>
                       <h4 className="mb-[0.5pt] uppercase">
-                        Junior Developer • Bitcube
+                        Junior Developer • Bitcube • Remote
                       </h4>
                       <span className="text-foreground/60">
                         May 2024 - Present
                       </span>
-                      <div></div>
+                      <div className="mb-[0.5pt]">
+                        <h5 className="uppercase">
+                          Engineering Department • July 2025 - Present
+                        </h5>
+                        <p className="text-muted-foreground text-[7pt] text-balance">
+                          My most ambitious project to date, due for completion
+                          in 2026. Atomwave is a rewrite of shadcn/ui without a
+                          Tailwind dependency, offering additional components,
+                          greater flexibility, and built-in support for multiple
+                          themes.
+                        </p>
+                        <h5 className="uppercase">
+                          Ecommerce Department • May 2024 - July 2025
+                        </h5>
+                        <p className="text-muted-foreground text-[7pt] text-balance">
+                          My most ambitious project to date, due for completion
+                          in 2026. Atomwave is a rewrite of shadcn/ui without a
+                          Tailwind dependency, offering additional components,
+                          greater flexibility, and built-in support for multiple
+                          themes.
+                        </p>
+                      </div>
                     </div>
                   </li>
                   <li className="mt-[1mm]">
                     <div>
                       <h4 className="mb-[0.5pt] uppercase">
-                        Junior Front-End Developer • SOCO_ED
+                        Junior Front-End Developer • SOCO_ED • Remote
                       </h4>
                       <span className="text-foreground/60">
                         January 2023 - March 2024
@@ -341,7 +362,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                   <li className="mt-[1mm]">
                     <div>
                       <h4 className="mb-[0.5pt] uppercase">
-                        Development • Intern Condensation
+                        Development Intern • Condensation • Remote
                       </h4>
                       <span className="text-foreground/60">
                         September 2022 - October 2022
@@ -416,8 +437,8 @@ export const CV = ({ className, ...props }: CVProps) => {
                       <p className="text-muted-foreground text-[7pt] text-balance">
                         An educational platform for high school students in
                         Grades 10-12, supporting the education of over 200,000
-                        learners across South Africa. Built with Next.js,
-                        React, Tailwind, and Strapi.
+                        learners across South Africa. Built with Next.js, React,
+                        Tailwind, and Strapi.
                       </p>
                     </div>
                   </li>
