@@ -73,6 +73,11 @@ import { SiteBackground } from "./site-background";
       pdfDownloadLink="/images/logos/ldk_logo_atomwave_square_512px.png"
       client:load
     />
+    <div
+      class="p-4 w-screen select-none text-xs text-center flex justify-center items bg-destructive text-white text-shadow-sm"
+    >
+      <span>Development Preview (PLEASE DO NOT DISTRIBUTE)</span>
+    </div>
     <slot />
     <Footer client:load />
     <Toaster client:load position="bottom-center" className="print:hidden" />
