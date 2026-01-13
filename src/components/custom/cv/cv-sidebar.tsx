@@ -16,7 +16,7 @@ export const CVSidebar = ({
         {...props}
         data-slot="cv-sidebar"
         className={clsx(
-          "text-sidebar-foreground bg-sidebar border-border relative z-10 h-full w-[75mm] border-r-[0.5291666667mm] p-[4.2333333333mm] shadow-none shadow-black/50 dark:shadow-md",
+          "text-sidebar-foreground bg-sidebar border-border max-w-[75mm] relative z-10 h-full w-[75mm] min-w-[75mm] shrink-0 border-r-[0.5291666667mm] p-[4.2333333333mm] shadow-none shadow-black/50 dark:shadow-md",
           className,
         )}
       >

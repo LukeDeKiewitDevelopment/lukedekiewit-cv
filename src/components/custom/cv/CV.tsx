@@ -12,6 +12,7 @@ import { CVPageSection } from "./cv-page-section";
 import {
   Briefcase,
   CheckIcon,
+  ExternalLinkIcon,
   FolderCodeIcon,
   GlobeIcon,
   GraduationCap,
@@ -95,7 +96,7 @@ export const CV = ({ className, ...props }: CVProps) => {
               <CVPageSectionTitle className="text-sm">
                 Summary
               </CVPageSectionTitle>
-              <p className="text-muted-foreground mt-[2.1166666667mm] block w-full text-[7pt] text-pretty">
+              <p className="text-muted-foreground mt-[2.1166666667mm] block w-full text-[7pt] text-balance">
                 Highly motivated and passionate web developer from Bloemfontein.
                 Eager and willing to learn new things and find my place in the
                 industry, working with technologies that I am passionate about.
@@ -121,7 +122,8 @@ export const CV = ({ className, ...props }: CVProps) => {
                       title="Bloemfontein, Free State, South Africa, 9301 🇿🇦"
                       className="text-muted-foreground cursor-help text-[7pt]"
                     >
-                      Bloemfontein, Free State <i className="not-italic text-[7.5pt]">🇿🇦</i>
+                      Bloemfontein, Free State{" "}
+                      <i className="text-[7.5pt] not-italic">🇿🇦</i>
                     </span>
                   </li>
                   <li className="mt-[2.1166666667mm] flex items-center justify-between">
@@ -316,16 +318,18 @@ export const CV = ({ className, ...props }: CVProps) => {
                 <ol className="text-foreground/80 mt-[2.1166666667mm] flex flex-col gap-[2pt] text-[7pt]">
                   <li>
                     <div>
-                      <h4 className="uppercase">Junior Developer • Bitcube</h4>
+                      <h4 className="mb-[0.5pt] uppercase">
+                        Junior Developer • Bitcube
+                      </h4>
                       <span className="text-foreground/60">
                         May 2024 - Present
                       </span>
                       <div></div>
                     </div>
                   </li>
-                  <li>
+                  <li className="mt-[1mm]">
                     <div>
-                      <h4 className="uppercase">
+                      <h4 className="mb-[0.5pt] uppercase">
                         Junior Front-End Developer • SOCO_ED
                       </h4>
                       <span className="text-foreground/60">
@@ -334,9 +338,9 @@ export const CV = ({ className, ...props }: CVProps) => {
                       <div></div>
                     </div>
                   </li>
-                  <li>
+                  <li className="mt-[1mm]">
                     <div>
-                      <h4 className="uppercase">
+                      <h4 className="mb-[0.5pt] uppercase">
                         Development • Intern Condensation
                       </h4>
                       <span className="text-foreground/60">
@@ -356,9 +360,68 @@ export const CV = ({ className, ...props }: CVProps) => {
                   <i title="Projects">
                     <FolderCodeIcon className="size-[13pt]" />
                   </i>
-                  <span>Projects</span>
+                  <span>Public Projects</span>
                 </h3>
-                <div className="mt-[2.1166666667mm]"></div>
+                <ul className="text-foreground/80 mt-[2.1166666667mm] flex flex-col gap-[2pt] text-[7pt]">
+                  <li>
+                    <div>
+                      <h4 className="mb-[0.5pt] flex items-center gap-2 uppercase">
+                        <span>Atomwave Component Library • 2025/26</span>
+                      </h4>
+                      <p className="text-muted-foreground text-[7pt] text-balance">
+                        My most ambitious project to date, due for completion in
+                        2026. Atomwave is a rewrite of shadcn/ui without a
+                        Tailwind dependency, offering additional components,
+                        greater flexibility, and built-in support for multiple
+                        themes.
+                      </p>
+                    </div>
+                  </li>
+                  <li className="mt-[1mm]">
+                    <div>
+                      <h4 className="mb-[0.5pt] flex items-center gap-2 uppercase">
+                        <span>Marlin Brokers • 2024</span>
+                        <a
+                          target="_blank"
+                          href="https://marlinbrokers.co.za/"
+                          rel="noopener noreferrer nofollow"
+                          className="text-muted-foreground hover:text-primary text-[7pt]"
+                          title="Marlin Brokers Website Link"
+                        >
+                          <ExternalLinkIcon className="size-[10pt]" />
+                        </a>
+                      </h4>
+                      <p className="text-muted-foreground text-[7pt] text-balance">
+                        A complete rebuild of the Marlin Brokers website from
+                        scratch, transforming an outdated and slow WordPress
+                        site into a clean, fast, SEO-optimised website built
+                        with Astro, React, and Tailwind.
+                      </p>
+                    </div>
+                  </li>
+                  <li className="mt-[1mm]">
+                    <div>
+                      <h4 className="mb-[0.5pt] flex items-center gap-2 uppercase">
+                        <span>Topic LMS • 2023</span>
+                        <a
+                          target="_blank"
+                          href="https://topic.co.za/"
+                          rel="noopener noreferrer nofollow"
+                          className="text-muted-foreground hover:text-primary text-[7pt]"
+                          title="Topic LMS Link"
+                        >
+                          <ExternalLinkIcon className="size-[10pt]" />
+                        </a>
+                      </h4>
+                      <p className="text-muted-foreground text-[7pt] text-balance">
+                        An educational platform for high school students in
+                        Grades 10-12, supporting the education of over 200,000
+                        learners across South Africa. Built with Next.js,
+                        React, Tailwind, and Strapi.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </CVPageSection>
             <CVSeparator className="mt-[4.2333333333mm]" />
@@ -373,10 +436,11 @@ export const CV = ({ className, ...props }: CVProps) => {
                 <ol className="text-foreground/80 mt-[2.1166666667mm] flex flex-col gap-[2pt] text-[7pt]">
                   <li>
                     <div>
-                      <h4 className="uppercase">
+                      <h4 className="mb-[0.5pt] uppercase">
                         CTU Training Solutions • 2022
                       </h4>
                       <a
+                        target="_blank"
                         href="https://allqs.saqa.org.za/showQualification.php?id=48872"
                         rel="noopener noreferrer nofollow"
                         className="text-muted-foreground hover:text-primary text-[7pt] hover:underline"
@@ -385,12 +449,13 @@ export const CV = ({ className, ...props }: CVProps) => {
                       </a>
                     </div>
                   </li>
-                  <li>
+                  <li className="mt-[1mm]">
                     <div>
-                      <h4 className="uppercase">
+                      <h4 className="mb-[0.5pt] uppercase">
                         CTU Training Solutions • 2021
                       </h4>
                       <a
+                        target="_blank"
                         href="https://regqs.saqa.org.za/viewQualification.php?id=78965"
                         rel="noopener noreferrer nofollow"
                         className="text-muted-foreground hover:text-primary text-[7pt] hover:underline"
@@ -399,9 +464,9 @@ export const CV = ({ className, ...props }: CVProps) => {
                       </a>
                     </div>
                   </li>
-                  <li>
+                  <li className="mt-[1mm]">
                     <div>
-                      <h4 className="uppercase">
+                      <h4 className="mb-[0.5pt] uppercase">
                         CTU Training Solutions • 2020
                       </h4>
                       <a
@@ -414,9 +479,9 @@ export const CV = ({ className, ...props }: CVProps) => {
                       </a>
                     </div>
                   </li>
-                  <li>
+                  <li className="mt-[1mm]">
                     <div>
-                      <h4 className="uppercase">
+                      <h4 className="mb-[0.5pt] uppercase">
                         Grey College Secondary • 2019
                       </h4>
                       <p className="text-muted-foreground">
@@ -436,7 +501,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                   </i>
                   <span>References</span>
                 </h3>
-                <p className="text-muted-foreground mt-[2.1166666667mm] text-[7pt]">
+                <p className="text-muted-foreground mt-[2.1166666667mm] text-[7pt] text-balance">
                   For privacy reasons, references are available upon request.
                 </p>
               </div>
