@@ -16,13 +16,12 @@ type SkillBadgeIcon = Omit<
   "slug" | "svg" | "source" | "guidelines" | "license"
 >;
 
-
 export const SkillBadge = ({ skill }: SkillBadgeProps) => {
   const badge = skillBadgeIconMapper[skill] || defaultSkillBadge;
 
   return (
     <Badge
-      className="text-xs shadow-2xs select-none [&_svg]:size-4!"
+      className="text-[7pt] shadow-2xs select-none [&_svg]:size-[7pt]!"
       style={{
         backgroundColor: validateCSSColor(badge.colors.background),
         color: validateCSSColor(badge.colors.foreground),

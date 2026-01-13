@@ -1,11 +1,15 @@
 import {
   siAngular,
+  siCss,
   siDotnet,
   siFigma,
   siGit,
+  siHtml5,
+  siJavascript,
   siMysql,
   siReact,
   siShopify,
+  siTypescript,
   siWoocommerce,
 } from "simple-icons";
 import type { SimpleIcon } from "simple-icons";
@@ -65,36 +69,11 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
       background: "#0D9488",
     },
   },
-  "Blog Writing": {
-    colors: {
-      foreground: "#fff",
-      background: "#6366F1",
-    },
-  },
-  "Manual Testing": {
-    colors: {
-      foreground: "#fff",
-      background: "#D97706",
-    },
-  },
-  "Test Case Writing": {
-    colors: {
-      foreground: "#fff",
-      background: "#475569",
-    },
-  },
   Shopify: {
     icon: siShopify,
     colors: {
       foreground: "#fff",
       background: siShopify.hex,
-    },
-  },
-  WooCommerce: {
-    icon: siWoocommerce,
-    colors: {
-      foreground: "#fff",
-      background: siWoocommerce.hex,
     },
   },
   React: {
@@ -104,18 +83,39 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
       background: siReact.hex,
     },
   },
-  Figma: {
-    icon: siFigma,
-    colors: {
-      foreground: "#fff",
-      background: siFigma.hex,
-    },
-  },
   Angular: {
     icon: siAngular,
     colors: {
       foreground: "#fff",
       background: siAngular.hex,
+    },
+  },
+  HTML: {
+    icon: siHtml5,
+    colors: {
+      foreground: "#fff",
+      background: siHtml5.hex,
+    },
+  },
+  CSS: {
+    icon: siCss,
+    colors: {
+      foreground: "#fff",
+      background: siCss.hex,
+    },
+  },
+  JavaScript: {
+    icon: siJavascript,
+    colors: {
+      foreground: "#000",
+      background: siJavascript.hex,
+    },
+  },
+  TypeScript: {
+    icon: siTypescript,
+    colors: {
+      foreground: "#fff",
+      background: siHtml5.hex,
     },
   },
 };
