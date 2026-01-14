@@ -54,11 +54,11 @@ export const CV = ({ className, ...props }: CVProps) => {
         data-slot="cv-interactive"
         data-cv-type="interactive"
         className={clsx(
-          "relative z-1 mx-auto flex break-after-page gap-4 p-4 md:p-6 lg:p-8 print:gap-0 print:p-0 print:[data-cv-type='interactive']:hidden!",
+          "relative z-1 flex max-w-screen break-after-page gap-4 overflow-auto p-4 md:p-6 lg:p-8 print:gap-0 print:p-0 print:[data-cv-type='interactive']:hidden!",
           className,
         )}
       >
-        <CVPage>
+        <CVPage className="mx-auto">
           <CVSidebar>
             <CVPageSection className="flex items-center justify-center">
               <CVAvatar

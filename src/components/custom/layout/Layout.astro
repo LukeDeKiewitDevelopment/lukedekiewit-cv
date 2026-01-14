@@ -9,7 +9,7 @@ import { SiteBackground } from './site-background'
 <!doctype html>
 <html
 	lang='en'
-	class='dark antialiased min-w-screen w-fit'
+	class='dark antialiased w-screen h-screen overflow-hidden'
 >
 	<head>
 		<meta charset='UTF-8' />
@@ -77,7 +77,7 @@ import { SiteBackground } from './site-background'
 			}
 		</script>
 	</head>
-	<body class='w-full'>
+	<body class='size-full overflow-x-hidden'>
 		<Header
 			lightModeLogo={{
 				src: '/images/logos/ldk_logo_black_tilted_724px.png',
@@ -100,11 +100,7 @@ import { SiteBackground } from './site-background'
 			pdfDownloadLink='/images/logos/ldk_logo_atomwave_square_512px.png'
 			client:load
 		/>
-		<div
-			class='p-4 w-screen select-none text-xs text-center flex justify-center items bg-destructive text-white text-shadow-sm'
-		>
-			<span>Development Preview (PLEASE DO NOT DISTRIBUTE)</span>
-		</div>
+
 		<slot />
 		<Footer client:load />
 		<Toaster
