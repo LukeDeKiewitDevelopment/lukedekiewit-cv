@@ -13,7 +13,7 @@ export const Footer = ({ className, ...props }: FooterProps) => {
       {...props}
       data-slot="footer"
       className={clsx(
-        "flex items-center justify-center p-4 md:p-6 lg:p-8 print:hidden",
+        "p-4 md:p-6 lg:p-8 print:hidden",
         className,
       )}
     >

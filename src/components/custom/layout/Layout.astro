@@ -1,92 +1,123 @@
 ---
-import "../../../styles/global.css";
-import { Toaster } from "@/components/ui/sonner";
-import { Header } from "./header";
-import { Footer } from "./footer";
-import { SiteBackground } from "./site-background";
+import '../../../styles/global.css'
+import { Toaster } from '@/components/ui/sonner'
+import { Header } from './header'
+import { Footer } from './footer'
+import { SiteBackground } from './site-background'
 ---
 
 <!doctype html>
-<html lang="en" class="dark antialiased">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Luke De Kiewit CV</title>
-    <meta
-      name="description"
-      content="My interactive CV web page - built with Astro, React, TypeScript, Tailwind CSS and shadcn/ui."
-    />
-    <meta name="lang" content="en" />
-    <meta name="author" content="Luke De Kiewit" />
-    <meta name="robots" content="noindex, nofollow" />
-    <meta name="googlebot" content="noindex, nofollow" />
-    <meta name="bingbot" content="noindex" />
-    <link rel="canonical" href="https://example.com/" />
-    <link rel="icon" href="/images/favicon.ico" />
-    <script is:inline>
-      const getThemePreference = () => {
-        if (
-          typeof localStorage !== "undefined" &&
-          localStorage.getItem("theme")
-        ) {
-          return localStorage.getItem("theme");
-        }
-        return window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light";
-      };
-      const isDark = getThemePreference() === "dark";
-      document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+<html
+	lang='en'
+	class='dark antialiased min-w-screen w-fit'
+>
+	<head>
+		<meta charset='UTF-8' />
+		<meta
+			name='viewport'
+			content='width=device-width'
+		/>
+		<title>Luke De Kiewit CV</title>
+		<meta
+			name='description'
+			content='My interactive CV web page - built with Astro, React, TypeScript, Tailwind CSS and shadcn/ui.'
+		/>
+		<meta
+			name='lang'
+			content='en'
+		/>
+		<meta
+			name='author'
+			content='Luke De Kiewit'
+		/>
+		<meta
+			name='robots'
+			content='noindex, nofollow'
+		/>
+		<meta
+			name='googlebot'
+			content='noindex, nofollow'
+		/>
+		<meta
+			name='bingbot'
+			content='noindex'
+		/>
+		<link
+			rel='canonical'
+			href='https://example.com/'
+		/>
+		<link
+			rel='icon'
+			href='/images/favicon.ico'
+		/>
+		<script is:inline>
+			const getThemePreference = () => {
+				if (
+					typeof localStorage !== 'undefined' &&
+					localStorage.getItem('theme')
+				) {
+					return localStorage.getItem('theme')
+				}
+				return window.matchMedia('(prefers-color-scheme: dark)').matches
+					? 'dark'
+					: 'light'
+			}
+			const isDark = getThemePreference() === 'dark'
+			document.documentElement.classList[isDark ? 'add' : 'remove']('dark')
 
-      if (typeof localStorage !== "undefined") {
-        const observer = new MutationObserver(() => {
-          const isDark = document.documentElement.classList.contains("dark");
-          localStorage.setItem("theme", isDark ? "dark" : "light");
-        });
-        observer.observe(document.documentElement, {
-          attributes: true,
-          attributeFilter: ["class"],
-        });
-      }
-    </script>
-  </head>
-  <body>
-    <Header
-      lightModeLogo={{
-        src: "/images/logos/ldk_logo_black_tilted_724px.png",
-        alt: "Luke De Kiewit logo",
-        height: 40,
-        width: 40,
-        loading: "eager",
-        title: "Luke De Kiewit Logo",
-      }}
-      darkModeLogo={{
-        src: "/images/logos/ldk_logo_atomwave_tilted_724px.png",
-        alt: "Luke De Kiewit logo",
-        height: 40,
-        width: 40,
-        loading: "eager",
-        title: "Luke De Kiewit Logo",
-      }}
-      lastUpdated="10/01/2026"
-      shareLink="https://cv.lukedekiewit.co.za/"
-      pdfDownloadLink="/images/logos/ldk_logo_atomwave_square_512px.png"
-      client:load
-    />
-    <div
-      class="p-4 w-screen select-none text-xs text-center flex justify-center items bg-destructive text-white text-shadow-sm"
-    >
-      <span>Development Preview (PLEASE DO NOT DISTRIBUTE)</span>
-    </div>
-    <slot />
-    <Footer client:load />
-    <Toaster client:load position="bottom-center" className="print:hidden" />
-    <SiteBackground
-      client:load
-      backgroundImage={{
-        className: "grayscale opacity-10 hidden dark:block",
-        src: "/images/backgrounds/code_3.jpg",
-      }}
-    />
-  </body>
+			if (typeof localStorage !== 'undefined') {
+				const observer = new MutationObserver(() => {
+					const isDark = document.documentElement.classList.contains('dark')
+					localStorage.setItem('theme', isDark ? 'dark' : 'light')
+				})
+				observer.observe(document.documentElement, {
+					attributes: true,
+					attributeFilter: ['class']
+				})
+			}
+		</script>
+	</head>
+	<body class='w-full'>
+		<Header
+			lightModeLogo={{
+				src: '/images/logos/ldk_logo_black_tilted_724px.png',
+				alt: 'Luke De Kiewit logo',
+				height: 40,
+				width: 40,
+				loading: 'eager',
+				title: 'Luke De Kiewit Logo'
+			}}
+			darkModeLogo={{
+				src: '/images/logos/ldk_logo_atomwave_tilted_724px.png',
+				alt: 'Luke De Kiewit logo',
+				height: 40,
+				width: 40,
+				loading: 'eager',
+				title: 'Luke De Kiewit Logo'
+			}}
+			lastUpdated='10/01/2026'
+			shareLink='https://cv.lukedekiewit.co.za/'
+			pdfDownloadLink='/images/logos/ldk_logo_atomwave_square_512px.png'
+			client:load
+		/>
+		<div
+			class='p-4 w-screen select-none text-xs text-center flex justify-center items bg-destructive text-white text-shadow-sm'
+		>
+			<span>Development Preview (PLEASE DO NOT DISTRIBUTE)</span>
+		</div>
+		<slot />
+		<Footer client:load />
+		<Toaster
+			client:load
+			position='bottom-center'
+			className='print:hidden'
+		/>
+		<SiteBackground
+			client:load
+			backgroundImage={{
+				className: 'grayscale opacity-10 hidden dark:block',
+				src: '/images/backgrounds/code_3.jpg'
+			}}
+		/>
+	</body>
 </html>

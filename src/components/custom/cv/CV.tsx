@@ -54,7 +54,7 @@ export const CV = ({ className, ...props }: CVProps) => {
         data-slot="cv-interactive"
         data-cv-type="interactive"
         className={clsx(
-          "relative z-1 flex flex-[1_0_auto] break-after-page justify-center gap-4 p-4 md:p-6 lg:p-8 print:gap-0 print:p-0 print:[data-cv-type='interactive']:hidden!",
+          "relative z-1 mx-auto flex break-after-page gap-4 p-4 md:p-6 lg:p-8 print:gap-0 print:p-0 print:[data-cv-type='interactive']:hidden!",
           className,
         )}
       >
