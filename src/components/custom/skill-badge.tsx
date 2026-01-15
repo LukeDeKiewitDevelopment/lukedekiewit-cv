@@ -1,11 +1,40 @@
 import { Badge } from "@/components/ui/badge";
 import type { SimpleIcon } from "simple-icons";
-import { SkillBadgeIcon } from "./skill-badge-icon";
 import {
   defaultSkillBadge,
   skillBadgeIconMapper,
 } from "../../lib/skills-mapper";
 import { validateCSSColor } from "@/lib/validate-css-color";
+
+export type SkillBadgeIconProps = Omit<
+  SimpleIcon,
+  "slug" | "svg" | "source" | "guidelines" | "license"
+> & {
+  className?: string;
+};
+
+export const SkillBadgeIcon = ({
+  hex,
+  title,
+  path,
+  className,
+}: SkillBadgeIconProps) => {
+  const fill = validateCSSColor(hex);
+  return (
+    <svg
+      role="img"
+      viewBox="0 0 24 24"
+      width={24}
+      height={24}
+      fill={fill}
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <title>{title}</title>
+      <path d={path} />
+    </svg>
+  );
+};
 
 export type SkillBadgeProps = {
   skill: string;
@@ -13,7 +42,7 @@ export type SkillBadgeProps = {
 
 type SkillBadgeIcon = Omit<
   SimpleIcon,
-  "slug" | "svg" | "source" | "guidelines" | "license"
+  "slug" | "source" | "guidelines" | "license"
 >;
 
 export const SkillBadge = ({ skill }: SkillBadgeProps) => {
@@ -21,7 +50,8 @@ export const SkillBadge = ({ skill }: SkillBadgeProps) => {
 
   return (
     <Badge
-      className="shadow-2xs select-none [&_svg]:size-[7pt]!"
+      className="text-7pt [&_svg]:size-4pt! px-[1.25mm] py-[0.75mm] shadow-sm select-none"
+      title={skill}
       style={{
         backgroundColor: validateCSSColor(badge.colors.background),
         color: validateCSSColor(badge.colors.foreground),

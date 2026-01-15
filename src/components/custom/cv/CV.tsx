@@ -23,13 +23,10 @@ import {
   User2Icon,
 } from "lucide-react";
 import { siGithub } from "simple-icons";
-
-import { Badge } from "@/components/ui/badge";
 import clsx from "clsx";
 import { CVPageSectionTitle } from "./cv-page-section-title";
 import { CVPageContentBackground } from "./cv-page-content-background";
-import { SkillBadgeIcon } from "../skill-badge-icon";
-import { SkillBadge } from "../skill-badge";
+import { SkillBadge, SkillBadgeIcon } from "../skill-badge";
 
 export type CVProps = ComponentPropsWithoutRef<"main">;
 
@@ -58,11 +55,11 @@ export const CV = ({ className, ...props }: CVProps) => {
           className,
         )}
       >
-        <CVPage className="mx-auto">
-          <CVSidebar>
+        <CVPage className="mx-auto print:m-0!">
+          <CVSidebar className="relative">
             <CVPageSection className="flex items-center justify-center">
               <CVAvatar
-                className="bg-primary hidden-in-darkmode border-2 border-transparent shadow-sm shadow-black/20 select-none"
+                className="bg-primary hidden-in-darkmode border-2 border-transparent shadow-md shadow-black/20 select-none"
                 title="Luke De Kiewit profile picture"
               >
                 <CVAvatarImage
@@ -90,9 +87,9 @@ export const CV = ({ className, ...props }: CVProps) => {
                 <CVAvatarFallback />
               </CVAvatar>
             </CVPageSection>
-            <CVSeparator className="my-[4mm]" />
+              <CVSeparator className="my-[2.5mm]" />
             <CVPageSection>
-              <CVPageSectionTitle className="mb-[2mm]">
+              <CVPageSectionTitle id="summary" className="mb-[2mm]">
                 Summary
               </CVPageSectionTitle>
               <p className="text-8pt text-foreground/70 block w-full max-w-prose text-balance">
@@ -104,14 +101,14 @@ export const CV = ({ className, ...props }: CVProps) => {
                 exceptional user experience.
               </p>
             </CVPageSection>
-            <CVSeparator className="my-[2mm]" />
+              <CVSeparator className="my-[2.5mm]" />
             <CVPageSection>
-              <CVPageSectionTitle className="mb-[2mm]">
+              <CVPageSectionTitle id="contact-information" className="mb-[2mm]">
                 Contact information
               </CVPageSectionTitle>
               <address className="text-8pt not-italic">
-                <ul className="flex flex-col justify-center gap-[1.5mm]">
-                  <li className="flex items-center justify-between">
+                <ul className="flex flex-col justify-center">
+                  <li className="mb-[1mm] flex items-center justify-between">
                     <i title="Location">
                       <MapPinIcon className="text-foreground/90 size-[4mm] shrink-0" />
                     </i>
@@ -122,7 +119,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                       Bloemfontein, Free State <i className="not-italic">🇿🇦</i>
                     </span>
                   </li>
-                  <li className="flex items-center justify-between">
+                  <li className="mb-[1mm] flex items-center justify-between">
                     <i title="Phone number">
                       <PhoneIcon className="text-foreground/90 size-[4mm] shrink-0" />
                     </i>
@@ -134,7 +131,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                       +27738782766
                     </a>
                   </li>
-                  <li className="flex items-center justify-between">
+                  <li className="mb-[1mm] flex items-center justify-between">
                     <i title="Email">
                       <MailIcon className="text-foreground/90 size-[4mm] shrink-0" />
                     </i>
@@ -147,7 +144,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                       luke.dekiewit@yahoo.com
                     </a>
                   </li>
-                  <li className="flex items-center justify-between">
+                  <li className="mb-[1mm] flex items-center justify-between">
                     <SkillBadgeIcon
                       title="GitHub"
                       hex="color-mix(in oklab, var(--foreground) 90%, transparent)"
@@ -163,7 +160,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                       @lukedekiewit
                     </a>
                   </li>
-                  <li className="flex items-center justify-between">
+                  <li className="mb-[1mm] flex items-center justify-between">
                     <i title="LinkedIn">
                       <LinkedinIcon className="text-foreground/90 size-[4mm] shrink-0" />
                     </i>
@@ -190,36 +187,39 @@ export const CV = ({ className, ...props }: CVProps) => {
                 </ul>
               </address>
             </CVPageSection>
-            <CVSeparator className="my-[2mm]" />
+              <CVSeparator className="my-[2.5mm]" />
             <CVPageSection>
-              <CVPageSectionTitle className="mb-[2mm]">
+              <CVPageSectionTitle
+                id="personal-information"
+                className="mb-[2mm]"
+              >
                 Personal information
               </CVPageSectionTitle>
               <div className="text-8pt">
-                <ul className="flex flex-col justify-center gap-[1.5mm]">
-                  <li className="flex items-center justify-between">
+                <ul>
+                  <li className="mb-[1mm] flex items-center justify-between">
                     <span className="text-foreground/90">Age</span>
                     <span className="text-foreground/70 text-right">25</span>
                   </li>
-                  <li className="flex items-center justify-between">
+                  <li className="mb-[1mm] flex items-center justify-between">
                     <span className="text-foreground/90">Languages</span>
                     <span className="text-foreground/70 text-right">
                       English, Afrikaans
                     </span>
                   </li>
-                  <li className="flex items-center justify-between">
+                  <li className="mb-[1mm] flex items-center justify-between">
                     <span className="text-foreground/90">Driving License</span>
                     <span className="text-foreground/70 text-right">
                       Code B
                     </span>
                   </li>
-                  <li className="flex items-center justify-between">
+                  <li className="mb-[1mm] flex items-center justify-between">
                     <span className="text-foreground/90">Own transport</span>
                     <i title="Yes">
                       <CheckIcon className="text-foreground/70 size-[4mm] shrink-0" />
                     </i>
                   </li>
-                  <li className="flex items-center justify-between">
+                  <li className="mb-[1mm] flex items-center justify-between">
                     <span className="text-foreground/90">
                       Willing to relocate
                     </span>
@@ -238,19 +238,34 @@ export const CV = ({ className, ...props }: CVProps) => {
                 </ul>
               </div>
             </CVPageSection>
-            <CVSeparator className="my-[2mm]" />
+              <CVSeparator className="my-[2.5mm]" />
             <CVPageSection>
-              <CVPageSectionTitle className="mb-[2mm]">
+              <CVPageSectionTitle id="tech-stack" className="mb-[2mm]">
                 Tech stack
               </CVPageSectionTitle>
-              <div>
-                <legend className="flex flex-wrap gap-[1mm]">
-                  <SkillBadge skill="HTML" />
-                </legend>
-              </div>
+              <legend className="flex flex-wrap gap-[1mm]">
+                <SkillBadge skill="HTML" />
+                <SkillBadge skill="CSS" />
+                <SkillBadge skill="JavaScript" />
+                <SkillBadge skill="TypeScript" />
+                <SkillBadge skill="React" />
+                <SkillBadge skill="Next.js" />
+                <SkillBadge skill="Astro" />
+                <SkillBadge skill="Preact" />
+                <SkillBadge skill="shadcn/ui" />
+                <SkillBadge skill="Tailwind CSS" />
+                <SkillBadge skill="Sass" />
+                <SkillBadge skill="Node.js" />
+                <SkillBadge skill="Shopify" />
+                <SkillBadge skill="Shopify Liquid" />
+                <SkillBadge skill="Prismic" />
+                <SkillBadge skill="Wordpress" />
+                <SkillBadge skill="Git" />
+                <SkillBadge skill="GitHub" />
+              </legend>
             </CVPageSection>
-            <CVSeparator className="my-[2mm]" />
-            <CVPageSection>
+            {/*   <CVSeparator className="my-[2.5mm]" /> */}
+            {/* <CVPageSection>
               <CVPageSectionTitle className="mb-[2mm]">
                 Skills
               </CVPageSectionTitle>
@@ -265,7 +280,19 @@ export const CV = ({ className, ...props }: CVProps) => {
                   <Badge>Shopify</Badge>
                 </legend>
               </div>
-            </CVPageSection>
+            </CVPageSection> */}
+            <div className="text-7pt absolute bottom-0 left-0 z-10 hidden w-full items-center justify-center pb-[4mm] pl-[4mm] text-center print:flex">
+              <a
+                target="_blank"
+                href="https://cv.lukedekiewit.co.za/"
+                rel="noopener noreferrer nofollow"
+                className="hover:text-primary text-foreground/40 flex w-full items-center justify-center gap-[1mm] text-center hover:underline"
+                title="Web version link"
+              >
+                <span>Web Version</span>{" "}
+                <ExternalLinkIcon className="size-[2.75mm]" />
+              </a>
+            </div>
           </CVSidebar>
           <CVPageContent>
             <CVPageHeader
@@ -324,16 +351,20 @@ export const CV = ({ className, ...props }: CVProps) => {
                 </div>
               }
             ></CVPageHeader>
-            <CVSeparator className="my-[2mm]" />
+              <CVSeparator className="my-[2.5mm]" />
             <CVPageSection>
-              <CVPageSectionTitle className="mb-[2mm] flex items-center gap-[1.5mm]">
-                <Briefcase className="size-[5mm] shrink-0" />
+              <CVPageSectionTitle
+                id="professional-experience"
+                className="mb-[2mm] flex items-center gap-[1.5mm]"
+              >
+                <Briefcase className="size-[4.5mm] shrink-0" />
                 <span>Professional experience</span>
               </CVPageSectionTitle>
-              <ol className="text-8pt flex flex-col gap-[1.5mm]">
-                <li>
+              <ol className="text-8pt">
+                <li className="mb-[2mm]">
                   <div>
-                    <h4 className="text-foreground/90">
+                    <h4 className="text-foreground/90 mb-[1mm]">
+                      {"> "}
                       <span className="uppercase">
                         {"Junior Developer • "}
                         <a
@@ -349,7 +380,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                       </span>
                     </h4>
                     <div className="text-foreground/70">
-                      <p className="max-w-prose text-balance">
+                      <p className="mb-[1mm] max-w-prose text-balance">
                         I began my career at Bitcube in the Ecommerce department
                         in May 2024, specialising in Shopify theme and
                         storefront development. Focusing on responsive design,
@@ -360,7 +391,6 @@ export const CV = ({ className, ...props }: CVProps) => {
                         and contemporary fashion clients across the UK, EU, and
                         US.
                       </p>
-                      <br />
                       <p className="max-w-prose text-balance">
                         I transferred to the Engineering department in July
                         2025, moving from Ecommerce into more technical
@@ -373,9 +403,10 @@ export const CV = ({ className, ...props }: CVProps) => {
                     </div>
                   </div>
                 </li>
-                <li>
+                <li className="mb-[2mm]">
                   <div>
-                    <h4 className="text-foreground/90 uppercase">
+                    <h4 className="text-foreground/90 mb-[1mm] uppercase">
+                      {"> "}
                       <span>
                         {"Junior Front-End Developer • "}
                         <a
@@ -404,7 +435,8 @@ export const CV = ({ className, ...props }: CVProps) => {
                 </li>
                 <li>
                   <div>
-                    <h4 className="text-foreground/90 uppercase">
+                    <h4 className="text-foreground/90 mb-[1mm] uppercase">
+                      {"> "}
                       <span>
                         {"Development Intern • "}
                         <a
@@ -430,17 +462,32 @@ export const CV = ({ className, ...props }: CVProps) => {
                 </li>
               </ol>
             </CVPageSection>
-            <CVSeparator className="my-[2mm]" />
+              <CVSeparator className="my-[2.5mm]" />
             <CVPageSection>
-              <CVPageSectionTitle className="mb-[2mm] flex items-center gap-[1.5mm]">
-                <FolderCodeIcon className="size-[5mm] shrink-0" />
+              <CVPageSectionTitle
+                id="public-projects"
+                className="mb-[2mm] flex items-center gap-[1.5mm]"
+              >
+                <FolderCodeIcon className="size-[4.5mm] shrink-0" />
                 <span>Public Projects</span>
               </CVPageSectionTitle>
-              <ul className="text-8pt text-foreground/90">
-                <li>
+              <ul className="text-8pt">
+                <li className="mb-[1mm]">
                   <div>
-                    <h4 className="text-foreground/80 flex items-center uppercase">
-                      <span>Atomwave Component Library • 2025/26</span>
+                    <h4 className="text-foreground/90 flex items-center uppercase">
+                      <span>
+                        {"> "}
+                        <a
+                          target="_blank"
+                          href="https://atomwave.lukedekiewit.co.za/"
+                          rel="noopener noreferrer nofollow"
+                          className="hover:text-primary hover:underline"
+                          title="Atomwave website link"
+                        >
+                          Atomwave Component Library
+                        </a>{" "}
+                        • 2025/26
+                      </span>
                     </h4>
                     <p className="text-foreground/70 max-w-prose text-balance">
                       My most ambitious project to date, due for completion in
@@ -451,10 +498,11 @@ export const CV = ({ className, ...props }: CVProps) => {
                     </p>
                   </div>
                 </li>
-                <li>
+                <li className="mb-[1mm]">
                   <div>
-                    <h4 className="text-foreground/80 flex items-center uppercase">
+                    <h4 className="text-foreground/90 flex items-center uppercase">
                       <span>
+                        {"> "}
                         <a
                           target="_blank"
                           href="https://marlinbrokers.co.za/"
@@ -477,8 +525,9 @@ export const CV = ({ className, ...props }: CVProps) => {
                 </li>
                 <li>
                   <div>
-                    <h4 className="flex items-center uppercase">
+                    <h4 className="text-foreground/90 flex items-center uppercase">
                       <span>
+                        {"> "}
                         <a
                           target="_blank"
                           href="https://topic.co.za/"
@@ -501,14 +550,17 @@ export const CV = ({ className, ...props }: CVProps) => {
                 </li>
               </ul>
             </CVPageSection>
-            <CVSeparator className="my-[2mm]" />
+              <CVSeparator className="my-[2.5mm]" />
             <CVPageSection>
-              <CVPageSectionTitle className="mb-[2mm] flex items-center gap-[1.5mm]">
-                <GraduationCap className="size-[5mm] shrink-0" />
+              <CVPageSectionTitle
+                id="education"
+                className="mb-[2mm] flex items-center gap-[1.5mm]"
+              >
+                <GraduationCap className="size-[4.5mm] shrink-0" />
                 <span>Education</span>
               </CVPageSectionTitle>
-              <ol className="text-8pt flex flex-col">
-                <li>
+              <ol className="text-8pt">
+                <li className="mb-[1mm]">
                   <div>
                     <h4 className="text-foreground/90 uppercase">
                       CTU Training Solutions • 2022
@@ -523,7 +575,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                     </a>
                   </div>
                 </li>
-                <li>
+                <li className="mb-[1mm]">
                   <div>
                     <h4 className="text-foreground/90 uppercase">
                       CTU Training Solutions • 2021
@@ -538,7 +590,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                     </a>
                   </div>
                 </li>
-                <li>
+                <li className="mb-[1mm]">
                   <div>
                     <h4 className="text-foreground/90 uppercase">
                       CTU Training Solutions • 2020
@@ -553,7 +605,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                     </a>
                   </div>
                 </li>
-                <li>
+                <li className="mb-[1mm]">
                   <div>
                     <h4 className="text-foreground/90 uppercase">
                       Grey College Secondary • 2019
@@ -565,14 +617,25 @@ export const CV = ({ className, ...props }: CVProps) => {
                 </li>
               </ol>
             </CVPageSection>
-            <CVSeparator className="my-[2mm]" />
+              <CVSeparator className="my-[2.5mm]" />
             <CVPageSection>
-              <CVPageSectionTitle className="mb-[2mm] flex items-center gap-[1.5mm]">
-                <User2Icon className="size-[5mm] shrink-0" />
+              <CVPageSectionTitle
+                id="references"
+                className="mb-[2mm] flex items-center gap-[1.5mm]"
+              >
+                <User2Icon className="size-[4.5mm] shrink-0" />
                 <span>References</span>
               </CVPageSectionTitle>
               <p className="text-8pt text-foreground/70 max-w-prose text-balance">
-                For privacy reasons, references are available upon request.
+                <span>For privacy reasons, references are available</span>{" "}
+                <a
+                  href="#contact-information"
+                  rel="noopener noreferrer nofollow"
+                  className="hover:text-primary text-foreground/70 text-right underline transition-all hover:underline"
+                >
+                  upon request
+                </a>
+                .
               </p>
             </CVPageSection>
 

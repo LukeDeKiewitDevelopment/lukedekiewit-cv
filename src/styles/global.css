@@ -213,6 +213,11 @@
   color: var(--primary-foreground);
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 html.dark .hidden-in-darkmode,
 html:not(.dark) .hidden-in-lightmode {
   display: none !important;

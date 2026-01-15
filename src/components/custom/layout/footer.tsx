@@ -12,9 +12,12 @@ export const Footer = ({ className, ...props }: FooterProps) => {
     <footer
       {...props}
       data-slot="footer"
-      className={clsx("p-4 md:p-6 lg:p-8 print:hidden!", className)}
+      className={clsx(
+        "flex items-center justify-center p-4 text-center md:p-6 lg:p-8 print:hidden!",
+        className,
+      )}
     >
-      <span className="text-muted-foreground w-fit text-center align-middle text-[7pt]">
+      <span className="text-muted-foreground text-7pt w-fit text-center align-middle">
         <i className="not-italic">&copy;</i>&nbsp;
         <time dateTime={String(currentYear)}>{currentYear}</time>&nbsp;
         {`Luke De Kiewit. Built using `}

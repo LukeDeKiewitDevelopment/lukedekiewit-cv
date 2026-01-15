@@ -1,20 +1,28 @@
 import {
   siAngular,
+  siAstro,
   siCss,
   siDotnet,
-  siFigma,
   siGit,
+  siGithub,
   siHtml5,
   siJavascript,
   siMysql,
+  siNextdotjs,
+  siNodedotjs,
+  siPreact,
+  siPrismic,
   siReact,
+  siSass,
+  siShadcnui,
   siShopify,
+  siTailwindcss,
   siTypescript,
-  siWoocommerce,
+  siWordpress,
 } from "simple-icons";
 import type { SimpleIcon } from "simple-icons";
 
-type SkillBadgeMapperEntry = {
+export type SkillBadgeMapperEntry = {
   icon?: Omit<SimpleIcon, "slug" | "svg" | "source" | "guidelines" | "license">;
   colors: {
     foreground: string;
@@ -47,7 +55,7 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
   Git: {
     icon: siGit,
     colors: {
-      foreground: "#fff",
+      foreground: "#000",
       background: siGit.hex,
     },
   },
@@ -83,6 +91,27 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
       background: siReact.hex,
     },
   },
+  Preact: {
+    icon: siPreact,
+    colors: {
+      foreground: "#fff",
+      background: siPreact.hex,
+    },
+  },
+  "shadcn/ui": {
+    icon: siShadcnui,
+    colors: {
+      foreground: "#000",
+      background: "#fff",
+    },
+  },
+  GitHub: {
+    icon: siGithub,
+    colors: {
+      foreground: "#fff",
+      background: "#000",
+    },
+  },
   Angular: {
     icon: siAngular,
     colors: {
@@ -115,7 +144,63 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
     icon: siTypescript,
     colors: {
       foreground: "#fff",
-      background: siHtml5.hex,
+      background: siTypescript.hex,
+    },
+  },
+  "Node.js": {
+    icon: siNodedotjs,
+    colors: {
+      foreground: "#fff",
+      background: siNodedotjs.hex,
+    },
+  },
+  "Next.js": {
+    icon: siNextdotjs,
+    colors: {
+      foreground: "#000",
+      background: "#fff",
+    },
+  },
+  Astro: {
+    icon: siAstro,
+    colors: {
+      foreground: "#000",
+      background: siAstro.hex,
+    },
+  },
+  "Shopify Liquid": {
+    icon: siShopify,
+    colors: {
+      foreground: "#fff",
+      background: "#3398cc",
+    },
+  },
+  "Tailwind CSS": {
+    icon: siTailwindcss,
+    colors: {
+      foreground: "#fff",
+      background: siTailwindcss.hex,
+    },
+  },
+  Sass: {
+    icon: siSass,
+    colors: {
+      foreground: "#fff",
+      background: siSass.hex,
+    },
+  },
+  Prismic: {
+    icon: siPrismic,
+    colors: {
+      foreground: "#fff",
+      background: siPrismic.hex,
+    },
+  },
+  Wordpress: {
+    icon: siWordpress,
+    colors: {
+      foreground: "#fff",
+      background: siWordpress.hex,
     },
   },
 };
