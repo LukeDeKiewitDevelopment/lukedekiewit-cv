@@ -106,12 +106,12 @@ import { SiteBackground } from './site-background'
 		<Toaster
 			client:load
 			position='bottom-center'
-			className='print:hidden'
+			className='print:hidden!'
 		/>
 		<SiteBackground
 			client:load
 			backgroundImage={{
-				className: 'grayscale opacity-10 hidden dark:block',
+				className: 'grayscale opacity-10 hidden dark:block print:hidden!',
 				src: '/images/backgrounds/code_3.jpg'
 			}}
 		/>

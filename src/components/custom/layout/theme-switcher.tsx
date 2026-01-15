@@ -41,7 +41,7 @@ export const ThemeSwitcher = () => {
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="">
+      <DropdownMenuContent align="end">
         <DropdownMenuItem
           className="cursor-pointer text-sm"
           onClick={() => setCurrentTheme("theme-light")}

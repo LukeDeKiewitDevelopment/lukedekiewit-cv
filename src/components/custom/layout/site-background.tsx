@@ -21,7 +21,7 @@ export const SiteBackground = ({ backgroundImage }: SiteBackgroundProps) => {
           backgroundImage?.className,
         )}
       />
-      <AuroraBackground className="fixed top-0 left-0 -z-2000 size-full min-h-screen min-w-screen motion-reduce:hidden print:hidden">
+      <AuroraBackground className="fixed top-0 left-0 -z-2000 size-full min-h-screen min-w-screen motion-reduce:hidden print:hidden!">
         <motion.div
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

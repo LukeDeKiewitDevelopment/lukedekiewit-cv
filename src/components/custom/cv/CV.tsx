@@ -54,7 +54,7 @@ export const CV = ({ className, ...props }: CVProps) => {
         data-slot="cv-interactive"
         data-cv-type="interactive"
         className={clsx(
-          "relative z-1 flex max-w-screen break-after-page gap-4 overflow-auto p-4 md:p-6 lg:p-8 print:gap-0 print:p-0 print:[data-cv-type='interactive']:hidden!",
+          "relative z-1 flex max-w-screen break-after-page gap-4 overflow-auto p-4 md:p-6 lg:p-8 print:gap-0! print:[data-cv-type='interactive']:hidden!",
           className,
         )}
       >
@@ -90,10 +90,10 @@ export const CV = ({ className, ...props }: CVProps) => {
                 <CVAvatarFallback />
               </CVAvatar>
             </CVPageSection>
-            <CVSeparator className="mt-[4.2333333333mm]" />
+            <CVSeparator />
             <CVPageSection>
               <CVPageSectionTitle>Summary</CVPageSectionTitle>
-              <p className="text-muted-foreground mt-[2.1166666667mm] block w-full text-[7pt]">
+              <p className="block w-full">
                 I specialise in engineering high-quality front-end systems,
                 websites, and UI libraries. I'm committed to the highest
                 standards of performance, accessibility, and code quality.
@@ -102,10 +102,10 @@ export const CV = ({ className, ...props }: CVProps) => {
                 exceptional user experience.
               </p>
             </CVPageSection>
-            <CVSeparator className="bg-border mt-[2.1166666667mm]" />
+            <CVSeparator className="bg-border" />
             <CVPageSection>
               <CVPageSectionTitle>Contact information</CVPageSectionTitle>
-              <address className="mt-[2.1166666667mm] not-italic">
+              <address className="not-italic">
                 <ul>
                   <li className="flex items-center justify-between">
                     <i title="Location">
@@ -113,25 +113,24 @@ export const CV = ({ className, ...props }: CVProps) => {
                     </i>
                     <span
                       title="Bloemfontein, Free State, South Africa, 9301 🇿🇦"
-                      className="text-muted-foreground cursor-help text-[7pt]"
+                      className="cursor-help"
                     >
-                      Bloemfontein, Free State{" "}
-                      <i className="text-[7.5pt] not-italic">🇿🇦</i>
+                      Bloemfontein, Free State <i className="not-italic">🇿🇦</i>
                     </span>
                   </li>
-                  <li className="mt-[2.1166666667mm] flex items-center justify-between">
+                  <li className="flex items-center justify-between">
                     <i title="Phone number">
                       <PhoneIcon className="size-[4.2333333333mm] shrink-0" />
                     </i>
                     <a
                       href="tel:+27738782766"
                       rel="noopener noreferrer nofollow"
-                      className="text-muted-foreground hover:text-primary text-[7pt] transition-all hover:underline"
+                      className="hover:text-primary transition-all hover:underline"
                     >
                       +27738782766
                     </a>
                   </li>
-                  <li className="mt-[2.1166666667mm] flex items-center justify-between">
+                  <li className="flex items-center justify-between">
                     <i title="Email">
                       <MailIcon className="size-[4.2333333333mm] shrink-0" />
                     </i>
@@ -139,12 +138,12 @@ export const CV = ({ className, ...props }: CVProps) => {
                       href="mailto:luke.dekiewit@yahoo.com"
                       rel="noopener noreferrer nofollow"
                       title="Bloemfontein, Free State, South Africa, 9301 🇿🇦"
-                      className="text-muted-foreground hover:text-primary text-[7pt] hover:underline"
+                      className="hover:text-primary hover:underline"
                     >
                       luke.dekiewit@yahoo.com
                     </a>
                   </li>
-                  <li className="mt-[2.1166666667mm] flex items-center justify-between">
+                  <li className="flex items-center justify-between">
                     <SkillBadgeIcon
                       title="GitHub"
                       hex="var(--sidebar-foreground)"
@@ -155,31 +154,31 @@ export const CV = ({ className, ...props }: CVProps) => {
                       href="https://github.com/lukedekiewit"
                       rel="noopener noreferrer nofollow"
                       target="_blank"
-                      className="text-muted-foreground hover:text-primary text-[7pt] hover:underline"
+                      className="hover:text-primary hover:underline"
                     >
                       @lukedekiewit
                     </a>
                   </li>
-                  <li className="mt-[2.1166666667mm] flex items-center justify-between">
+                  <li className="flex items-center justify-between">
                     <i title="LinkedIn">
                       <LinkedinIcon className="size-[4.2333333333mm] shrink-0" />
                     </i>
                     <a
                       href="https://lukedekiewit.co.za/"
                       rel="noopener noreferrer nofollow"
-                      className="text-muted-foreground hover:text-primary text-[7pt] hover:underline"
+                      className="hover:text-primary hover:underline"
                     >
                       @lukedekiewit
                     </a>
                   </li>
-                  <li className="mt-[2.1166666667mm] flex items-center justify-between">
+                  <li className="flex items-center justify-between">
                     <i title="Website">
                       <GlobeIcon className="size-[4.2333333333mm] shrink-0" />
                     </i>
                     <a
                       href="https://lukedekiewit.co.za/"
                       rel="noopener noreferrer nofollow"
-                      className="text-muted-foreground hover:text-primary text-[7pt] hover:underline"
+                      className="hover:text-primary hover:underline"
                     >
                       lukedekiewit.co.za
                     </a>
@@ -187,60 +186,58 @@ export const CV = ({ className, ...props }: CVProps) => {
                 </ul>
               </address>
             </CVPageSection>
-            <CVSeparator className="mt-[4.2333333333mm]" />
+            <CVSeparator />
             <CVPageSection>
               <CVPageSectionTitle>Personal information</CVPageSectionTitle>
-              <div className="mt-[2.1166666667mm]">
+              <div>
                 <ul>
-                  <li className="flex items-center justify-between text-[7pt]">
+                  <li className="flex items-center justify-between">
                     <span>Age</span>
-                    <span className="text-muted-foreground">25</span>
+                    <span className="">25</span>
                   </li>
-                  <li className="mt-[2.1166666667mm] flex items-center justify-between text-[7pt]">
+                  <li className="flex items-center justify-between">
                     <span>Languages</span>
-                    <span className="text-muted-foreground">
-                      English, Afrikaans
-                    </span>
+                    <span className="">English, Afrikaans</span>
                   </li>
-                  <li className="mt-[2.1166666667mm] flex items-center justify-between text-[7pt]">
+                  <li className="flex items-center justify-between">
                     <span>Driving License</span>
-                    <span className="text-muted-foreground">Code B</span>
+                    <span className="">Code B</span>
                   </li>
-                  <li className="mt-[2.1166666667mm] flex items-center justify-between text-[7pt]">
+                  <li className="flex items-center justify-between">
                     <span>Own transport</span>
                     <i title="Yes">
-                      <CheckIcon className="text-muted-foreground size-[9.5pt]" />
+                      <CheckIcon className="size-[9.5pt]" />
                     </i>
                   </li>
-                  <li className="mt-[2.1166666667mm] flex items-center justify-between text-[7pt]">
+                  <li className="flex items-center justify-between">
                     <span>Willing to relocate</span>
                     <i title="Yes">
-                      <CheckIcon className="text-muted-foreground size-[9.5pt]" />
+                      <CheckIcon className="size-[9.5pt]" />
                     </i>
                   </li>
-                  <li className="mt-[2.1166666667mm] flex items-center justify-between text-[7pt]">
+                  <li className="flex items-center justify-between">
                     <span>Open to remote work</span>
                     <i title="Yes">
-                      <CheckIcon className="text-muted-foreground size-[9.5pt]" />
+                      <CheckIcon className="size-[9.5pt]" />
                     </i>
                   </li>
                 </ul>
               </div>
             </CVPageSection>
-            <CVSeparator className="mt-[4.2333333333mm]" />
+            <CVSeparator />
             <CVPageSection>
               <CVPageSectionTitle>Tech stack</CVPageSectionTitle>
-              <div className="mt-[2.1166666667mm]">
+              <div>
                 <legend className="flex flex-wrap">
                   <SkillBadge skill="HTML" />
                 </legend>
               </div>
             </CVPageSection>
-            <CVSeparator className="mt-[4.2333333333mm]" />
+            <CVSeparator />
             <CVPageSection>
               <CVPageSectionTitle>Skills</CVPageSectionTitle>
-              <div className="mt-[2.1166666667mm]">
-                <legend className="flex flex-wrap gap-[1.0583333333mm]">
+              <div>
+                <legend className="flex flex-wrap">
                   <Badge>HTML</Badge>
                   <Badge>CSS</Badge>
                   <Badge>JavaScript</Badge>
@@ -252,15 +249,15 @@ export const CV = ({ className, ...props }: CVProps) => {
               </div>
             </CVPageSection>
           </CVSidebar>
-          <CVPageContent className="text-card-foreground">
+          <CVPageContent>
             <CVPageHeader
               titleNode={
-                <h1 className="text-primary text-4xl uppercase">
+                <h1 className="text-primary uppercase">
                   <EncryptedText
                     text={"Luke De Kiewit"}
                     className="motion-reduce:hidden"
-                    encryptedClassName="text-muted-foreground select-none"
-                    revealedClassName="text-primary select-text"
+                    encryptedClassName=" select-none"
+                    revealedClassName="select-text"
                     revealDelayMs={0}
                     flipDelayMs={0}
                   />
@@ -270,9 +267,9 @@ export const CV = ({ className, ...props }: CVProps) => {
                 </h1>
               }
               subtitleNode={
-                <div className="text-muted-foreground flex items-center gap-[1.0583333333mm] font-mono uppercase">
+                <div className="flex items-center font-mono uppercase">
                   <span
-                    className="text-muted-foreground pointer-events-none text-lg not-italic select-none"
+                    className="pointer-events-none not-italic select-none"
                     aria-hidden="true"
                   >
                     {"<"}
@@ -280,17 +277,17 @@ export const CV = ({ className, ...props }: CVProps) => {
                   <EncryptedText
                     text={"Front-End Engineer"}
                     className="motion-reduce:hidden"
-                    encryptedClassName="text-muted-foreground select-none text-xl"
-                    revealedClassName="text-muted-foreground select-text text-xl"
+                    encryptedClassName=" select-none"
+                    revealedClassName=" select-text"
                     revealDelayMs={10}
                     flipDelayMs={0}
                   />
-                  <h2 className="text-muted-foreground hidden text-lg motion-reduce:block">
+                  <h2 className="hidden motion-reduce:block">
                     Front-End Engineer
                   </h2>
                   <i
                     className={clsx(
-                      "bg-primary inline h-4.5 w-0.5 motion-reduce:hidden print:hidden",
+                      "bg-primary inline h-4.5 w-0.5 motion-reduce:hidden print:hidden!",
                       !caretBlink && "invisible",
                     )}
                     style={{
@@ -301,7 +298,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                   ></i>
 
                   <span
-                    className="text-muted-foreground pointer-events-none text-lg not-italic select-none"
+                    className="pointer-events-none not-italic select-none"
                     aria-hidden="true"
                   >
                     {"/>"}
@@ -309,17 +306,17 @@ export const CV = ({ className, ...props }: CVProps) => {
                 </div>
               }
             ></CVPageHeader>
-            <CVSeparator className="mt-[4.2333333333mm]" />
-            <CVPageSection className="mt-[4.2333333333mm]">
+            <CVSeparator />
+            <CVPageSection>
               <div>
-                <CVPageSectionTitle className="flex items-center gap-2">
-                  <Briefcase className="size-[13pt]" />
+                <CVPageSectionTitle className="flex items-center">
+                  <Briefcase />
                   <span>Professional experience</span>
                 </CVPageSectionTitle>
-                <ol className="text-foreground/80 mt-[2.1166666667mm] flex flex-col gap-[2pt] text-[7pt]">
+                <ol className="flex flex-col">
                   <li>
                     <div>
-                      <h4 className="mb-[0.5pt] uppercase">
+                      <h4 className="uppercase">
                         <span>
                           {"Junior Developer • "}
                           <a
@@ -333,11 +330,9 @@ export const CV = ({ className, ...props }: CVProps) => {
                           </a>
                         </span>
                       </h4>
-                      <span className="text-foreground/60">
-                        On-site • May 2024 - Present
-                      </span>
-                      <div className="mb-[0.5pt]">
-                        <p className="text-muted-foreground text-[7pt] text-balance">
+                      <span>On-site • May 2024 - Present</span>
+                      <div>
+                        <p>
                           I began my career at Bitcube in the Ecommerce
                           department in May 2024, specialising in Shopify theme
                           and storefront development. Focusing on responsive
@@ -349,7 +344,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                           EU, and US.
                         </p>
                         <br />
-                        <p className="text-muted-foreground text-[7pt] text-balance">
+                        <p>
                           I transferred to the Engineering department in July
                           2025, moving from Ecommerce into more technical
                           development work. I collaborate with different teams
@@ -361,9 +356,9 @@ export const CV = ({ className, ...props }: CVProps) => {
                       </div>
                     </div>
                   </li>
-                  <li className="mt-[1mm]">
+                  <li>
                     <div>
-                      <h4 className="mb-[0.5pt] uppercase">
+                      <h4 className="uppercase">
                         <span>
                           {"Junior Front-End Developer • "}
                           <a
@@ -377,11 +372,9 @@ export const CV = ({ className, ...props }: CVProps) => {
                           </a>
                         </span>
                       </h4>
-                      <span className="text-foreground/60">
-                        Remote • January 2023 - March 2024
-                      </span>
+                      <span>Remote • January 2023 - March 2024</span>
                       <div>
-                        <p className="text-muted-foreground text-[7pt] text-balance">
+                        <p>
                           I worked on a range of SaaS projects, building,
                           maintaining, and extending custom systems for several
                           clients, including leading universities in South
@@ -392,9 +385,9 @@ export const CV = ({ className, ...props }: CVProps) => {
                       </div>
                     </div>
                   </li>
-                  <li className="mt-[1mm]">
+                  <li>
                     <div>
-                      <h4 className="mb-[0.5pt] uppercase">
+                      <h4 className="uppercase">
                         <span>
                           {"Web Development Intern • "}
                           <a
@@ -408,29 +401,27 @@ export const CV = ({ className, ...props }: CVProps) => {
                           </a>
                         </span>
                       </h4>
-                      <span className="text-foreground/60">
-                        Remote • September 2022 - October 2022
-                      </span>
+                      <span>Remote • September 2022 - October 2022</span>
                       <div></div>
                     </div>
                   </li>
                 </ol>
               </div>
             </CVPageSection>
-            <CVSeparator className="mt-[4.2333333333mm]" />
-            <CVPageSection className="mt-[4.2333333333mm]">
-              <CVPageSectionTitle className="flex items-center gap-2">
+            <CVSeparator />
+            <CVPageSection>
+              <CVPageSectionTitle className="flex items-center">
                 <FolderCodeIcon className="size-[13pt]" />
                 <span>Public Projects</span>
               </CVPageSectionTitle>
               <div>
-                <ul className="text-foreground/80 mt-[2.1166666667mm] flex flex-col gap-[2pt] text-[7pt]">
+                <ul>
                   <li>
                     <div>
-                      <h4 className="mb-[0.5pt] flex items-center gap-2 uppercase">
+                      <h4 className="flex items-center uppercase">
                         <span>Atomwave Component Library • 2025/26</span>
                       </h4>
-                      <p className="text-muted-foreground text-[7pt] text-balance">
+                      <p>
                         My most ambitious project to date, due for completion in
                         2026. Atomwave is a rewrite of shadcn/ui without a
                         Tailwind dependency, offering additional components,
@@ -439,43 +430,43 @@ export const CV = ({ className, ...props }: CVProps) => {
                       </p>
                     </div>
                   </li>
-                  <li className="mt-[1mm]">
+                  <li>
                     <div>
-                      <h4 className="mb-[0.5pt] flex items-center gap-2 uppercase">
+                      <h4 className="flex items-center uppercase">
                         <span>Marlin Brokers • 2024</span>
                         <a
                           target="_blank"
                           href="https://marlinbrokers.co.za/"
                           rel="noopener noreferrer nofollow"
-                          className="text-muted-foreground hover:text-primary text-[7pt]"
+                          className="hover:text-primary"
                           title="Marlin Brokers website link"
                         >
-                          <ExternalLinkIcon className="size-[10pt]" />
+                          <ExternalLinkIcon />
                         </a>
                       </h4>
-                      <p className="text-muted-foreground text-[7pt] text-balance">
+                      <p>
                         A complete rebuild of the Marlin Brokers website from
                         scratch, transforming an outdated and slow WordPress
-                        site into a clean, fast, SEO-optimised website built
+                        site into a clean, fast, SEO-optimized website built
                         with Astro, React, and Tailwind.
                       </p>
                     </div>
                   </li>
-                  <li className="mt-[1mm]">
+                  <li>
                     <div>
-                      <h4 className="mb-[0.5pt] flex items-center gap-2 uppercase">
+                      <h4 className="flex items-center uppercase">
                         <span>Topic LMS • 2023</span>
                         <a
                           target="_blank"
                           href="https://topic.co.za/"
                           rel="noopener noreferrer nofollow"
-                          className="text-muted-foreground hover:text-primary text-[7pt]"
+                          className="hover:text-primary"
                           title="Topic LMS Link"
                         >
-                          <ExternalLinkIcon className="size-[10pt]" />
+                          <ExternalLinkIcon />
                         </a>
                       </h4>
-                      <p className="text-muted-foreground text-[7pt] text-balance">
+                      <p>
                         An educational platform for high school students in
                         Grades 10-12, supporting the education of over 200,000
                         learners across South Africa. Built with Next.js, React,
@@ -486,80 +477,78 @@ export const CV = ({ className, ...props }: CVProps) => {
                 </ul>
               </div>
             </CVPageSection>
-            <CVSeparator className="mt-[4.2333333333mm]" />
-            <CVPageSection className="mt-[4.2333333333mm]">
+            <CVSeparator />
+            <CVPageSection>
               <div>
-                <CVPageSectionTitle className="flex items-center gap-2">
-                  <GraduationCap className="size-[13pt]" />
+                <CVPageSectionTitle className="flex items-center">
+                  <GraduationCap />
                   <span>Education</span>
                 </CVPageSectionTitle>
-                <ol className="text-foreground/80 mt-[2.1166666667mm] flex flex-col gap-[2pt] text-[7pt]">
+                <ol className="flex flex-col">
                   <li>
                     <div>
-                      <h4 className="mb-[0.5pt] uppercase">
+                      <h4 className="uppercase">
                         CTU Training Solutions • 2022
                       </h4>
                       <a
                         target="_blank"
                         href="https://allqs.saqa.org.za/showQualification.php?id=48872"
                         rel="noopener noreferrer nofollow"
-                        className="text-muted-foreground hover:text-primary text-[7pt] hover:underline"
+                        className="hover:text-primary hover:underline"
                       >
                         National Certificate: IT Systems Development (NQF 6)
                       </a>
                     </div>
                   </li>
-                  <li className="mt-[1mm]">
+                  <li>
                     <div>
-                      <h4 className="mb-[0.5pt] uppercase">
+                      <h4 className="uppercase">
                         CTU Training Solutions • 2021
                       </h4>
                       <a
                         target="_blank"
                         href="https://regqs.saqa.org.za/viewQualification.php?id=78965"
                         rel="noopener noreferrer nofollow"
-                        className="text-muted-foreground hover:text-primary text-[7pt] hover:underline"
+                        className="hover:text-primary hover:underline"
                       >
                         FET Certificate: IT Systems Development (NQF 5)
                       </a>
                     </div>
                   </li>
-                  <li className="mt-[1mm]">
+                  <li>
                     <div>
-                      <h4 className="mb-[0.5pt] uppercase">
+                      <h4 className="uppercase">
                         CTU Training Solutions • 2020
                       </h4>
                       <a
                         target="_blank"
                         href="https://regqs.saqa.org.za/viewQualification.php?id=71850"
                         rel="noopener noreferrer nofollow"
-                        className="text-muted-foreground hover:text-primary text-[7pt] hover:underline"
+                        className="hover:text-primary hover:underline"
                       >
                         FET Certificate: IT Database Development (NQF 4)
                       </a>
                     </div>
                   </li>
-                  <li className="mt-[1mm]">
+                  <li>
                     <div>
-                      <h4 className="mb-[0.5pt] uppercase">
+                      <h4 className="uppercase">
                         Grey College Secondary • 2019
                       </h4>
-                      <p className="text-muted-foreground">
-                        National Senior Certificate
-                      </p>
+                      <p className="">National Senior Certificate</p>
                     </div>
                   </li>
                 </ol>
               </div>
             </CVPageSection>
-            <CVSeparator className="mt-[4.2333333333mm]" />
-            <CVPageSection className="mt-[4.2333333333mm]">
-              <CVPageSectionTitle className="flex items-center gap-2">
-                <User2Icon className="size-[13pt]" />
+            <CVSeparator />
+            <CVPageSection>
+              <CVPageSectionTitle className="flex items-center">
+                <User2Icon />
                 <span>References</span>
               </CVPageSectionTitle>
               <div>
-                <p className="text-muted-foreground mt-[2.1166666667mm] text-[7pt] text-balance">
+                <p>
                   For privacy reasons, references are available upon request.
                 </p>
               </div>
@@ -571,13 +560,6 @@ export const CV = ({ className, ...props }: CVProps) => {
             />
           </CVPageContent>
         </CVPage>
-      </main>
-      <main
-        data-slot="cv-print"
-        data-cv-type="print"
-        className="hidden break-after-page justify-center gap-4 p-4 md:p-6 lg:p-8 print:flex print:gap-0 print:p-0 print:[data-cv-type='print']:hidden!"
-      >
-        <CVPage></CVPage>
       </main>
     </>
   );

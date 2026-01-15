@@ -101,7 +101,7 @@ export const Header = ({
   return (
     <nav
       data-slot="header"
-      className="bg-card flex min-w-screen flex-col shadow-md print:hidden"
+      className="bg-card flex min-w-screen flex-col shadow-md print:hidden!"
     >
       <div className="flex items-center justify-between gap-4 p-4 md:p-6 lg:p-8">
         <div className="flex items-center gap-2">

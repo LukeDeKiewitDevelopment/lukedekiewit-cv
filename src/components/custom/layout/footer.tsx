@@ -12,10 +12,7 @@ export const Footer = ({ className, ...props }: FooterProps) => {
     <footer
       {...props}
       data-slot="footer"
-      className={clsx(
-        "p-4 md:p-6 lg:p-8 print:hidden",
-        className,
-      )}
+      className={clsx("p-4 md:p-6 lg:p-8 print:hidden!", className)}
     >
       <span className="text-muted-foreground w-fit text-center align-middle text-[7pt]">
         <i className="not-italic">&copy;</i>&nbsp;

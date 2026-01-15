@@ -11,14 +11,11 @@ export const CVPageContent = ({
   ...props
 }: CVPageContentProps) => {
   return (
-    <div className="bg-card text-card-foreground min-w-[135mm]">
+    <div className="bg-card text-card-foreground w-[135mm] max-w-[135mm] min-w-[135mm]">
       <div
         {...props}
         data-slot="cv-page-content"
-        className={clsx(
-          "relative z-2 size-full overflow-x-hidden overflow-y-auto p-[4.2333333333mm]",
-          className,
-        )}
+        className={clsx("relative z-2 size-full p-[4.2333333333mm]", className)}
       >
         {children}
       </div>

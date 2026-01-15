@@ -21,7 +21,7 @@ export const SkillBadge = ({ skill }: SkillBadgeProps) => {
 
   return (
     <Badge
-      className="text-[7pt] shadow-2xs select-none [&_svg]:size-[7pt]!"
+      className="shadow-2xs select-none [&_svg]:size-[7pt]!"
       style={{
         backgroundColor: validateCSSColor(badge.colors.background),
         color: validateCSSColor(badge.colors.foreground),
