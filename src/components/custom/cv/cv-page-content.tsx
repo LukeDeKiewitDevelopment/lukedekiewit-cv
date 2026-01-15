@@ -15,7 +15,7 @@ export const CVPageContent = ({
       <div
         {...props}
         data-slot="cv-page-content"
-        className={clsx("relative z-2 size-full p-[4.2333333333mm]", className)}
+        className={clsx("relative z-2 size-full p-[4mm]", className)}
       >
         {children}
       </div>

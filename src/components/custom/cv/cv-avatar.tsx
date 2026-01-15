@@ -9,7 +9,7 @@ export const CVAvatar = ({ className, ...props }: CVAvatarProps) => {
     <AvatarPrimitive.Root
       data-slot="cv-avatar"
       className={cn(
-        "relative flex size-[33.866666667mm] shrink-0 overflow-hidden rounded-[calc(infinity*0.2645833333mm)]",
+        "relative flex size-[34mm] shrink-0 overflow-hidden rounded-[calc(infinity*0.2645833333mm)]",
         className,
       )}
       {...props}
