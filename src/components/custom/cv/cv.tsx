@@ -50,7 +50,7 @@ export const CV = ({ className, ...props }: CVProps) => {
         {...props}
         data-slot="cv"
         className={clsx(
-          "relative z-1 flex w-full print:min-w-[210mm] gap-4 overflow-auto p-4 md:p-6 lg:p-8 print:block print:h-[297mm] print:max-h-[297mm] print:min-h-[297mm] print:max-w-none print:gap-0! print:overflow-hidden print:p-0!",
+          "relative z-1 flex w-full gap-4 overflow-auto p-4 md:p-6 lg:p-8 print:block print:h-[297mm] print:max-h-[297mm] print:min-h-[297mm] print:max-w-none print:min-w-[210mm] print:gap-0! print:overflow-hidden print:p-0!",
           className,
         )}
       >
@@ -58,26 +58,12 @@ export const CV = ({ className, ...props }: CVProps) => {
           <CVSidebar>
             <CVPageSection className="flex items-center justify-center">
               <CVAvatar
-                className="bg-primary hidden-in-darkmode border-2 border-transparent shadow-md shadow-black/20 select-none"
+                className="border-border border-2 shadow-sm select-none dark:shadow-md"
                 title="Luke De Kiewit profile picture"
               >
                 <CVAvatarImage
                   className="animate-in fade-in blur-in duration-200"
                   src="/images/ldk_selfie_pfp.jpg"
-                  alt="Profile picture"
-                  height={128}
-                  width={128}
-                  loading="eager"
-                />
-                <CVAvatarFallback />
-              </CVAvatar>
-              <CVAvatar
-                className="border-primary bg-primary hidden-in-lightmode hover:shadow-primary/60 border-2 shadow-black transition-shadow duration-500 ease-in-out select-none hover:shadow-[0px_0px_2px_2px]"
-                title="Welcome to the Matrix, Neo."
-              >
-                <CVAvatarImage
-                  className="animate-in fade-in blur-in duration-200"
-                  src="/images/ldk_matrix_avatar_1024px.png"
                   alt="Profile picture"
                   height={128}
                   width={128}
@@ -248,19 +234,31 @@ export const CV = ({ className, ...props }: CVProps) => {
                 <SkillBadge skill="JavaScript" />
                 <SkillBadge skill="TypeScript" />
                 <SkillBadge skill="React" />
-                <SkillBadge skill="Next.js" />
-                <SkillBadge skill="Astro" />
                 <SkillBadge skill="Preact" />
-                <SkillBadge skill="shadcn/ui" />
+                <SkillBadge className="hidden-in-lightmode" skill="Next.js" />
+                <SkillBadge
+                  className="hidden-in-darkmode bg-black! text-white! [&_svg]:fill-white!"
+                  skill="Next.js"
+                />
+                <SkillBadge skill="Astro" />
                 <SkillBadge skill="Tailwind CSS" />
                 <SkillBadge skill="Sass" />
                 <SkillBadge skill="Node.js" />
                 <SkillBadge skill="Shopify" />
                 <SkillBadge skill="Shopify Liquid" />
+                <SkillBadge
+                  className="hidden-in-lightmode bg-white! text-black! [&_svg]:fill-black!"
+                  skill="shadcn/ui"
+                />
+                <SkillBadge className="hidden-in-darkmode" skill="shadcn/ui" />
                 <SkillBadge skill="Prismic" />
                 <SkillBadge skill="Wordpress" />
                 <SkillBadge skill="Git" />
-                <SkillBadge skill="GitHub" />
+                <SkillBadge className="hidden-in-darkmode" skill="GitHub" />
+                <SkillBadge
+                  className="hidden-in-lightmode bg-[#7c007a]!"
+                  skill="GitHub"
+                />
               </legend>
             </CVPageSection>
             <CVSeparator className="my-[2mm]" />
@@ -299,7 +297,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                 </h1>
               }
               subtitleNode={
-                <div className="text-13pt flex items-center gap-[1.25mm] leading-6 uppercase">
+                <div className="text-13pt! flex items-center gap-[1.25mm] leading-6 uppercase">
                   <span
                     className="pointer-events-none not-italic select-none"
                     aria-hidden="true"

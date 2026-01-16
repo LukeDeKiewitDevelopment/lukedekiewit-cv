@@ -5,6 +5,7 @@ import {
   skillBadgeIconMapper,
 } from "../../lib/skills-mapper";
 import { validateCSSColor } from "@/lib/validate-css-color";
+import clsx from "clsx";
 
 export type SkillBadgeIconProps = Omit<
   SimpleIcon,
@@ -38,6 +39,7 @@ export const SkillBadgeIcon = ({
 
 export type SkillBadgeProps = {
   skill: string;
+  className?: string;
 };
 
 type SkillBadgeIcon = Omit<
@@ -45,12 +47,15 @@ type SkillBadgeIcon = Omit<
   "slug" | "source" | "guidelines" | "license"
 >;
 
-export const SkillBadge = ({ skill }: SkillBadgeProps) => {
+export const SkillBadge = ({ skill, className }: SkillBadgeProps) => {
   const badge = skillBadgeIconMapper[skill] || defaultSkillBadge;
 
   return (
     <Badge
-      className="text-7pt [&_svg]:size-4pt! px-[1.25mm] py-[0.75mm] shadow-sm select-none"
+      className={clsx(
+        "text-7pt [&_svg]:size-4pt! px-[1.25mm] py-[0.75mm] shadow-sm select-none",
+        className,
+      )}
       title={skill}
       style={{
         backgroundColor: validateCSSColor(badge.colors.background),
