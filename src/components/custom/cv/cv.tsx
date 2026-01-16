@@ -1,14 +1,14 @@
 "use client";
 
 import { useEffect, useState, type ComponentPropsWithoutRef } from "react";
-import { CVAvatar, CVAvatarFallback, CVAvatarImage } from "../cv/cv-avatar";
-import { CVPage } from "../cv/cv-page";
-import { CVPageContent } from "../cv/cv-page-content";
-import { CVPageHeader } from "../cv/cv-page-header";
-import { CVSeparator } from "../cv/cv-separator";
-import { CVSidebar } from "../cv/cv-sidebar";
+import { CVAvatar, CVAvatarFallback, CVAvatarImage } from "./cv-avatar";
+import { CVPage } from "./cv-page";
+import { CVPageContent } from "./cv-page-content";
+import { CVPageHeader } from "./cv-page-header";
+import { CVSeparator } from "./cv-separator";
+import { CVSidebar } from "./cv-sidebar";
 import { EncryptedText } from "@/components/ui/encrypted-text";
-import { CVPageSection } from "../cv/cv-page-section";
+import { CVPageSection } from "./cv-page-section";
 import {
   Briefcase,
   CheckIcon,
@@ -24,8 +24,8 @@ import {
 } from "lucide-react";
 import { siGithub } from "simple-icons";
 import clsx from "clsx";
-import { CVPageSectionTitle } from "../cv/cv-page-section-title";
-import { CVPageContentBackground } from "../cv/cv-page-content-background";
+import { CVPageSectionTitle } from "./cv-page-section-title";
+import { CVPageContentBackground } from "./cv-page-content-background";
 import { SkillBadge, SkillBadgeIcon } from "../skill-badge";
 
 export type CVProps = ComponentPropsWithoutRef<"main">;
