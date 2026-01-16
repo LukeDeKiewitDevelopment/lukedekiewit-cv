@@ -11,9 +11,9 @@ import path from "node:path";
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
-    resolve: { 
+    resolve: {
       alias: {
-        "@": path.resolve("./src"),
+        "@": new URL("./src", import.meta.url).pathname,
       },
     },
   },
