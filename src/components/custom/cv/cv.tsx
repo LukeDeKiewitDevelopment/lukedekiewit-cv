@@ -50,7 +50,7 @@ export const CV = ({ className, ...props }: CVProps) => {
         {...props}
         data-slot="cv"
         className={clsx(
-          "relative z-1 flex w-full max-w-screen min-w-[210mm] gap-4 overflow-auto p-4 md:p-6 lg:p-8 print:block print:h-[297mm] print:max-h-[297mm] print:min-h-[297mm] print:max-w-none print:gap-0! print:overflow-hidden print:p-0!",
+          "relative z-1 flex w-full print:min-w-[210mm] gap-4 overflow-auto p-4 md:p-6 lg:p-8 print:block print:h-[297mm] print:max-h-[297mm] print:min-h-[297mm] print:max-w-none print:gap-0! print:overflow-hidden print:p-0!",
           className,
         )}
       >
