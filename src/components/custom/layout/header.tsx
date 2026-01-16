@@ -12,7 +12,7 @@ import {
 import { ThemeSwitcher } from "./theme-switcher";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "sonner";
-import type { ComponentPropsWithoutRef } from "react";
+import { type ComponentPropsWithoutRef } from "react";
 
 export type HeaderProps = {
   lightModeLogo?: HeaderLogo;

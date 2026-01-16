@@ -4,11 +4,13 @@ import { Toaster } from "@/components/ui/sonner";
 import { Header } from "./header";
 import { Footer } from "./footer";
 import { SiteBackground } from "./site-background";
-import { SEO } from "astro-seo";
 ---
 
 <!doctype html>
-<html lang="en" class="dark antialiased w-screen h-screen overflow-hidden">
+<html
+  lang="en"
+  class="dark antialiased w-screen h-screen print:w-auto print:h-auto print:overflow-hidden"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -52,7 +54,7 @@ import { SEO } from "astro-seo";
       }
     </script>
   </head>
-  <body class="size-full overflow-x-hidden">
+  <body class="size-full overflow-x-hidden print:overflow-hidden">
     <Header
       lightModeLogo={{
         src: "/images/logos/ldk_logo_black_tilted_724px.png",
@@ -70,9 +72,9 @@ import { SEO } from "astro-seo";
         loading: "eager",
         title: "Luke De Kiewit Logo",
       }}
-      lastUpdated="15/01/2026"
+      lastUpdated="16/01/2026"
       shareLink="https://cv.lukedekiewit.co.za/"
-      pdfDownloadLink="/images/logos/ldk_logo_atomwave_square_512px.png"
+      pdfDownloadLink="/files/Luke_De_Kiewit_CV_Jan_2026.pdf"
       client:load
     />
 

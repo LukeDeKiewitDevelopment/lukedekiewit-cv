@@ -87,8 +87,8 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
   React: {
     icon: siReact,
     colors: {
-      foreground: "#000",
-      background: siReact.hex,
+      foreground: "#fff",
+      background: "#00d1f7",
     },
   },
   Preact: {
@@ -243,6 +243,12 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
     colors: {
       foreground: "#fff",
       background: "#005a9c",
+    },
+  },
+  Atomwave: {
+    colors: {
+      foreground: "#000",
+      background: "#0f9",
     },
   },
 };

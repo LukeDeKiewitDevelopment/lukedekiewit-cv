@@ -32,7 +32,6 @@ export type CVProps = ComponentPropsWithoutRef<"main">;
 
 export const CV = ({ className, ...props }: CVProps) => {
   const [caretBlink, setCaretBlink] = useState(false);
-  const [loading, setLoading] = useState(true);
 
   const startCaretBlinking = () => {
     const timeout = setTimeout(() => {
@@ -51,14 +50,13 @@ export const CV = ({ className, ...props }: CVProps) => {
         {...props}
         data-slot="cv"
         className={clsx(
-          "relative z-1 flex max-w-screen break-after-page gap-4 overflow-auto p-4 md:p-6 lg:p-8 print:gap-0!",
+          "relative z-1 flex w-full max-w-screen min-w-[210mm] gap-4 overflow-auto p-4 md:p-6 lg:p-8 print:block print:h-[297mm] print:max-h-[297mm] print:min-h-[297mm] print:max-w-none print:gap-0! print:overflow-hidden print:p-0!",
           className,
         )}
       >
         <CVPage className="mx-auto print:m-0!">
-          <CVSidebar className="relative">
+          <CVSidebar>
             <CVPageSection className="flex items-center justify-center">
-              {loading && "Loading!!"}
               <CVAvatar
                 className="bg-primary hidden-in-darkmode border-2 border-transparent shadow-md shadow-black/20 select-none"
                 title="Luke De Kiewit profile picture"
@@ -70,8 +68,6 @@ export const CV = ({ className, ...props }: CVProps) => {
                   height={128}
                   width={128}
                   loading="eager"
-                  onLoad={() => setLoading(false)}
-                  onError={() => setLoading(false)}
                 />
                 <CVAvatarFallback />
               </CVAvatar>
@@ -86,31 +82,13 @@ export const CV = ({ className, ...props }: CVProps) => {
                   height={128}
                   width={128}
                   loading="eager"
-                  onLoad={() => setLoading(false)}
-                  onError={() => setLoading(false)}
                 />
                 <CVAvatarFallback />
               </CVAvatar>
             </CVPageSection>
-            <CVSeparator className="my-[2mm] block print:hidden" />
-            <>
-              <CVSeparator className="mt-[1mm] hidden print:block" />
-              <div className="text-7pt hidden items-center justify-end text-center print:flex">
-                <a
-                  target="_blank"
-                  href="https://cv.lukedekiewit.co.za/"
-                  rel="noopener noreferrer nofollow"
-                  className="hover:text-primary text-foreground/40 flex w-fit items-center justify-center gap-[1mm] text-right hover:underline"
-                  title="Web version link"
-                >
-                  <span>Interactive web version</span>{" "}
-                  <ExternalLinkIcon className="size-[2.75mm]" />
-                </a>
-              </div>
-              <CVSeparator className="mb-[1mm] hidden print:block" />
-            </>
+            <CVSeparator className="mt-[4mm] mb-[2mm]" />
             <CVPageSection>
-              <CVPageSectionTitle id="summary" className="mb-[1.25mm]">
+              <CVPageSectionTitle id="summary" className="mb-[2mm]">
                 Summary
               </CVPageSectionTitle>
               <p className="text-8pt text-foreground/70 block w-full max-w-prose text-balance">
@@ -121,14 +99,10 @@ export const CV = ({ className, ...props }: CVProps) => {
                 every project follows modern best practices and delivers an
                 exceptional user experience.
               </p>
-              <CVSeparator className="my-[2mm]" />
             </CVPageSection>
             <CVSeparator className="my-[2mm]" />
             <CVPageSection>
-              <CVPageSectionTitle
-                id="contact-information"
-                className="mb-[1.25mm]"
-              >
+              <CVPageSectionTitle id="contact-information" className="mb-[2mm]">
                 Contact information
               </CVPageSectionTitle>
               <address className="text-8pt not-italic">
@@ -216,7 +190,7 @@ export const CV = ({ className, ...props }: CVProps) => {
             <CVPageSection>
               <CVPageSectionTitle
                 id="personal-information"
-                className="mb-[1.25mm]"
+                className="mb-[2mm]"
               >
                 Personal information
               </CVPageSectionTitle>
@@ -265,10 +239,10 @@ export const CV = ({ className, ...props }: CVProps) => {
             </CVPageSection>
             <CVSeparator className="my-[2mm]" />
             <CVPageSection>
-              <CVPageSectionTitle id="tech-stack" className="mb-[1.25mm]">
+              <CVPageSectionTitle id="tech-stack" className="mb-[2mm]">
                 Tech stack
               </CVPageSectionTitle>
-              <legend className="flex flex-wrap gap-[1.5mm]">
+              <legend className="flex flex-wrap items-center gap-[1.5mm]">
                 <SkillBadge skill="HTML" />
                 <SkillBadge skill="CSS" />
                 <SkillBadge skill="JavaScript" />
@@ -291,7 +265,7 @@ export const CV = ({ className, ...props }: CVProps) => {
             </CVPageSection>
             <CVSeparator className="my-[2mm]" />
             <CVPageSection>
-              <CVPageSectionTitle className="mb-[1.25mm]">
+              <CVPageSectionTitle className="mb-[2mm]">
                 Additional Skills
               </CVPageSectionTitle>
               <ul className="text-8pt text-foreground/80 list-inside list-disc text-balance break-keep">
@@ -306,8 +280,9 @@ export const CV = ({ className, ...props }: CVProps) => {
               </ul>
             </CVPageSection>
           </CVSidebar>
-          <CVPageContent>
+          <CVPageContent className="relative">
             <CVPageHeader
+              className="relative"
               titleNode={
                 <h1 className="text-primary text-[26pt] leading-none uppercase">
                   <EncryptedText
@@ -324,7 +299,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                 </h1>
               }
               subtitleNode={
-                <div className="text-13pt flex items-center leading-6 uppercase">
+                <div className="text-13pt flex items-center gap-[1.25mm] leading-6 uppercase">
                   <span
                     className="pointer-events-none not-italic select-none"
                     aria-hidden="true"
@@ -353,7 +328,6 @@ export const CV = ({ className, ...props }: CVProps) => {
                         : "caretBlink 1.4s steps(1, end) infinite",
                     }}
                   ></i>
-
                   <span
                     className="pointer-events-none not-italic select-none"
                     aria-hidden="true"
@@ -362,12 +336,22 @@ export const CV = ({ className, ...props }: CVProps) => {
                   </span>
                 </div>
               }
-            ></CVPageHeader>
+            >
+              <a
+                target="_blank"
+                href="https://cv.lukedekiewit.co.za/"
+                rel="noopener noreferrer nofollow"
+                className="hover:text-primary text-foreground absolute top-0 right-0 hidden print:block"
+                title="Interactive web version link"
+              >
+                <ExternalLinkIcon className="size-[4.5mm]" />
+              </a>
+            </CVPageHeader>
             <CVSeparator className="my-[2mm]" />
             <CVPageSection>
               <CVPageSectionTitle
                 id="professional-experience"
-                className="mb-[1.25mm] flex items-center gap-[1.5mm]"
+                className="mb-[2mm] flex items-center gap-[1.75mm]"
               >
                 <Briefcase className="size-[4.5mm] shrink-0" />
                 <span>Professional experience</span>
@@ -478,7 +462,7 @@ export const CV = ({ className, ...props }: CVProps) => {
             <CVPageSection>
               <CVPageSectionTitle
                 id="public-projects"
-                className="mb-[1.25mm] flex items-center gap-[1.5mm]"
+                className="mb-[2mm] flex items-center gap-[1.75mm]"
               >
                 <FolderCodeIcon className="size-[4.5mm] shrink-0" />
                 <span>Public Projects</span>
@@ -566,7 +550,7 @@ export const CV = ({ className, ...props }: CVProps) => {
             <CVPageSection>
               <CVPageSectionTitle
                 id="education"
-                className="mb-[1.25mm] flex items-center gap-[1.5mm]"
+                className="mb-[2mm] flex items-center gap-[1.75mm]"
               >
                 <GraduationCap className="size-[4.5mm] shrink-0" />
                 <span>Education</span>
@@ -582,7 +566,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                       target="_blank"
                       href="https://allqs.saqa.org.za/showQualification.php?id=48872"
                       rel="noopener noreferrer nofollow"
-                      className="hover:text-primary text-foreground/80 hover:underline"
+                      className="hover:text-primary text-foreground/70 hover:underline"
                     >
                       National Certificate: IT Systems Development (NQF 6)
                     </a>
@@ -597,7 +581,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                       target="_blank"
                       href="https://regqs.saqa.org.za/viewQualification.php?id=78965"
                       rel="noopener noreferrer nofollow"
-                      className="hover:text-primary text-foreground/80 hover:underline"
+                      className="hover:text-primary text-foreground/70 hover:underline"
                     >
                       FET Certificate: IT Systems Development (NQF 5)
                     </a>
@@ -612,7 +596,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                       target="_blank"
                       href="https://regqs.saqa.org.za/viewQualification.php?id=71850"
                       rel="noopener noreferrer nofollow"
-                      className="hover:text-primary text-foreground/80 hover:underline"
+                      className="hover:text-primary text-foreground/70 hover:underline"
                     >
                       FET Certificate: IT Database Development (NQF 4)
                     </a>
@@ -623,7 +607,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                     <h4 className="text-foreground/90 mb-[1.25mm] uppercase">
                       <span>{"> "}</span>Grey College Secondary • 2019
                     </h4>
-                    <p className="text-foreground/80">
+                    <p className="text-foreground/70">
                       National Senior Certificate
                     </p>
                   </div>
@@ -634,7 +618,7 @@ export const CV = ({ className, ...props }: CVProps) => {
             <CVPageSection>
               <CVPageSectionTitle
                 id="references"
-                className="mb-[1.25mm] flex items-center gap-[1.5mm]"
+                className="mb-[2mm] flex items-center gap-[1.75mm]"
               >
                 <User2Icon className="size-[4.5mm] shrink-0" />
                 <span>References</span>
