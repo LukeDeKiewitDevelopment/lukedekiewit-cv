@@ -6,11 +6,12 @@ import robotsTxt from "astro-robots-txt";
 import webmanifest from "astro-webmanifest";
 import itsmatteomanfsecurityTxt from "@itsmatteomanf/astro-security-txt";
 import htaccess from "astro-htaccess";
+import path from "node:path";
 
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
-    resolve: {
+    resolve: { 
       alias: {
         "@": path.resolve("./src"),
       },
