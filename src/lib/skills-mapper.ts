@@ -55,7 +55,7 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
   Git: {
     icon: siGit,
     colors: {
-      foreground: "#000",
+      foreground: "#fff",
       background: siGit.hex,
     },
   },
@@ -101,8 +101,8 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
   "shadcn/ui": {
     icon: siShadcnui,
     colors: {
-      foreground: "#000",
-      background: "#fff",
+      foreground: "#fff",
+      background: "#000",
     },
   },
   GitHub: {
@@ -164,7 +164,7 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
   Astro: {
     icon: siAstro,
     colors: {
-      foreground: "#000",
+      foreground: "#fff",
       background: siAstro.hex,
     },
   },
@@ -201,6 +201,48 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
     colors: {
       foreground: "#fff",
       background: siWordpress.hex,
+    },
+  },
+  "W3C Web Standards": {
+    colors: {
+      foreground: "#fff",
+      background: "#0077cf",
+    },
+  },
+  "WCAG Accessibility": {
+    colors: {
+      foreground: "#fff",
+      background: "#005a9c",
+    },
+  },
+  "Agile Project Management": {
+    colors: {
+      foreground: "#fff",
+      background: "#005a9c",
+    },
+  },
+  "Client Communication": {
+    colors: {
+      foreground: "#fff",
+      background: "#005a9c",
+    },
+  },
+  "Responsive Design": {
+    colors: {
+      foreground: "#fff",
+      background: "#005a9c",
+    },
+  },
+  "Attention to Detail": {
+    colors: {
+      foreground: "#fff",
+      background: "#005a9c",
+    },
+  },
+  "BEM Methodology": {
+    colors: {
+      foreground: "#fff",
+      background: "#005a9c",
     },
   },
 };
