@@ -10,6 +10,11 @@ import htaccess from "astro-htaccess";
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
+    resolve: {
+      alias: {
+        "@": path.resolve("./src"),
+      },
+    },
   },
 
   integrations: [react()],
