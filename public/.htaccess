@@ -4,9 +4,15 @@
 Options -Indexes
 ServerSignature Off
 
+# =========================================================
+# Astro MIME Types (Crucial for loading .mjs files correctly)
+# =========================================================
+<IfModule mod_mime.c>
+  AddType text/javascript .js .mjs
+</IfModule>
 
 # =========================================================
-# Security & privacy headers
+# Security Headers
 # =========================================================
 <IfModule mod_headers.c>
   Header always set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
@@ -16,14 +22,12 @@ ServerSignature Off
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 </IfModule>
 
-
 # =========================================================
 # Protect sensitive files
 # =========================================================
 <FilesMatch "^(\.env|\.git|\.htaccess|\.htpasswd|.*\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|swp))$">
   Require all denied
 </FilesMatch>
-
 
 # =========================================================
 # Canonicalisation & routing
@@ -35,8 +39,19 @@ ServerSignature Off
   RewriteCond %{HTTPS} !=on
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # Redirect everything to / except allowed file downloads
-  RewriteCond %{REQUEST_URI} !^/$
-  RewriteCond %{REQUEST_URI} !^/files/
+  # -------------------------------------------------------
+  # Routing
+  # -------------------------------------------------------
+  
+  # 1. If the request matches a real file (like your CSS/JS in /_astro/), SERVE IT.
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # 2. If the request matches a real directory (like /about/), SERVE IT.
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # 3. If it's NOT a file or folder, redirect to Home.
   RewriteRule ^ / [L,R=301]
+
 </IfModule>
