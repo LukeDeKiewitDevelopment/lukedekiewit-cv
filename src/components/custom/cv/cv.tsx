@@ -268,12 +268,14 @@ export const CV = ({ className, ...props }: CVProps) => {
               </CVPageSectionTitle>
               <ul className="text-8pt text-foreground/80 list-inside list-disc text-balance break-keep">
                 <li>W3C Web Standards</li>
+<li>WCAG Accessibility Standards</li>
                 <li>Client Communication</li>
                 <li>Search Engine Optimisation</li>
+<li>Semantic HTML</li>
                 <li>Responsive Web Design</li>
                 <li>Attention to Detail</li>
                 <li>Agile Project Management</li>
-                <li>BEM Methodology</li>
+             
                 <li>Collaborative Problem Solving</li>
               </ul>
             </CVPageSection>
