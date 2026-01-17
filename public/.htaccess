@@ -1,13 +1,13 @@
-# ---------------------------------------------------------
-# General hardening
-# ---------------------------------------------------------
+# =========================================================
+# Global hardening
+# =========================================================
 Options -Indexes
 ServerSignature Off
 
 
-# ---------------------------------------------------------
-# Security headers
-# ---------------------------------------------------------
+# =========================================================
+# Security & privacy headers
+# =========================================================
 <IfModule mod_headers.c>
   Header always set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
   Header always set X-Frame-Options "DENY"
@@ -17,17 +17,17 @@ ServerSignature Off
 </IfModule>
 
 
-# ---------------------------------------------------------
-# Protect sensitive and dot files (Apache 2.4+)
-# ---------------------------------------------------------
+# =========================================================
+# Protect sensitive files
+# =========================================================
 <FilesMatch "^(\.env|\.git|\.htaccess|\.htpasswd|.*\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|swp))$">
   Require all denied
 </FilesMatch>
 
 
-# ---------------------------------------------------------
-# Canonicalisation & HTTPS
-# ---------------------------------------------------------
+# =========================================================
+# Canonicalisation & routing
+# =========================================================
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
@@ -35,7 +35,8 @@ ServerSignature Off
   RewriteCond %{HTTPS} !=on
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # Redirect everything to /
+  # Redirect everything to / except allowed file downloads
   RewriteCond %{REQUEST_URI} !^/$
+  RewriteCond %{REQUEST_URI} !^/files/
   RewriteRule ^ / [L,R=301]
 </IfModule>
