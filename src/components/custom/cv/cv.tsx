@@ -283,7 +283,7 @@ export const CV = ({ className, ...props }: CVProps) => {
             <CVPageHeader
               className="relative"
               titleNode={
-                <h1 className="text-primary text-[26pt] leading-none uppercase">
+                <h1 className="text-primary text-[26pt] leading-none uppercase mb-[1mm]">
                   <EncryptedText
                     text={"Luke De Kiewit"}
                     className="motion-reduce:hidden"
