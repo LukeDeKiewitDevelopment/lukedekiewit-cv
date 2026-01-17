@@ -1,0 +1,41 @@
+# ---------------------------------------------------------
+# General hardening
+# ---------------------------------------------------------
+Options -Indexes
+ServerSignature Off
+
+
+# ---------------------------------------------------------
+# Security headers
+# ---------------------------------------------------------
+<IfModule mod_headers.c>
+  Header always set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
+  Header always set X-Frame-Options "DENY"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+
+# ---------------------------------------------------------
+# Protect sensitive and dot files (Apache 2.4+)
+# ---------------------------------------------------------
+<FilesMatch "^(\.env|\.git|\.htaccess|\.htpasswd|.*\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|swp))$">
+  Require all denied
+</FilesMatch>
+
+
+# ---------------------------------------------------------
+# Canonicalisation & HTTPS
+# ---------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Redirect everything to /
+  RewriteCond %{REQUEST_URI} !^/$
+  RewriteRule ^ / [L,R=301]
+</IfModule>
