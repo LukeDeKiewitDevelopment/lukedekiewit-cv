@@ -267,14 +267,14 @@ export const CV = ({ className, ...props }: CVProps) => {
                 Additional Skills
               </CVPageSectionTitle>
               <ul className="text-8pt text-foreground/80 list-inside list-disc text-balance break-keep">
-<li>Responsive Web Design</li>
+                <li>Responsive Web Design</li>
                 <li>W3C Web Standards</li>
-<li>WCAG Accessibility Standards</li>
+                <li>WCAG Accessibility Standards</li>
                 <li>Search Engine Optimisation</li>
-<li>Semantic HTML</li>
+                <li>Semantic HTML</li>
                 <li>Attention to Detail</li>
                 <li>Agile Project Management</li>
-             
+
                 <li>Collaborative Problem Solving</li>
               </ul>
             </CVPageSection>
@@ -283,7 +283,7 @@ export const CV = ({ className, ...props }: CVProps) => {
             <CVPageHeader
               className="relative"
               titleNode={
-                <h1 className="text-primary text-[26pt] leading-none uppercase mb-[1mm]">
+                <h1 className="text-primary mb-[1mm] text-[26pt] leading-none uppercase">
                   <EncryptedText
                     text={"Luke De Kiewit"}
                     className="motion-reduce:hidden"
