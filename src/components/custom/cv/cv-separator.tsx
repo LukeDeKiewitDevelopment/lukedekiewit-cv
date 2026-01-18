@@ -2,7 +2,7 @@ import * as React from "react";
 import * as SeparatorPrimitive from "@radix-ui/react-separator";
 import { cn } from "@/lib/utils";
 
-export type CVSeperatorProps = React.ComponentProps<
+export type CVSeparatorProps = React.ComponentProps<
   typeof SeparatorPrimitive.Root
 >;
 
@@ -11,7 +11,7 @@ export const CVSeparator = ({
   orientation = "horizontal",
   decorative = true,
   ...props
-}: CVSeperatorProps) => {
+}: CVSeparatorProps) => {
   return (
     <SeparatorPrimitive.Root
       data-slot="cv-separator"

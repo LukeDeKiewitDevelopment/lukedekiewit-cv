@@ -6,7 +6,7 @@
     "url": "https://www.lukedekiewit.co.za"
   },
   "type": "module",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
-    "@itsmatteomanf/astro-security-txt": "^0.4.0",
     "@radix-ui/react-avatar": "^1.1.11",
     "@radix-ui/react-dropdown-menu": "^2.1.16",
     "@radix-ui/react-hover-card": "^1.1.15",
@@ -31,11 +30,7 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "astro": "^5.16.6",
-    "astro-htaccess": "^0.2.3",
-    "astro-humans": "^1.0.0",
-    "astro-robots-txt": "^1.0.0",
     "astro-seo": "^1.1.0",
-    "astro-webmanifest": "^1.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.562.0",
