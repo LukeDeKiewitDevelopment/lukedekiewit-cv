@@ -32,7 +32,7 @@ const copyLink = async (shareLink: string) => {
 
       if (clipboardContent === shareLink) {
         toast(
-          <div className="flex items-center font-mono gap-1.5rem">
+          <div className="flex items-center font-mono gap-1.5">
               <ClipboardCheck className="size-4" />
               <span>Link copied to clipboard</span>
           </div>,
