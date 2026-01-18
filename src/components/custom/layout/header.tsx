@@ -161,7 +161,8 @@ export const Header = ({
               download
             >
               <DownloadIcon />
-              <span className="hidden sm:hidden md:inline-flex">Download</span>
+              <span className="hidden md:inline-flex">Download</span>
+              <span className="sr-only md:hidden">Download</span>
             </a>
           </Button>
           <Button
@@ -172,7 +173,7 @@ export const Header = ({
             }}
           >
             <ShareIcon />
-            <span className="hidden sm:hidden md:inline-flex">Share</span>
+            <span className="sr-only">Download</span>
           </Button>
           <Button
             variant={"outline"}
