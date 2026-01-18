@@ -7,7 +7,7 @@ import {
   CheckCircle,
   DownloadIcon,
   PrinterIcon,
-  ShareIcon,
+  CopyIcon,
 } from "lucide-react";
 import { ThemeSwitcher } from "./theme-switcher";
 import { Separator } from "@/components/ui/separator";
@@ -172,7 +172,7 @@ export const Header = ({
               copyLink(shareLink);
             }}
           >
-            <ShareIcon />
+            <CopyIcon />
             <span className="sr-only">Download</span>
           </Button>
           <Button
