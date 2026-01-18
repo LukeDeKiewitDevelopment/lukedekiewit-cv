@@ -30,7 +30,7 @@ const copyLink = async (shareLink: string) => {
     toast.error(
       <span role="alert" className="font-mono">
         Error: Could not copy link
-      </span>,
+      </span>
     );
   }
 
@@ -42,14 +42,9 @@ const copyLink = async (shareLink: string) => {
 
       if (clipboardContent === shareLink) {
         toast(
-          <div className="flex flex-col gap-1.5 font-mono">
-            <span className="text-primary uppercase select-all">
-              {shareLink}
-            </span>
-            <div className="flex items-center gap-2">
+          <div className="flex font-mono gap-1rem">
               <CheckCircle className="size-4" />
-              <span>Link copied to clipboard!</span>
-            </div>
+              <span>Link copied to clipboard</span>
           </div>,
         );
       }
