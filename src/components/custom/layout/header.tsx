@@ -4,7 +4,7 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { EncryptedText } from "@/components/ui/encrypted-text";
 import {
-  CheckCircle,
+  ClipboardCheck,
   DownloadIcon,
   PrinterIcon,
   CopyIcon,
@@ -25,25 +25,15 @@ export type HeaderProps = {
 type HeaderLogo = ComponentPropsWithoutRef<"img">;
 
 const copyLink = async (shareLink: string) => {
-  if (typeof window === "undefined") {
-    console.error("Could not open copy link: window is undefined");
-    toast.error(
-      <span role="alert" className="font-mono">
-        Error: Could not copy link
-      </span>
-    );
-  }
-
   try {
     await navigator.clipboard.writeText(shareLink);
-
     try {
       const clipboardContent = await navigator.clipboard.readText();
 
       if (clipboardContent === shareLink) {
         toast(
           <div className="flex font-mono gap-1rem">
-              <CheckCircle className="size-4" />
+              <ClipboardCheck className="size-4" />
               <span>Link copied to clipboard</span>
           </div>,
         );
@@ -51,16 +41,16 @@ const copyLink = async (shareLink: string) => {
     } catch (error) {
       console.error("Could not copy link:", error);
       toast.error(
-        <span role="alert" className="font-mono">
-          Error: Could not copy link
+        <span role="alert" className="font-mono text-destructive">
+          {`Error: ${error}`}
         </span>,
       );
     }
   } catch (error) {
     console.error("Could not copy link:", error);
     toast.error(
-      <span role="alert" className="font-mono">
-        Error: Could not copy link
+      <span role="alert" className="font-mono text-destructive">
+        {`Error: ${error}`}
       </span>,
     );
   }
@@ -77,8 +67,8 @@ const printPage = async () => {
   } catch (error) {
     console.error("Could not open print dialog:", error);
     toast.error(
-      <span role="alert" className="font-mono">
-        Error: Could not open print dialog
+      <span role="alert" className="font-mono text-destructive">
+        {`Error: ${error}`}
       </span>,
     );
   } finally {
