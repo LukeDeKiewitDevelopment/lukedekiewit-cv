@@ -173,7 +173,7 @@ export const Header = ({
             }}
           >
             <CopyIcon />
-            <span className="sr-only">Download</span>
+            <span className="sr-only">Copy link</span>
           </Button>
           <Button
             variant={"outline"}
