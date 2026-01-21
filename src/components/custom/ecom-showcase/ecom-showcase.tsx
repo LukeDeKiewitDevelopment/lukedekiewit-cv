@@ -4,6 +4,7 @@ import { Timeline } from "@/components/ui/timeline";
 import { useEffect, useState } from "react";
 import { getAsanaData } from "./fetch-asana-tasks_DELETE_LATER";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 type EcomShowcaseNavigation =
   | "ecom-timeline"
@@ -19,15 +20,15 @@ export const EcomShowcase = () => {
   //   getAsanaData();
   // }, []);
 
-  return (
-    <div className="p-4 md:p-6 lg:p-8">
-      <div className="flex flex-col gap-4">
+  const EcomShowcaseNavigation = () => {
+    return (
+      <div className="flex flex-col gap-4 bg-blend-color-burn">
         <div className="flex flex-col text-center">
-          <h1 className="text-3xl uppercase dark:text-shadow-black dark:text-shadow-xs">
+          <h1 className="text-2xl uppercase selection:text-shadow-none md:text-3xl dark:text-shadow-black dark:text-shadow-xs">
             Luke De Kiewit
           </h1>
-          <span className="text-muted-foreground text-xs dark:text-shadow-black dark:text-shadow-xs">
-            Application to{" "}
+          <span className="text-muted-foreground text-xs selection:text-shadow-none dark:text-shadow-black dark:text-shadow-xs">
+            {"Application to "}
             <a
               href="https://r17ventures.com/"
               rel="noopener noreferrer nofollow"
@@ -36,8 +37,10 @@ export const EcomShowcase = () => {
             >
               R17 Ventures
             </a>
+            {" - Website Developer Position"}
           </span>
         </div>
+        <Separator />
         <nav className="flex flex-wrap items-center justify-center gap-4">
           <Button
             size="sm"
@@ -74,8 +77,14 @@ export const EcomShowcase = () => {
             Shopify Sections Showcase
           </Button>
         </nav>
+        <Separator />
       </div>
+    );
+  };
 
+  return (
+    <div className="p-4 md:p-6 lg:p-8">
+      <EcomShowcaseNavigation />
       <main className="mt-4 md:mt-6 lg:mt-8">
         {activeShowcaseSection === "ecom-timeline" && <EcomShowcaseTimeline />}
         {activeShowcaseSection === "ecom-project-highlights" && (
