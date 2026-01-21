@@ -23,7 +23,7 @@ export const EcomTimelineHeader = ({
     >
       <div className="flex items-center justify-between gap-4 p-4 md:p-6 lg:p-8">
         {lightModeLogo && (
-          <Avatar className="border-primary hidden-in-darkmode hidden border-2 p-0.75 shadow-black select-none sm:hidden md:flex md:size-10">
+          <Avatar className="border-primary hidden-in-darkmode flex border-2 p-0.75 shadow-black select-none md:size-10">
             <AvatarImage
               className="animate-in zoom-in fade-in blur-in duration-200"
               {...lightModeLogo}
@@ -35,7 +35,7 @@ export const EcomTimelineHeader = ({
           </Avatar>
         )}
         {darkModeLogo && (
-          <Avatar className="border-primary hidden-in-lightmode hidden border-2 p-0.75 shadow-black select-none sm:hidden md:flex md:size-10">
+          <Avatar className="border-primary hidden-in-lightmode flex border-2 p-0.75 shadow-black select-none md:size-10">
             <AvatarImage
               className="animate-in zoom-in fade-in blur-in duration-200"
               {...darkModeLogo}

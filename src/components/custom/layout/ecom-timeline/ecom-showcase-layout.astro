@@ -1,9 +1,10 @@
 ---
-import "../../../styles/global.css";
+import "../../../../styles/global.css";
 import { Toaster } from "@/components/ui/sonner";
 import { SiteBackground } from "../site-background";
-import { Footer } from "../footer";
+
 import { EcomTimelineHeader } from "./ecom-showcase-header";
+import { Footer } from "../footer";
 ---
 
 <!doctype html>
@@ -51,7 +52,9 @@ import { EcomTimelineHeader } from "./ecom-showcase-header";
       }
     </script>
   </head>
-  <body class="size-full overflow-x-hidden print:overflow-hidden">
+  <body
+    class="size-full overflow-x-hidden min-h-screen flex flex-col"
+  >
     <EcomTimelineHeader
       lightModeLogo={{
         src: "/images/logos/ldk_logo_black_tilted_724px.png",
@@ -72,13 +75,13 @@ import { EcomTimelineHeader } from "./ecom-showcase-header";
       client:load
     />
     <slot />
-    <Footer client:load />
+    <Footer client:load className="mt-auto" />
     <Toaster client:load position="bottom-center" />
     <SiteBackground
       client:load
       backgroundImage={{
         className: "grayscale opacity-10 hidden dark:block",
-        src: "/images/backgrounds/code_4.jpg",
+        src: "/images/backgrounds/laptop_code_1.jpg",
       }}
     />
   </body>
