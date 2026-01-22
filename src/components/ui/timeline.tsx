@@ -29,15 +29,12 @@ export const Timeline = ({ data }: SanitisedAsanaData) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div
-      className="w-full font-sans md:px-10"
-      ref={containerRef}
-    >
+    <div className="w-full font-sans md:px-10" ref={containerRef}>
       <div className="mx-auto max-w-7xl px-4 py-20 md:px-8 lg:px-10">
-        <h2 className="mb-4 max-w-4xl text-lg  md:text-4xl ">
+        <h2 className="mb-4 max-w-4xl text-lg md:text-4xl">
           Changelog from my journey
         </h2>
-        <p className="max-w-sm text-sm md:text-base ">
+        <p className="max-w-sm text-sm md:text-base">
           I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
           a timeline of my journey.
         </p>
@@ -50,7 +47,7 @@ export const Timeline = ({ data }: SanitisedAsanaData) => {
             className="flex justify-start pt-10 md:gap-10 md:pt-40"
           >
             <div className="sticky top-40 z-40 flex max-w-xs flex-col items-center self-start md:w-full md:flex-row lg:max-w-sm">
-              <div className="absolute left-3 flex h-10 w-10 items-center justify-center rounded-full  md:left-3 ">
+              <div className="absolute left-3 flex h-10 w-10 items-center justify-center rounded-full md:left-3">
                 <div className="h-4 w-4 rounded-full border border-neutral-300 bg-neutral-200 p-2 dark:border-neutral-700 dark:bg-neutral-800" />
               </div>
               <h3 className="hidden text-xl font-bold text-neutral-500 md:block md:pl-20 md:text-5xl dark:text-neutral-500">
@@ -69,6 +66,7 @@ export const Timeline = ({ data }: SanitisedAsanaData) => {
         <div
           style={{
             height: height + "px",
+            interpolateSize: "allow-keywords",
           }}
           className="absolute top-0 left-8 w-0.5 overflow-hidden bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-0% via-neutral-200 to-transparent to-99% mask-[linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] md:left-8 dark:via-neutral-700"
         >
@@ -76,8 +74,9 @@ export const Timeline = ({ data }: SanitisedAsanaData) => {
             style={{
               height: heightTransform,
               opacity: opacityTransform,
+              interpolateSize: "allow-keywords",
             }}
-            className="absolute inset-x-0 top-0 w-1 rounded-full bg-linear-to-t from-primary from-0% via-primary via-10% to-transparent"
+            className="from-primary via-primary/90 absolute inset-x-0 top-0 w-1 rounded-full bg-linear-to-t from-0% via-10% to-transparent"
           />
         </div>
       </div>

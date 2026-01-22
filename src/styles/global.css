@@ -230,6 +230,11 @@ pre {
   font-size: var(--text-sm);
 }
 
+.scrollbar-gutter-stable {
+  scrollbar-gutter: stable;
+}
+
+
 @media (prefers-reduced-motion: reduce) {
   *,
   ::before,
@@ -252,6 +257,10 @@ pre {
   * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
+  }
+
+  .scrollbar-gutter-stable {
+    scrollbar-gutter: auto !important;
   }
 }
 

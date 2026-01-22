@@ -93,13 +93,14 @@ export const EcomShowcase = () => {
         {activeShowcaseSection === "ecom-timeline" && (
           <div className="mt-4 flex flex-wrap items-center justify-end">
             <div className="text-muted-foreground flex items-center gap-2 text-right text-xs uppercase">
-              <span>Data snapshot retrieved using the Asana API</span>
+              <span> Data snapshot retrieved using the </span>
               <SkillBadgeIcon
                 title="Asana Icon"
                 hex="var(--muted-foreground)"
                 path={siAsana.path}
-                className="size-[3.75mm] shrink-0"
+                className="inline size-[3.75mm] shrink-0 align-middle mb-0.5"
               />
+              Asana API
             </div>
           </div>
         )}

@@ -50,9 +50,10 @@ export const CV = ({ className, ...props }: CVProps) => {
         {...props}
         data-slot="cv"
         className={clsx(
-          "relative z-1 flex w-full gap-4 overflow-auto p-4 md:p-6 lg:p-8 print:block print:h-[297mm] print:max-h-[297mm] print:min-h-[297mm] print:max-w-none print:min-w-[210mm] print:gap-0! print:overflow-hidden print:p-0!",
+          "scrollbar-gutter-stable relative z-1 flex w-full gap-4 overflow-auto scroll-smooth p-4 md:p-6 lg:p-8 print:block print:h-[297mm] print:max-h-[297mm] print:min-h-[297mm] print:max-w-none print:min-w-[210mm] print:gap-0! print:overflow-hidden print:p-0!",
           className,
         )}
+        style={{ scrollbarGutter: "stable" }}
       >
         <CVPage className="mx-auto print:m-0!">
           <CVSidebar>
