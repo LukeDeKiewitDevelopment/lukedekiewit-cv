@@ -1,11 +1,6 @@
 "use client";
 
 import type { SanitisedAsanaData } from "@/lib/engineering-asana-tasks";
-import {
-  CheckCircle2Icon,
-  CheckCircleIcon,
-  CircleCheckBigIcon,
-} from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
@@ -30,16 +25,28 @@ export const Timeline = ({ data }: SanitisedAsanaData) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div className="w-full" ref={containerRef}>
-      <div ref={ref} className="relative mx-auto">
+    <div className="w-full font-sans md:px-10" ref={containerRef}>
+      <div className="mx-auto max-w-7xl px-4 py-20 md:px-8 lg:px-10">
+        <h2 className="mb-4 max-w-4xl text-lg md:text-4xl">
+          Changelog from my journey
+        </h2>
+        <p className="max-w-sm text-sm md:text-base">
+          I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
+          a timeline of my journey.
+        </p>
+      </div>
+
+      <div ref={ref} className="relative mx-auto max-w-7xl">
         {data.map((item, index) => (
-          <div key={index} className="flex justify-start pt-10 md:gap-10">
-            <div className="sticky top-40 z-40 flex flex-col items-center self-start md:w-full md:flex-row lg:max-w-sm">
+          <div
+            key={index}
+            className="flex justify-start pt-10 md:gap-10 md:pt-40"
+          >
+            <div className="sticky top-40 z-40 flex max-w-xs flex-col items-center self-start md:w-full md:flex-row lg:max-w-sm">
               <div className="absolute left-3 flex h-10 w-10 items-center justify-center rounded-full md:left-3">
-               
-                <CircleCheckBigIcon className="text-primary size-8 rounded-full backdrop-blur-3xl" />
+                <div className="h-4 w-4 rounded-full border border-neutral-300 p-2 dark:border-neutral-700 dark:bg-neutral-800" />
               </div>
-              <h3 className="hidden text-lg font-bold md:block md:pl-20 dark:text-neutral-500">
+              <h3 className="hidden text-xl font-bold text-neutral-500 md:block md:pl-20 md:text-5xl dark:text-neutral-500">
                 {item.name}
               </h3>
             </div>
@@ -72,7 +79,7 @@ export const Timeline = ({ data }: SanitisedAsanaData) => {
               opacity: opacityTransform,
               interpolateSize: "allow-keywords",
             }}
-            className="from-primary via-primary absolute inset-x-0 top-0 w-1 rounded-full bg-linear-to-t from-0% via-10% to-transparent"
+            className="from-primary via-primary/90 absolute inset-x-0 top-0 w-1 rounded-full bg-linear-to-t from-0% via-10% to-transparent"
           />
         </div>
       </div>

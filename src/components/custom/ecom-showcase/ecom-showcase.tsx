@@ -7,7 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { SkillBadgeIcon } from "../skill-badge";
 import { siAsana } from "simple-icons";
-import { ecomData } from "@/lib/ecom-asana-tasks";
+import { ecomData } from "@/lib/ecommerce-asana-tasks";
+import { IconInfoCircle } from "@tabler/icons-react";
 type EcomShowcaseNavigation =
   | "ecom-timeline"
   | "ecom-section-showcase"
@@ -91,14 +92,19 @@ export const EcomShowcase = () => {
       <EcomShowcaseNavigation />
       <main>
         {activeShowcaseSection === "ecom-timeline" && (
-          <div className="mt-4 flex flex-wrap items-center justify-end">
-            <div className="text-muted-foreground flex items-center gap-2 text-right text-xs uppercase">
-              <span> Data snapshot retrieved using the </span>
+          <div className="mt-4 flex flex-wrap justify-between gap-4">
+            <p className="text-muted-foreground max-w-1/3 text-xs text-balance wrap-break-word uppercase">
+              This is a complete timeline of all the tasks I completed across
+              multiple Ecommerce projects at Bitcube. All proprietary and
+              sensitive details, including project names, have been redacted.
+            </p>
+            <div className="text-muted-foreground flex gap-2 text-right text-xs uppercase">
+              <span>Data snapshot retrieved using the</span>
               <SkillBadgeIcon
                 title="Asana Icon"
                 hex="var(--muted-foreground)"
                 path={siAsana.path}
-                className="inline size-[3.75mm] shrink-0 align-middle mb-0.5"
+                className="mb-0.5 inline size-[3.75mm] shrink-0 align-middle"
               />
               Asana API
             </div>

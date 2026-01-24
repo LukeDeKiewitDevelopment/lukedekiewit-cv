@@ -1,4 +1,5 @@
-import type { SanitisedAsanaData, SanitisedAsanaDataEntry } from "./ecom-asana-tasks";
+import type { SanitisedAsanaData, SanitisedAsanaDataEntry } from "./engineering-asana-tasks";
+
 
 export async function getAsanaData(
   pat: string,
