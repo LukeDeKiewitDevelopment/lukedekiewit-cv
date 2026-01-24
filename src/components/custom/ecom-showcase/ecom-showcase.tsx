@@ -67,7 +67,7 @@ export const EcomShowcase = () => {
     <div className="p-4 md:p-6 lg:p-8">
       <EcomShowcaseNavigation />
       <main>
-        {/* {activeShowcaseSection === "ecom-timeline" && (
+        {activeShowcaseSection === "ecom-timeline" && (
           <div className="text-muted-foreground mt-12 flex flex-col items-center justify-center gap-4 text-center text-xs text-balance wrap-break-word">
             <p className="text-muted-foreground/90 max-w-prose">
               This is a complete timeline of all the tasks I completed across
@@ -78,7 +78,7 @@ export const EcomShowcase = () => {
               Data snapshot retrieved using the Asana API.
             </span>
           </div>
-        )} */}
+        )}
         {activeShowcaseSection === "ecom-timeline" && <EcomShowcaseTimeline />}
         {activeShowcaseSection === "ecom-project-highlights" && (
           <EcomProjectHighlights />
