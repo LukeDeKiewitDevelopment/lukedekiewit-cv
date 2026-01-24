@@ -15,22 +15,7 @@ export const ecomData: SanitisedAsanaData = {
       name: 'Ref(booking form): add salesforce form to "book an appointment"',
       createdAt: "2025-03-18T07:30:34.804Z",
       notes:
-        "https://app.asana.com/0/0/1209493724421485/f\n\nhttps://www.*********.com/pages/contact\n\n\nhttps://app.asana.com/app/asana/-/get_asset?asset_id=*********",
-      projectName: "*********",
-    },
-
-    {
-      id: "1209709497437162",
-      name: "Admin",
-      createdAt: "2025-03-18T07:29:46.778Z",
-      notes: "",
-      projectName: "*********",
-    },
-    {
-      id: "1209709497437160",
-      name: "Reviews",
-      createdAt: "2025-03-18T07:29:03.673Z",
-      notes: "",
+        "https://app.asana.com/0/0/*********\n\nhttps://www.*********.com/pages/contact\n\n\nhttps://app.asana.com/app/asana/-/get_asset?asset_id=*********",
       projectName: "*********",
     },
 
@@ -129,13 +114,6 @@ export const ecomData: SanitisedAsanaData = {
       projectName: "*********",
     },
     {
-      id: "1209627114590248",
-      name: "Planning",
-      createdAt: "2025-03-10T09:37:16.066Z",
-      notes: "",
-      projectName: "*********",
-    },
-    {
       id: "1209568210402144",
       name: "Feat(Landing Page): ********* Landing Page",
       createdAt: "2025-03-05T05:21:57.016Z",
@@ -182,13 +160,7 @@ export const ecomData: SanitisedAsanaData = {
         "    On mobile, the feature isn’t formatting properly - I've attached a screenshot for reference.\n    Could we also implement an option to add a third content box in the row? \nLet me know when we can expect these fixes.\n\n\n",
       projectName: "*********",
     },
-    {
-      id: "1209508146892411",
-      name: "Time Tracking - Luke",
-      createdAt: "2025-02-26T10:36:23.536Z",
-      notes: "",
-      projectName: "NoTwoWays",
-    },
+
     {
       id: "1209497055787210",
       name: "Fix(Finish options): Broken Link ",
@@ -252,7 +224,7 @@ export const ecomData: SanitisedAsanaData = {
     },
     {
       id: "1209480725147849",
-      name: "Fix(PDP):unit of measure",
+      name: "Fix(PDP):unit of measurement",
       createdAt: "2025-02-24T08:20:54.996Z",
       notes:
         "The jacket/trouser alteration length on garments is being displayed a (CM) default - when it should be shown as inches. Please can you investigate why this is happening and rectify?\n\nhttps://app.asana.com/app/asana/-/get_asset?asset_id=*********",
@@ -314,7 +286,7 @@ export const ecomData: SanitisedAsanaData = {
     },
     {
       id: "1209290671972217",
-      name: "Fix(cart): fix styling issues relating to clerk recommendations",
+      name: "Fix(cart): fix styling issues relating to Clerk recommendations",
       createdAt: "2025-02-03T05:57:19.349Z",
       notes:
         "1) Fix styling on cart page where adding a new section breaks page.\nEnsure that styling regarding the main layout of the page is per section.\n    Seems like flex styling is on body and possibly inline styles\n\n\ncontext https://app.asana.com/0/1202537898929105/1209290671972214\n\n2) get the custom liquid currently on the cart page that has code from https://clerk.io to work\n\n\n",
@@ -334,14 +306,14 @@ export const ecomData: SanitisedAsanaData = {
       name: "Footer links should not be all caps",
       createdAt: "2025-01-29T08:21:25.683Z",
       notes: "",
-      projectName: "Palome - Kanban",
+      projectName: "*********",
     },
     {
       id: "1209268408381477",
       name: "Added social media links don't display properly",
       createdAt: "2025-01-29T08:14:53.054Z",
       notes: "https://app.asana.com/app/asana/-/get_asset?asset_id=*********",
-      projectName: "Palome - Kanban",
+      projectName: "*********",
     },
     {
       id: "1209261142376825",
@@ -379,7 +351,7 @@ export const ecomData: SanitisedAsanaData = {
       name: "Feat(ts): convert js to ts files",
       createdAt: "2025-01-14T10:47:44.664Z",
       notes: "",
-      projectName: "Wishlist app",
+      projectName: "*********",
     },
     {
       id: "1209074705883826",

@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
+import { Separator } from "./separator";
 
 export const Timeline = ({ data }: SanitisedAsanaData) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -29,26 +30,63 @@ export const Timeline = ({ data }: SanitisedAsanaData) => {
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
+  const formatDate = (isoString?: string) => {
+    if (!isoString) {
+      return;
+    }
+
+    const date = new Date(isoString);
+
+    if (isNaN(date.getTime())) {
+      return "Invalid Date";
+    }
+
+    const formattedDate = date.toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+      timeZone: "UTC",
+    });
+
+    return formattedDate;
+  };
+
   return (
-    <div className="w-full" ref={containerRef}>
+    <div ref={containerRef}>
       <div ref={ref} className="relative mx-auto">
         {data.map((item, index) => (
           <div key={index} className="flex justify-start pt-10 md:gap-10">
             <div className="sticky top-40 z-40 flex flex-col items-center self-start md:w-full md:flex-row lg:max-w-sm">
-              <div className="absolute left-3 flex h-10 w-10 items-center justify-center rounded-full md:left-3">
-               
+              <div className="absolute left-3 flex size-10 items-center justify-center rounded-full md:left-3">
                 <CircleCheckBigIcon className="text-primary size-8 rounded-full backdrop-blur-3xl" />
               </div>
-              <h3 className="hidden text-lg font-bold md:block md:pl-20 dark:text-neutral-500">
-                {item.name}
-              </h3>
+              <div className="hidden md:block">
+                <h3 className="text-foreground text-sm wrap-anywhere md:pl-20">
+                  {item.name}
+                </h3>
+                <time
+                  className="text-muted-foreground mt-1 text-xs md:pl-20"
+                  dateTime={item.createdAt}
+                >
+                  {formatDate(item.createdAt)}
+                </time>
+              </div>
             </div>
 
             <div className="relative w-full pr-4 pl-20 md:pl-4">
-              <h3 className="mb-4 block text-left text-2xl font-bold text-neutral-500 md:hidden dark:text-neutral-500">
-                {item.name}
-              </h3>
-              <pre className="w-full max-w-prose wrap-anywhere break-all whitespace-pre-line">
+              <div className="mb-4 block md:hidden">
+                <h3 className="text-foreground text-left text-sm wrap-anywhere break-all">
+                  {item.name}
+                </h3>
+                <time
+                  className="text-muted-foreground mt-1 text-xs md:pl-20"
+                  dateTime={item.createdAt}
+                >
+                  {formatDate(item.createdAt)}
+                </time>
+              </div>
+
+              <pre className="text-muted-foreground w-full max-w-prose text-xs! wrap-anywhere break-all whitespace-pre-line">
                 {item.notes === "" ? (
                   <span className="italic">No description provided.</span>
                 ) : (

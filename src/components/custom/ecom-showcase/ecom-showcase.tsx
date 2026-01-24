@@ -9,6 +9,7 @@ import { SkillBadgeIcon } from "../skill-badge";
 import { siAsana } from "simple-icons";
 import { ecomData } from "@/lib/ecommerce-asana-tasks";
 import { IconInfoCircle } from "@tabler/icons-react";
+import { BackToTop } from "../back-to-top";
 type EcomShowcaseNavigation =
   | "ecom-timeline"
   | "ecom-section-showcase"
@@ -92,22 +93,15 @@ export const EcomShowcase = () => {
       <EcomShowcaseNavigation />
       <main>
         {activeShowcaseSection === "ecom-timeline" && (
-          <div className="mt-4 flex flex-wrap justify-between gap-4">
-            <p className="text-muted-foreground max-w-1/3 text-xs text-balance wrap-break-word uppercase">
+          <div className="text-muted-foreground mt-4 flex flex-col items-center justify-center gap-4 text-center text-xs text-balance wrap-break-word">
+            <p className="text-muted-foreground/90 max-w-prose">
               This is a complete timeline of all the tasks I completed across
               multiple Ecommerce projects at Bitcube. All proprietary and
               sensitive details, including project names, have been redacted.
             </p>
-            <div className="text-muted-foreground flex gap-2 text-right text-xs uppercase">
-              <span>Data snapshot retrieved using the</span>
-              <SkillBadgeIcon
-                title="Asana Icon"
-                hex="var(--muted-foreground)"
-                path={siAsana.path}
-                className="mb-0.5 inline size-[3.75mm] shrink-0 align-middle"
-              />
-              Asana API
-            </div>
+            <span className="">
+              Data snapshot retrieved using the Asana API.
+            </span>
           </div>
         )}
         {activeShowcaseSection === "ecom-timeline" && <EcomShowcaseTimeline />}
@@ -124,9 +118,12 @@ export const EcomShowcase = () => {
 
 const EcomShowcaseTimeline = () => {
   return (
-    <section className="mt-4">
-      <Timeline data={ecomData.data} />
-    </section>
+    <>
+      <section className="animate-in fade-in mt-16 duration-300 flex justify-center">
+        <Timeline data={ecomData.data} />
+      </section>
+      <BackToTop />
+    </>
   );
 };
 
