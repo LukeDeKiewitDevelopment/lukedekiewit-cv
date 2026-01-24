@@ -1,14 +1,10 @@
 "use client";
 
 import type { SanitisedAsanaData } from "@/lib/engineering-asana-tasks";
-import {
-  CheckCircle2Icon,
-  CheckCircleIcon,
-  CircleCheckBigIcon,
-} from "lucide-react";
+import { formatNotes } from "@/lib/format-notes";
+import { CircleCheckBigIcon } from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
-import { Separator } from "./separator";
 
 export const Timeline = ({ data }: SanitisedAsanaData) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -55,7 +51,7 @@ export const Timeline = ({ data }: SanitisedAsanaData) => {
     <div ref={containerRef}>
       <div ref={ref} className="relative mx-auto">
         {data.map((item, index) => (
-          <div key={index} className="flex justify-start pt-10 md:gap-10">
+          <div key={index} className="flex justify-start pt-24 md:gap-10">
             <div className="sticky top-40 z-40 flex flex-col items-center self-start md:w-full md:flex-row lg:max-w-sm">
               <div className="absolute left-3 flex size-10 items-center justify-center rounded-full md:left-3">
                 <CircleCheckBigIcon className="text-primary size-8 rounded-full backdrop-blur-3xl" />
@@ -72,7 +68,6 @@ export const Timeline = ({ data }: SanitisedAsanaData) => {
                 </time>
               </div>
             </div>
-
             <div className="relative w-full pr-4 pl-20 md:pl-4">
               <div className="mb-4 block md:hidden">
                 <h3 className="text-foreground text-left text-sm wrap-anywhere break-all">
@@ -85,14 +80,8 @@ export const Timeline = ({ data }: SanitisedAsanaData) => {
                   {formatDate(item.createdAt)}
                 </time>
               </div>
-
-              <pre className="text-muted-foreground w-full max-w-prose text-xs! wrap-anywhere break-all whitespace-pre-line">
-                {item.notes === "" ? (
-                  <span className="italic">No description provided.</span>
-                ) : (
-                  item.notes
-                  // item.notes
-                )}
+              <pre className="text-muted-foreground w-full max-w-prose text-xs! wrap-anywhere text-balance whitespace-pre-line">
+                {formatNotes(item.notes)}
               </pre>
             </div>
           </div>

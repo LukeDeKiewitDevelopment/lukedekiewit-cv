@@ -1,6 +1,6 @@
 import type { SanitisedAsanaData } from "./engineering-asana-tasks";
 
-export const ecomData: SanitisedAsanaData = {
+export const ecommerceAsanaTasks: SanitisedAsanaData = {
   data: [
     {
       id: "1209699933931781",
@@ -350,13 +350,6 @@ export const ecomData: SanitisedAsanaData = {
       id: "1209134400020729",
       name: "Feat(ts): convert js to ts files",
       createdAt: "2025-01-14T10:47:44.664Z",
-      notes: "",
-      projectName: "*********",
-    },
-    {
-      id: "1209074705883826",
-      name: "Code reviews",
-      createdAt: "2025-01-03T07:02:35.269Z",
       notes: "",
       projectName: "*********",
     },
@@ -1081,17 +1074,10 @@ export const ecomData: SanitisedAsanaData = {
       projectName: "*********",
     },
     {
-      id: "1208168375653216",
-      name: "planning",
-      createdAt: "2024-08-29T10:03:13.150Z",
-      notes: "",
-      projectName: "NoTwoWays",
-    },
-    {
       id: "1208145861176769",
       name: "feature(landing page): new page ",
       createdAt: "2024-08-28T12:33:17.183Z",
-      notes: "    \n",
+      notes: "",
       projectName: "*********",
     },
     {

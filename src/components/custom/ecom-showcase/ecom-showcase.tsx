@@ -1,30 +1,17 @@
 "use client";
 
 import { Timeline } from "@/components/ui/timeline";
-import { useEffect, useState } from "react";
-import { getAsanaData } from "@/lib/fetch-asana-tasks";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { SkillBadgeIcon } from "../skill-badge";
-import { siAsana } from "simple-icons";
-import { ecomData } from "@/lib/ecommerce-asana-tasks";
-import { IconInfoCircle } from "@tabler/icons-react";
+import { ecommerceAsanaTasks } from "@/lib/ecommerce-asana-tasks";
 import { BackToTop } from "../back-to-top";
-type EcomShowcaseNavigation =
-  | "ecom-timeline"
-  | "ecom-section-showcase"
-  | "ecom-project-highlights";
+
+type EcomShowcaseNavigation = "ecom-timeline" | "ecom-project-highlights";
 
 export const EcomShowcase = () => {
   const [activeShowcaseSection, setActiveShowcaseSection] =
     useState<EcomShowcaseNavigation>("ecom-timeline");
-
-  // useEffect(() => {
-  //   getAsanaData(
-  //     import.meta.env.ASANA_TOKEN,
-  //     import.meta.env.ASANA_WORKSPACE_ID,
-  //   );
-  // }, [activeShowcaseSection]);
 
   const EcomShowcaseNavigation = () => {
     return (
@@ -70,18 +57,6 @@ export const EcomShowcase = () => {
           >
             Ecommerce Project Highlights
           </Button>
-          <Button
-            size="sm"
-            variant={
-              activeShowcaseSection === "ecom-section-showcase"
-                ? "default"
-                : "ghost"
-            }
-            onClick={() => setActiveShowcaseSection("ecom-section-showcase")}
-            className="data-[variant=default]:hover:bg-primary data-[variant=default]:shadow-md"
-          >
-            Shopify Sections Showcase
-          </Button>
         </nav>
         <Separator />
       </div>
@@ -92,8 +67,8 @@ export const EcomShowcase = () => {
     <div className="p-4 md:p-6 lg:p-8">
       <EcomShowcaseNavigation />
       <main>
-        {activeShowcaseSection === "ecom-timeline" && (
-          <div className="text-muted-foreground mt-4 flex flex-col items-center justify-center gap-4 text-center text-xs text-balance wrap-break-word">
+        {/* {activeShowcaseSection === "ecom-timeline" && (
+          <div className="text-muted-foreground mt-12 flex flex-col items-center justify-center gap-4 text-center text-xs text-balance wrap-break-word">
             <p className="text-muted-foreground/90 max-w-prose">
               This is a complete timeline of all the tasks I completed across
               multiple Ecommerce projects at Bitcube. All proprietary and
@@ -103,13 +78,10 @@ export const EcomShowcase = () => {
               Data snapshot retrieved using the Asana API.
             </span>
           </div>
-        )}
+        )} */}
         {activeShowcaseSection === "ecom-timeline" && <EcomShowcaseTimeline />}
         {activeShowcaseSection === "ecom-project-highlights" && (
           <EcomProjectHighlights />
-        )}
-        {activeShowcaseSection === "ecom-section-showcase" && (
-          <EcomShowcaseSection />
         )}
       </main>
     </div>
@@ -119,8 +91,8 @@ export const EcomShowcase = () => {
 const EcomShowcaseTimeline = () => {
   return (
     <>
-      <section className="animate-in fade-in mt-16 duration-300 flex justify-center">
-        <Timeline data={ecomData.data} />
+      <section className="animate-in fade-in flex justify-center duration-300">
+        <Timeline data={ecommerceAsanaTasks.data} />
       </section>
       <BackToTop />
     </>
