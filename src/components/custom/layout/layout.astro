@@ -39,6 +39,7 @@ import { SiteBackground } from "./site-background";
           ? "dark"
           : "light";
       };
+
       const isDark = getThemePreference() === "dark";
       document.documentElement.classList[isDark ? "add" : "remove"]("dark");
 

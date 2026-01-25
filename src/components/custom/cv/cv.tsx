@@ -380,12 +380,12 @@ export const CV = ({ className, ...props }: CVProps) => {
                         I began my career at Bitcube in the Ecommerce department
                         in May 2024, specialising in Shopify theme and
                         storefront development. Focusing on responsive design,
-                        performance, and accessibility standards, I collaborated
-                        with a team of developers, designers and
-                        quality-assurance engineers to build, maintain and
-                        deliver bespoke solutions for prominent high-end luxury
-                        and contemporary fashion clients across the UK, EU, and
-                        US.
+                        performance, accessibility, semantic markup and
+                        improving conversion. I collaborated with a team of
+                        developers, designers and quality-assurance engineers to
+                        build, maintain and deliver bespoke solutions for
+                        prominent high-end luxury and contemporary fashion
+                        clients across the UK, EU, and US.
                       </p>
                       <p className="max-w-prose text-balance">
                         I transferred to the Engineering department in July
