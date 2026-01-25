@@ -49,12 +49,12 @@ export const Timeline = ({ data }: SanitisedAsanaData) => {
 
   return (
     <div ref={containerRef}>
-      <div ref={ref} className="relative mx-auto">
+      <div ref={ref} className="relative w-fit mx-auto">
         {data.map((item, index) => (
           <div key={index} className="flex justify-start pt-24 md:gap-10">
             <div className="sticky top-40 z-40 flex flex-col items-center self-start md:w-full md:flex-row lg:max-w-sm">
               <div className="absolute left-3 flex size-10 items-center justify-center rounded-full md:left-3">
-                <CircleCheckBigIcon className="text-primary size-8 rounded-full backdrop-blur-3xl" />
+                <CircleCheckBigIcon className="dark:text-primary size-8 rounded-full text-green-600 backdrop-blur-3xl" />
               </div>
               <div className="hidden md:block">
                 <h3 className="text-foreground text-sm wrap-anywhere md:pl-20">
@@ -80,7 +80,7 @@ export const Timeline = ({ data }: SanitisedAsanaData) => {
                   {formatDate(item.createdAt)}
                 </time>
               </div>
-              <pre className="text-muted-foreground w-full max-w-prose text-xs! wrap-anywhere text-balance whitespace-pre-line">
+              <pre className="text-muted-foreground w-full max-w-prose text-xs! text-balance wrap-anywhere whitespace-pre-line">
                 {formatNotes(item.notes)}
               </pre>
             </div>

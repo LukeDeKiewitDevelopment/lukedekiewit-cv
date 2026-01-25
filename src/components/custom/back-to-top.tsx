@@ -36,8 +36,8 @@ export const BackToTop = () => {
       aria-hidden={!isVisible}
       onClick={backtoTop}
       className={clsx(
-        "animate-in fade-in zoom-in fixed right-8 bottom-8 duration-200",
-        !isVisible && "pointer-events-none! opacity-0! -z-50!",
+        "animate-in fade-in zoom-in fixed right-8 bottom-8 z-9999 shadow-md duration-200",
+        !isVisible && "pointer-events-none! -z-50! opacity-0!",
       )}
     >
       <ArrowUpIcon />

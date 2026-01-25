@@ -7,7 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import { ecommerceAsanaTasks } from "@/lib/ecommerce-asana-tasks";
 import { BackToTop } from "../back-to-top";
 
-type ShowcaseNavigation = "ecom-timeline" | "ecom-project-highlights";
+type ShowcaseNavigation = "ecom-timeline" | "project-highlights";
 
 export const Showcase = () => {
   const [activeShowcaseSection, setActiveShowcaseSection] =
@@ -17,7 +17,7 @@ export const Showcase = () => {
     return (
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-2 text-center">
-          <h1 className="text-2xl uppercase selection:text-shadow-none md:text-3xl dark:text-shadow-black dark:text-shadow-xs">
+          <h1 className="text-3xl uppercase selection:text-shadow-none md:text-3xl dark:text-shadow-black dark:text-shadow-xs">
             Luke De Kiewit
           </h1>
           <span className="text-muted-foreground text-xs selection:text-shadow-none dark:text-shadow-black dark:text-shadow-xs">
@@ -47,17 +47,18 @@ export const Showcase = () => {
           <Button
             size="sm"
             variant={
-              activeShowcaseSection === "ecom-project-highlights"
+              activeShowcaseSection === "project-highlights"
                 ? "default"
                 : "ghost"
             }
-            onClick={() => setActiveShowcaseSection("ecom-project-highlights")}
+            onClick={() => setActiveShowcaseSection("project-highlights")}
             className="data-[variant=default]:hover:bg-primary data-[variant=default]:shadow-md"
           >
-            Projects
+            Project Highlights
           </Button>
         </nav>
         <Separator />
+        <BackToTop />
       </div>
     );
   };
@@ -66,19 +67,17 @@ export const Showcase = () => {
     <div className="p-4 md:p-6 lg:p-8">
       <ShowcaseNavigation />
       <main>
-        {activeShowcaseSection === "ecom-timeline" && (
+        {/* {activeShowcaseSection === "ecom-timeline" && (
           <div className="text-muted-foreground mt-12 flex flex-col items-center justify-center gap-4 text-center text-xs text-balance wrap-break-word">
-            <p className="text-muted-foreground/90 max-w-prose">
-              This is a complete timeline of all the tasks I completed across
-              multiple Ecommerce projects at Bitcube. All proprietary and
-              sensitive details, including project names, have been redacted.
-            </p>
-            <span className="max-w-prose">
+            <span className="text-muted-foreground/90">
               Data snapshot retrieved using the Asana API.
             </span>
           </div>
-        )}
+        )} */}
         {activeShowcaseSection === "ecom-timeline" && <ShowcaseEcomTimeline />}
+        {activeShowcaseSection === "project-highlights" && (
+          <ShowcaseProjectHighlights />
+        )}
       </main>
     </div>
   );
@@ -86,11 +85,28 @@ export const Showcase = () => {
 
 const ShowcaseEcomTimeline = () => {
   return (
-    <>
-      <section className="animate-in fade-in flex justify-center duration-300">
-        <Timeline data={ecommerceAsanaTasks.data} />
-      </section>
-      <BackToTop />
-    </>
+    <section>
+      <Timeline data={ecommerceAsanaTasks.data} />
+    </section>
+  );
+};
+
+const ShowcaseProjectHighlights = () => {
+  return (
+    <section>
+      <span>TAE</span>
+      <span>MIB</span>
+      <span>NTW</span>
+      <span></span>
+      <div>
+        <h5>Other Notable Projects</h5>
+        <ul>
+          <li>Atomwave Component Library</li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </section>
   );
 };
