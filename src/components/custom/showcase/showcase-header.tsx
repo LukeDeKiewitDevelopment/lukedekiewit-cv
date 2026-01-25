@@ -3,22 +3,27 @@
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { type ComponentPropsWithoutRef } from "react";
-import { ThemeSwitcher } from "../theme-switcher";
+import { ThemeSwitcher } from "../layout/theme-switcher";
 import { EncryptedText } from "@/components/ui/encrypted-text";
+import { Button } from "@/components/ui/button";
+import { CopyIcon } from "lucide-react";
+import { copyLink } from "../layout/header";
 
-export type EcomTimelineHeaderProps = {
-  lightModeLogo?: EcomTimelineHeaderLogo;
-  darkModeLogo?: EcomTimelineHeaderLogo;
+export type ShowcaseHeaderProps = {
+  lightModeLogo?: ShowcaseHeaderLogo;
+  darkModeLogo?: ShowcaseHeaderLogo;
   lastUpdated: string;
+  shareLink: string;
 };
 
-type EcomTimelineHeaderLogo = ComponentPropsWithoutRef<"img">;
+type ShowcaseHeaderLogo = ComponentPropsWithoutRef<"img">;
 
-export const EcomTimelineHeader = ({
+export const ShowcaseHeader = ({
   lightModeLogo,
   darkModeLogo,
   lastUpdated,
-}: EcomTimelineHeaderProps) => {
+  shareLink,
+}: ShowcaseHeaderProps) => {
   return (
     <nav
       data-slot="header"
@@ -70,7 +75,19 @@ export const EcomTimelineHeader = ({
             </time>
           </div>
         </div>
-        <ThemeSwitcher />
+        <div className="flex items-center gap-2">
+          <Button
+            variant={"outline"}
+            title="Click to copy the link to this page to your clipboard"
+            onClick={() => {
+              copyLink(shareLink);
+            }}
+          >
+            <CopyIcon />
+            <span className="sr-only">Copy link</span>
+          </Button>
+          <ThemeSwitcher />
+        </div>
       </div>
       <Separator decorative />
     </nav>

@@ -151,7 +151,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                       <LinkedinIcon className="text-foreground/90 size-[4mm] shrink-0" />
                     </i>
                     <a
-                      href="https://lukedekiewit.co.za/"
+                      href="https://www.linkedin.com/in/lukedekiewit/"
                       rel="noopener noreferrer nofollow"
                       className="hover:text-primary text-foreground/70 text-right hover:underline"
                     >

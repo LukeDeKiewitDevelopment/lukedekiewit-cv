@@ -24,7 +24,7 @@ export type HeaderProps = {
 
 type HeaderLogo = ComponentPropsWithoutRef<"img">;
 
-const copyLink = async (shareLink: string) => {
+export const copyLink = async (shareLink: string) => {
   try {
     await navigator.clipboard.writeText(shareLink);
     try {
@@ -32,16 +32,16 @@ const copyLink = async (shareLink: string) => {
 
       if (clipboardContent === shareLink) {
         toast(
-          <div className="flex items-center font-mono gap-1.5">
-              <ClipboardCheck className="size-4" />
-              <span>Link copied to clipboard</span>
+          <div className="flex items-center gap-1.5 font-mono">
+            <ClipboardCheck className="size-4" />
+            <span>Link copied to clipboard</span>
           </div>,
         );
       }
     } catch (error) {
       console.error("Could not copy link:", error);
       toast.error(
-        <span role="alert" className="font-mono text-destructive">
+        <span role="alert" className="text-destructive font-mono">
           {`Error: ${error}`}
         </span>,
       );
@@ -49,7 +49,7 @@ const copyLink = async (shareLink: string) => {
   } catch (error) {
     console.error("Could not copy link:", error);
     toast.error(
-      <span role="alert" className="font-mono text-destructive">
+      <span role="alert" className="text-destructive font-mono">
         {`Error: ${error}`}
       </span>,
     );
@@ -67,7 +67,7 @@ const printPage = async () => {
   } catch (error) {
     console.error("Could not open print dialog:", error);
     toast.error(
-      <span role="alert" className="font-mono text-destructive">
+      <span role="alert" className="text-destructive font-mono">
         {`Error: ${error}`}
       </span>,
     );
@@ -134,7 +134,7 @@ export const Header = ({
             </time>
           </div>
         </div>
-        <div className="flex gap-2">
+        <div className="flex items-center gap-2">
           <Button
             variant={"default"}
             title="Download this CV in PDF format"

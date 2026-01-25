@@ -21,7 +21,6 @@ export const Showcase = () => {
             Luke De Kiewit
           </h1>
           <span className="text-muted-foreground text-xs selection:text-shadow-none dark:text-shadow-black dark:text-shadow-xs">
-            {"Ecommerce Showcase "} <i className="not-italic select-none">|</i>{" "}
             {" Application to "}
             <a
               href="https://r17ventures.com/"
@@ -55,7 +54,7 @@ export const Showcase = () => {
             onClick={() => setActiveShowcaseSection("ecom-project-highlights")}
             className="data-[variant=default]:hover:bg-primary data-[variant=default]:shadow-md"
           >
-            Ecommerce Project Highlights
+            Projects
           </Button>
         </nav>
         <Separator />

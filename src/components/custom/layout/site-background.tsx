@@ -16,6 +16,7 @@ export const SiteBackground = ({ backgroundImage }: SiteBackgroundProps) => {
         {...backgroundImage}
         alt=""
         aria-hidden="true"
+        loading="lazy"
         className={clsx(
           "pointer-events-none fixed top-0 right-0 bottom-0 left-0 -z-1000 m-0 size-full min-h-screen min-w-screen border-none object-cover select-none",
           backgroundImage?.className,
