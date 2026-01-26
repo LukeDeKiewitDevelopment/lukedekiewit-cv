@@ -28,30 +28,3 @@ ServerSignature Off
 <FilesMatch "^(\.env|\.git|\.htaccess|\.htpasswd|.*\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|swp))$">
   Require all denied
 </FilesMatch>
-
-# =========================================================
-# Canonicalisation & routing
-# =========================================================
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-
-  # Force HTTPS
-  RewriteCond %{HTTPS} !=on
-  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-  # -------------------------------------------------------
-  # Routing
-  # -------------------------------------------------------
-  
-  # 1. If the request matches a real file (like your CSS/JS in /_astro/), SERVE IT.
-  RewriteCond %{REQUEST_FILENAME} -f
-  RewriteRule ^ - [L]
-
-  # 2. If the request matches a real directory (like /about/), SERVE IT.
-  RewriteCond %{REQUEST_FILENAME} -d
-  RewriteRule ^ - [L]
-
-  # 3. If it's NOT a file or folder, redirect to Home.
-  RewriteRule ^ / [L,R=301]
-
-</IfModule>
