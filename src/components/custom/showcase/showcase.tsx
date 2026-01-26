@@ -57,23 +57,3 @@ const ShowcaseEcomTimeline = () => {
     </section>
   );
 };
-
-const ShowcaseProjectHighlights = () => {
-  return (
-    <section>
-      <span>TAE</span>
-      <span>MIB</span>
-      <span>NTW</span>
-      <span></span>
-      <div>
-        <h5>Other Notable Projects</h5>
-        <ul>
-          <li>Atomwave Component Library</li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-    </section>
-  );
-};

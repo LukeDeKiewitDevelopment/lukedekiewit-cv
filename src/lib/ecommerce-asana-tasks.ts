@@ -7,7 +7,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "fix(finish-options): empty properties adding to cart",
       createdAt: "2025-03-18T08:39:55.728Z",
       notes:
-        "Description:\nOnline orders are being received where clients have submitted measurements, but these measurements are not appearing on the order. Example order:\n🔗 https://admin.shopify.com/store/*********/orders/11675806368124#event225588494532988\nFindings So Far:\n    Testing shows that selecting 'finish options' without adding measurements prevents the product from being added to the cart.\n    This suggests that the measurement information is lost between checkout and confirmed order.\n    Likely linked to the previously raised issue by Taj, where the incorrect measurement metric was being displayed in the order form.\nAction Items:\n✅ Investigate why measurement data is missing from confirmed orders.\n✅ Verify if this issue is linked to the previously reported measurement metric issue.\n✅ Provide updates on the cause and fix ASAP, as this directly impacts order fulfillment.\nAdditional Contact:\n    Hemison (CC'd) – Processes online orders and will share further examples or relevant details if needed.\n",
+        "Description:\nOnline orders are being received where clients have submitted measurements, but these measurements are not appearing on the order. Example order:\n🔗 https://admin.shopify.com/store/*********/orders/11675806368124#event225588494532988\nFindings So Far:\n    Testing shows that selecting 'finish options' without adding measurements prevents the product from being added to the cart.\n    This suggests that the measurement information is lost between checkout and confirmed order.\n    Likely linked to the previously raised issue by *********, where the incorrect measurement metric was being displayed in the order form.\nAction Items:\n✅ Investigate why measurement data is missing from confirmed orders.\n✅ Verify if this issue is linked to the previously reported measurement metric issue.\n✅ Provide updates on the cause and fix ASAP, as this directly impacts order fulfillment.\nAdditional Contact:\n    ********* (CC'd) – Processes online orders and will share further examples or relevant details if needed.\n",
       projectName: "*********",
     },
     {
@@ -71,7 +71,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       createdAt: "2025-03-12T08:58:45.231Z",
       notes:
         'When NVDA is enabled on step "When was the property build" if the user selects the dropdown then NVDA announces "clickable" but nothing like "select a date range"',
-      projectName: "GE - Backlog",
+      projectName: "********",
     },
     {
       id: "1209642962481834",
@@ -79,7 +79,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       createdAt: "2025-03-11T15:00:05.516Z",
       notes:
         "When the user inserts an incorrect discount code, then this is not read to the customer so they are unaware that the discount has not been applied. ",
-      projectName: "GE - Backlog",
+      projectName: "********",
     },
     {
       id: "1209642962481830",
@@ -87,15 +87,15 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       createdAt: "2025-03-11T14:56:05.381Z",
       notes:
         "When using a screen reader, if the user does not select any option and clicks on Next, then there is no announcement of this error to the customer. The only way to read the message is for the user to navigate with the keyboard to the error block, which is quite far away. As the focus is given to the error block, then this should be read to the customer. Looking into our own portal, seems like we use aria-label in order to announce it to the customer about the error",
-      projectName: "GE - Backlog",
+      projectName: "********",
     },
     {
       id: "1209642955817690",
       name: "NVDA does not inform which new page the user is at/read the questions",
       createdAt: "2025-03-11T14:52:41.227Z",
       notes:
-        "When using nvda and navigating through the pages, then the question isnt read to the customer, so i.e. in the do you own or rent , the header/question is not read and only the buttons are read to the end customer. This can cause confusion as they might not know what page they're at. \n\nLooking into our portal , seems like NVDA is reading the tab, so i.e. in this one it'd read \"Terms and conditions, good energy\"\n\nhttps://app.asana.com/app/asana/-/get_asset?asset_id=********* into heat pump, the tab is always the same, so that wouldnt be useful. ",
-      projectName: "GE - Backlog",
+        "When using nvda and navigating through the pages, then the question isnt read to the customer, so i.e. in the do you own or rent , the header/question is not read and only the buttons are read to the end customer. This can cause confusion as they might not know what page they're at. \n\nLooking into our portal , seems like NVDA is reading the tab, so i.e. in this one it'd read \"Terms and conditions, ********\"\n\nhttps://app.asana.com/app/asana/-/get_asset?asset_id=********* into heat pump, the tab is always the same, so that wouldnt be useful. ",
+      projectName: "********",
     },
     {
       id: "1209642955817681",
@@ -103,7 +103,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       createdAt: "2025-03-11T14:47:42.210Z",
       notes:
         "When using NVDA and navigating to a link that opens in a new tab (the footers or i.e. zoopla/rightmove) the screen reader only reads the text, it does not inform the end user that it's opening in a new tab.\n\n\nI believe the aria-label needs to be updated so that the text + (opens in a new tab) is read to the user. \n\n",
-      projectName: "GE - Backlog",
+      projectName: "********",
     },
     {
       id: "1209641260437437",
@@ -118,7 +118,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "Feat(Landing Page): ********* Landing Page",
       createdAt: "2025-03-05T05:21:57.016Z",
       notes:
-        "Description:\n    Wireframes for the landing page are available here:  https://www.canva.com/design/DAGgzN9ey6Q/GDhj0I9CDqTxC4LkOhafyA/view?utm_content=DAGgzN9ey6Q&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h23727df045\n    Imagery used for the design is in [this folder] (https://drive.google.com/drive/u/0/folders/1dGRcGa27HYZ2UIaa8Anv5CD4TX2opc3_). Let us know if any resizing is needed.\n    Product featured at the bottom: Syzygy – current PDP [HERE] (https://www.notwoways.com/products/syzygy-2).\n    Klaviyo List ID: XWKmTX [Linked Here] (https://www.klaviyo.com/login?next=/list/XWKmTX).\n    Capture SMS: Please explore options for adding SMS capture on the page.\n    Deadline: The goal is to have this rolling by Thursday evening (4:30 pm our time) so we can start linking ads.\n    The template follows the JME lead-gen page, but let us know if any block adjustments are needed for faster execution.\n",
+        "Description:\n    Wireframes for the landing page are available here:  https://www.canva.com/design/*********\n    Imagery used for the design is in [this folder] (https://drive.google.com/drive/u/0/folders/*********). Let us know if any resizing is needed.\n    Product featured at the bottom: Syzygy – current PDP [HERE] (https://*********/products/*********).\n    Klaviyo List ID: ****** [Linked Here] (https://www.klaviyo.com/login?next=/list/*********).\n    Capture SMS: Please explore options for adding SMS capture on the page.\n    Deadline: The goal is to have this rolling by Thursday evening (4:30 pm our time) so we can start linking ads.\n    The template follows the ******** lead-gen page, but let us know if any block adjustments are needed for faster execution.\n",
       projectName: "*********",
     },
     {
@@ -127,7 +127,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       createdAt: "2025-03-04T10:30:17.006Z",
       notes:
         'Revert Branch: https://github.com/bitcubesystems/*********/pull/516\nFeature Branch: https://github.com/bitcubesystems/*********/pull/499\n\nFound when testing https://app.asana.com/1/375643158116881/project/1205765637665888/task/1208446412892370\n\nWhen the user clicks on next without selecting any option, then an error message should be displayed at the top, with an error message that anchors to the corresponding question.\n\n\nStep\nError Message\nAnchor\nHeat pump quote\nOk\nWhen clicking on "Enter a valid address" then the focus goes quite low. The customer does not see anymore the question. (See pic)\nReceive a copy of your estimate\nEmail error message\nCorresponding anchor working as expected\nDo you own or rent this property?\nOk\nWhen clicking on "Select an option" the focus goes really low. The customer does not see the question and half the buttons (see pic)\n\n\nWhat type of property is it?\nOk\nOk\nHow many bedrooms does the property have?\nOk\nQuestion cant be seen \nHow many storeys does your property have?\nThe focus is not given to the red error message at the top (see pic)\nStoreys question cant be seen\nBasement ok\nWhen was the property built?\nOk\nOk\nWhat is your main source of fuel for your heating?\nOk\nOk\nDo you have a hot water cylinder?\nOk\nWhen clicking on "Select an option" the focus goes really low. The customer does not see the question and half the buttons\nWhat type of heating system do you currently have?oK\n\n\nWhen clicking on "Select an option" the focus goes really low. The customer does not see the question and half the buttons\n\nhttps://app.asana.com/app/asana/-/get_asset?asset_id=*********',
-      projectName: "GE - Backlog",
+      projectName: "********",
     },
     {
       id: "1209534694992899",
@@ -142,7 +142,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: " Ensure 'Coming Soon' Label Displays Correctly Until Product Launch",
       createdAt: "2025-02-28T10:20:40.977Z",
       notes:
-        "🔍 Task Description:\nThe product M1 HKE Ultimate by JME ( https://www.notwoways.com/products/m1-hke-ultimate-by-jme ) should remain labeled as 'Coming Soon' until launch at 5 PM. Currently, after reverting stock to zero, the button shows 'Sold Out' instead of 'Coming Soon' despite the metafield being set to 'True'.\n🛠️ Steps to Resolve:\n    Investigate why the product is displaying 'Sold Out' instead of 'Coming Soon' after stock adjustments.\n    Ensure that the product remains as 'Coming Soon' until launch time.\n    Confirm that the Klaviyo embed removal does not interfere with the expected behavior.\n    Provide a fix or workaround before 5 PM to ensure a smooth transition.\n✅ Deliverables:\n    Product correctly displays 'Coming Soon' until launch.\n    Clear instructions on managing similar stock transitions in the future.\n⏳ Status: Pending Investigation & Fix",
+        "🔍 Task Description:\nThe product ********* by ********* ( https://*********/products/********* ) should remain labeled as 'Coming Soon' until launch at 5 PM. Currently, after reverting stock to zero, the button shows 'Sold Out' instead of 'Coming Soon' despite the metafield being set to 'True'.\n🛠️ Steps to Resolve:\n    Investigate why the product is displaying 'Sold Out' instead of 'Coming Soon' after stock adjustments.\n    Ensure that the product remains as 'Coming Soon' until launch time.\n    Confirm that the Klaviyo embed removal does not interfere with the expected behavior.\n    Provide a fix or workaround before 5 PM to ensure a smooth transition.\n✅ Deliverables:\n    Product correctly displays 'Coming Soon' until launch.\n    Clear instructions on managing similar stock transitions in the future.\n⏳ Status: Pending Investigation & Fix",
       projectName: "*********",
     },
     {
@@ -328,7 +328,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "investigation(Product):Unpublished products appearing",
       createdAt: "2025-01-28T06:53:26.867Z",
       notes:
-        "Task title:\ninvestigation(Product):Unpublished products appearing\n\nContact Person / Person that requested:\nJohnny\n\nRequest type:\nBug Fix\n\nPriority:\nHigh (Urgent or critical)\n\nDetailed Description:\nhttps://admin.shopify.com/store/*********/products/14983954497916\n\nThis product is appearing in search results even though it's not published on any sales channel, or active. This product should not be displayed on the website.\n\nWhy is that happening, and please can we ensure it is removed from the site asap?\n\n\nBusiness Impact:\nHigh (Critical issue impacting sales or client relationship)\n\n———————————————\nThis task was submitted through Client Request Submission\nhttps://form.asana.com/*********",
+        "Task title:\ninvestigation(Product):Unpublished products appearing\n\nContact Person / Person that requested:\n********\n\nRequest type:\nBug Fix\n\nPriority:\nHigh (Urgent or critical)\n\nDetailed Description:\nhttps://admin.shopify.com/store/*********/products/14983954497916\n\nThis product is appearing in search results even though it's not published on any sales channel, or active. This product should not be displayed on the website.\n\nWhy is that happening, and please can we ensure it is removed from the site asap?\n\n\nBusiness Impact:\nHigh (Critical issue impacting sales or client relationship)\n\n———————————————\nThis task was submitted through Client Request Submission\nhttps://form.asana.com/*********",
       projectName: "*********",
     },
     {
@@ -343,7 +343,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "Fix(in line menu): Menu burger & restructure the new menu",
       createdAt: "2025-01-14T12:37:30.776Z",
       notes:
-        "1\n\nMenu burger is currently white on PDP’s so is not visible - change to red\nhttps://www.*********.com/products/*********\n\nhttps://app.asana.com/app/asana/-/get_asset?asset_id=********* we try to restructure the new menu, putting direct page links after the navigation it doesn't format the correctly. Please see \"About ********* *********\" remains purple and underlined.\nCan we make it so that we don't have to do a subcategory heading before we reach a page link? Happy to jump on a call now to discuss?\n\nhttps://app.asana.com/app/asana/-/get_asset?asset_id=*********",
+        "\n\nMenu burger is currently white on PDP’s so is not visible - change to red\nhttps://www.*********.com/products/*********\n\nhttps://app.asana.com/app/asana/-/get_asset?asset_id=********* we try to restructure the new menu, putting direct page links after the navigation it doesn't format the correctly. Please see \"About ********* *********\" remains purple and underlined.\nCan we make it so that we don't have to do a subcategory heading before we reach a page link? Happy to jump on a call now to discuss?\n\nhttps://app.asana.com/app/asana/-/get_asset?asset_id=*********",
       projectName: "*********",
     },
     {
@@ -374,7 +374,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "Feat(Footer): setup signup to use klaviyo",
       createdAt: "2024-12-17T12:16:54.583Z",
       notes:
-        "    Change current footer signup setup to subscribe emails to klaviyo\n    add a custom tooltip for incorrect email addresses when trying to signup\n\nKlaviyo ID: XbRrDN\n\n",
+        "    Change current footer signup setup to subscribe emails to klaviyo\n    add a custom tooltip for incorrect email addresses when trying to signup\n\nKlaviyo ID: *********\n\n",
       projectName: "*********",
     },
     {
@@ -382,7 +382,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "fix(FAQ):redirect links",
       createdAt: "2024-12-16T11:37:48.888Z",
       notes:
-        "Can we add a direct link to the main Returns FAQ in the footer.\nThe direct link is this one:  https://support.notwoways.com/kb/article/9-can-i-return-my-order/\n\nIn the middle menu,  can we have:\nFAQ\nTRACK YOUR ORDER\nRETURNS\nCUSTOMER SERVICE\n\nand then remove the terms and conditions as that already exists in the bottom footer.\nCan we get that done today as it would help with some customer service questions\n\n\n----------------------------------------\n\n----------------------------------------\n\n----------------------------------------\n\n----------------------------------------\n\n----------------------------------------\n\n\n    Remove TERMS & CONDITIONS in middle footer nav\n    Reorder middle footer nav to\n        FAQ\n        TRACK YOUR ORDER\n        RETURNS (links to  https://support.notwoways.com/kb/article/9-can-i-return-my-order/)\n        CUSTOMER SERVICE\n\n",
+        "Can we add a direct link to the main Returns FAQ in the footer.\nThe direct link is this one:  https://support.*********.com/kb/article/9-can-i-return-my-order/\n\nIn the middle menu,  can we have:\nFAQ\nTRACK YOUR ORDER\nRETURNS\nCUSTOMER SERVICE\n\nand then remove the terms and conditions as that already exists in the bottom footer.\nCan we get that done today as it would help with some customer service questions\n\n\n----------------------------------------\n\n----------------------------------------\n\n----------------------------------------\n\n----------------------------------------\n\n----------------------------------------\n\n\n    Remove TERMS & CONDITIONS in middle footer nav\n    Reorder middle footer nav to\n        FAQ\n        TRACK YOUR ORDER\n        RETURNS (links to  https://support.*********.com/kb/article/*********/)\n        CUSTOMER SERVICE\n\n",
       projectName: "*********",
     },
     {
@@ -436,7 +436,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       id: "1208932831630469",
       name: "Ref(footer): link the footer to homepage",
       createdAt: "2024-12-09T13:22:32.244Z",
-      notes: "NTW logo in footer should link to the homepage",
+      notes: "******** logo in footer should link to the homepage",
       projectName: "*********",
     },
     {
@@ -468,15 +468,14 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "Fix(nav): center logo on screen",
       createdAt: "2024-12-09T13:19:34.156Z",
       notes:
-        "On PDP the logo is not centered when animation has run and only the NTW shows\nLogo should be centered with the featured image edge\n\nhttps://app.asana.com/app/asana/-/get_asset?asset_id=*********",
+        "On PDP the logo is not centered when animation has run and only the ******** shows\nLogo should be centered with the featured image edge\n\nhttps://app.asana.com/app/asana/-/get_asset?asset_id=*********",
       projectName: "*********",
     },
     {
       id: "1208932831630462",
       name: "Fix(site reskin): change requests",
       createdAt: "2024-12-09T13:19:22.788Z",
-      notes:
-        "https://docs.google.com/document/d/1hHocbgoOz8GBQWUnxMppmQxYYANo851VQ1bPDlGjm3E/edit?tab=t.0",
+      notes: "https://docs.google.com/document/d/********",
       projectName: "*********",
     },
     {
@@ -499,7 +498,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "fix(PDP): dropdown for content",
       createdAt: "2024-12-03T14:52:47.985Z",
       notes:
-        "Hi! ***** is going through so there will be a bit more to follow.\nBig note from me is on the Shipping & Returns, Style Guide etc on the PDP. Can they please be like the Represent link on Figma: https://uk.representclo.com/products/represent-owners-club-stamp-t-shirt-flat-white\n(whereby they cover the description, rather than expand the way they currently do). If all of them are expanded, you cannot scroll down anymore.\nThanks!",
+        "Hi! ***** is going through so there will be a bit more to follow.\nBig note from me is on the Shipping & Returns, Style Guide etc on the PDP. Can they please be like the ********* link on Figma: https://*********\n(whereby they cover the description, rather than expand the way they currently do). If all of them are expanded, you cannot scroll down anymore.\nThanks!",
       projectName: "*********",
     },
     {
@@ -515,7 +514,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "Fix(reskin): Reskin final feedback ",
       createdAt: "2024-12-03T07:15:09.024Z",
       notes:
-        "I'm trying to get the site over the line today. A few notes which would be great to address asap:\n    The copy for Shipping/Returns/Payment Methods needs changing\n\nPAYMENT METHODS: https://bitcube-*********.slack.com/team/********* could you help us with a small line of copy here?\nHELP AND CONTACT US: If you need help or have any questions, please contact us at support@notwoways.com\nSTYLE DETAILS: Let's please have this pull from the 'Materials and care' section on the current PDPs\n    The 'Origins' page needs some work - please see Figma here: https://www.figma.com/design/********* preview from my side here: https://*********.shopifypreview.com/\nhttps://bitcube-*********.slack.com/team/********* could I please have your eyes on it when you get a sec?\n\nNote that 'Origins' ratios are fine on mobile - it's desktop that needs work",
+        "I'm trying to get the site over the line today. A few notes which would be great to address asap:\n    The copy for Shipping/Returns/Payment Methods needs changing\n\nPAYMENT METHODS: https://*********.slack.com/team/********* could you help us with a small line of copy here?\nHELP AND CONTACT US: If you need help or have any questions, please contact us at support@*********.com\nSTYLE DETAILS: Let's please have this pull from the 'Materials and care' section on the current PDPs\n    The 'Origins' page needs some work - please see Figma here: https://www.figma.com/design/********* preview from my side here: https://*********.shopifypreview.com/\nhttps://*********.slack.com/team/********* could I please have your eyes on it when you get a sec?\n\nNote that 'Origins' ratios are fine on mobile - it's desktop that needs work",
       projectName: "*********",
     },
     {
@@ -530,7 +529,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "Feat(pricing): a strikethrough of the compare price should be shown on featured collection section",
       createdAt: "2024-11-27T11:18:57.649Z",
       notes:
-        'Strike through setting on featured products block\n\nAlex still needs to provide details on all section where this should be added\n\n\ncompare_at_price is the "was price"',
+        'Strike through setting on featured products block\n\n******** still needs to provide details on all section where this should be added\n\n\ncompare_at_price is the "was price"',
       projectName: "*********",
     },
     {
@@ -553,7 +552,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "fix(multicolumn): Section error ",
       createdAt: "2024-11-25T05:26:17.940Z",
       notes:
-        "Task title:\nfix(multicolumn):Section error \n\nContact Person / Person that requested:\nAlex\n\nRequest type:\nBug Fix\n\nPriority:\nMedium (Important but not urgent)\n\nDetailed Description:\nthe Multicolumn block but when I add images they are taken up by blocks of red where the link button is seemingly extending?\n\nBusiness Impact:\nMedium (Some disruption or risk of sales loss)\n\n———————————————\nThis task was submitted through Client Request Submission\nhttps://form.asana.com/?k=rqVcfziJXwwji-4hMQQ1Kg&d=375643158116881",
+        "Task title:\nfix(multicolumn):Section error \n\nContact Person / Person that requested:\n********\n\nRequest type:\nBug Fix\n\nPriority:\nMedium (Important but not urgent)\n\nDetailed Description:\nthe Multicolumn block but when I add images they are taken up by blocks of red where the link button is seemingly extending?\n\nBusiness Impact:\nMedium (Some disruption or risk of sales loss)\n\n———————————————\nThis task was submitted through Client Request Submission\nhttps://form.asana.com/********",
       projectName: "*********",
     },
     {
@@ -561,7 +560,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "feat(text and icons): setup richtext section with icons section",
       createdAt: "2024-11-21T13:40:20.376Z",
       notes:
-        "https://app.asana.com/app/asana/-/get_asset?asset_id=********* the no\nOne of us is a pro athlete. The other works in luxury fashion. Our day jobs and sponsors have us keeping our identities on the down-low, but nothing's stopping us from launching. After a year of testing and perfecting, we're introducing the worl's first microplatic-free underwear. Soft, chafe-free, and built for you to move in, it's so comfortable you'll forget you're even wearing it.\nWEAR NO UNDERWEAR.",
+        "https://app.asana.com/app/asana/-/get_asset?asset_id=********* the no\nOne of us is a pro athlete. The other works in luxury fashion. Our day jobs and sponsors have us keeping our identities on the down-low, but nothing's stopping us from launching. After a year of testing and perfecting, we're introducing the world's first microplatic-free underwear. Soft, chafe-free, and built for you to move in, it's so comfortable you'll forget you're even wearing it.\n********",
       projectName: "*********",
     },
     {
@@ -607,7 +606,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "investigation(F&F -size guide): Size guide not displaying",
       createdAt: "2024-11-18T11:19:23.463Z",
       notes:
-        "Task title:\ninvestigation(F&F -size guide): Size guide not displaying\n\nContact Person / Person that requested:\nAlex\n\nRequest type:\nBug Fix\n\nPriority:\nMedium (Important but not urgent)\n\nDetailed Description:\nThe size guides should be visible on these two products: CMO018 (Men's Felgate Coat) and CMS142 (Men's Tartan Shirt).\n\n \n\nIf you could check and let me know that would be great. Thanks!\n\nBusiness Impact:\nMedium (Some disruption or risk of sales loss)\n\n———————————————\nThis task was submitted through Client Request Submission\nhttps://form.asana.com/?k=rqVcfziJXwwji-4hMQQ1Kg&d=375643158116881",
+        "Task title:\ninvestigation(F&F -size guide): Size guide not displaying\n\nContact Person / Person that requested:\n********\n\nRequest type:\nBug Fix\n\nPriority:\nMedium (Important but not urgent)\n\nDetailed Description:\nThe size guides should be visible on these two products: CMO018 (Men's Felgate Coat) and CMS142 (Men's Tartan Shirt).\n\n \n\nIf you could check and let me know that would be great. Thanks!\n\nBusiness Impact:\nMedium (Some disruption or risk of sales loss)\n\n———————————————\nThis task was submitted through Client Request Submission\nhttps://form.asana.com/?k=rqVcfziJXwwji-4hMQQ1Kg&d=375643158116881",
       projectName: "*********",
     },
     {
@@ -628,10 +627,10 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
     },
     {
       id: "1208764354334613",
-      name: "NO Underwear",
+      name: "Epic: ********",
       createdAt: "2024-11-14T12:35:20.584Z",
       notes:
-        "Task title:\nNO Underwear\n\nContact Person / Person that requested:\nMaria\n\nRequest type:\nNew Feature\n\nPriority:\nHigh (Urgent or critical)\n\nDetailed Description:\nAs mentioned in yesterday’s catch-up, we’re gearing up to start a new ecomm project. We’re working on an underwear/activewear brand called NO (no underwear, NO to stand for naked obsession..).\nThe plan for this is to be independent from notwoways and hopefully evolve into its own thing.\nWe’d like to start building the site asap as we’re keen to start a lead-gen campaign for this as soon as we have the assets ready.\nI have the wireframes ready for you on this Figma board. - https://www.figma.com/design/********* small note is that the final imagery is still being edited, so it’d be great to build this with the placeholders provided and facilitate an easy swap once all is ready.\nThe key right now is getting the layout and dimensions right.\nA few notes:\n- Really important to get the imagery above the fold, and USPs right below\n- We’re quite precious about logo and email capture box placement in its two variations (you’ll see there are two homepage options - let’s please build both at this early stage)\n- I’ve dropped the original files of everything I’ve used on Figma. I like the crops I’ve used on the final boards, but it’s more important that the ratios are correct across desktop and mobile, so please feel free to place imagery in blocks accordingly\nTech stack:\n- The domain wearing.no is under the same GoDaddy account you have access to\n- I’ve just set-up a Shopify store (domain already integrated). I have two admin seats free, who should I give access to? - https://wearing.no/password\n- Sendlane for email/SMS. I can either add admins, or give you a full access API key. There’s only one list in the account currently - we’ll be collecting emails there. - https://www.sendlane.com/\n\n\n\nBusiness Impact:\nHigh (Critical issue impacting sales or client relationship)\n\n———————————————\nThis task was submitted through Client Request Submission\nhttps://form.asana.com/?k=9oZt0gqwx7v2JgswfBnXxg&d=375643158116881",
+        "Task title:\nEpic: ********\n\nContact Person / Person that requested:\n*********\n\nRequest type:\nNew Feature\n\nPriority:\nHigh (Urgent or critical)\n\nDetailed Description:\nAs mentioned in yesterday’s catch-up, we’re gearing up to start a new ecomm project. We’re working on an underwear/activewear brand called ******** (******** to stand for ********...)\nThe plan for this is to be independent from ********* and hopefully evolve into its own thing.\nWe’d like to start building the site asap as we’re keen to start a lead-gen campaign for this as soon as we have the assets ready.\nI have the wireframes ready for you on this Figma board. - https://www.figma.com/design/********* small note is that the final imagery is still being edited, so it’d be great to build this with the placeholders provided and facilitate an easy swap once all is ready.\nThe key right now is getting the layout and dimensions right.\nA few notes:\n- Really important to get the imagery above the fold, and USPs right below\n- We’re quite precious about logo and email capture box placement in its two variations (you’ll see there are two homepage options - let’s please build both at this early stage)\n- I’ve dropped the original files of everything I’ve used on Figma. I like the crops I’ve used on the final boards, but it’s more important that the ratios are correct across desktop and mobile, so please feel free to place imagery in blocks accordingly\nTech stack:\n- The domain ******** is under the same GoDaddy account you have access to\n- I’ve just set-up a Shopify store (domain already integrated). I have two admin seats free, who should I give access to? - https://*********/password\n- Sendlane for email/SMS. I can either add admins, or give you a full access API key. There’s only one list in the account currently - we’ll be collecting emails there. - https://www.sendlane.com/\n\n\n\nBusiness Impact:\nHigh (Critical issue impacting sales or client relationship)\n\n———————————————\nThis task was submitted through Client Request Submission\nhttps://form.asana.com/?k=9oZt0gqwx7v2JgswfBnXxg&d=375643158116881",
       projectName: "*********",
     },
     {
@@ -646,7 +645,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "Feat(Mystery Box): Setup Mystery Box LP",
       createdAt: "2024-11-05T05:20:02.327Z",
       notes:
-        "Task title:\nMystery Box campaign for Christmas\n\nContact Person / Person that requested:\nMaria\n\nRequest type:\nNew Feature\n\nPriority:\nHigh (Urgent or critical)\n\nDetailed Description:\nwe're doing a Mystery Box campaign for Christmas and would like to start collecting emails for the activation asap.\nI've got some landing page wireframes for you here: https://www.canva.com/design/DAGVh0YPHvA/7P0UtmjLZ96gqYMYrlANxg/view?utm_content=DAGVh0YPHvA&utm_campaign=designshare&utm_medium=link&utm_source=editor\nAssets I've used here: https://we.tl/t-MAhawgAD4G\nThis will need optimising for desktop + mob.\n\nBusiness Impact:\nHigh (Critical issue impacting sales or client relationship)\n\nExpected Outcome or Deliverables:\nNew landing page \n\n———————————————\nThis task was submitted through Client Request Submission\nhttps://form.asana.com/?k=9oZt0gqwx7v2JgswfBnXxg&d=375643158116881",
+        "Task title:\nMystery Box campaign for Christmas\n\nContact Person / Person that requested:\n*********\n\nRequest type:\nNew Feature\n\nPriority:\nHigh (Urgent or critical)\n\nDetailed Description:\nwe're doing a Mystery Box campaign for Christmas and would like to start collecting emails for the activation asap.\nI've got some landing page wireframes for you here: https://www.canva.com/design/*********\nAssets I've used here: https://we.tl/*********\nThis will need optimising for desktop + mob.\n\nBusiness Impact:\nHigh (Critical issue impacting sales or client relationship)\n\nExpected Outcome or Deliverables:\nNew landing page \n\n———————————————\nThis task was submitted through Client Request Submission\nhttps://form.asana.com/?k=9oZt0gqwx7v2JgswfBnXxg&d=375643158116881",
       projectName: "*********",
     },
     {
@@ -662,7 +661,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "feat(multi column text blocks): setup multi column text blocks",
       createdAt: "2024-10-29T06:02:28.055Z",
       notes:
-        'Task title:\nURGENT - PUR - Page Request \n\nContact Person / Person that requested:\nAbi\n\nRequest type:\nNew Feature\n\nPriority:\nHigh (Urgent or critical)\n\nDetailed Description:\n\n\nSorry to be a total pain. But can you duplicate the recipe blog block – but have it as free text? I don’t want to link the duplicated block to recipes.\n\nBasically I need to create this landing page (attached) and the block for directions/heading etc is created with the look and feel of the recipe block.\n\n\n\nThis page needs to go live on 30th btw! I just realised this afternoon as I tried to build it.\n\n\nBusiness Impact:\nHigh (Critical issue impacting sales or client relationship)\n\nExpected Outcome or Deliverables:\nNew page\n\nDeadline/Time Sensitivity:\nOct 29, 2024 – Oct 29, 2024\n\n———————————————\nThis task was submitted through Client Request Submission\nhttps://form.asana.com/?k=rqVcfziJXwwji-4hMQQ1Kg&d=375643158116881\n\n\n----------------------------------------\n\n----------------------------------------\n\n----------------------------------------\n\n----------------------------------------\n\n----------------------------------------\n\n\nCreate a new section "multi column text blocks"\n\nSection settings:\n    Heading\n        richtext\n    color scheme setting\n    margin top and bottom\n    checkbox for line between blocks (true by default)\n\nBlock settings (max of 4 blocks)\n    Heading\n        richtext\n    Body copy\n        richtext\n\nIf 1 block is setup then it takes 100% width if 2 blocks then 50 -50 etc to max of 4 blocks',
+        'Task title:\nURGENT - PUR - Page Request \n\nContact Person / Person that requested:\n********\n\nRequest type:\nNew Feature\n\nPriority:\nHigh (Urgent or critical)\n\nDetailed Description:\n\n\nSorry to be a total pain. But can you duplicate the recipe blog block – but have it as free text? I don’t want to link the duplicated block to recipes.\n\nBasically I need to create this landing page (attached) and the block for directions/heading etc is created with the look and feel of the recipe block.\n\n\n\nThis page needs to go live on 30th btw! I just realised this afternoon as I tried to build it.\n\n\nBusiness Impact:\nHigh (Critical issue impacting sales or client relationship)\n\nExpected Outcome or Deliverables:\nNew page\n\nDeadline/Time Sensitivity:\nOct 29, 2024 – Oct 29, 2024\n\n———————————————\nThis task was submitted through Client Request Submission\nhttps://form.asana.com/?k=rqVcfziJXwwji-4hMQQ1Kg&d=375643158116881\n\n\n----------------------------------------\n\n----------------------------------------\n\n----------------------------------------\n\n----------------------------------------\n\n----------------------------------------\n\n\nCreate a new section "multi column text blocks"\n\nSection settings:\n    Heading\n        richtext\n    color scheme setting\n    margin top and bottom\n    checkbox for line between blocks (true by default)\n\nBlock settings (max of 4 blocks)\n    Heading\n        richtext\n    Body copy\n        richtext\n\nIf 1 block is setup then it takes 100% width if 2 blocks then 50 -50 etc to max of 4 blocks',
       projectName: "*********",
     },
     {
@@ -686,7 +685,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "PUR - SF Form On PDP",
       createdAt: "2024-10-22T05:03:52.429Z",
       notes:
-        "Task title:\nPUR - SF Form On PDP\n\nContact Person / Person that requested:\nAbi\n\nRequest type:\nContent Update\n\nPriority:\nMedium (Important but not urgent)\n\nDetailed Description:\nCan we put the general SalesForce enquiry form on PDPs instead of the link to the booking tool below?\n\nPriority 4 please.\n\nBusiness Impact:\nMedium (Some disruption or risk of sales loss)\n\nExpected Outcome or Deliverables:\nForm link update \n\nDeadline/Time Sensitivity:\nOct 29, 2024 – Oct 29, 2024\n\n———————————————\nThis task was submitted through Client Request Submission\nhttps://form.asana.com/?k=rqVcfziJXwwji-4hMQQ1Kg&d=375643158116881\n\n                                                        \n\nUpdate PDP contact us button to open a popup of this signup form\nhttps://shop.*********.com/pages/*********\n\nThis is contact-us-form webcomponent\nimplement as a popup",
+        "Task title:\nPUR - SF Form On PDP\n\nContact Person / Person that requested:\n********\n\nRequest type:\nContent Update\n\nPriority:\nMedium (Important but not urgent)\n\nDetailed Description:\nCan we put the general SalesForce enquiry form on PDPs instead of the link to the booking tool below?\n\nPriority 4 please.\n\nBusiness Impact:\nMedium (Some disruption or risk of sales loss)\n\nExpected Outcome or Deliverables:\nForm link update \n\nDeadline/Time Sensitivity:\nOct 29, 2024 – Oct 29, 2024\n\n———————————————\nThis task was submitted through Client Request Submission\nhttps://form.asana.com/?k=rqVcfziJXwwji-4hMQQ1Kg&d=375643158116881\n\n                                                        \n\nUpdate PDP contact us button to open a popup of this signup form\nhttps://shop.*********.com/pages/*********\n\nThis is contact-us-form webcomponent\nimplement as a popup",
       projectName: "*********",
     },
     {
@@ -725,7 +724,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "feat(blueprint-landing-page): setup new page",
       createdAt: "2024-10-14T10:22:35.625Z",
       notes:
-        "Task title:\nBlue pint landing page\n\nContact Person / Person that requested:\n******\n\nRequest type:\nNew Feature\n\nPriority:\nHigh (Urgent or critical)\n\nDetailed Description:\nI've got a landing page brief for a shoe we're releasing soon here: https://www.figma.com/design/*********'ve kept the layout the Exact same as the Mokka one (except the press quote - there is only one, instead of three).\nWe'd like for this to be live this week; let me know if too ambitious, with all assets provided. I can give you a Klaviyo embed for the black box in the middle and all assets today.\nOn a different note, how are we looking on the HKE landing page amends?\n\nBusiness Impact:\nHigh (Critical issue impacting sales or client relationship)\n\nExpected Outcome or Deliverables:\nNew landing page \n\nDeadline/Time Sensitivity:\nOct 18, 2024 – Oct 18, 2024\n\n———————————————\nThis task was submitted through Client Request Submission\nhttps://form.asana.com/?k=9oZt0gqwx7v2JgswfBnXxg&d=375643158116881",
+        "Task title:\nBlue pint landing page\n\nContact Person / Person that requested:\n******\n\nRequest type:\nNew Feature\n\nPriority:\nHigh (Urgent or critical)\n\nDetailed Description:\nI've got a landing page brief for a shoe we're releasing soon here: https://www.figma.com/design/*********'ve kept the layout the Exact same as the ******** one (except the press quote - there is only one, instead of three).\nWe'd like for this to be live this week; let me know if too ambitious, with all assets provided. I can give you a Klaviyo embed for the black box in the middle and all assets today.\nOn a different note, how are we looking on the HKE landing page amends?\n\nBusiness Impact:\nHigh (Critical issue impacting sales or client relationship)\n\nExpected Outcome or Deliverables:\nNew landing page \n\nDeadline/Time Sensitivity:\nOct 18, 2024 – Oct 18, 2024\n\n———————————————\nThis task was submitted through Client Request Submission\nhttps://form.asana.com/?k=9oZt0gqwx7v2JgswfBnXxg&d=375643158116881",
       projectName: "*********",
     },
     {
@@ -755,7 +754,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "Feat(drawer): Setup free shipping indicator in cart",
       createdAt: "2024-10-09T11:05:23.650Z",
       notes:
-        "Task title:\nShipping on Cart (drawer) \n\nContact Person / Person that requested:\nMaria\n\nRequest type:\nNew Feature\n\nPriority:\nMedium (Important but not urgent)\n\nDetailed Description:\nOn the cart conversation - dropping some favourite examples below.\nI would love to have the bar at the top (You're X£ away from free shipping).\n+ suggested product cards for the Cap and Socks (link below:\nBlack socks: https://www.notwoways.com/products/no-socks\nWhite socks: https://www.notwoways.com/products/no-socks-white\nCap: https://www.notwoways.com/products/no-cap-black\nIf they qualify for free shipping already, they should get a 'Congratulations, you get free shipping' bar instead, but would love to still keep the product carousel at the bottom. This should be dynamic, so it doesn't clash with what's in their basket.\nI believe @Rich M has set some free shipping thresholds yesterday, let  me know if you can find these or need us to send them over please! Ty\n\nBusiness Impact:\nMedium (Some disruption or risk of sales loss)\n\nExpected Outcome or Deliverables:\nFree shipping to be displayed with bar \n\nDeadline/Time Sensitivity:\nOct 10, 2024 – Oct 11, 2024\n\n———————————————\nThis task was submitted through Client Request Submission\nhttps://form.asana.com/?k=9oZt0gqwx7v2JgswfBnXxg&d=375643158116881\n\nmin spend for free shipping is £130\n\nTHEME SETTING for shipping threshold",
+        "Task title:\nShipping on Cart (drawer) \n\nContact Person / Person that requested:\n*********\n\nRequest type:\nNew Feature\n\nPriority:\nMedium (Important but not urgent)\n\nDetailed Description:\nOn the cart conversation - dropping some favourite examples below.\nI would love to have the bar at the top (You're X£ away from free shipping).\n+ suggested product cards for the Cap and Socks (link below:\nBlack socks: https://www.*********.com/products/*********\nWhite socks: https://www.*********.com/products/*********\nCap: https://www.*********.com/products/*********\nIf they qualify for free shipping already, they should get a 'Congratulations, you get free shipping' bar instead, but would love to still keep the product carousel at the bottom. This should be dynamic, so it doesn't clash with what's in their basket.\nI believe ********* has set some free shipping thresholds yesterday, let  me know if you can find these or need us to send them over please! Ty\n\nBusiness Impact:\nMedium (Some disruption or risk of sales loss)\n\nExpected Outcome or Deliverables:\nFree shipping to be displayed with bar \n\nDeadline/Time Sensitivity:\nOct 10, 2024 – Oct 11, 2024\n\n———————————————\nThis task was submitted through Client Request Submission\nhttps://form.asana.com/?k=9oZt0gqwx7v2JgswfBnXxg&d=375643158116881\n\nmin spend for free shipping is £130\n\nTHEME SETTING for shipping threshold",
       projectName: "*********",
     },
     {
@@ -784,7 +783,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "feat(live chat): implement Shopify live chat  ",
       createdAt: "2024-10-01T14:27:28.087Z",
       notes:
-        "Shopify Inbox app\n\nScribes:\n    Customer:\nhttps://scribehow.com/shared/How_to_use_Shopify_live_chat_as_a_customer__Do5Ey5YtT9y4frkCX1XyGQ\n    Admin:\nhttps://scribehow.com/shared/Customising_Shopify_Live_Chat_as_an_Admin__olkPKmWFQYulzDFp44Kmhw",
+        "Shopify Inbox app\n\nScribes:\n    Customer:\nhttps://scribehow.com/shared/********\n    Admin:\nhttps://scribehow.com/shared/********",
       projectName: "*********",
     },
     {
@@ -830,7 +829,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "feat(theme updates): Reskin the Website for Retail Launch",
       createdAt: "2024-09-25T06:00:33.258Z",
       notes:
-        "Task: Reskin the Website for Retail Launch\n\n\n    Review and Analyze Annotated PDF\n    Execute Homepage and Product Page Design\n    Apply Design to Other Pages\n\nThe core sites we are emulating here are https://uk.representclo.com/, https://axelarigato.com/ and https://fearofgod.com/\n\n",
+        "Task: Reskin the Website for Retail Launch\n\n\n    Review and Analyze Annotated PDF\n    Execute Homepage and Product Page Design\n    Apply Design to Other Pages\n\nThe core sites we are emulating here are https://*********/, https://*********/ and https://*********/\n\n",
       projectName: "*********",
     },
     {
@@ -850,10 +849,10 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
     },
     {
       id: "1208328654616349",
-      name: "ref(mokka landing page improvements)",
+      name: "ref(******** landing page improvements)",
       createdAt: "2024-09-18T13:22:41.900Z",
       notes:
-        "follow up on this task: https://app.asana.com/0/1207453505969671/1208290669635038/f\n\nNotes below:\nDesktop version\n    Quite a lot of white space at the top. I've attached a shorter image to use.\n    Font colour is different to the Figma one, HEX code #E0D0B7\n    Please move email capture box lower (currently crammed under the header)\n    The image is slightly blurry for me - was it compressed in any way?\n    Press section is still on central; there needs to be more space between 'FRESH OFF THE PRESS' and the quotes themselves. NICE logo is larger than the others. Logos aren't aligned\n    Can ticker tape move continuously, not glitch + restart? Let me know if you need it longer\n    Add space top + bottom of WHAT'S INSIDE\n    Box image is blurry - let me know if you need another\n    Product section - please align text as per Figma (to take up the full space and be larger in size)\n    Add space top + bottom of RATED BY THE NTW community header\n\nMobile version\n    Header is really crammed, doesn't look like the new image (which has a lot more space at the top)\n    Make text slightly smaller so it's not quite as edge to edge\n    Email box needs to bee smaller and further from the shoes\n    FRESH OFF THE PRESS needs to be smaller\n    Same note on ticker tape - it glitches and restarts, can it run smoothly?\n    WHAT'S INSIDE needs to be slightly smaller and have more space top + bottom\n    2nd product image in the carousel is smaller when the rest\n",
+        "follow up on this task: https://app.asana.com/0/1207453505969671/1208290669635038/f\n\nNotes below:\nDesktop version\n    Quite a lot of white space at the top. I've attached a shorter image to use.\n    Font colour is different to the Figma one, HEX code #E0D0B7\n    Please move email capture box lower (currently crammed under the header)\n    The image is slightly blurry for me - was it compressed in any way?\n    Press section is still on central; there needs to be more space between 'FRESH OFF THE PRESS' and the quotes themselves. ******** logo is larger than the others. Logos aren't aligned\n    Can ticker tape move continuously, not glitch + restart? Let me know if you need it longer\n    Add space top + bottom of WHAT'S INSIDE\n    Box image is blurry - let me know if you need another\n    Product section - please align text as per Figma (to take up the full space and be larger in size)\n    Add space top + bottom of RATED BY THE ******** community header\n\nMobile version\n    Header is really crammed, doesn't look like the new image (which has a lot more space at the top)\n    Make text slightly smaller so it's not quite as edge to edge\n    Email box needs to bee smaller and further from the shoes\n    FRESH OFF THE PRESS needs to be smaller\n    Same note on ticker tape - it glitches and restarts, can it run smoothly?\n    WHAT'S INSIDE needs to be slightly smaller and have more space top + bottom\n    2nd product image in the carousel is smaller when the rest\n",
       projectName: "*********",
     },
     {
@@ -906,10 +905,10 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
     },
     {
       id: "1208290669635038",
-      name: "Feat(new page): landing page for Mokka ",
+      name: "Feat(new page): landing page for ******** ",
       createdAt: "2024-09-13T05:41:37.829Z",
       notes:
-        "We would like to create an additional landing page for https://www.notwoways.com/products/mokka (not currently live on our site). Since we'll be using this for lead gen ads, we want to try an even more aggressive approach when it comes to optimising for conversion.\nI've mocked up the page here: https://www.figma.com/design/********* the assets I've used are on this link: https://we.tl/*********\nA couple of notes:\n    Email capture box at the top - how do we do this? I usually use a Klaviyo embed but these can only go in a body of text from my knowledge. Can you help us embed over an image? LMK if you need the piece of code from the form itself/any other help from me.\n    Can the black ticker tape be dynamic from mobile (i.e. move from left to right)\n    As with Syzygy - if we can, at some point, have a video of someone reviewing/styling pop up on the page, let me know and I can give you content for this\n\nTIME ESTIMATE:  6 - 8 hours",
+        "We would like to create an additional landing page for https://www.*********.com/products/********* (not currently live on our site). Since we'll be using this for lead gen ads, we want to try an even more aggressive approach when it comes to optimising for conversion.\nI've mocked up the page here: https://www.figma.com/design/********* the assets I've used are on this link: https://we.tl/*********\nA couple of notes:\n    Email capture box at the top - how do we do this? I usually use a Klaviyo embed but these can only go in a body of text from my knowledge. Can you help us embed over an image? LMK if you need the piece of code from the form itself/any other help from me.\n    Can the black ticker tape be dynamic from mobile (i.e. move from left to right)\n    As with Syzygy - if we can, at some point, have a video of someone reviewing/styling pop up on the page, let me know and I can give you content for this\n\nTIME ESTIMATE:  6 - 8 hours",
       projectName: "*********",
     },
     {
@@ -1018,7 +1017,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "feat: Integrate user reviews in to product landing page (low lift test on Syzergy product page)",
       createdAt: "2024-08-30T13:07:48.783Z",
       notes:
-        'Context\nOur paid marketing agency are pushing for us to improve the product landing page to improve conversion here. We have healthy CTR but low on page conversion (we are testing ads for the Syzergy shoe only at this time).\nI believe we already have a ticket open in this sprint to update this page but (given how important it seems) it felt like a good idea to lean in a little on this happening asap. Can you take a look at the below?\n\nStage One:\nUpdate Landing Page Image:\n        Change the landing page image to include a quote. This task is currently in progress.\nQuote for the image:\n"Desired chunky aesthetic without any of the unwelcome heaviness or bulk"\n\nwe should have Waldenburg on all the pages. Looks like it\'s at 105 compression too.\n\n\nhttps://app.asana.com/app/asana/-/get_asset?asset_id=********* Consumer Reviews:\n        Work with Maria to integrate consumer reviews on the landing page. This can be done either by integrating Trustpilot reviews or hard-coding the reviews for testing purposes. Prioritize whichever method is quickest and looks best.\n\nhttps://app.asana.com/app/asana/-/get_asset?asset_id=********* Two (Conditional):\n    If Stage One is successful, implement functionality to display "only x left" on specific sizes. Ideally, if the visitor has visited before, this message should appear next to the same size they viewed previously.\n\nhttps://*********.shopifypreview.com/products/*********',
+        'Context\nOur paid marketing agency are pushing for us to improve the product landing page to improve conversion here. We have healthy CTR but low on page conversion (we are testing ads for the Syzergy shoe only at this time).\nI believe we already have a ticket open in this sprint to update this page but (given how important it seems) it felt like a good idea to lean in a little on this happening asap. Can you take a look at the below?\n\nStage One:\nUpdate Landing Page Image:\n        Change the landing page image to include a quote. This task is currently in progress.\nQuote for the image:\n"Desired chunky aesthetic without any of the unwelcome heaviness or bulk"\n\nwe should have Waldenburg on all the pages. Looks like it\'s at 105 compression too.\n\n\nhttps://app.asana.com/app/asana/-/get_asset?asset_id=********* Consumer Reviews:\n        Work with ********* to integrate consumer reviews on the landing page. This can be done either by integrating Trustpilot reviews or hard-coding the reviews for testing purposes. Prioritize whichever method is quickest and looks best.\n\nhttps://app.asana.com/app/asana/-/get_asset?asset_id=********* Two (Conditional):\n    If Stage One is successful, implement functionality to display "only x left" on specific sizes. Ideally, if the visitor has visited before, this message should appear next to the same size they viewed previously.\n\nhttps://*********.shopifypreview.com/products/*********',
       projectName: "*********",
     },
     {
@@ -1033,7 +1032,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "create a doc in shared folder indicating where to updates this",
       createdAt: "2024-08-30T10:09:19.106Z",
       notes: "",
-      projectName: "NoTwoWays",
+      projectName: "*********",
     },
     {
       id: "1208188618716679",
@@ -1100,7 +1099,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "fix(login-registration): adjust login and registration analytics to read the email address via javascript",
       createdAt: "2024-08-20T13:25:00.630Z",
       notes:
-        "The analytics events triggered on login and registration use liquid to obtain the customer's email address. This value would not exist at this time and should rather be obtained by reading the data in the form.\n\nSince these values are not used in any active reporting, remove the events:\nhttps://github.com/bitcubesystems/*********/blob/4377ee2be0f9025776958d7b5f9ad8b2a5f902be/theme/templates/customers/register.liquid#L158\n\nhttps://github.com/bitcubesystems/*********/blob/4377ee2be0f9025776958d7b5f9ad8b2a5f902be/theme/templates/customers/login.liquid#L133\n\n",
+        "The analytics events triggered on login and registration use liquid to obtain the customer's email address. This value would not exist at this time and should rather be obtained by reading the data in the form.\n\nSince these values are not used in any active reporting, remove the events:\nhttps://github.com/********/*********/blob/4377ee2be0f9025776958d7b5f9ad8b2a5f902be/theme/templates/customers/register.liquid#L158\n\nhttps://github.com/bitcubesystems/*********/blob/4377ee2be0f9025776958d7b5f9ad8b2a5f902be/theme/templates/customers/login.liquid#L133\n\n",
       projectName: "*********",
     },
     {
@@ -1116,7 +1115,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "Reviews",
       createdAt: "2024-08-19T12:02:26.318Z",
       notes: "",
-      projectName: "NoTwoWays",
+      projectName: "*********",
     },
 
     {
@@ -1193,12 +1192,12 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "Fix mega menu hover issue",
       createdAt: "2024-07-15T10:42:57.143Z",
       notes:
-        "When hovering over main items in the mega menu, the submenu sometimes closes prematurely. \n\nhttps://www.loom.com/share/3bab03095b274274a9b6170d8976fa4d?sid=98395011-9cca-4669-a25d-0084c088ef2d\n\nhttps://app.asana.com/app/asana/-/get_asset?asset_id=*********",
+        "When hovering over main items in the mega menu, the submenu sometimes closes prematurely. \n\nhttps://www.loom.com/share/********\n\nhttps://app.asana.com/app/asana/-/get_asset?asset_id=*********",
       projectName: "*********",
     },
     {
       id: "1207786967777732",
-      name: "The homepage nav is glitching when it minimises the NO logo",
+      name: "The homepage nav is glitching when it minimises the ******** logo",
       createdAt: "2024-07-12T09:37:19.886Z",
       notes: "",
       projectName: "*********",
@@ -1256,7 +1255,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "fix(carousel): improve thumbnail border consistency",
       createdAt: "2024-06-28T07:33:14.441Z",
       notes:
-        "Issue Description\n    Came across this issue when testing on this branch refactor/swiper-consistency\n    The thumbnail border on some thumbnails is thicker on other thumbnails \n    When navigating between the images using the thumbnail arrows some images get skipped \n    On mobile its just the thumbnail border size issue inconsistency\n\nWhat steps will reproduce the problem?\n    Navigate to any PDP \n        https://shop.*********.com/products/mens-ridge-parka-jacket-in-tobacco-1?_pos=21&_sid=f3a8fe819&_ss=r and https://shop.*********.com/products/purdey-london-6-paperweight-limited-edition?_pos=3&_sid=2cb9d12ec&_ss=r were used in this instance \n    Observe the thick thumbnail border on some thumbnails, and  a thin one on others\n    Click the arrows on the thumbnail section and observe as some images are being skipped \n\nWhat is the expected output? \n    There should be consistency on the weight/thickness of the thumbnail border \n    Images should not be skipped when clicking the arrows on the thumbnail section \n\nhttps://app.asana.com/app/asana/-/get_asset?asset_id=*********",
+        "Issue Description\n    Came across this issue when testing on this branch refactor/swiper-consistency\n    The thumbnail border on some thumbnails is thicker on other thumbnails \n    When navigating between the images using the thumbnail arrows some images get skipped \n    On mobile its just the thumbnail border size issue inconsistency\n\nWhat steps will reproduce the problem?\n    Navigate to any PDP \n        https://shop.*********.com/products/mens-ridge-parka-jacket-in-tobacco-1?_pos=21&_sid=f3a8fe819&_ss=r and https://shop.*********.com/products/********* were used in this instance \n    Observe the thick thumbnail border on some thumbnails, and  a thin one on others\n    Click the arrows on the thumbnail section and observe as some images are being skipped \n\nWhat is the expected output? \n    There should be consistency on the weight/thickness of the thumbnail border \n    Images should not be skipped when clicking the arrows on the thumbnail section \n\nhttps://app.asana.com/app/asana/-/get_asset?asset_id=*********",
       projectName: "*********",
     },
     {
@@ -1278,7 +1277,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
     },
     {
       id: "1207630116311765",
-      name: "Can we please remove the notwoways.com button on the collection blocks on home page?\n",
+      name: "Can we please remove the ********* button on the collection blocks on home page?\n",
       createdAt: "2024-06-21T07:04:17.178Z",
       notes: "https://app.asana.com/app/asana/-/get_asset?asset_id=*********",
       projectName: "*********",
@@ -1368,8 +1367,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       id: "1207571080027685",
       name: "Add notify me when available forms to archive",
       createdAt: "2024-06-14T07:36:41.877Z",
-      notes:
-        '{%- if product.metafields.custom.coming_soon_signup_form -%}\n              <div\n                class="{{ product.metafields.custom.coming_soon_signup_form.value }} klaviyo-form"\n              ></div>\n            {% else %}\n              <!-- Existing button -->\n            {%- endif -%}',
+      notes: "",
       projectName: "*********",
     },
     {
@@ -1541,7 +1539,7 @@ export const ecommerceAsanaTasks: SanitisedAsanaData = {
       name: "fix(shop-the-look): fix shop-the-look functionality on mobile",
       createdAt: "2024-02-13T10:38:34.674Z",
       notes:
-        "Issue Description\nOn mobile when the shop the look section is on other pages beside the PDP the UX is not as expected i.e.\n    the carousel is not functioning (cannot scroll) even the appearance is different \n    the quick shop is not functioning \n    the burger menu is not functioning \n    in some instances delayed navigation to the PDPs on the section \n\nWhat steps will reproduce the problem?\n    Navigate to https://*********.com?preview_theme_id=127894487113 where the issue can be reproduced \n    Navigate to the https://shop.*********.com/collections/view-all-new-arrivals (page that is not PDP where the section has been added )on mobile \n    Click the quick shop\n    Click the burger menu\n    Click the carousel \n    Observe as all are not responsive \n\nWhat is the expected output? \nThe following functionality...\n    Carousel\n    Quick shop \n    Burger menu \nshould remain working and responsive on any page where the shop the look section has been added \n\n\n\nhttps://app.asana.com/app/asana/-/get_asset?asset_id=*********",
+        "Issue Description\nOn mobile when the shop the look section is on other pages beside the PDP the UX is not as expected i.e.\n    the carousel is not functioning (cannot scroll) even the appearance is different \n    the quick shop is not functioning \n    the burger menu is not functioning \n    in some instances delayed navigation to the PDPs on the section \n\nWhat steps will reproduce the problem?\n    Navigate to https://*********.com?preview_theme_id=********* where the issue can be reproduced \n    Navigate to the https://shop.*********.com/collections/view-all-new-arrivals (page that is not PDP where the section has been added )on mobile \n    Click the quick shop\n    Click the burger menu\n    Click the carousel \n    Observe as all are not responsive \n\nWhat is the expected output? \nThe following functionality...\n    Carousel\n    Quick shop \n    Burger menu \nshould remain working and responsive on any page where the shop the look section has been added \n\n\n\nhttps://app.asana.com/app/asana/-/get_asset?asset_id=*********",
       projectName: "*********",
     },
     {
