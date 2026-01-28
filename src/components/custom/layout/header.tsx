@@ -17,14 +17,18 @@ import { type ComponentPropsWithoutRef } from "react";
 export type HeaderProps = {
   lightModeLogo?: HeaderLogo;
   darkModeLogo?: HeaderLogo;
-  lastUpdated: string;
-  shareLink: string;
-  pdfDownloadLink: string;
+  lastUpdated?: string;
+  shareLink?: string;
+  pdfDownloadLink?: string;
 };
 
 type HeaderLogo = ComponentPropsWithoutRef<"img">;
 
-export const copyLink = async (shareLink: string) => {
+export const copyLink = async (shareLink?: string) => {
+  if (!shareLink) {
+    return;
+  }
+
   try {
     await navigator.clipboard.writeText(shareLink);
     try {
@@ -114,52 +118,59 @@ export const Header = ({
               />
             </Avatar>
           )}
-          <div
-            className="flex flex-col"
-            style={{
-              fontSize: "clamp(0.7rem, 0.8rem, 0.9rem)",
-            }}
-          >
-            <span className="text-muted-foreground">Last Updated:</span>
-            <time>
-              <EncryptedText
-                text={lastUpdated}
-                encryptedClassName="text-muted-foreground/60"
-                revealedClassName="text-muted-foreground/60"
-                revealDelayMs={0}
-              />
-            </time>
-            <time className="text-muted-foreground/60 hidden motion-reduce:inline">
-              {lastUpdated}
-            </time>
-          </div>
+          {lastUpdated && (
+            <div
+              className="flex flex-col"
+              style={{
+                fontSize: "clamp(0.7rem, 0.8rem, 0.9rem)",
+              }}
+            >
+              <span className="text-muted-foreground">Last Updated:</span>
+              <time>
+                <EncryptedText
+                  text={lastUpdated}
+                  encryptedClassName="text-muted-foreground/60"
+                  revealedClassName="text-muted-foreground/60"
+                  revealDelayMs={0}
+                />
+              </time>
+              <time className="text-muted-foreground/60 hidden motion-reduce:inline">
+                {lastUpdated}
+              </time>
+            </div>
+          )}
         </div>
         <div className="flex items-center gap-2">
-          <Button
-            variant={"default"}
-            title="Download this CV in PDF format"
-            asChild
-          >
-            <a
-              href={pdfDownloadLink}
-              rel="noopener noreferrer nofollow"
-              download
+          {pdfDownloadLink && (
+            <Button
+              variant={"default"}
+              title="Download this CV in PDF format"
+              asChild
             >
-              <DownloadIcon />
-              <span className="hidden md:inline-flex">Download</span>
-              <span className="sr-only md:hidden">Download</span>
-            </a>
-          </Button>
-          <Button
-            variant={"outline"}
-            title="Click to copy the link to this page to your clipboard"
-            onClick={() => {
-              copyLink(shareLink);
-            }}
-          >
-            <CopyIcon />
-            <span className="sr-only">Copy link</span>
-          </Button>
+              <a
+                href={pdfDownloadLink}
+                rel="noopener noreferrer nofollow"
+                download
+              >
+                <DownloadIcon />
+                <span className="hidden md:inline-flex">Download</span>
+                <span className="sr-only md:hidden">Download</span>
+              </a>
+            </Button>
+          )}
+          {shareLink && (
+            <Button
+              variant={"outline"}
+              title="Click to copy the link to this page to your clipboard"
+              onClick={() => {
+                copyLink(shareLink);
+              }}
+            >
+              <CopyIcon />
+              <span className="sr-only">Copy link</span>
+            </Button>
+          )}
+
           <Button
             variant={"outline"}
             title="Print this page"

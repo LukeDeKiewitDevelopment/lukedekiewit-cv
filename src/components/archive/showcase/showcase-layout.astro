@@ -1,0 +1,88 @@
+---
+import "../../../styles/global.css";
+import { Toaster } from "@/components/ui/sonner";
+import { ShowcaseHeader } from "../showcase/showcase-header";
+import { Footer } from "@/components/custom/layout/footer";
+import { SiteBackground } from "@/components/custom/layout/site-background";
+---
+
+<!doctype html>
+<html lang="en" class="dark antialiased w-screen h-screen">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Luke De Kiewit | Ecom Timeline</title>
+    <meta
+      name="description"
+      content="A showcase of the work I've done in - built with Astro, React, TypeScript, Tailwind CSS and shadcn/ui."
+    />
+    <meta name="lang" content="en" />
+    <meta name="author" content="Luke De Kiewit" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <meta name="bingbot" content="noindex" />
+    <link rel="canonical" href="https://example.com/" />
+    <link rel="icon" href="/images/favicon.ico" />
+
+    <script is:inline>
+      const getThemePreference = () => {
+        if (
+          typeof localStorage !== "undefined" &&
+          localStorage.getItem("theme")
+        ) {
+          return localStorage.getItem("theme");
+        }
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      };
+      const isDark = getThemePreference() === "dark";
+      document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+
+      if (typeof localStorage !== "undefined") {
+        const observer = new MutationObserver(() => {
+          const isDark = document.documentElement.classList.contains("dark");
+          localStorage.setItem("theme", isDark ? "dark" : "light");
+        });
+        observer.observe(document.documentElement, {
+          attributes: true,
+          attributeFilter: ["class"],
+        });
+      }
+    </script>
+  </head>
+  <body
+    class="size-full overflow-x-hidden min-h-screen min-w-screen flex flex-col scrollbar-gutter-stable scroll-smooth"
+  >
+    <ShowcaseHeader
+      lightModeLogo={{
+        src: "/images/logos/ldk_logo_black_tilted_724px.png",
+        alt: "Luke De Kiewit logo",
+        height: 40,
+        width: 40,
+        loading: "eager",
+        title: "Luke De Kiewit Logo",
+      }}
+      darkModeLogo={{
+        src: "/images/logos/ldk_logo_atomwave_tilted_724px.png",
+        alt: "Luke De Kiewit logo",
+        height: 40,
+        width: 40,
+        loading: "eager",
+        title: "Luke De Kiewit Logo",
+      }}
+      lastUpdated="28/01/2026"
+      client:load
+    />
+    <slot />
+    <Footer client:load className="mt-auto" />
+    <Toaster client:load position="bottom-center" />
+    <SiteBackground
+      client:load
+      backgroundImage={{
+        className: "grayscale opacity-10 hidden dark:block",
+        src: "/images/backgrounds/laptop_code_1.jpg",
+      }}
+    />
+  </body>
+</html>

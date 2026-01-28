@@ -15,20 +15,8 @@ export const Showcase = () => {
           <h1 className="text-2xl uppercase selection:text-shadow-none md:text-3xl dark:text-shadow-black dark:text-shadow-xs">
             Luke De Kiewit - Ecommerce Timeline
           </h1>
-          <span className="text-muted-foreground text-xs selection:text-shadow-none dark:text-shadow-black dark:text-shadow-xs">
-            {" Application to "}
-            <a
-              href="https://r17ventures.com/"
-              rel="noopener noreferrer nofollow"
-              target="_blank"
-              className="hover:text-primary hover:underline"
-            >
-              R17 Ventures
-            </a>
-          </span>
         </div>
         <Separator />
-
         <BackToTop />
       </div>
     );
