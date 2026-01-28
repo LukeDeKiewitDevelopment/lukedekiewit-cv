@@ -1,11 +1,8 @@
 "use client";
 
 import { Timeline } from "@/components/ui/timeline";
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ecommerceAsanaTasks } from "@/lib/ecommerce-asana-tasks";
-import { BackToTop } from "../back-to-top";
 
 export const Showcase = () => {
   const ShowcaseNavigation = () => {
@@ -17,7 +14,6 @@ export const Showcase = () => {
           </h1>
         </div>
         <Separator />
-        <BackToTop />
       </div>
     );
   };

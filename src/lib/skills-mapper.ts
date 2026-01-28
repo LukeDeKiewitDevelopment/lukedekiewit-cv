@@ -56,7 +56,7 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
     icon: siGit,
     colors: {
       foreground: "#fff",
-      background: siGit.hex,
+      background: "#df3011",
     },
   },
   "SQL Server": {
@@ -81,14 +81,14 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
     icon: siShopify,
     colors: {
       foreground: "#fff",
-      background: siShopify.hex,
+      background: "#4c823a",
     },
   },
   React: {
     icon: siReact,
     colors: {
-      foreground: "#fff",
-      background: "#00d1f7",
+      foreground: "#000",
+      background: siReact.hex,
     },
   },
   Preact: {
@@ -123,7 +123,7 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
     icon: siHtml5,
     colors: {
       foreground: "#fff",
-      background: siHtml5.hex,
+      background: "#d4441c",
     },
   },
   CSS: {
@@ -151,7 +151,7 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
     icon: siNodedotjs,
     colors: {
       foreground: "#fff",
-      background: siNodedotjs.hex,
+      background: "#437138",
     },
   },
   "Next.js": {
@@ -165,35 +165,35 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
     icon: siAstro,
     colors: {
       foreground: "#fff",
-      background: siAstro.hex,
+      background: "#b237eb",
     },
   },
   "Shopify Liquid": {
     icon: siShopify,
     colors: {
       foreground: "#fff",
-      background: "#3398cc",
+      background: "#3776cd",
     },
   },
   "Tailwind CSS": {
     icon: siTailwindcss,
     colors: {
       foreground: "#fff",
-      background: siTailwindcss.hex,
+      background: "#078197",
     },
   },
   Sass: {
     icon: siSass,
     colors: {
       foreground: "#fff",
-      background: siSass.hex,
+      background: "#c24785",
     },
   },
   Prismic: {
     icon: siPrismic,
     colors: {
       foreground: "#fff",
-      background: siPrismic.hex,
+      background: "#5465bb",
     },
   },
   Wordpress: {

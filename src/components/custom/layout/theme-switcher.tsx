@@ -10,7 +10,7 @@ import {
 import { LaptopIcon, MoonIcon, SunIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 
-type Themes = "theme-light" | "dark" | "system";
+export type Themes = "theme-light" | "dark" | "system";
 
 export const ThemeSwitcher = () => {
   const [currentTheme, setCurrentTheme] = useState<Themes>("theme-light");

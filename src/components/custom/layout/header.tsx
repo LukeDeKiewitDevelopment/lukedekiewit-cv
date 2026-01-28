@@ -9,17 +9,18 @@ import {
   PrinterIcon,
   CopyIcon,
 } from "lucide-react";
-import { ThemeSwitcher } from "./theme-switcher";
+import { ThemeSwitcher, type Themes } from "./theme-switcher";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "sonner";
-import { type ComponentPropsWithoutRef } from "react";
+import { useEffect, useState, type ComponentPropsWithoutRef } from "react";
 
 export type HeaderProps = {
   lightModeLogo?: HeaderLogo;
   darkModeLogo?: HeaderLogo;
   lastUpdated?: string;
   shareLink?: string;
-  pdfDownloadLink?: string;
+  lightPdfDownloadLink: string;
+  darkPdfDownloadLink: string;
 };
 
 type HeaderLogo = ComponentPropsWithoutRef<"img">;
@@ -85,7 +86,8 @@ export const Header = ({
   darkModeLogo,
   lastUpdated,
   shareLink,
-  pdfDownloadLink,
+  lightPdfDownloadLink,
+  darkPdfDownloadLink,
 }: HeaderProps) => {
   return (
     <nav
@@ -98,11 +100,12 @@ export const Header = ({
             <Avatar className="border-primary hidden-in-darkmode hidden border-2 p-0.75 shadow-black select-none sm:hidden md:flex md:size-10">
               <AvatarImage
                 className="animate-in zoom-in fade-in blur-in duration-200"
-                {...lightModeLogo}
                 src={lightModeLogo.src}
                 alt={lightModeLogo.alt}
                 height={lightModeLogo.height}
                 width={lightModeLogo.width}
+                loading="eager"
+                {...lightModeLogo}
               />
             </Avatar>
           )}
@@ -110,11 +113,12 @@ export const Header = ({
             <Avatar className="border-primary hidden-in-lightmode hidden border-2 p-0.75 shadow-black select-none sm:hidden md:flex md:size-10">
               <AvatarImage
                 className="animate-in zoom-in fade-in blur-in duration-200"
-                {...darkModeLogo}
                 src={darkModeLogo.src}
                 alt={darkModeLogo.alt}
                 height={darkModeLogo.height}
                 width={darkModeLogo.width}
+                loading="eager"
+                {...darkModeLogo}
               />
             </Avatar>
           )}
@@ -141,14 +145,14 @@ export const Header = ({
           )}
         </div>
         <div className="flex items-center gap-2">
-          {pdfDownloadLink && (
+          {lightPdfDownloadLink && darkPdfDownloadLink && (
             <Button
               variant={"default"}
               title="Download this CV in PDF format"
               asChild
             >
               <a
-                href={pdfDownloadLink}
+                href={darkPdfDownloadLink}
                 rel="noopener noreferrer nofollow"
                 download
               >

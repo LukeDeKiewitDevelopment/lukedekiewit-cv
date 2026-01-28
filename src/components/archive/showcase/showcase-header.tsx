@@ -3,11 +3,12 @@
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { type ComponentPropsWithoutRef } from "react";
-import { ThemeSwitcher } from "../layout/theme-switcher";
+
 import { EncryptedText } from "@/components/ui/encrypted-text";
 import { Button } from "@/components/ui/button";
 import { CopyIcon } from "lucide-react";
-import { copyLink } from "../layout/header";
+import { copyLink } from "@/components/custom/layout/header";
+import { ThemeSwitcher } from "@/components/custom/layout/theme-switcher";
 
 export type ShowcaseHeaderProps = {
   lightModeLogo?: ShowcaseHeaderLogo;

@@ -4,6 +4,9 @@ import { Toaster } from "@/components/ui/sonner";
 import { Header } from "./header";
 import { Footer } from "./footer";
 import { SiteBackground } from "./site-background";
+import { BackToTop } from "../back-to-top";
+
+const { hideNavbar } = Astro.props;
 ---
 
 <!doctype html>
@@ -58,31 +61,37 @@ import { SiteBackground } from "./site-background";
   <body
     class="size-full overflow-x-hidden print:overflow-hidden scrollbar-gutter-stable scroll-smooth"
   >
-    <Header
-      lightModeLogo={{
-        src: "/images/logos/ldk_logo_black_tilted_724px.png",
-        alt: "Luke De Kiewit logo",
-        height: 40,
-        width: 40,
-        loading: "eager",
-        title: "Luke De Kiewit Logo",
-      }}
-      darkModeLogo={{
-        src: "/images/logos/ldk_logo_atomwave_tilted_724px.png",
-        alt: "Luke De Kiewit logo",
-        height: 40,
-        width: 40,
-        loading: "eager",
-        title: "Luke De Kiewit Logo",
-      }}
-      lastUpdated="28/01/2026"
-      shareLink="https://cv.lukedekiewit.co.za/"
-      pdfDownloadLink="/files/Luke_De_Kiewit_CV_Feb_2026.pdf"
-      client:load
-    />
+    {
+      !hideNavbar && (
+        <Header
+          lightModeLogo={{
+            src: "/images/logos/ldk_logo_black_tilted_128px.webp",
+            alt: "Luke De Kiewit logo",
+            height: 40,
+            width: 40,
+            loading: "eager",
+            title: "Luke De Kiewit Logo",
+          }}
+          darkModeLogo={{
+            src: "/images/logos/ldk_logo_atomwave_tilted_128px.webp",
+            alt: "Luke De Kiewit logo",
+            height: 40,
+            width: 40,
+            loading: "eager",
+            title: "Luke De Kiewit Logo",
+          }}
+          lastUpdated="28/01/2026"
+          shareLink="https://cv.lukedekiewit.co.za/"
+          lightPdfDownloadLink="/files/Luke_De_Kiewit_CV_Feb_2026_light.pdf"
+          darkPdfDownloadLink="/files/Luke_De_Kiewit_CV_Feb_2026_dark.pdf"
+          client:load
+        />
+      )
+    }
 
     <slot />
     <Footer client:load />
+    <BackToTop client:load />
     <Toaster client:load position="bottom-center" className="print:hidden!" />
     <SiteBackground
       client:load

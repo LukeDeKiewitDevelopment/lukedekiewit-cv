@@ -59,12 +59,12 @@ export const CV = ({ className, ...props }: CVProps) => {
           <CVSidebar>
             <CVPageSection className="flex items-center justify-center">
               <CVAvatar
-                className="border-border size-[33.866666667mm] border-2 shadow-sm select-none dark:shadow-md"
+                className="border-border size-[33.866666667mm] border-2 shadow-sm dark:shadow-md"
                 title="Luke De Kiewit profile picture"
               >
                 <CVAvatarImage
-                  className="animate-in fade-in blur-in duration-200"
-                  src="/images/ldk_selfie_pfp_webp.webp"
+                  className="animate-in fade-in blur-in duration-200 select-none"
+                  src="/images/ldk_selfie_pfp_filter_200px.webp"
                   alt="Profile picture"
                   height={128}
                   width={128}
@@ -105,7 +105,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                       Bloemfontein, Free State <i className="not-italic">🇿🇦</i>
                     </span>
                   </li>
-                  <li className="mb-[1.25mm] flex items-center justify-between">
+                  {/* <li className="mb-[1.25mm] flex items-center justify-between">
                     <i title="Phone number">
                       <PhoneIcon className="text-foreground/90 size-[4mm] shrink-0" />
                     </i>
@@ -116,7 +116,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                     >
                       +27738782766
                     </a>
-                  </li>
+                  </li> */}
                   <li className="mb-[1.25mm] flex items-center justify-between">
                     <i title="Email">
                       <MailIcon className="text-foreground/90 size-[4mm] shrink-0" />
@@ -236,15 +236,15 @@ export const CV = ({ className, ...props }: CVProps) => {
                 <SkillBadge skill="TypeScript" />
                 <SkillBadge skill="React" />
                 <SkillBadge skill="Preact" />
+                <SkillBadge skill="Node.js" />
                 <SkillBadge className="hidden-in-lightmode" skill="Next.js" />
                 <SkillBadge
                   className="hidden-in-darkmode bg-black! text-white! [&_svg]:fill-white!"
                   skill="Next.js"
                 />
                 <SkillBadge skill="Astro" />
-                <SkillBadge skill="Tailwind CSS" />
                 <SkillBadge skill="Sass" />
-                <SkillBadge skill="Node.js" />
+                <SkillBadge skill="Tailwind CSS" />
                 <SkillBadge skill="Shopify" />
                 <SkillBadge skill="Shopify Liquid" />
                 <SkillBadge
