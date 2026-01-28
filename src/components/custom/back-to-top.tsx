@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "../ui/button";
-import { ArrowBigUpIcon, ArrowUp01Icon, ArrowUpIcon } from "lucide-react";
+import { ArrowUpIcon } from "lucide-react";
 import clsx from "clsx";
 
 export const BackToTop = () => {

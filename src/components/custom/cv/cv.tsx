@@ -19,7 +19,6 @@ import {
   LinkedinIcon,
   MailIcon,
   MapPinIcon,
-  PhoneIcon,
   User2Icon,
 } from "lucide-react";
 import { siGithub } from "simple-icons";
