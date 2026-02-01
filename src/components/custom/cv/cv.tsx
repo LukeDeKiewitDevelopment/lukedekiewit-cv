@@ -58,7 +58,7 @@ export const CV = ({ className, ...props }: CVProps) => {
           <CVSidebar>
             <CVPageSection className="flex items-center justify-center">
               <CVAvatar
-                className="border-border size-[33.866666667mm] border-2 shadow-sm dark:shadow-md"
+                className="border-border size-[38mm] border-2 shadow-sm dark:shadow-md"
                 title="Luke De Kiewit profile picture"
               >
                 <CVAvatarImage

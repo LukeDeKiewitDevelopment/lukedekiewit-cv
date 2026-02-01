@@ -12,15 +12,14 @@ import {
 import { ThemeSwitcher, type Themes } from "./theme-switcher";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "sonner";
-import { useEffect, useState, type ComponentPropsWithoutRef } from "react";
+import { type ComponentPropsWithoutRef } from "react";
 
 export type HeaderProps = {
   lightModeLogo?: HeaderLogo;
   darkModeLogo?: HeaderLogo;
   lastUpdated?: string;
   shareLink?: string;
-  lightPdfDownloadLink: string;
-  darkPdfDownloadLink: string;
+  pdfDownloadLink?: string;
 };
 
 type HeaderLogo = ComponentPropsWithoutRef<"img">;
@@ -86,8 +85,7 @@ export const Header = ({
   darkModeLogo,
   lastUpdated,
   shareLink,
-  lightPdfDownloadLink,
-  darkPdfDownloadLink,
+  pdfDownloadLink,
 }: HeaderProps) => {
   return (
     <nav
@@ -145,14 +143,14 @@ export const Header = ({
           )}
         </div>
         <div className="flex items-center gap-2">
-          {lightPdfDownloadLink && darkPdfDownloadLink && (
+          {pdfDownloadLink && (
             <Button
               variant={"default"}
               title="Download this CV in PDF format"
               asChild
             >
               <a
-                href={darkPdfDownloadLink}
+                href={pdfDownloadLink}
                 rel="noopener noreferrer nofollow"
                 download
               >
