@@ -114,7 +114,6 @@ export const CV = ({ className, ...props }: CVProps) => {
               <a
                 target="_blank"
                 href="https://cv.lukedekiewit.co.za/"
-                rel="noopener noreferrer nofollow"
                 className="hover:text-primary text-foreground absolute top-0 right-0 hidden print:block"
                 title="Interactive web version link"
               >
@@ -140,7 +139,6 @@ export const CV = ({ className, ...props }: CVProps) => {
                         <a
                           target="_blank"
                           href="https://bitcube.tech/"
-                          rel="noopener noreferrer nofollow"
                           className="hover:text-primary hover:underline"
                           title="Bitcube website link"
                         >
@@ -182,7 +180,6 @@ export const CV = ({ className, ...props }: CVProps) => {
                         <a
                           target="_blank"
                           href="https://www.socoed.com/"
-                          rel="noopener noreferrer nofollow"
                           className="hover:text-primary uppercase hover:underline"
                           title="SOCO_ED website link"
                         >
@@ -212,7 +209,6 @@ export const CV = ({ className, ...props }: CVProps) => {
                         <a
                           target="_blank"
                           href="https://www.condensation.co.za/"
-                          rel="noopener noreferrer nofollow"
                           className="hover:text-primary hover:underline"
                           title="Condensation website link"
                         >
@@ -250,7 +246,6 @@ export const CV = ({ className, ...props }: CVProps) => {
                         <a
                           target="_blank"
                           href="https://atomwave.lukedekiewit.co.za/"
-                          rel="noopener noreferrer nofollow"
                           className="hover:text-primary hover:underline"
                           title="Atomwave website link"
                         >
@@ -276,7 +271,6 @@ export const CV = ({ className, ...props }: CVProps) => {
                         <a
                           target="_blank"
                           href="https://marlinbrokers.co.za/"
-                          rel="noopener noreferrer nofollow"
                           className="hover:text-primary hover:underline"
                           title="Marlin Brokers website link"
                         >
@@ -301,7 +295,6 @@ export const CV = ({ className, ...props }: CVProps) => {
                         <a
                           target="_blank"
                           href="https://topic.co.za/"
-                          rel="noopener noreferrer nofollow"
                           className="hover:text-primary hover:underline"
                           title="Topic LMS Link"
                         >
@@ -339,7 +332,6 @@ export const CV = ({ className, ...props }: CVProps) => {
                     <a
                       target="_blank"
                       href="https://allqs.saqa.org.za/showQualification.php?id=48872"
-                      rel="noopener noreferrer nofollow"
                       className="hover:text-primary text-foreground/70 hover:underline"
                     >
                       National Certificate: IT Systems Development (NQF 6)
@@ -354,7 +346,6 @@ export const CV = ({ className, ...props }: CVProps) => {
                     <a
                       target="_blank"
                       href="https://regqs.saqa.org.za/viewQualification.php?id=78965"
-                      rel="noopener noreferrer nofollow"
                       className="hover:text-primary text-foreground/70 hover:underline"
                     >
                       FET Certificate: IT Systems Development (NQF 5)
@@ -369,7 +360,6 @@ export const CV = ({ className, ...props }: CVProps) => {
                     <a
                       target="_blank"
                       href="https://regqs.saqa.org.za/viewQualification.php?id=71850"
-                      rel="noopener noreferrer nofollow"
                       className="hover:text-primary text-foreground/70 hover:underline"
                     >
                       FET Certificate: IT Database Development (NQF 4)
@@ -401,7 +391,6 @@ export const CV = ({ className, ...props }: CVProps) => {
                 <span>For privacy reasons, references are available</span>{" "}
                 <a
                   href="#contact-information"
-                  rel="noopener noreferrer nofollow"
                   className="hover:text-primary text-foreground/70 text-right underline transition-all hover:underline"
                 >
                   upon request
@@ -470,7 +459,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                     </i>
                     <a
                       href="tel:+27738782766"
-                      rel="noopener noreferrer nofollow"
+                      
                       className="hover:text-primary text-foreground/70 text-right transition-all hover:underline"
                     >
                       +27738782766
@@ -482,7 +471,6 @@ export const CV = ({ className, ...props }: CVProps) => {
                     </i>
                     <a
                       href="mailto:luke.dekiewit@yahoo.com"
-                      rel="noopener noreferrer nofollow"
                       title="Bloemfontein, Free State, South Africa, 9301 🇿🇦"
                       className="hover:text-primary text-foreground/70 text-right hover:underline"
                     >
@@ -498,7 +486,6 @@ export const CV = ({ className, ...props }: CVProps) => {
                     />
                     <a
                       href="https://github.com/lukedekiewit"
-                      rel="noopener noreferrer nofollow"
                       target="_blank"
                       className="hover:text-primary text-foreground/70 text-right hover:underline"
                     >
@@ -511,7 +498,6 @@ export const CV = ({ className, ...props }: CVProps) => {
                     </i>
                     <a
                       href="https://www.linkedin.com/in/lukedekiewit/"
-                      rel="noopener noreferrer nofollow"
                       className="hover:text-primary text-foreground/70 text-right hover:underline"
                     >
                       @lukedekiewit
@@ -523,7 +509,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                     </i>
                     <a
                       href="https://lukedekiewit.co.za/"
-                      rel="noopener noreferrer nofollow"
+                      
                       className="hover:text-primary text-foreground/70 text-right hover:underline"
                     >
                       lukedekiewit.co.za

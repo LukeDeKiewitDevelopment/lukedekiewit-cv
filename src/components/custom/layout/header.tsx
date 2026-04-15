@@ -152,11 +152,7 @@ export const Header = ({
               title="Download this CV in PDF format"
               asChild
             >
-              <a
-                href={pdfDownloadLink}
-                rel="noopener noreferrer nofollow"
-                download
-              >
+              <a href={pdfDownloadLink} download>
                 <DownloadIcon />
                 <span className="hidden md:inline-flex">Download</span>
                 <span className="sr-only md:hidden">Download</span>
