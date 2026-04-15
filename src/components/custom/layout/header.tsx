@@ -136,7 +136,10 @@ export const Header = ({
                   revealDelayMs={0}
                 />
               </time>
-              <time className="text-muted-foreground/60 hidden motion-reduce:inline">
+              <time
+                dateTime={lastUpdated}
+                className="text-muted-foreground/60 hidden motion-reduce:inline"
+              >
                 {lastUpdated}
               </time>
             </div>

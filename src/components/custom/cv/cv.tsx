@@ -191,22 +191,20 @@ export const CV = ({ className, ...props }: CVProps) => {
                       English, Afrikaans
                     </span>
                   </li>
-                  <li className="mb-[1.25mm] flex items-center justify-between">
-                    <span className="text-foreground/90">Own transport</span>
-                    <i title="Yes">
-                      <CheckIcon className="text-foreground/70 size-[4mm] shrink-0" />
-                    </i>
-                  </li>
                   <li className="flex items-center justify-between">
                     <span className="text-foreground/90">
                       Open to remote work
                     </span>
-                    <span className="text-foreground/70 text-right">
-                      Yes (GMT +2)
-                    </span>
-                    {/* <i title="Yes">
+                    <i title="Yes">
                       <CheckIcon className="text-foreground/70 size-[4mm] shrink-0" />
-                    </i> */}
+                      <span className="sr-only">Yes</span>
+                    </i>
+                  </li>
+                  <li className="flex items-center justify-between">
+                    <span className="text-foreground/90">Timezone</span>
+                    <span className="text-foreground/70 text-right">
+                      GMT +2
+                    </span>
                   </li>
                 </ul>
               </div>
