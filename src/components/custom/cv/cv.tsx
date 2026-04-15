@@ -146,7 +146,7 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                         >
                           Bitcube
                         </a>
-                        {" • "} <span>May 2024 - Mar 2025</span>
+                        {" • "} <span>May 2024 - Mar 2026</span>
                       </span>
                     </h3>
                     <div className="text-foreground/70">
@@ -258,7 +258,7 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                     </h3>
                     <p className="text-foreground/70 max-w-prose text-balance">
                       My most ambitious project to date, due for completion in
-                      2026. Atomwave is a rewrite of shadcn/ui without a
+                      late 2026. Atomwave is a rewrite of shadcn/ui without a
                       Tailwind dependency, offering additional components,
                       greater flexibility, and built-in support for multiple
                       themes.
@@ -433,8 +433,8 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                 websites, and UI libraries. I'm committed to the highest
                 standards of performance, accessibility, and code quality.
                 Working alongside a team of passionate professionals, I ensure
-                every project follows modern best practices and delivers an
-                exceptional user experience.
+                every project follows modern best practices and AI-augmented
+                workflows to deliver an exceptional user experience.
               </p>
             </CVPageSection>
             <CVSeparator className="my-[2mm]" />
@@ -530,10 +530,10 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
               </CVPageSectionTitle>
               <div className="text-8pt">
                 <ul>
-                  <li className="mb-[1.25mm] flex items-center justify-between">
+                  {/* <li className="mb-[1.25mm] flex items-center justify-between">
                     <span className="text-foreground/90">Age</span>
                     <span className="text-foreground/70 text-right">25</span>
-                  </li>
+                  </li> */}
                   <li className="mb-[1.25mm] flex items-center justify-between">
                     <span className="text-foreground/90">Languages</span>
                     <span className="text-foreground/70 text-right">
@@ -599,15 +599,19 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                 Additional Skills
               </CVPageSectionTitle>
               <ul className="text-8pt text-foreground/80 list-inside list-disc text-balance break-keep">
-                <li>Responsive Web Design</li>
-                <li>W3C Web Standards</li>
-                <li>WCAG Accessibility Standards</li>
-                <li>Search Engine Optimisation</li>
+                <li>Component-Driven Development</li>
+                <li>Design System Implementation</li>
+                <li>Performance Optimisation</li>
+                <li>State Management</li>
+                <li>API Integration</li>
+                <li>SEO & GEO Optimisation</li>
+                <li>Conversion Rate Optimisation</li>
+                <li>W3C & WCAG Web Standards</li>
                 <li>Semantic HTML</li>
-                <li>Attention to Detail</li>
-                <li>Agile Project Management</li>
-
-                <li>Collaborative Problem Solving</li>
+                <li>Responsive Web Design</li>
+                <li>CI/CD & Deployment Workflows</li>
+                <li>Version Control & Branching</li>
+                <li>Cross-Browser Compatibility</li>
               </ul>
             </CVPageSection>
           </CVSidebar>
