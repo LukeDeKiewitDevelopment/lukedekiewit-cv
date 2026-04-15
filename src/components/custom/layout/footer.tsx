@@ -20,7 +20,7 @@ export const Footer = ({ className, ...props }: FooterProps) => {
       <span className="text-muted-foreground text-7pt w-fit text-center align-middle">
         <i className="not-italic">&copy;</i>&nbsp;
         <time dateTime={String(currentYear)}>{currentYear}</time>&nbsp;
-        {`Luke De Kiewit. Built using `}
+        {`Luke De Kiewit. Built with `}
         <a
           className="hover:text-primary underline transition-colors"
           target="_blank"

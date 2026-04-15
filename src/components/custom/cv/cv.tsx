@@ -14,7 +14,6 @@ import {
   CheckIcon,
   ExternalLinkIcon,
   FolderCodeIcon,
-  GlobeIcon,
   GraduationCap,
   LinkedinIcon,
   MailIcon,
@@ -157,7 +156,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                       @lukedekiewit
                     </a>
                   </li>
-                  <li className="flex items-center justify-between">
+                  {/* <li className="flex items-center justify-between">
                     <i title="Website">
                       <GlobeIcon className="text-foreground/90 size-[4mm] shrink-0" />
                     </i>
@@ -168,7 +167,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                     >
                       lukedekiewit.co.za
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </address>
             </CVPageSection>
@@ -193,21 +192,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                     </span>
                   </li>
                   <li className="mb-[1.25mm] flex items-center justify-between">
-                    <span className="text-foreground/90">Driving License</span>
-                    <span className="text-foreground/70 text-right">
-                      Code B
-                    </span>
-                  </li>
-                  <li className="mb-[1.25mm] flex items-center justify-between">
                     <span className="text-foreground/90">Own transport</span>
-                    <i title="Yes">
-                      <CheckIcon className="text-foreground/70 size-[4mm] shrink-0" />
-                    </i>
-                  </li>
-                  <li className="mb-[1.25mm] flex items-center justify-between">
-                    <span className="text-foreground/90">
-                      Willing to relocate
-                    </span>
                     <i title="Yes">
                       <CheckIcon className="text-foreground/70 size-[4mm] shrink-0" />
                     </i>
@@ -216,9 +201,12 @@ export const CV = ({ className, ...props }: CVProps) => {
                     <span className="text-foreground/90">
                       Open to remote work
                     </span>
-                    <i title="Yes">
+                    <span className="text-foreground/70 text-right">
+                      Yes (GMT +2)
+                    </span>
+                    {/* <i title="Yes">
                       <CheckIcon className="text-foreground/70 size-[4mm] shrink-0" />
-                    </i>
+                    </i> */}
                   </li>
                 </ul>
               </div>
@@ -361,7 +349,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                     <h4 className="text-foreground/90 mb-[1.25mm]">
                       {"> "}
                       <span className="uppercase">
-                        {"Junior Developer • "}
+                        {"Front-End Engineer • "}
                         <a
                           target="_blank"
                           href="https://bitcube.tech/"
@@ -371,7 +359,7 @@ export const CV = ({ className, ...props }: CVProps) => {
                         >
                           Bitcube
                         </a>
-                        {" • "} <span>May 2024 - Present</span>
+                        {" • "} <span>May 2024 - Mar 2025</span>
                       </span>
                     </h4>
                     <div className="text-foreground/70">
