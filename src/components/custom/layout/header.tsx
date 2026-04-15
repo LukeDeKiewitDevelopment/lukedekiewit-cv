@@ -178,7 +178,7 @@ export const Header = ({
 
           <Button
             variant={"outline"}
-            title="Print this page"
+            title="Click to print this CV"
             onClick={() => {
               printPage();
             }}
