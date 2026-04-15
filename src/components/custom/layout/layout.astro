@@ -5,7 +5,7 @@ import { Header } from "./header";
 import { Footer } from "./footer";
 import { SiteBackground } from "./site-background";
 import { BackToTop } from "../back-to-top";
-
+import { AstroSEO } from "astro-seo-plugin";
 const { hideNavbar } = Astro.props;
 ---
 
@@ -17,17 +17,54 @@ const { hideNavbar } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Luke De Kiewit CV</title>
-    <meta
-      name="description"
-      content="My interactive CV web page - built with Astro, React, TypeScript, Tailwind CSS and shadcn/ui."
-    />
     <meta name="lang" content="en" />
     <meta name="author" content="Luke De Kiewit" />
-    <meta name="robots" content="noindex, nofollow" />
-    <meta name="googlebot" content="noindex, nofollow" />
-    <meta name="bingbot" content="noindex" />
-    <link rel="canonical" href="https://cv.lukedekiewit.co.za/" />
+
+    <AstroSEO
+      title="Luke De Kiewit | Front-End Engineer"
+      description="Luke De Kiewit is a Front-End Engineer specialising in high-quality front-end systems, websites, and UI libraries. Skilled in React, TypeScript, Astro, Tailwind CSS, and Shopify Liquid."
+      openGraph={{
+        title: "Luke De Kiewit | Front-End Engineer",
+        description:
+          "Luke De Kiewit is a Front-End Engineer specialising in high-quality front-end systems, websites, and UI libraries. Skilled in React, TypeScript, Astro, Tailwind CSS, and Shopify Liquid.",
+        image: "https://cv.lukedekiewit.co.za/images/ldk_selfie_pfp.webp",
+        type: "profile",
+      }}
+      jsonLd={{
+        "@type": "Person",
+        name: "Luke De Kiewit",
+        jobTitle: "Front-End Engineer",
+        url: "https://cv.lukedekiewit.co.za/",
+        email: "luke.dekiewit@yahoo.com",
+        sameAs: [
+          "https://github.com/lukedekiewit",
+          "https://www.linkedin.com/in/lukedekiewit/",
+        ],
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Bloemfontein",
+          addressRegion: "Free State",
+          addressCountry: "ZA",
+        },
+      }}
+      robots={{
+        index: true,
+        follow: true,
+        noarchive: false,
+        nosnippet: false,
+        maxSnippet: 150,
+      }}
+      additionalLinkTags={[
+        { rel: "canonical", href: "https://cv.lukedekiewit.co.za/" },
+      ]}
+      additionalMetaTags={[
+        {
+          name: "keywords",
+          content:
+            "Luke De Kiewit, Front-End Engineer, Web Developer, React, TypeScript, Astro, Tailwind CSS, Shopify Liquid, Shopify, JavaScript, CV, Resume, South Africa, Bloemfontein",
+        },
+      ]}
+    />
     <link rel="icon" href="/images/favicon.ico" />
 
     <script is:inline>
