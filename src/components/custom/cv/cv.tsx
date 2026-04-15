@@ -53,7 +53,368 @@ export const CV = ({ className, ...props }: CVProps) => {
         )}
         style={{ scrollbarGutter: "stable" }}
       >
-        <CVPage className="mx-auto print:m-0!">
+        <CVPage className="mx-auto flex-row-reverse print:m-0!">
+          <CVPageContent className="relative">
+            <CVPageHeader
+              className="relative"
+              titleNode={
+                <h1 className="text-primary mb-[1mm] text-[26pt] leading-none uppercase">
+                  <EncryptedText
+                    text={"Luke De Kiewit"}
+                    className="motion-reduce:hidden"
+                    encryptedClassName="select-none"
+                    revealedClassName="select-text"
+                    revealDelayMs={0}
+                    flipDelayMs={0}
+                  />
+                  <span className="hidden motion-reduce:inline">
+                    Luke De Kiewit
+                  </span>
+                </h1>
+              }
+              subtitleNode={
+                <h2 className="text-13pt! flex items-center gap-[1.25mm] leading-6 uppercase">
+                  <span
+                    className="pointer-events-none not-italic select-none"
+                    aria-hidden="true"
+                  >
+                    {"<"}
+                  </span>
+                  <EncryptedText
+                    text={"Front-End Engineer"}
+                    className="motion-reduce:hidden"
+                    encryptedClassName="select-none"
+                    revealedClassName="select-text"
+                    revealDelayMs={10}
+                    flipDelayMs={0}
+                  />
+                  <span className="hidden motion-reduce:inline">
+                    Front-End Engineer
+                  </span>
+                  <i
+                    className={clsx(
+                      "bg-primary inline h-4.5 w-0.5 motion-reduce:hidden print:hidden!",
+                      !caretBlink && "invisible",
+                    )}
+                    style={{
+                      animation: !caretBlink
+                        ? "none"
+                        : "caretBlink 1.4s steps(1, end) infinite",
+                    }}
+                  ></i>
+                  <span
+                    className="pointer-events-none not-italic select-none"
+                    aria-hidden="true"
+                  >
+                    {"/>"}
+                  </span>
+                </h2>
+              }
+            >
+              <a
+                target="_blank"
+                href="https://cv.lukedekiewit.co.za/"
+                rel="noopener noreferrer nofollow"
+                className="hover:text-primary text-foreground absolute top-0 right-0 hidden print:block"
+                title="Interactive web version link"
+              >
+                <ExternalLinkIcon className="size-[4.5mm]" />
+              </a>
+            </CVPageHeader>
+            <CVSeparator className="my-[2mm]" />
+            <CVPageSection>
+              <CVPageSectionTitle
+                id="professional-experience"
+                className="mb-[2mm] flex items-center gap-[1.75mm]"
+              >
+                <Briefcase className="size-[4.5mm] shrink-0" />
+                <span>Professional experience</span>
+              </CVPageSectionTitle>
+              <ol className="text-8pt">
+                <li className="mb-[1.25mm]">
+                  <div>
+                    <h3 className="text-foreground/90 mb-[1.25mm]">
+                      {"> "}
+                      <span className="uppercase">
+                        {"Front-End Engineer • "}
+                        <a
+                          target="_blank"
+                          href="https://bitcube.tech/"
+                          rel="noopener noreferrer nofollow"
+                          className="hover:text-primary hover:underline"
+                          title="Bitcube website link"
+                        >
+                          Bitcube
+                        </a>
+                        {" • "} <span>May 2024 - Mar 2025</span>
+                      </span>
+                    </h3>
+                    <div className="text-foreground/70">
+                      <p className="mb-[1.25mm] max-w-prose text-balance">
+                        I began my career at Bitcube in the Ecommerce department
+                        in May 2024, specialising in Shopify theme and
+                        storefront development. Focusing on responsive design,
+                        performance, accessibility, semantic markup and
+                        improving conversion. I collaborated with a team of
+                        developers, designers and quality-assurance engineers to
+                        build, maintain and deliver bespoke solutions for
+                        prominent high-end luxury and contemporary fashion
+                        clients across the UK, EU, and US.
+                      </p>
+                      <p className="max-w-prose text-balance">
+                        I transferred to the Engineering department in July
+                        2025, moving from Ecommerce into more technical
+                        development work. I collaborate with different teams to
+                        build and maintain front-end systems for UK and EU-based
+                        clients, primarily in the renewable energy and maritime
+                        logistics sectors, as well as internal projects at
+                        Bitcube.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li className="mb-[1.25mm]">
+                  <div>
+                    <h3 className="text-foreground/90 mb-[1.25mm] uppercase">
+                      {"> "}
+                      <span>
+                        {"Junior Front-End Developer • "}
+                        <a
+                          target="_blank"
+                          href="https://www.socoed.com/"
+                          rel="noopener noreferrer nofollow"
+                          className="hover:text-primary uppercase hover:underline"
+                          title="SOCO_ED website link"
+                        >
+                          SOCO_ED
+                        </a>
+                        {" • "}
+                        <span>Jan 2023 - Mar 2024</span>
+                      </span>
+                    </h3>
+                    <div className="text-foreground/70">
+                      <p className="max-w-prose text-balance">
+                        I worked on a range of SaaS projects, building,
+                        maintaining, and extending custom systems for several
+                        clients, including leading universities in South Africa.
+                        I led front-end development for numerous UI/UX features
+                        and improvements on the Topic LMS and similar platforms.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h3 className="text-foreground/90 mb-[1.25mm] uppercase">
+                      {"> "}
+                      <span>
+                        {"Development Intern • "}
+                        <a
+                          target="_blank"
+                          href="https://www.condensation.co.za/"
+                          rel="noopener noreferrer nofollow"
+                          className="hover:text-primary hover:underline"
+                          title="Condensation website link"
+                        >
+                          Condensation
+                        </a>
+                        {" • "} Sep 2022 - Oct 2022
+                      </span>
+                    </h3>
+                    <div className="text-foreground/70">
+                      <p className="max-w-prose text-balance">
+                        I worked with a team of development interns to build and
+                        maintain front-end UI components for PHP-based platforms
+                        and static websites.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </CVPageSection>
+            <CVSeparator className="my-[2mm]" />
+            <CVPageSection>
+              <CVPageSectionTitle
+                id="public-projects"
+                className="mb-[2mm] flex items-center gap-[1.75mm]"
+              >
+                <FolderCodeIcon className="size-[4.5mm] shrink-0" />
+                <span>Public Projects</span>
+              </CVPageSectionTitle>
+              <ul className="text-8pt">
+                <li className="mb-[1.25mm]">
+                  <div>
+                    <h3 className="text-foreground/90 mb-[1.25mm] flex items-center uppercase">
+                      <span>
+                        {"> "}
+                        <a
+                          target="_blank"
+                          href="https://atomwave.lukedekiewit.co.za/"
+                          rel="noopener noreferrer nofollow"
+                          className="hover:text-primary hover:underline"
+                          title="Atomwave website link"
+                        >
+                          Atomwave Component Library
+                        </a>{" "}
+                        • 2025/26
+                      </span>
+                    </h3>
+                    <p className="text-foreground/70 max-w-prose text-balance">
+                      My most ambitious project to date, due for completion in
+                      2026. Atomwave is a rewrite of shadcn/ui without a
+                      Tailwind dependency, offering additional components,
+                      greater flexibility, and built-in support for multiple
+                      themes.
+                    </p>
+                  </div>
+                </li>
+                <li className="mb-[1.25mm]">
+                  <div>
+                    <h3 className="text-foreground/90 mb-[1.25mm] flex items-center uppercase">
+                      <span>
+                        {"> "}
+                        <a
+                          target="_blank"
+                          href="https://marlinbrokers.co.za/"
+                          rel="noopener noreferrer nofollow"
+                          className="hover:text-primary hover:underline"
+                          title="Marlin Brokers website link"
+                        >
+                          Marlin Brokers
+                        </a>{" "}
+                        • 2024
+                      </span>
+                    </h3>
+                    <p className="text-foreground/70 max-w-prose text-balance">
+                      A complete rebuild of the Marlin Brokers website from
+                      scratch, transforming an outdated and slow WordPress site
+                      into a clean, fast, SEO-optimized website built with
+                      Astro, React, and Tailwind.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h3 className="text-foreground/90 mb-[1.25mm] flex items-center uppercase">
+                      <span>
+                        {"> "}
+                        <a
+                          target="_blank"
+                          href="https://topic.co.za/"
+                          rel="noopener noreferrer nofollow"
+                          className="hover:text-primary hover:underline"
+                          title="Topic LMS Link"
+                        >
+                          Topic LMS
+                        </a>{" "}
+                        • 2023
+                      </span>
+                    </h3>
+                    <p className="text-foreground/70 max-w-prose text-balance">
+                      An educational platform for high school students in Grades
+                      10-12, supporting the education of over 200,000 learners
+                      across South Africa. Built with Next.js, React, Tailwind,
+                      and Strapi.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </CVPageSection>
+            <CVSeparator className="my-[2mm]" />
+            <CVPageSection>
+              <CVPageSectionTitle
+                id="education"
+                className="mb-[2mm] flex items-center gap-[1.75mm]"
+              >
+                <GraduationCap className="size-[4.5mm] shrink-0" />
+                <span>Education</span>
+              </CVPageSectionTitle>
+              <ol className="text-8pt">
+                <li className="mb-[1.25mm]">
+                  <div>
+                    <h3 className="text-foreground/90 mb-[1.25mm] uppercase">
+                      <span>{"> "}</span>
+                      CTU Training Solutions • 2022
+                    </h3>
+                    <a
+                      target="_blank"
+                      href="https://allqs.saqa.org.za/showQualification.php?id=48872"
+                      rel="noopener noreferrer nofollow"
+                      className="hover:text-primary text-foreground/70 hover:underline"
+                    >
+                      National Certificate: IT Systems Development (NQF 6)
+                    </a>
+                  </div>
+                </li>
+                <li className="mb-[1.25mm]">
+                  <div>
+                    <h3 className="text-foreground/90 mb-[1.25mm] uppercase">
+                      <span>{"> "}</span>CTU Training Solutions • 2021
+                    </h3>
+                    <a
+                      target="_blank"
+                      href="https://regqs.saqa.org.za/viewQualification.php?id=78965"
+                      rel="noopener noreferrer nofollow"
+                      className="hover:text-primary text-foreground/70 hover:underline"
+                    >
+                      FET Certificate: IT Systems Development (NQF 5)
+                    </a>
+                  </div>
+                </li>
+                <li className="mb-[1.25mm]">
+                  <div>
+                    <h3 className="text-foreground/90 mb-[1.25mm] uppercase">
+                      <span>{"> "}</span>CTU Training Solutions • 2020
+                    </h3>
+                    <a
+                      target="_blank"
+                      href="https://regqs.saqa.org.za/viewQualification.php?id=71850"
+                      rel="noopener noreferrer nofollow"
+                      className="hover:text-primary text-foreground/70 hover:underline"
+                    >
+                      FET Certificate: IT Database Development (NQF 4)
+                    </a>
+                  </div>
+                </li>
+                <li className="mb-[1.25mm]">
+                  <div>
+                    <h3 className="text-foreground/90 mb-[1.25mm] uppercase">
+                      <span>{"> "}</span>Grey College Secondary • 2019
+                    </h3>
+                    <p className="text-foreground/70">
+                      National Senior Certificate
+                    </p>
+                  </div>
+                </li>
+              </ol>
+            </CVPageSection>
+            <CVSeparator className="my-[2mm]" />
+            <CVPageSection>
+              <CVPageSectionTitle
+                id="references"
+                className="mb-[2mm] flex items-center gap-[1.75mm]"
+              >
+                <User2Icon className="size-[4.5mm] shrink-0" />
+                <span>References</span>
+              </CVPageSectionTitle>
+              <p className="text-8pt text-foreground/70 max-w-prose text-balance">
+                <span>For privacy reasons, references are available</span>{" "}
+                <a
+                  href="#contact-information"
+                  rel="noopener noreferrer nofollow"
+                  className="hover:text-primary text-foreground/70 text-right underline transition-all hover:underline"
+                >
+                  upon request
+                </a>
+                .
+              </p>
+            </CVPageSection>
+
+            <CVPageContentBackground
+              className="opacity-0 grayscale dark:opacity-5"
+              src="/images/backgrounds/laptop_code_3.jpg"
+            />
+          </CVPageContent>
           <CVSidebar>
             <CVPageSection className="flex items-center justify-center">
               <CVAvatar
@@ -265,367 +626,6 @@ export const CV = ({ className, ...props }: CVProps) => {
               </ul>
             </CVPageSection>
           </CVSidebar>
-          <CVPageContent className="relative">
-            <CVPageHeader
-              className="relative"
-              titleNode={
-                <h1 className="text-primary mb-[1mm] text-[26pt] leading-none uppercase">
-                  <EncryptedText
-                    text={"Luke De Kiewit"}
-                    className="motion-reduce:hidden"
-                    encryptedClassName="select-none"
-                    revealedClassName="select-text"
-                    revealDelayMs={0}
-                    flipDelayMs={0}
-                  />
-                  <span className="hidden motion-reduce:inline">
-                    Luke De Kiewit
-                  </span>
-                </h1>
-              }
-              subtitleNode={
-                <div className="text-13pt! flex items-center gap-[1.25mm] leading-6 uppercase">
-                  <span
-                    className="pointer-events-none not-italic select-none"
-                    aria-hidden="true"
-                  >
-                    {"<"}
-                  </span>
-                  <EncryptedText
-                    text={"Front-End Engineer"}
-                    className="motion-reduce:hidden"
-                    encryptedClassName="select-none"
-                    revealedClassName="select-text"
-                    revealDelayMs={10}
-                    flipDelayMs={0}
-                  />
-                  <h2 className="hidden motion-reduce:block">
-                    Front-End Engineer
-                  </h2>
-                  <i
-                    className={clsx(
-                      "bg-primary inline h-4.5 w-0.5 motion-reduce:hidden print:hidden!",
-                      !caretBlink && "invisible",
-                    )}
-                    style={{
-                      animation: !caretBlink
-                        ? "none"
-                        : "caretBlink 1.4s steps(1, end) infinite",
-                    }}
-                  ></i>
-                  <span
-                    className="pointer-events-none not-italic select-none"
-                    aria-hidden="true"
-                  >
-                    {"/>"}
-                  </span>
-                </div>
-              }
-            >
-              <a
-                target="_blank"
-                href="https://cv.lukedekiewit.co.za/"
-                rel="noopener noreferrer nofollow"
-                className="hover:text-primary text-foreground absolute top-0 right-0 hidden print:block"
-                title="Interactive web version link"
-              >
-                <ExternalLinkIcon className="size-[4.5mm]" />
-              </a>
-            </CVPageHeader>
-            <CVSeparator className="my-[2mm]" />
-            <CVPageSection>
-              <CVPageSectionTitle
-                id="professional-experience"
-                className="mb-[2mm] flex items-center gap-[1.75mm]"
-              >
-                <Briefcase className="size-[4.5mm] shrink-0" />
-                <span>Professional experience</span>
-              </CVPageSectionTitle>
-              <ol className="text-8pt">
-                <li className="mb-[1.25mm]">
-                  <div>
-                    <h4 className="text-foreground/90 mb-[1.25mm]">
-                      {"> "}
-                      <span className="uppercase">
-                        {"Front-End Engineer • "}
-                        <a
-                          target="_blank"
-                          href="https://bitcube.tech/"
-                          rel="noopener noreferrer nofollow"
-                          className="hover:text-primary hover:underline"
-                          title="Bitcube website link"
-                        >
-                          Bitcube
-                        </a>
-                        {" • "} <span>May 2024 - Mar 2025</span>
-                      </span>
-                    </h4>
-                    <div className="text-foreground/70">
-                      <p className="mb-[1.25mm] max-w-prose text-balance">
-                        I began my career at Bitcube in the Ecommerce department
-                        in May 2024, specialising in Shopify theme and
-                        storefront development. Focusing on responsive design,
-                        performance, accessibility, semantic markup and
-                        improving conversion. I collaborated with a team of
-                        developers, designers and quality-assurance engineers to
-                        build, maintain and deliver bespoke solutions for
-                        prominent high-end luxury and contemporary fashion
-                        clients across the UK, EU, and US.
-                      </p>
-                      <p className="max-w-prose text-balance">
-                        I transferred to the Engineering department in July
-                        2025, moving from Ecommerce into more technical
-                        development work. I collaborate with different teams to
-                        build and maintain front-end systems for UK and EU-based
-                        clients, primarily in the renewable energy and maritime
-                        logistics sectors, as well as internal projects at
-                        Bitcube.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li className="mb-[1.25mm]">
-                  <div>
-                    <h4 className="text-foreground/90 mb-[1.25mm] uppercase">
-                      {"> "}
-                      <span>
-                        {"Junior Front-End Developer • "}
-                        <a
-                          target="_blank"
-                          href="https://www.socoed.com/"
-                          rel="noopener noreferrer nofollow"
-                          className="hover:text-primary uppercase hover:underline"
-                          title="SOCO_ED website link"
-                        >
-                          SOCO_ED
-                        </a>
-                        {" • "}
-                        <span>Jan 2023 - Mar 2024</span>
-                      </span>
-                    </h4>
-                    <div className="text-foreground/70">
-                      <p className="max-w-prose text-balance">
-                        I worked on a range of SaaS projects, building,
-                        maintaining, and extending custom systems for several
-                        clients, including leading universities in South Africa.
-                        I led front-end development for numerous UI/UX features
-                        and improvements on the Topic LMS and similar platforms.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <h4 className="text-foreground/90 mb-[1.25mm] uppercase">
-                      {"> "}
-                      <span>
-                        {"Development Intern • "}
-                        <a
-                          target="_blank"
-                          href="https://www.condensation.co.za/"
-                          rel="noopener noreferrer nofollow"
-                          className="hover:text-primary hover:underline"
-                          title="Condensation website link"
-                        >
-                          Condensation
-                        </a>
-                        {" • "} Sep 2022 - Oct 2022
-                      </span>
-                    </h4>
-                    <div className="text-foreground/70">
-                      <p className="max-w-prose text-balance">
-                        I worked with a team of development interns to build and
-                        maintain front-end UI components for PHP-based platforms
-                        and static websites.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-              </ol>
-            </CVPageSection>
-            <CVSeparator className="my-[2mm]" />
-            <CVPageSection>
-              <CVPageSectionTitle
-                id="public-projects"
-                className="mb-[2mm] flex items-center gap-[1.75mm]"
-              >
-                <FolderCodeIcon className="size-[4.5mm] shrink-0" />
-                <span>Public Projects</span>
-              </CVPageSectionTitle>
-              <ul className="text-8pt">
-                <li className="mb-[1.25mm]">
-                  <div>
-                    <h4 className="text-foreground/90 mb-[1.25mm] flex items-center uppercase">
-                      <span>
-                        {"> "}
-                        <a
-                          target="_blank"
-                          href="https://atomwave.lukedekiewit.co.za/"
-                          rel="noopener noreferrer nofollow"
-                          className="hover:text-primary hover:underline"
-                          title="Atomwave website link"
-                        >
-                          Atomwave Component Library
-                        </a>{" "}
-                        • 2025/26
-                      </span>
-                    </h4>
-                    <p className="text-foreground/70 max-w-prose text-balance">
-                      My most ambitious project to date, due for completion in
-                      2026. Atomwave is a rewrite of shadcn/ui without a
-                      Tailwind dependency, offering additional components,
-                      greater flexibility, and built-in support for multiple
-                      themes.
-                    </p>
-                  </div>
-                </li>
-                <li className="mb-[1.25mm]">
-                  <div>
-                    <h4 className="text-foreground/90 mb-[1.25mm] flex items-center uppercase">
-                      <span>
-                        {"> "}
-                        <a
-                          target="_blank"
-                          href="https://marlinbrokers.co.za/"
-                          rel="noopener noreferrer nofollow"
-                          className="hover:text-primary hover:underline"
-                          title="Marlin Brokers website link"
-                        >
-                          Marlin Brokers
-                        </a>{" "}
-                        • 2024
-                      </span>
-                    </h4>
-                    <p className="text-foreground/70 max-w-prose text-balance">
-                      A complete rebuild of the Marlin Brokers website from
-                      scratch, transforming an outdated and slow WordPress site
-                      into a clean, fast, SEO-optimized website built with
-                      Astro, React, and Tailwind.
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <h4 className="text-foreground/90 mb-[1.25mm] flex items-center uppercase">
-                      <span>
-                        {"> "}
-                        <a
-                          target="_blank"
-                          href="https://topic.co.za/"
-                          rel="noopener noreferrer nofollow"
-                          className="hover:text-primary hover:underline"
-                          title="Topic LMS Link"
-                        >
-                          Topic LMS
-                        </a>{" "}
-                        • 2023
-                      </span>
-                    </h4>
-                    <p className="text-foreground/70 max-w-prose text-balance">
-                      An educational platform for high school students in Grades
-                      10-12, supporting the education of over 200,000 learners
-                      across South Africa. Built with Next.js, React, Tailwind,
-                      and Strapi.
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </CVPageSection>
-            <CVSeparator className="my-[2mm]" />
-            <CVPageSection>
-              <CVPageSectionTitle
-                id="education"
-                className="mb-[2mm] flex items-center gap-[1.75mm]"
-              >
-                <GraduationCap className="size-[4.5mm] shrink-0" />
-                <span>Education</span>
-              </CVPageSectionTitle>
-              <ol className="text-8pt">
-                <li className="mb-[1.25mm]">
-                  <div>
-                    <h4 className="text-foreground/90 mb-[1.25mm] uppercase">
-                      <span>{"> "}</span>
-                      CTU Training Solutions • 2022
-                    </h4>
-                    <a
-                      target="_blank"
-                      href="https://allqs.saqa.org.za/showQualification.php?id=48872"
-                      rel="noopener noreferrer nofollow"
-                      className="hover:text-primary text-foreground/70 hover:underline"
-                    >
-                      National Certificate: IT Systems Development (NQF 6)
-                    </a>
-                  </div>
-                </li>
-                <li className="mb-[1.25mm]">
-                  <div>
-                    <h4 className="text-foreground/90 mb-[1.25mm] uppercase">
-                      <span>{"> "}</span>CTU Training Solutions • 2021
-                    </h4>
-                    <a
-                      target="_blank"
-                      href="https://regqs.saqa.org.za/viewQualification.php?id=78965"
-                      rel="noopener noreferrer nofollow"
-                      className="hover:text-primary text-foreground/70 hover:underline"
-                    >
-                      FET Certificate: IT Systems Development (NQF 5)
-                    </a>
-                  </div>
-                </li>
-                <li className="mb-[1.25mm]">
-                  <div>
-                    <h4 className="text-foreground/90 mb-[1.25mm] uppercase">
-                      <span>{"> "}</span>CTU Training Solutions • 2020
-                    </h4>
-                    <a
-                      target="_blank"
-                      href="https://regqs.saqa.org.za/viewQualification.php?id=71850"
-                      rel="noopener noreferrer nofollow"
-                      className="hover:text-primary text-foreground/70 hover:underline"
-                    >
-                      FET Certificate: IT Database Development (NQF 4)
-                    </a>
-                  </div>
-                </li>
-                <li className="mb-[1.25mm]">
-                  <div>
-                    <h4 className="text-foreground/90 mb-[1.25mm] uppercase">
-                      <span>{"> "}</span>Grey College Secondary • 2019
-                    </h4>
-                    <p className="text-foreground/70">
-                      National Senior Certificate
-                    </p>
-                  </div>
-                </li>
-              </ol>
-            </CVPageSection>
-            <CVSeparator className="my-[2mm]" />
-            <CVPageSection>
-              <CVPageSectionTitle
-                id="references"
-                className="mb-[2mm] flex items-center gap-[1.75mm]"
-              >
-                <User2Icon className="size-[4.5mm] shrink-0" />
-                <span>References</span>
-              </CVPageSectionTitle>
-              <p className="text-8pt text-foreground/70 max-w-prose text-balance">
-                <span>For privacy reasons, references are available</span>{" "}
-                <a
-                  href="#contact-information"
-                  rel="noopener noreferrer nofollow"
-                  className="hover:text-primary text-foreground/70 text-right underline transition-all hover:underline"
-                >
-                  upon request
-                </a>
-                .
-              </p>
-            </CVPageSection>
-
-            <CVPageContentBackground
-              className="opacity-0 grayscale dark:opacity-5"
-              src="/images/backgrounds/laptop_code_3.jpg"
-            />
-          </CVPageContent>
         </CVPage>
       </main>
     </>
