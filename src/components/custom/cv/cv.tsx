@@ -26,9 +26,11 @@ import { CVPageSectionTitle } from "./cv-page-section-title";
 import { CVPageContentBackground } from "./cv-page-content-background";
 import { SkillBadge, SkillBadgeIcon } from "../skill-badge";
 
-export type CVProps = ComponentPropsWithoutRef<"main">;
+export type CVProps = ComponentPropsWithoutRef<"main"> & {
+  optimizedBg?: string;
+};
 
-export const CV = ({ className, ...props }: CVProps) => {
+export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
   const [caretBlink, setCaretBlink] = useState(false);
 
   const startCaretBlinking = () => {
@@ -401,7 +403,7 @@ export const CV = ({ className, ...props }: CVProps) => {
 
             <CVPageContentBackground
               className="opacity-0 grayscale dark:opacity-5"
-              src="/images/backgrounds/laptop_code_3.jpg"
+              src={optimizedBg ?? "/images/backgrounds/laptop_code_3.jpg"}
             />
           </CVPageContent>
           <CVSidebar>

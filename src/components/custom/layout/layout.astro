@@ -6,6 +6,11 @@ import { Footer } from "./footer";
 import { SiteBackground } from "./site-background";
 import { BackToTop } from "../back-to-top";
 import { AstroSEO } from "astro-seo-plugin";
+
+import { getImage } from "astro:assets";
+import code3Bg from "@/assets/images/backgrounds/code_3.jpg";
+const optimizedCode3Bg = await getImage({ src: code3Bg, format: 'webp', width: 1920 });
+
 const { hideNavbar } = Astro.props;
 ---
 
@@ -134,7 +139,7 @@ const { hideNavbar } = Astro.props;
       client:load
       backgroundImage={{
         className: "grayscale opacity-10 hidden dark:block print:hidden!",
-        src: "/images/backgrounds/code_3.jpg",
+        src: optimizedCode3Bg.src,
       }}
     />
   </body>
