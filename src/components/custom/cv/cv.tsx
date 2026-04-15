@@ -538,14 +538,11 @@ export const CV = ({ className, ...props }: CVProps) => {
                       English, Afrikaans
                     </span>
                   </li>
-                  <li className="flex items-center justify-between">
+                  <li className="mb-[1.25mm] flex items-center justify-between">
                     <span className="text-foreground/90">
                       Open to remote work
                     </span>
-                    <i title="Yes">
-                      <CheckIcon className="text-foreground/70 size-[4mm] shrink-0" />
-                      <span className="sr-only">Yes</span>
-                    </i>
+                    <span className="text-foreground/70 text-right">Yes</span>
                   </li>
                   <li className="flex items-center justify-between">
                     <span className="text-foreground/90">Timezone</span>
