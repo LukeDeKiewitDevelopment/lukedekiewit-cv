@@ -16,7 +16,7 @@ export const CVPageSectionTitle = ({
       <h2
         id={id}
         data-slot="cv-page-section-title"
-        className={clsx("text-10pt text-balance uppercase", className)}
+        className={clsx("text-9pt text-balance uppercase", className)}
       >
         {children}
       </h2>

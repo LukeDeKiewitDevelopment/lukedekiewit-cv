@@ -122,7 +122,7 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                 <ExternalLinkIcon className="size-[4.5mm]" />
               </a>
             </CVPageHeader>
-            <CVSeparator className="my-[2mm]" />
+            <CVSeparator className="my-[2.125mm]" />
             <CVPageSection>
               <CVPageSectionTitle
                 id="professional-experience"
@@ -131,7 +131,7 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                 <Briefcase className="size-[4.5mm] shrink-0" />
                 <span>Professional experience</span>
               </CVPageSectionTitle>
-              <ol className="text-8pt">
+              <ol className="text-7pt">
                 <li className="mb-[1.25mm]">
                   <div>
                     <h3 className="text-foreground/90 mb-[1.25mm]">
@@ -150,35 +150,52 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                       </span>
                     </h3>
                     <div className="text-foreground/70">
-                      <p className="mb-[1.25mm] max-w-prose text-balance">
-                        I began my career at Bitcube in the Ecommerce department
-                        in May 2024, specialising in Shopify theme and
-                        storefront development. Focusing on responsive design,
-                        performance, accessibility, semantic markup and
-                        improving conversion. I collaborated with a team of
-                        developers, designers and quality-assurance engineers to
-                        build, maintain and deliver bespoke solutions for
-                        prominent high-end luxury and contemporary fashion
-                        clients across the UK, EU, and US.
-                      </p>
-                      <p className="max-w-prose text-balance">
-                        I transferred to the Engineering department in July
-                        2025, moving from Ecommerce into more technical
-                        development work. I collaborate with different teams to
-                        build and maintain front-end systems for UK and EU-based
-                        clients, primarily in the renewable energy and maritime
-                        logistics sectors, as well as internal projects at
-                        Bitcube.
-                      </p>
+                      <h4 className="text-foreground/65 mb-[1mm]">
+                        Engineering Department{" "}
+                        <span>(Apr 2025 - Mar 2026)</span>
+                      </h4>
+                      <ul className="text-foreground/60 mb-[1.25mm] list-disc pl-[6mm] text-balance break-keep">
+                        <li className="my-[2mm]">
+                          Engineered front-end systems for UK and EU-based
+                          clients in the maritime logistics and renewable energy
+                          sectors.
+                        </li>
+                        <li className="my-[2mm]">
+                          Developed and maintained high-performance internal
+                          React and Next.js web applications. Utilised
+                          AI-augmented workflows to automate boilerplate and
+                          testing, significantly reducing delivery timelines.
+                        </li>
+                      </ul>
+                      <h4 className="text-foreground/65 mb-[1mm]">
+                        Ecommerce Department <span>(May 2024 - Mar 2025)</span>
+                      </h4>
+                      <ul className="text-foreground/60 mb-[1.25mm] list-disc pl-[6mm] text-balance break-keep">
+                        <li className="my-[2mm]">
+                          Built and maintained bespoke Shopify storefronts for
+                          high-end luxury and fashion brands across the UK, EU,
+                          and US.
+                        </li>
+                        <li className="my-[2mm]">
+                          Optimised storefronts for performance, W3C
+                          accessibility standards, and conversion rate growth.
+                        </li>
+                        <li className="my-[2mm]">
+                          Implemented responsive design, semantic UI and
+                          SEO-optimisation across diverse international
+                          e-commerce platforms.
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </li>
+
                 <li className="mb-[1.25mm]">
                   <div>
                     <h3 className="text-foreground/90 mb-[1.25mm] uppercase">
                       {"> "}
                       <span>
-                        {"Junior Front-End Developer • "}
+                        {"Front-End Engineer • "}
                         <a
                           target="_blank"
                           href="https://www.socoed.com/"
@@ -191,15 +208,24 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                         <span>Jan 2023 - Mar 2024</span>
                       </span>
                     </h3>
-                    <div className="text-foreground/70">
-                      <p className="max-w-prose text-balance">
-                        I worked on a range of SaaS projects, building,
-                        maintaining, and extending custom systems for several
-                        clients, including leading universities in South Africa.
-                        I led front-end development for numerous UI/UX features
-                        and improvements on the Topic LMS and similar platforms.
-                      </p>
-                    </div>
+                    <ul className="text-foreground/60 list-disc pl-[6mm] text-balance break-keep">
+                      <li className="my-[2mm]">
+                        Led front-end development for the Topic LMS platform,
+                        supporting over 200,000 learners across South Africa.
+                      </li>
+                      <li className="my-[2mm]">
+                        Engineered custom SaaS solutions and UI/UX features for
+                        high-profile educational institutions and universities.
+                      </li>
+                      <li className="my-[2mm]">
+                        Built and extended scalable front-end systems using
+                        Next.js, React, and Tailwind CSS.
+                      </li>
+                      <li className="my-[2mm]">
+                        Integrated complex CMS architectures with Strapi to
+                        manage large-scale educational content delivery.
+                      </li>
+                    </ul>
                   </div>
                 </li>
                 <li>
@@ -207,7 +233,7 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                     <h3 className="text-foreground/90 mb-[1.25mm] uppercase">
                       {"> "}
                       <span>
-                        {"Development Intern • "}
+                        {"Front-End Developer (Intern) • "}
                         <a
                           target="_blank"
                           href="https://www.condensation.co.za/"
@@ -219,18 +245,22 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                         {" • "} Sep 2022 - Oct 2022
                       </span>
                     </h3>
-                    <div className="text-foreground/70">
-                      <p className="max-w-prose text-balance">
-                        I worked with a team of development interns to build and
-                        maintain front-end UI components for PHP-based platforms
-                        and static websites.
-                      </p>
-                    </div>
+
+                    <ul className="text-foreground/60 list-disc pl-[6mm] text-balance break-keep">
+                      <li className="my-[2mm]">
+                        Engineered front-end UI components for PHP-based
+                        platforms and static websites.
+                      </li>
+                      <li className="my-[2mm]">
+                        Collaborated on the maintenance and scaling of web
+                        interfaces.
+                      </li>
+                    </ul>
                   </div>
                 </li>
               </ol>
             </CVPageSection>
-            <CVSeparator className="my-[2mm]" />
+            <CVSeparator className="my-[2.125mm]" />
             <CVPageSection>
               <CVPageSectionTitle
                 id="public-projects"
@@ -239,7 +269,7 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                 <FolderCodeIcon className="size-[4.5mm] shrink-0" />
                 <span>Public Projects</span>
               </CVPageSectionTitle>
-              <ul className="text-8pt">
+              <ul className="text-7pt">
                 <li className="mb-[1.25mm]">
                   <div>
                     <h3 className="text-foreground/90 mb-[1.25mm] flex items-center uppercase">
@@ -256,7 +286,7 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                         • 2025/26
                       </span>
                     </h3>
-                    <p className="text-foreground/70 max-w-prose text-balance">
+                    <p className="text-foreground/60 pl-[6mm] text-balance">
                       My most ambitious project to date, due for completion in
                       late 2026. Atomwave is a rewrite of shadcn/ui without a
                       Tailwind dependency, offering additional components,
@@ -281,10 +311,10 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                         • 2024
                       </span>
                     </h3>
-                    <p className="text-foreground/70 max-w-prose text-balance">
+                    <p className="text-foreground/60 pl-[6mm] text-balance">
                       A complete rebuild of the Marlin Brokers website from
                       scratch, transforming an outdated and slow WordPress site
-                      into a clean, fast, SEO-optimized website built with
+                      into a clean, fast, SEO-optimised website built with
                       Astro, React, and Tailwind.
                     </p>
                   </div>
@@ -305,7 +335,7 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                         • 2023
                       </span>
                     </h3>
-                    <p className="text-foreground/70 max-w-prose text-balance">
+                    <p className="text-foreground/60 pl-[6mm] text-balance">
                       An educational platform for high school students in Grades
                       10-12, supporting the education of over 200,000 learners
                       across South Africa. Built with Next.js, React, Tailwind,
@@ -315,7 +345,7 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                 </li>
               </ul>
             </CVPageSection>
-            <CVSeparator className="my-[2mm]" />
+            <CVSeparator className="my-[2.125mm]" />
             <CVPageSection>
               <CVPageSectionTitle
                 id="education"
@@ -324,17 +354,17 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                 <GraduationCap className="size-[4.5mm] shrink-0" />
                 <span>Education</span>
               </CVPageSectionTitle>
-              <ol className="text-8pt">
+              <ol className="text-7pt">
                 <li className="mb-[1.25mm]">
                   <div>
-                    <h3 className="text-foreground/90 mb-[1.25mm] uppercase">
+                    <h3 className="text-foreground/70 mb-[1.25mm] uppercase">
                       <span>{"> "}</span>
                       CTU Training Solutions • 2022
                     </h3>
                     <a
                       target="_blank"
                       href="https://allqs.saqa.org.za/showQualification.php?id=48872"
-                      className="hover:text-primary text-foreground/70 hover:underline"
+                      className="hover:text-primary text-foreground/60 ml-[6mm] hover:underline"
                     >
                       National Certificate: IT Systems Development (NQF 6)
                     </a>
@@ -342,13 +372,13 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                 </li>
                 <li className="mb-[1.25mm]">
                   <div>
-                    <h3 className="text-foreground/90 mb-[1.25mm] uppercase">
+                    <h3 className="text-foreground/70 mb-[1.25mm] uppercase">
                       <span>{"> "}</span>CTU Training Solutions • 2021
                     </h3>
                     <a
                       target="_blank"
                       href="https://regqs.saqa.org.za/viewQualification.php?id=78965"
-                      className="hover:text-primary text-foreground/70 hover:underline"
+                      className="hover:text-primary text-foreground/60 ml-[6mm] hover:underline"
                     >
                       FET Certificate: IT Systems Development (NQF 5)
                     </a>
@@ -356,13 +386,13 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                 </li>
                 <li className="mb-[1.25mm]">
                   <div>
-                    <h3 className="text-foreground/90 mb-[1.25mm] uppercase">
+                    <h3 className="text-foreground/70 mb-[1.25mm] uppercase">
                       <span>{"> "}</span>CTU Training Solutions • 2020
                     </h3>
                     <a
                       target="_blank"
                       href="https://regqs.saqa.org.za/viewQualification.php?id=71850"
-                      className="hover:text-primary text-foreground/70 hover:underline"
+                      className="hover:text-primary text-foreground/60 ml-[6mm] hover:underline"
                     >
                       FET Certificate: IT Database Development (NQF 4)
                     </a>
@@ -370,17 +400,17 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                 </li>
                 <li className="mb-[1.25mm]">
                   <div>
-                    <h3 className="text-foreground/90 mb-[1.25mm] uppercase">
+                    <h3 className="text-foreground/70 mb-[1.25mm] uppercase">
                       <span>{"> "}</span>Grey College Secondary • 2019
                     </h3>
-                    <p className="text-foreground/70">
+                    <p className="text-foreground/60 ml-[6mm]">
                       National Senior Certificate
                     </p>
                   </div>
                 </li>
               </ol>
             </CVPageSection>
-            <CVSeparator className="my-[2mm]" />
+            <CVSeparator className="my-[2.125mm]" />
             <CVPageSection>
               <CVPageSectionTitle
                 id="references"
@@ -389,11 +419,11 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                 <User2Icon className="size-[4.5mm] shrink-0" />
                 <span>References</span>
               </CVPageSectionTitle>
-              <p className="text-8pt text-foreground/70 max-w-prose text-balance">
+              <p className="text-7pt text-foreground/60 max-w-prose pl-[6mm] text-balance">
                 <span>For privacy reasons, references are available</span>{" "}
                 <a
                   href="#contact-information"
-                  className="hover:text-primary text-foreground/70 text-right underline transition-all hover:underline"
+                  className="hover:text-primary text-foreground/60 text-right underline transition-all hover:underline"
                 >
                   upon request
                 </a>
@@ -428,21 +458,23 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
               <CVPageSectionTitle id="summary" className="mb-[2mm]">
                 Summary
               </CVPageSectionTitle>
-              <p className="text-8pt text-foreground/70 block w-full max-w-prose text-balance">
-                I specialise in engineering high-quality front-end systems,
-                websites, and UI libraries. I'm committed to the highest
-                standards of performance, accessibility, and code quality.
-                Working alongside a team of passionate professionals, I ensure
-                every project follows modern best practices and AI-augmented
-                workflows to deliver an exceptional user experience.
+              <p className="text-7pt text-foreground/65 block w-full max-w-prose text-balance">
+                I specialise in engineering front-end systems and UI libraries
+                with a commitment to accessibility and code quality. I have a
+                proven track record of building at scale, including platforms
+                for 200,000+ users, front-end solutions for the maritime and
+                renewable energy sectors, and storefronts for high-profile UK,
+                EU and US clients. I integrate AI-augmented workflows into my
+                development process to accelerate delivery while maintaining
+                strict engineering standards.
               </p>
             </CVPageSection>
-            <CVSeparator className="my-[2mm]" />
+            <CVSeparator className="my-[2.125mm]" />
             <CVPageSection>
               <CVPageSectionTitle id="contact-information" className="mb-[2mm]">
                 Contact information
               </CVPageSectionTitle>
-              <address className="text-8pt not-italic">
+              <address className="text-7pt not-italic">
                 <ul className="flex flex-col justify-center">
                   <li className="mb-[1.25mm] flex items-center justify-between">
                     <i title="Location">
@@ -450,7 +482,7 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                     </i>
                     <span
                       title="Bloemfontein, Free State, South Africa, 9301 🇿🇦"
-                      className="text-foreground/70 cursor-help text-right"
+                      className="text-foreground/65 cursor-help text-right"
                     >
                       Bloemfontein, Free State <i className="not-italic">🇿🇦</i>
                     </span>
@@ -474,7 +506,7 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                     <a
                       href="mailto:luke.dekiewit@yahoo.com"
                       title="Bloemfontein, Free State, South Africa, 9301 🇿🇦"
-                      className="hover:text-primary text-foreground/70 text-right hover:underline"
+                      className="hover:text-primary text-foreground/65 text-right hover:underline"
                     >
                       luke.dekiewit@yahoo.com
                     </a>
@@ -489,7 +521,7 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                     <a
                       href="https://github.com/lukedekiewit"
                       target="_blank"
-                      className="hover:text-primary text-foreground/70 text-right hover:underline"
+                      className="hover:text-primary text-foreground/65 text-right hover:underline"
                     >
                       @lukedekiewit
                     </a>
@@ -500,7 +532,7 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                     </i>
                     <a
                       href="https://www.linkedin.com/in/lukedekiewit/"
-                      className="hover:text-primary text-foreground/70 text-right hover:underline"
+                      className="hover:text-primary text-foreground/65 text-right hover:underline"
                     >
                       @lukedekiewit
                     </a>
@@ -520,7 +552,7 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                 </ul>
               </address>
             </CVPageSection>
-            <CVSeparator className="my-[2mm]" />
+            <CVSeparator className="my-[2.125mm]" />
             <CVPageSection>
               <CVPageSectionTitle
                 id="personal-information"
@@ -528,7 +560,7 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
               >
                 Personal information
               </CVPageSectionTitle>
-              <div className="text-8pt">
+              <div className="text-7pt">
                 <ul>
                   {/* <li className="mb-[1.25mm] flex items-center justify-between">
                     <span className="text-foreground/90">Age</span>
@@ -536,7 +568,7 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                   </li> */}
                   <li className="mb-[1.25mm] flex items-center justify-between">
                     <span className="text-foreground/90">Languages</span>
-                    <span className="text-foreground/70 text-right">
+                    <span className="text-foreground/65 text-right">
                       English, Afrikaans
                     </span>
                   </li>
@@ -544,18 +576,18 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                     <span className="text-foreground/90">
                       Open to remote work
                     </span>
-                    <span className="text-foreground/70 text-right">Yes</span>
+                    <span className="text-foreground/65 text-right">Yes</span>
                   </li>
                   <li className="flex items-center justify-between">
                     <span className="text-foreground/90">Timezone</span>
-                    <span className="text-foreground/70 text-right">
+                    <span className="text-foreground/65 text-right">
                       GMT +2
                     </span>
                   </li>
                 </ul>
               </div>
             </CVPageSection>
-            <CVSeparator className="my-[2mm]" />
+            <CVSeparator className="my-[2.125mm]" />
             <CVPageSection>
               <CVPageSectionTitle id="tech-stack" className="mb-[2mm]">
                 Tech stack
@@ -593,24 +625,27 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                 />
               </legend>
             </CVPageSection>
-            <CVSeparator className="my-[2mm]" />
+            <CVSeparator className="my-[2.125mm]" />
             <CVPageSection>
               <CVPageSectionTitle className="mb-[2mm]">
                 Additional Skills
               </CVPageSectionTitle>
-              <ul className="text-8pt text-foreground/80 list-inside list-disc text-balance break-keep">
-                <li>Component-Driven Development</li>
+              <ul className="text-7pt text-foreground/65 list-inside list-disc text-balance break-keep">
                 <li>Design System Implementation</li>
+                <li>Headless CMS & Architecture</li>
                 <li>Performance Optimisation</li>
+                <li>E2E & Unit Testing (Playwright)</li>
+                <li>Conversion Rate Optimisation</li>
+                <li>Component-Driven Development</li>
                 <li>State Management</li>
                 <li>API Integration</li>
-                <li>SEO & GEO Optimisation</li>
-                <li>Conversion Rate Optimisation</li>
                 <li>W3C & WCAG Web Standards</li>
-                <li>Semantic HTML</li>
-                <li>Responsive Web Design</li>
+                <li>SEO & GEO Optimisation</li>
                 <li>CI/CD & Deployment Workflows</li>
                 <li>Version Control & Branching</li>
+                <li>Remote-First Collaboration</li>
+                <li>Semantic HTML</li>
+                <li>Responsive Web Design</li>
                 <li>Cross-Browser Compatibility</li>
               </ul>
             </CVPageSection>
