@@ -14,6 +14,6 @@ export default defineConfig({
       },
     },
   },
-  site: 'https://cv.lukedekiewit.co.za',
+  site: 'https://lukedekiewit-cv.vercel.app/',
   integrations: [react(), sitemap()],
 });

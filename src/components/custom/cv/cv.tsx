@@ -115,7 +115,7 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
             >
               <a
                 target="_blank"
-                href="https://cv.lukedekiewit.co.za/"
+                href="https://lukedekiewit-cv.vercel.app/"
                 className="hover:text-primary text-foreground absolute top-0 right-0 hidden print:block"
                 title="Interactive web version link"
               >
