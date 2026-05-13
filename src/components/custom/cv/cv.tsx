@@ -11,7 +11,6 @@ import { EncryptedText } from "@/components/ui/encrypted-text";
 import { CVPageSection } from "./cv-page-section";
 import {
   Briefcase,
-  CheckIcon,
   ExternalLinkIcon,
   FolderCodeIcon,
   GraduationCap,
@@ -267,7 +266,16 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                 className="mb-[2mm] flex items-center gap-[1.75mm]"
               >
                 <FolderCodeIcon className="size-[4.5mm] shrink-0" />
-                <span>Public Projects</span>
+
+                <span className="flex items-center gap-[2mm]">
+                  <span>Featured Projects </span>
+                  <a
+                    href="/projects"
+                    className="hover:text-primary text-foreground/60 text-6pt hover:underline"
+                  >
+                    View all
+                  </a>
+                </span>
               </CVPageSectionTitle>
               <ul className="text-7pt">
                 <li className="mb-[1.25mm]">

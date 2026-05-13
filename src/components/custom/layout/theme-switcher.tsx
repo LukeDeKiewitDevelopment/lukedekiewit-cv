@@ -33,7 +33,7 @@ export const ThemeSwitcher = () => {
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
-          size="icon"
+          size={"icon-sm"}
           title="Click to choose a different theme"
           className="relative"
         >

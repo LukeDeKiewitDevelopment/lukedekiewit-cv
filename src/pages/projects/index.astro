@@ -1,0 +1,181 @@
+---
+import Layout from "@/components/custom/layout/layout.astro";
+import { ProjectsList } from "@/components/custom/projects/projects-list.tsx";
+import { type ProjectCardProps } from "@/components/custom/projects/project-card.tsx";
+import { Separator } from "@/components/ui/separator";
+
+const publicProjects: ProjectCardProps[] = [
+  {
+    title: "Steam Player Search",
+    company: "Personal",
+    link: "https://steam-player-search.vercel.app/",
+    imageSrc: "/images/project_thumbnails/steamplayersearch.png",
+    skills: [
+      {
+        skill: "Next.js",
+      },
+      {
+        skill: "React",
+      },
+      {
+        skill: "TypeScript",
+      },
+      {
+        skill: "Tailwind CSS",
+      },
+      {
+        skill: "Steam API",
+        className: "bg-[#1a9fff]! text-[#fcfdff]!",
+      },
+    ],
+    role: "Developer (Author)",
+    description: "",
+  },
+  {
+    title: "Topic",
+    company: "SOCO_ED",
+    link: "https://marlinbrokers.co.za/",
+    imageSrc: "/images/project_thumbnails/topic.png",
+    skills: [
+      {
+        skill: "Next.js",
+      },
+      {
+        skill: "React",
+      },
+      {
+        skill: "JavaScript",
+      },
+      {
+        skill: "Tailwind CSS",
+      },
+      {
+        skill: "Strapi",
+        className: "bg-[#4945ff]! text-[#fff]!",
+      },
+    ],
+    role: "Developer",
+    description: "",
+  },
+  {
+    title: "Marlin Brokers",
+    company: "Freelance",
+    link: "https://marlinbrokers.co.za/",
+    imageSrc: "/images/project_thumbnails/marlinbrokers.png",
+    skills: [
+      {
+        skill: "Astro",
+      },
+      {
+        skill: "React",
+      },
+      {
+        skill: "TypeScript",
+      },
+      {
+        skill: "Tailwind CSS",
+      },
+    ],
+    role: "Developer (Author)",
+    description: "",
+  },
+  {
+    title: "Interactive CV",
+    company: "Personal",
+    link: "https://lukedekiewit-cv.vercel.app/",
+    imageSrc: "/images/project_thumbnails/cv.png",
+    skills: [
+      {
+        skill: "Astro",
+      },
+      {
+        skill: "React",
+      },
+      {
+        skill: "TypeScript",
+      },
+      {
+        skill: "Tailwind CSS",
+      },
+    ],
+    role: "Developer (Author)",
+    description: "",
+  },
+  {
+    title: "Marlin Cleaning Supplies",
+    company: "Freelance",
+    link: "https://marlinbrokers.co.za/",
+    imageSrc: "/images/project_thumbnails/marlincleaning.png",
+    skills: [
+      {
+        skill: "Astro",
+      },
+      {
+        skill: "React",
+      },
+      {
+        skill: "TypeScript",
+      },
+      {
+        skill: "Tailwind CSS",
+      },
+    ],
+    role: "Developer (Author)",
+    description: "",
+  },
+  {
+    title: "Atomwave Component Library",
+    company: "Personal",
+    link: "https://marlinbrokers.co.za/",
+    imageSrc: "/images/project_thumbnails/marlincleaning.png",
+    skills: [
+      {
+        skill: "React",
+      },
+      {
+        skill: "Tailwind CSS",
+      },
+    ],
+    role: "Developer (Author)",
+    description: "",
+  },
+];
+---
+
+<Layout
+  hideDownloadButton
+  hidePrintButton
+  hideProjectsButton
+  showBackToCvButton
+  client:load
+>
+  <main data-slot="projects" class="p-4 md:p-6 lg:p-8">
+    <div>
+      <h1
+        class="text-xl md:text-2xl lg:text-3xl font-bold dark:text-primary text-center md:text-left"
+      >
+        Public Projects
+      </h1>
+      <Separator className="mt-4" />
+      <ProjectsList projects={publicProjects} client:load />
+    </div>
+    <div>
+      <h2
+        class="text-xl md:text-2xl lg:text-3xl font-bold dark:text-primary text-center md:text-left"
+      >
+        Confidential Projects
+      </h2>
+      <Separator className="mt-4" />
+      <!-- <ProjectsList projects={publicProjects} client:load /> -->
+    </div>
+    <div>
+      <h2
+        class="text-xl md:text-2xl lg:text-3xl font-bold dark:text-primary text-center md:text-left"
+      >
+        Archived Projects
+      </h2>
+      <Separator className="mt-4" />
+      <!-- <ProjectsList projects={publicProjects} client:load /> -->
+    </div>
+  </main>
+</Layout>

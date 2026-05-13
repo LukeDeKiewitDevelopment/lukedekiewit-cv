@@ -8,6 +8,7 @@ import {
   DownloadIcon,
   PrinterIcon,
   CopyIcon,
+  ArrowLeftIcon,
 } from "lucide-react";
 import { ThemeSwitcher, type Themes } from "./theme-switcher";
 import { Separator } from "@/components/ui/separator";
@@ -20,6 +21,10 @@ export type HeaderProps = {
   lastUpdated?: string;
   shareLink?: string;
   pdfDownloadLink?: string;
+  hideDownloadButton?: boolean;
+  hidePrintButton?: boolean;
+  hideProjectsButton?: boolean;
+  showBackToCvButton?: boolean;
 };
 
 type HeaderLogo = ComponentPropsWithoutRef<"img">;
@@ -86,6 +91,10 @@ export const Header = ({
   lastUpdated,
   shareLink,
   pdfDownloadLink,
+  hideDownloadButton,
+  hidePrintButton,
+  hideProjectsButton,
+  showBackToCvButton,
 }: HeaderProps) => {
   return (
     <nav
@@ -122,9 +131,9 @@ export const Header = ({
           )}
           {lastUpdated && (
             <div
-              className="flex flex-col"
+              className="hidden flex-col md:flex"
               style={{
-                fontSize: "clamp(0.7rem, 0.8rem, 0.9rem)",
+                fontSize: "clamp(0.6rem, 0.8rem, 0.9rem)",
               }}
             >
               <span className="text-muted-foreground">Last Updated:</span>
@@ -144,24 +153,83 @@ export const Header = ({
               </time>
             </div>
           )}
+          {!hideProjectsButton && (
+            <Button
+              className="inline-flex md:hidden"
+              variant={"outline"}
+              size={"sm"}
+              title="Visit my projects page"
+              asChild
+            >
+              <a className="text-xs" href={"/projects"}>
+                Projects
+              </a>
+            </Button>
+          )}
+          {showBackToCvButton && (
+            <Button
+              className="inline-flex md:hidden"
+              variant={"default"}
+              size={"sm"}
+              asChild
+            >
+              <a href="/">
+                <span className="flex items-center gap-1">
+                  <ArrowLeftIcon />
+                  <span>Back to CV</span>
+                </span>
+              </a>
+            </Button>
+          )}
         </div>
+
         <div className="flex items-center gap-2">
-          {pdfDownloadLink && (
+          {!hideProjectsButton && (
+            <Button
+              className="hidden md:inline-flex"
+              variant={"ghost"}
+              size={"sm"}
+              title="Visit my projects page"
+              asChild
+            >
+              <a className="text-xs" href={"/projects"}>
+                Projects
+              </a>
+            </Button>
+          )}
+          {showBackToCvButton && (
+            <Button
+              className="hidden md:inline-flex"
+              size={"sm"}
+              title="Visit my projects page"
+              asChild
+            >
+              <a href="/">
+                <span className="flex items-center gap-1">
+                  <ArrowLeftIcon />
+                  <span> Back to CV</span>
+                </span>
+              </a>
+            </Button>
+          )}
+
+          {!hideDownloadButton && pdfDownloadLink && (
             <Button
               variant={"default"}
+              size={"icon-sm"}
               title="Download this CV in PDF format"
               asChild
             >
               <a href={pdfDownloadLink} download>
                 <DownloadIcon />
-                <span className="hidden md:inline-flex">Download</span>
                 <span className="sr-only md:hidden">Download</span>
               </a>
             </Button>
           )}
-          {shareLink && (
+          {!hidePrintButton && shareLink && (
             <Button
               variant={"outline"}
+              size={"icon-sm"}
               title="Click to copy the link to this page to your clipboard"
               onClick={() => {
                 copyLink(shareLink);
@@ -174,6 +242,7 @@ export const Header = ({
 
           <Button
             variant={"outline"}
+            size={"icon-sm"}
             title="Click to print this CV"
             onClick={() => {
               printPage();
