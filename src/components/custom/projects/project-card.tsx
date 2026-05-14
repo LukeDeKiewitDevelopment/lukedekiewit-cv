@@ -79,7 +79,7 @@ export const ProjectCard = ({
       </CardHeader>
       <CardContent>
         <div className="flex flex-col gap-4">
-          <div className="aspect-video w-full overflow-hidden rounded-xl border-2">
+          <div className="aspect-video w-full overflow-hidden rounded-xl">
             {imageSrc && (
               <img
                 className="h-full w-full touch-none object-contain select-none"
