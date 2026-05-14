@@ -1,5 +1,6 @@
 import {
   siAngular,
+  siAsana,
   siAstro,
   siCss,
   siDotnet,
@@ -10,6 +11,7 @@ import {
   siMysql,
   siNextdotjs,
   siNodedotjs,
+  siPostgresql,
   siPreact,
   siPrismic,
   siReact,
@@ -19,6 +21,7 @@ import {
   siTailwindcss,
   siTypescript,
   siWordpress,
+  siZoho,
 } from "simple-icons";
 import type { SimpleIcon } from "simple-icons";
 
@@ -127,6 +130,13 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
     },
   },
   CSS: {
+    icon: siCss,
+    colors: {
+      foreground: "#fff",
+      background: siCss.hex,
+    },
+  },
+  "CSS Modules": {
     icon: siCss,
     colors: {
       foreground: "#fff",
@@ -249,6 +259,45 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
     colors: {
       foreground: "#000",
       background: "#0f9",
+    },
+  },
+  Zoho: {
+    icon: siZoho,
+    colors: {
+      foreground: "#fff",
+      background: siZoho.hex,
+    },
+  },
+  Postgress: {
+    colors: {
+      foreground: "#fff",
+      background: siPostgresql.hex,
+    },
+  },
+  OpenAPI: {
+    colors: {
+      foreground: "#1d1d3f",
+      background: "#94c73d",
+    },
+  },
+  "Asana API": {
+    icon: siAsana,
+    colors: {
+      foreground: "#fff",
+      background: siAsana.hex,
+    },
+  },
+  "GitHub API": {
+    icon: siGithub,
+    colors: {
+      foreground: "#fff",
+      background: "#000",
+    },
+  },
+  "Hubstaff API": {
+    colors: {
+      foreground: "#fff",
+      background: "#294dff",
     },
   },
 };

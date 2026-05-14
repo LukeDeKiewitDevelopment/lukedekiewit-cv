@@ -15,7 +15,6 @@ import { cn } from "@/lib/utils";
 
 export type ProjectCardProps = {
   title?: string;
-  ndaTitle?: string;
   company?: string;
   link?: string;
   imageSrc?: string;
@@ -24,11 +23,12 @@ export type ProjectCardProps = {
   description?: string;
   skills?: SkillBadgeProps[];
   isNda?: boolean;
+  isWip?: boolean;
+  isArchived?: boolean;
 };
 
 export const ProjectCard = ({
   title,
-  ndaTitle,
   company,
   link,
   imageSrc,
@@ -37,24 +37,20 @@ export const ProjectCard = ({
   description,
   skills,
   isNda,
+  isWip,
+  isArchived,
 }: ProjectCardProps) => {
   return (
-    <Card className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)]">
+    <Card className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)] 2xl:w-[calc(25%-1rem)]">
       <CardHeader>
-        {!ndaTitle && title && (
-          <CardTitle className="text-sm">
+        {title && (
+          <CardTitle className="text-xs font-semibold">
             <h2>{title}</h2>
-          </CardTitle>
-        )}
-        {!title && ndaTitle && (
-          <CardTitle className="text-sm">
-            <h2>{ndaTitle}</h2>
           </CardTitle>
         )}
         {company && (
           <CardDescription className="text-xs">{company}</CardDescription>
         )}
-
         <CardAction>
           {!isNda && link && (
             <Button size={"sm"} title={`Visit ${title}`} asChild>
@@ -66,16 +62,24 @@ export const ProjectCard = ({
               </a>
             </Button>
           )}
-          {isNda && (
+          {!isWip && !isArchived && isNda && (
             <Badge className="bg-red-600 text-white select-none">
               Confidential
+            </Badge>
+          )}
+          {!isNda && !isArchived && isWip && (
+            <Badge className="bg-yellow-600 text-black select-none">WIP</Badge>
+          )}
+          {!isNda && !isWip && isArchived && (
+            <Badge className="bg-gray-600 text-white select-none">
+              Archived
             </Badge>
           )}
         </CardAction>
       </CardHeader>
       <CardContent>
         <div className="flex flex-col gap-4">
-          <div className="aspect-video w-full overflow-hidden rounded-xl">
+          <div className="aspect-video w-full overflow-hidden rounded-xl border-2">
             {imageSrc && (
               <img
                 className="h-full w-full touch-none object-contain select-none"
@@ -96,8 +100,8 @@ export const ProjectCard = ({
         </div>
       </CardContent>
       {skills && (
-        <CardFooter>
-          <div className="mt-auto">
+        <CardFooter className="mt-auto">
+          <div>
             <h3 className="text-xs">Tech Stack</h3>
             <div className="flex flex-wrap gap-1.5 pt-2">
               {skills.map((skill, index) => (

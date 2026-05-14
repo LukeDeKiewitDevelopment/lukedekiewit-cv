@@ -29,7 +29,8 @@ const publicProjects: ProjectCardProps[] = [
       },
     ],
     role: "Developer (Author)",
-    description: "",
+    description:
+      "A Next.js app that lets you look up any Steam profile and view player stats, game library and recently played games using the Steam Web API.",
   },
   {
     title: "Topic",
@@ -55,7 +56,8 @@ const publicProjects: ProjectCardProps[] = [
       },
     ],
     role: "Developer",
-    description: "",
+    description:
+      "An educational platform for high school students in Grades 10-12. Built with Next.js, React, Tailwind CSS and Strapi.",
   },
   {
     title: "Marlin Brokers",
@@ -77,8 +79,10 @@ const publicProjects: ProjectCardProps[] = [
       },
     ],
     role: "Developer (Author)",
-    description: "",
+    description:
+      "A complete rebuild of the Marlin Brokers website from scratch, transforming an outdated and slow WordPress site into a clean, fast, SEO-optimised website built with Astro, React, and Tailwind.",
   },
+
   {
     title: "Interactive CV",
     company: "Personal",
@@ -99,7 +103,8 @@ const publicProjects: ProjectCardProps[] = [
       },
     ],
     role: "Developer (Author)",
-    description: "",
+    description:
+      "My interactive CV site and project portfolio built with Astro, React, and Tailwind.",
   },
   {
     title: "Marlin Cleaning Supplies",
@@ -121,7 +126,8 @@ const publicProjects: ProjectCardProps[] = [
       },
     ],
     role: "Developer (Author)",
-    description: "",
+    description:
+      "A clean, fast, SEO-optimised website built with Astro, React, and Tailwind for Marlin Cleaning Supplies, based off of the Marlin Brokers website.",
   },
   {
     title: "Atomwave Component Library",
@@ -135,11 +141,275 @@ const publicProjects: ProjectCardProps[] = [
         skill: "TypeScript",
       },
       {
-        skill: "Tailwind CSS",
+        skill: "CSS Modules",
       },
     ],
     role: "Developer (Author)",
-    description: "",
+    description:
+      "A rewrite of shadcn/ui without a Tailwind dependency, offering additional components, greater flexibility, and built-in support for multiple themes.",
+    isWip: true,
+  },
+];
+
+const confidentialProjects: ProjectCardProps[] = [
+  {
+    title: "Internal Platform",
+    company: "Bitcube",
+    imageSrc: "/images/project_thumbnails/project_ccp.png",
+    skills: [
+      {
+        skill: "Next.js",
+      },
+      {
+        skill: "React",
+      },
+      {
+        skill: "TypeScript",
+      },
+      {
+        skill: "Tailwind CSS",
+      },
+      {
+        skill: "OpenAPI",
+      },
+      {
+        skill: ".NET",
+      },
+      {
+        skill: "Asana API",
+      },
+      {
+        skill: "GitHub API",
+      },
+      {
+        skill: "Hubstaff API",
+      },
+    ],
+    role: "Developer",
+    description:
+      "Internal employee management platform with centralised integration for GitHub, Asana, and Hubstaff.",
+    isNda: true,
+  },
+  {
+    title: "Quotation Generator",
+    company: "Bitcube",
+    imageSrc: "/images/project_thumbnails/project_greenpower.png",
+    skills: [
+      {
+        skill: "Next.js",
+      },
+      {
+        skill: "React",
+      },
+      {
+        skill: "Tailwind CSS",
+      },
+      {
+        skill: "Zoho",
+      },
+    ],
+    role: "Developer",
+    description:
+      "Quotation builder for a UK-based renewable energy client, integrated with Zoho CRM.",
+    isNda: true,
+  },
+  {
+    title: "Prismic Site",
+    company: "Bitcube",
+    imageSrc: "/images/project_thumbnails/project_floatyboat.png",
+    skills: [
+      {
+        skill: "Prismic",
+      },
+      {
+        skill: "Next.js",
+      },
+      {
+        skill: "React",
+      },
+      {
+        skill: "TypeScript",
+      },
+      {
+        skill: "Tailwind CSS",
+      },
+    ],
+    role: "Developer",
+    description: "Prismic site for a maritime logistics client.",
+    isNda: true,
+  },
+  {
+    title: "Contemporary Fashion Storefront",
+    company: "Bitcube",
+    imageSrc: "/images/project_thumbnails/project_kicks.png",
+    skills: [
+      {
+        skill: "Shopify",
+      },
+      {
+        skill: "Shopify Liquid",
+      },
+      {
+        skill: "CSS",
+      },
+    ],
+    role: "Developer",
+    description: "UK-based contemporary shoe brand.",
+    isNda: true,
+  },
+  {
+    title: "Bespoke Storefront",
+    company: "Bitcube",
+    imageSrc: "/images/project_thumbnails/project_agentsauce.png",
+    skills: [
+      {
+        skill: "Shopify",
+      },
+      {
+        skill: "Shopify Liquid",
+      },
+      {
+        skill: "TypeScript",
+      },
+      {
+        skill: "CSS",
+      },
+      {
+        skill: "Sass",
+      },
+    ],
+    role: "Developer",
+    description: "UK-based luxury fashion brand.",
+    isNda: true,
+  },
+  {
+    title: "Bespoke Storefront",
+    company: "Bitcube",
+    imageSrc: "/images/project_thumbnails/project_boomjacket.png",
+    skills: [
+      {
+        skill: "Shopify",
+      },
+      {
+        skill: "Shopify Liquid",
+      },
+      {
+        skill: "TypeScript",
+      },
+      {
+        skill: "CSS",
+      },
+      {
+        skill: "Sass",
+      },
+    ],
+    role: "Developer",
+    description: "UK-based luxury fashion and firearms brand.",
+    isNda: true,
+  },
+  {
+    title: "Wellness Brand Storefront",
+    company: "Bitcube",
+    imageSrc: "/images/project_thumbnails/project_waxleprechaun.png",
+    skills: [
+      {
+        skill: "Shopify",
+      },
+      {
+        skill: "Shopify Liquid",
+      },
+      {
+        skill: "CSS",
+      },
+    ],
+    role: "Developer",
+    description: "US-based wellness brand.",
+    isNda: true,
+  },
+  {
+    title: "Lifestyle & Gifting Storefront",
+    company: "Bitcube",
+    imageSrc: "/images/project_thumbnails/project_handyware.png",
+    skills: [
+      {
+        skill: "Shopify",
+      },
+      {
+        skill: "Shopify Liquid",
+      },
+      {
+        skill: "CSS",
+      },
+    ],
+    role: "Developer",
+    description: "US-based premium gift and multi-tool brand for men.",
+    isNda: true,
+  },
+  {
+    title: "Arts-And-Crafts Storefront",
+    company: "Bitcube",
+    imageSrc: "/images/project_thumbnails/project_inkydoing.png",
+    skills: [
+      {
+        skill: "Shopify",
+      },
+      {
+        skill: "Shopify Liquid",
+      },
+      {
+        skill: "CSS",
+      },
+    ],
+    role: "Developer",
+    description: "US-based Arts-And-Crafts brand.",
+    isNda: true,
+  },
+
+  {
+    title: "Headless Shopify Storefront",
+    company: "Bitcube",
+    imageSrc: "/images/project_thumbnails/project_aristro.png",
+    skills: [
+      {
+        skill: "Shopify",
+      },
+      {
+        skill: "Shopify Hydrogen",
+        className: "bg-[#1c1767]! text-[#fff]!",
+      },
+      {
+        skill: "Preact",
+      },
+      {
+        skill: "Tailwind CSS",
+      },
+    ],
+    role: "Developer",
+    description: "EU-based luxury fashion brand.",
+    isNda: true,
+  },
+];
+
+const archivedProjects: ProjectCardProps[] = [
+  {
+    title: "Atomwave Brand Guide",
+    company: "Personal",
+    imageSrc: "/images/project_thumbnails/atomwave_brand_guide.png",
+    skills: [
+      {
+        skill: "HTML",
+      },
+      {
+        skill: "CSS",
+      },
+      {
+        skill: "JavaScript",
+      },
+    ],
+    role: "Developer (Author)",
+    description:
+      "A brand guide for the Atomwave design system and component library with copy-to-clipboard functionality. Built with vanilla JavaScript, HTML, and CSS.",
+    isArchived: true,
   },
 ];
 ---
@@ -168,7 +438,7 @@ const publicProjects: ProjectCardProps[] = [
         Confidential Projects
       </h2>
       <Separator className="mt-4" />
-      <!-- <ProjectsList projects={publicProjects} client:load /> -->
+      <ProjectsList projects={confidentialProjects} client:load />
     </div>
     <div>
       <h2
@@ -177,7 +447,7 @@ const publicProjects: ProjectCardProps[] = [
         Archived Projects
       </h2>
       <Separator className="mt-4" />
-      <!-- <ProjectsList projects={publicProjects} client:load /> -->
+      <ProjectsList projects={archivedProjects} client:load />
     </div>
   </main>
 </Layout>
