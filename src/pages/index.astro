@@ -1,13 +1,16 @@
 ---
 import { CV } from "@/components/custom/cv/cv";
 import Layout from "@/components/custom/layout/layout.astro";
-
 import { getImage } from "astro:assets";
 import laptopCodeBg from "@/assets/images/backgrounds/laptop_code_3.jpg";
-const optimizedLaptopBg = await getImage({ src: laptopCodeBg, format: 'webp', width: 1920 });
+
+const optimizedLaptopBg = await getImage({
+  src: laptopCodeBg,
+  format: "webp",
+  width: 1920,
+});
 ---
 
 <Layout>
-  <CV client:load optimizedBg={optimizedLaptopBg.src} />
+  <CV client:load backgroundImage={optimizedLaptopBg.src} />
 </Layout>
-
