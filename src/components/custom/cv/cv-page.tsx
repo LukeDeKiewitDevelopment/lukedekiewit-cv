@@ -17,6 +17,7 @@ export const CVPage = ({
       {...props}
       data-slot="cv-page"
       data-page-number={pageNumber}
+      data-print-size="a4"
       className={clsx(
         "border-border flex h-[297mm] max-h-[297mm] min-h-[297mm] w-full max-w-[210mm] min-w-[210mm] shrink-0 overflow-hidden rounded-sm border-2 shadow-none shadow-black/50 dark:shadow-md print:rounded-none! print:border-none! print:shadow-none!",
         className,
