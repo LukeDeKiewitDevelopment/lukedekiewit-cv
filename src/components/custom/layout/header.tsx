@@ -176,7 +176,7 @@ export const Header = ({
             <Button
               className="hidden md:inline-flex"
               size={"sm"}
-              title="Visit my projects page"
+              title="Back to CV"
               asChild
             >
               <a href="/">
