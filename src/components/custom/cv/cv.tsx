@@ -270,7 +270,7 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                 <span className="flex items-center gap-[2mm]">
                   <span>Featured Projects</span>
                   <a
-                    href="/projects"
+                    href="https://lukedekiewit-cv.vercel.app/projects"
                     className="hover:text-primary text-foreground/60 text-6pt hover:underline"
                   >
                     View all
