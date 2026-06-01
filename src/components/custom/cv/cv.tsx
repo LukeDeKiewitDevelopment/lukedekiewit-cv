@@ -268,7 +268,7 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                 <FolderCodeIcon className="size-[4.5mm] shrink-0" />
 
                 <span className="flex items-center gap-[2mm]">
-                  <span>Featured Projects </span>
+                  <span>Featured Projects</span>
                   <a
                     href="/projects"
                     className="hover:text-primary text-foreground/60 text-6pt hover:underline"
@@ -285,21 +285,19 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                         {"> "}
                         <a
                           target="_blank"
-                          href="https://atomwave.lukedekiewit.co.za/"
+                          href="https://steam-player-search.vercel.app/?query=MayorCarol"
                           className="hover:text-primary hover:underline"
-                          title="Atomwave website link"
+                          title="Steam player search app link"
                         >
-                          Atomwave Component Library
+                          Steam Player Search
                         </a>{" "}
-                        • 2025/26
+                        • 2026
                       </span>
                     </h3>
                     <p className="text-foreground/60 pl-[6mm] text-balance">
-                      My most ambitious project to date, due for completion in
-                      late 2026. Atomwave is a rewrite of shadcn/ui without a
-                      Tailwind dependency, offering additional components,
-                      greater flexibility, and built-in support for multiple
-                      themes.
+                      A Next.js app that lets you look up any Steam profile and
+                      view player stats, game library and recently played games
+                      using the Steam Web API.
                     </p>
                   </div>
                 </li>
@@ -308,22 +306,15 @@ export const CV = ({ className, optimizedBg, ...props }: CVProps) => {
                     <h3 className="text-foreground/90 mb-[1.25mm] flex items-center uppercase">
                       <span>
                         {"> "}
-                        <a
-                          target="_blank"
-                          href="https://marlinbrokers.co.za/"
-                          className="hover:text-primary hover:underline"
-                          title="Marlin Brokers website link"
-                        >
-                          Marlin Brokers
-                        </a>{" "}
-                        • 2024
+                        <span>Atomwave Component Library</span> • 2026
                       </span>
                     </h3>
                     <p className="text-foreground/60 pl-[6mm] text-balance">
-                      A complete rebuild of the Marlin Brokers website from
-                      scratch, transforming an outdated and slow WordPress site
-                      into a clean, fast, SEO-optimised website built with
-                      Astro, React, and Tailwind.
+                      My most ambitious project to date, due for completion in
+                      late 2026. Atomwave is a rewrite of shadcn/ui without a
+                      Tailwind dependency, offering additional components,
+                      greater flexibility, and built-in support for multiple
+                      themes.
                     </p>
                   </div>
                 </li>

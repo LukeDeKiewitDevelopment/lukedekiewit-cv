@@ -18,7 +18,6 @@ import { type ComponentPropsWithoutRef } from "react";
 export type HeaderProps = {
   lightModeLogo?: HeaderLogo;
   darkModeLogo?: HeaderLogo;
-  lastUpdated?: string;
   shareLink?: string;
   pdfDownloadLink?: string;
   hideDownloadButton?: boolean;
@@ -88,7 +87,6 @@ const printPage = async () => {
 export const Header = ({
   lightModeLogo,
   darkModeLogo,
-  lastUpdated,
   shareLink,
   pdfDownloadLink,
   hideDownloadButton,
@@ -99,12 +97,12 @@ export const Header = ({
   return (
     <nav
       data-slot="header"
-      className="bg-card flex min-w-screen flex-col shadow-md print:hidden!"
+      className="bg-popover flex min-w-screen flex-col shadow-md print:hidden!"
     >
-      <div className="flex items-center justify-between gap-4 p-4 md:p-6 lg:p-8">
+      <div className="flex items-center justify-between gap-4 px-4 py-2 md:px-6 md:py-3 lg:px-8 lg:py-4">
         <div className="flex items-center gap-2">
           {lightModeLogo && (
-            <Avatar className="border-primary hidden-in-darkmode hidden border-2 p-0.75 shadow-black select-none sm:hidden md:flex md:size-10">
+            <Avatar className="hidden-in-darkmode hidden shadow-black select-none sm:hidden md:flex md:size-10">
               <AvatarImage
                 className="animate-in zoom-in fade-in blur-in duration-200"
                 src={lightModeLogo.src}
@@ -117,7 +115,7 @@ export const Header = ({
             </Avatar>
           )}
           {darkModeLogo && (
-            <Avatar className="border-primary hidden-in-lightmode hidden border-2 p-0.75 shadow-black select-none sm:hidden md:flex md:size-10">
+            <Avatar className="hidden-in-lightmode hidden shadow-black select-none sm:hidden md:flex md:size-10">
               <AvatarImage
                 className="animate-in zoom-in fade-in blur-in duration-200"
                 src={darkModeLogo.src}
@@ -129,30 +127,7 @@ export const Header = ({
               />
             </Avatar>
           )}
-          {lastUpdated && (
-            <div
-              className="hidden flex-col md:flex"
-              style={{
-                fontSize: "clamp(0.6rem, 0.8rem, 0.9rem)",
-              }}
-            >
-              <span className="text-muted-foreground">Last Updated:</span>
-              <time>
-                <EncryptedText
-                  text={lastUpdated}
-                  encryptedClassName="text-muted-foreground/60"
-                  revealedClassName="text-muted-foreground/60"
-                  revealDelayMs={0}
-                />
-              </time>
-              <time
-                dateTime={lastUpdated}
-                className="text-muted-foreground/60 hidden motion-reduce:inline"
-              >
-                {lastUpdated}
-              </time>
-            </div>
-          )}
+
           {!hideProjectsButton && (
             <Button
               className="inline-flex md:hidden"
@@ -254,7 +229,7 @@ export const Header = ({
           <ThemeSwitcher />
         </div>
       </div>
-      <Separator decorative />
+      <Separator />
     </nav>
   );
 };
