@@ -82,7 +82,7 @@ export const CV = ({ className, backgroundImage, ...props }: CVProps) => {
                     {"<"}
                   </span>
                   <EncryptedText
-                    text={"Front-End Engineer"}
+                    text={"Frontend Engineer"}
                     className="motion-reduce:hidden"
                     encryptedClassName="select-none"
                     revealedClassName="select-text"
@@ -90,7 +90,7 @@ export const CV = ({ className, backgroundImage, ...props }: CVProps) => {
                     flipDelayMs={0}
                   />
                   <span className="hidden motion-reduce:inline">
-                    Front-End Engineer
+                    Frontend Engineer
                   </span>
                   <i
                     className={clsx(
@@ -136,7 +136,7 @@ export const CV = ({ className, backgroundImage, ...props }: CVProps) => {
                     <h3 className="text-foreground/90 mb-[1.25mm]">
                       {"> "}
                       <span className="uppercase">
-                        {"Front-End Engineer • "}
+                        {"Frontend Engineer • "}
                         <a
                           target="_blank"
                           href="https://bitcube.tech/"
@@ -155,7 +155,7 @@ export const CV = ({ className, backgroundImage, ...props }: CVProps) => {
                       </h4>
                       <ul className="text-foreground/60 mb-[1.25mm] list-disc pl-[6mm] text-balance break-keep">
                         <li className="my-[2mm]">
-                          Engineered front-end systems for UK and EU-based
+                          Engineered frontend systems for UK and EU-based
                           clients in the maritime logistics and renewable energy
                           sectors.
                         </li>
@@ -194,7 +194,7 @@ export const CV = ({ className, backgroundImage, ...props }: CVProps) => {
                     <h3 className="text-foreground/90 mb-[1.25mm] uppercase">
                       {"> "}
                       <span>
-                        {"Front-End Engineer • "}
+                        {"Frontend Engineer • "}
                         <a
                           target="_blank"
                           href="https://www.socoed.com/"
@@ -209,7 +209,7 @@ export const CV = ({ className, backgroundImage, ...props }: CVProps) => {
                     </h3>
                     <ul className="text-foreground/60 list-disc pl-[6mm] text-balance break-keep">
                       <li className="my-[2mm]">
-                        Led front-end development for the Topic LMS platform,
+                        Led frontend development for the Topic LMS platform,
                         supporting over 200,000 learners across South Africa.
                       </li>
                       <li className="my-[2mm]">
@@ -217,7 +217,7 @@ export const CV = ({ className, backgroundImage, ...props }: CVProps) => {
                         high-profile educational institutions and universities.
                       </li>
                       <li className="my-[2mm]">
-                        Built and extended scalable front-end systems using
+                        Built and extended scalable frontend systems using
                         Next.js, React, and Tailwind CSS.
                       </li>
                       <li className="my-[2mm]">
@@ -232,7 +232,7 @@ export const CV = ({ className, backgroundImage, ...props }: CVProps) => {
                     <h3 className="text-foreground/90 mb-[1.25mm] uppercase">
                       {"> "}
                       <span>
-                        {"Front-End Developer (Intern) • "}
+                        {"Frontend Developer (Intern) • "}
                         <a
                           target="_blank"
                           href="https://www.condensation.co.za/"
@@ -247,7 +247,7 @@ export const CV = ({ className, backgroundImage, ...props }: CVProps) => {
 
                     <ul className="text-foreground/60 list-disc pl-[6mm] text-balance break-keep">
                       <li className="my-[2mm]">
-                        Engineered front-end UI components for PHP-based
+                        Engineered frontend UI components for PHP-based
                         platforms and static websites.
                       </li>
                       <li className="my-[2mm]">
@@ -458,10 +458,10 @@ export const CV = ({ className, backgroundImage, ...props }: CVProps) => {
                 Summary
               </CVPageSectionTitle>
               <p className="text-7pt text-foreground/65 block w-full max-w-prose text-balance">
-                I specialise in engineering front-end systems and UI libraries
+                I specialise in engineering frontend systems and UI libraries
                 with a commitment to accessibility and code quality. I have a
                 proven track record of building at scale, including platforms
-                for 200,000+ users, front-end solutions for the maritime and
+                for 200,000+ users, frontend solutions for the maritime and
                 renewable energy sectors, and storefronts for high-profile UK,
                 EU and US clients. I integrate AI-augmented workflows into my
                 development process to accelerate delivery while maintaining
