@@ -54,8 +54,15 @@ export const ProjectCard = ({
         )}
         <CardAction>
           {!isNda && link && (
-            <Button size={"sm"} title={`Visit ${title}`} asChild>
-              <a className="text-xs" href={link} target="_blank">
+            <Button size={"sm"} asChild>
+              <a
+                className="text-xs"
+                href={link}
+                target="_blank"
+                title={`View ${title}`}
+                aria-label={`View ${title}`}
+                rel="noopener noreferrer"
+              >
                 <div className="flex items-center gap-2">
                   <span>View</span>
                   <ExternalLinkIcon />

@@ -19,6 +19,7 @@ import {
   siSass,
   siShadcnui,
   siShopify,
+  siSteam,
   siTailwindcss,
   siTypescript,
   siWordpress,
@@ -285,7 +286,7 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
     icon: siAsana,
     colors: {
       foreground: "#fff",
-      background: siAsana.hex,
+      background: "#b01111",
     },
   },
   "GitHub API": {
@@ -305,7 +306,14 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
     icon: siPhp,
     colors: {
       foreground: "#fff",
-      background: siPhp.hex,
+      background: "#4e528d",
+    },
+  },
+  "Steam API": {
+    icon: siSteam,
+    colors: {
+      foreground: "#fff",
+      background: "#005999",
     },
   },
 };
