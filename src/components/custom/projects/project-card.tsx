@@ -12,12 +12,13 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLinkIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import type { GetImageResult } from "astro";
 
 export type ProjectCardProps = {
   title?: string;
   company?: string;
   link?: string;
-  imageSrc?: string;
+  image?: GetImageResult;
   imageAlt?: string;
   role?: string;
   description?: string;
@@ -31,7 +32,7 @@ export const ProjectCard = ({
   title,
   company,
   link,
-  imageSrc,
+  image,
   imageAlt,
   role,
   description,
@@ -41,7 +42,7 @@ export const ProjectCard = ({
   isArchived,
 }: ProjectCardProps) => {
   return (
-    <Card className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)] 2xl:w-[calc(25%-1rem)]">
+    <Card className="w-full">
       <CardHeader>
         {title && (
           <CardTitle className="text-xs font-semibold">
@@ -80,10 +81,10 @@ export const ProjectCard = ({
       <CardContent>
         <div className="flex flex-col gap-4">
           <div className="aspect-video w-full overflow-hidden rounded-xl">
-            {imageSrc && (
+            {image && (
               <img
                 className="h-full w-full touch-none object-contain select-none"
-                src={imageSrc}
+                src={image.src}
                 alt={imageAlt || "Project image"}
               />
             )}

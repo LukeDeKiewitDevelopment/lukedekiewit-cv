@@ -2,7 +2,6 @@
 
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { EncryptedText } from "@/components/ui/encrypted-text";
 import {
   ClipboardCheck,
   DownloadIcon,
@@ -10,14 +9,14 @@ import {
   CopyIcon,
   ArrowLeftIcon,
 } from "lucide-react";
-import { ThemeSwitcher, type Themes } from "./theme-switcher";
+import { ThemeSwitcher } from "./theme-switcher";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "sonner";
-import { type ComponentPropsWithoutRef } from "react";
+import type { GetImageResult } from "astro";
 
 export type HeaderProps = {
-  lightModeLogo?: HeaderLogo;
-  darkModeLogo?: HeaderLogo;
+  lightModeLogo?: GetImageResult;
+  darkModeLogo?: GetImageResult;
   shareLink?: string;
   pdfDownloadLink?: string;
   hideDownloadButton?: boolean;
@@ -25,8 +24,6 @@ export type HeaderProps = {
   hideProjectsButton?: boolean;
   showBackToCvButton?: boolean;
 };
-
-type HeaderLogo = ComponentPropsWithoutRef<"img">;
 
 export const copyLink = async (shareLink?: string) => {
   if (!shareLink) {
@@ -106,11 +103,10 @@ export const Header = ({
               <AvatarImage
                 className="animate-in zoom-in fade-in blur-in duration-200"
                 src={lightModeLogo.src}
-                alt={lightModeLogo.alt}
-                height={lightModeLogo.height}
-                width={lightModeLogo.width}
+                alt={"Luke De Kiewit Logo"}
+                height={48}
+                width={48}
                 loading="eager"
-                {...lightModeLogo}
               />
             </Avatar>
           )}
@@ -119,11 +115,10 @@ export const Header = ({
               <AvatarImage
                 className="animate-in zoom-in fade-in blur-in duration-200"
                 src={darkModeLogo.src}
-                alt={darkModeLogo.alt}
-                height={darkModeLogo.height}
-                width={darkModeLogo.width}
+                alt={"Luke De Kiewit Logo"}
+                height={48}
+                width={48}
                 loading="eager"
-                {...darkModeLogo}
               />
             </Avatar>
           )}

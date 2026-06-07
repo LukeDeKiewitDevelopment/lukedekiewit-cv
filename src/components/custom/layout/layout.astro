@@ -6,14 +6,20 @@ import { Footer } from "./footer";
 import { SiteBackground } from "./site-background";
 import { BackToTop } from "../back-to-top";
 import { AstroSEO } from "astro-seo-plugin";
-import { getImage } from "astro:assets";
 import codeBackground from "@/assets/images/backgrounds/codeBackground.jpg";
+import lightmodeLogo from "@/assets/images/logos/ldk_logo_black_tilted_724px.png";
+import darkmodeLogo from "@/assets/images/logos/ldk_logo_atomwave_tilted_724px.png";
+import { optimizeImage } from "@/lib/optimize-images";
 
-const optimizedCodeBackground = await getImage({
-  src: codeBackground,
-  format: "webp",
-  width: 1920,
-});
+const optimizedCodeBackground = await optimizeImage(
+  codeBackground,
+  "webp",
+  1920,
+);
+
+const optimizedLightmodeLogo = await optimizeImage(lightmodeLogo, "webp", 512);
+
+const optimizedDarkmodeLogo = await optimizeImage(darkmodeLogo, "webp", 512);
 
 const {
   hideNavbar,
@@ -130,22 +136,8 @@ const {
     {
       !hideNavbar && (
         <Header
-          lightModeLogo={{
-            src: "/images/logos/ldk_logo_black_tilted_128px.webp",
-            alt: "Luke De Kiewit logo",
-            height: 40,
-            width: 40,
-            loading: "eager",
-            title: "Luke De Kiewit Logo",
-          }}
-          darkModeLogo={{
-            src: "/images/logos/ldk_logo_atomwave_tilted_128px.webp",
-            alt: "Luke De Kiewit logo",
-            height: 40,
-            width: 40,
-            loading: "eager",
-            title: "Luke De Kiewit Logo",
-          }}
+          lightModeLogo={optimizedLightmodeLogo}
+          darkModeLogo={optimizedDarkmodeLogo}
           shareLink="https://lukedekiewit-cv.vercel.app/"
           pdfDownloadLink="/files/Luke_De_Kiewit_FrontendEngineer_latest.pdf"
           hideDownloadButton={hideDownloadButton}

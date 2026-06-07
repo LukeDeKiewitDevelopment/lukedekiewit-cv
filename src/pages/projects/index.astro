@@ -3,13 +3,140 @@ import Layout from "@/components/custom/layout/layout.astro";
 import { ProjectsList } from "@/components/custom/projects/projects-list.tsx";
 import { type ProjectCardProps } from "@/components/custom/projects/project-card.tsx";
 import { Separator } from "@/components/ui/separator";
+import { optimizeImage } from "@/lib/optimize-images";
+import steamPlayerSearchThumbnail from "@/assets/images/project_thumbnails/steamplayersearch.png";
+import topicThumbnail from "@/assets/images/project_thumbnails/topic.png";
+import marlinBrokersThumbnail from "@/assets/images/project_thumbnails/marlinbrokers.png";
+import marlinCleaningThumbnail from "@/assets/images/project_thumbnails/marlincleaning.png";
+import interactiveCvThumbnail from "@/assets/images/project_thumbnails/cv.png";
+import atomwaveThumbnail from "@/assets/images/project_thumbnails/atomwave.png";
+import summerwoodThumbnail from "@/assets/images/project_thumbnails/summerwood_wip.png";
+import projectCcpThumbnail from "@/assets/images/project_thumbnails/project_ccp.png";
+import projectGreenpowerThumbnail from "@/assets/images/project_thumbnails/project_greenpower.png";
+import projectFloatyboatThumbnail from "@/assets/images/project_thumbnails/project_floatyboat.png";
+import projectKicksThumbnail from "@/assets/images/project_thumbnails/project_kicks.png";
+import projectAgentsauceThumbnail from "@/assets/images/project_thumbnails/project_agentsauce.png";
+import projectBoomjacketThumbnail from "@/assets/images/project_thumbnails/project_boomjacket.png";
+import projectWaxleprechaunThumbnail from "@/assets/images/project_thumbnails/project_waxleprechaun.png";
+import projectHandywareThumbnail from "@/assets/images/project_thumbnails/project_handyware.png";
+import projectInkydoingThumbnail from "@/assets/images/project_thumbnails/project_inkydoing.png";
+import projectAristroThumbnail from "@/assets/images/project_thumbnails/project_aristro.png";
+import atomwaveBrandGuideThumbnail from "@/assets/images/project_thumbnails/atomwave_brand_guide.png";
+
+const optimizedSteamPlayerSearchThumbnail = await optimizeImage(
+  steamPlayerSearchThumbnail,
+  "webp",
+  800,
+);
+
+const optimizedTopicThumbnail = await optimizeImage(
+  topicThumbnail,
+  "webp",
+  800,
+);
+
+const optimizedMarlinBrokersThumbnail = await optimizeImage(
+  marlinBrokersThumbnail,
+  "webp",
+  800,
+);
+
+const optimizedMarlinCleaningThumbnail = await optimizeImage(
+  marlinCleaningThumbnail,
+  "webp",
+  800,
+);
+
+const optimizedInteractiveCvThumbnail = await optimizeImage(
+  interactiveCvThumbnail,
+  "webp",
+  800,
+);
+
+const optimizedAtomwaveThumbnail = await optimizeImage(
+  atomwaveThumbnail,
+  "webp",
+  800,
+);
+
+const optimizedSummerwoodThumbnail = await optimizeImage(
+  summerwoodThumbnail,
+  "webp",
+  800,
+);
+
+const optimizedProjectCcpThumbnail = await optimizeImage(
+  projectCcpThumbnail,
+  "webp",
+  800,
+);
+
+const optimizedProjectGreenpowerThumbnail = await optimizeImage(
+  projectGreenpowerThumbnail,
+  "webp",
+  800,
+);
+
+const optimizedProjectFloatyboatThumbnail = await optimizeImage(
+  projectFloatyboatThumbnail,
+  "webp",
+  800,
+);
+
+const optimizedProjectKicksThumbnail = await optimizeImage(
+  projectKicksThumbnail,
+  "webp",
+  800,
+);
+
+const optimizedProjectAgentsauceThumbnail = await optimizeImage(
+  projectAgentsauceThumbnail,
+  "webp",
+  800,
+);
+
+const optimizedProjectBoomjacketThumbnail = await optimizeImage(
+  projectBoomjacketThumbnail,
+  "webp",
+  800,
+);
+
+const optimizedProjectWaxleprechaunThumbnail = await optimizeImage(
+  projectWaxleprechaunThumbnail,
+  "webp",
+  800,
+);
+
+const optimizedProjectHandywareThumbnail = await optimizeImage(
+  projectHandywareThumbnail,
+  "webp",
+  800,
+);
+
+const optimizedProjectInkydoingThumbnail = await optimizeImage(
+  projectInkydoingThumbnail,
+  "webp",
+  800,
+);
+
+const optimizedProjectAristroThumbnail = await optimizeImage(
+  projectAristroThumbnail,
+  "webp",
+  800,
+);
+
+const optimizedAtomwaveBrandGuideThumbnail = await optimizeImage(
+  atomwaveBrandGuideThumbnail,
+  "webp",
+  800,
+);
 
 const publicProjects: ProjectCardProps[] = [
   {
     title: "Steam Player Search",
     company: "Personal",
     link: "https://steam-player-search.vercel.app/",
-    imageSrc: "/images/project_thumbnails/steamplayersearch.png",
+    image: optimizedSteamPlayerSearchThumbnail,
     skills: [
       {
         skill: "Next.js",
@@ -36,7 +163,7 @@ const publicProjects: ProjectCardProps[] = [
     title: "Topic",
     company: "SOCO_ED",
     link: "https://lms.topic.co.za",
-    imageSrc: "/images/project_thumbnails/topic.png",
+    image: optimizedTopicThumbnail,
     skills: [
       {
         skill: "Next.js",
@@ -63,7 +190,7 @@ const publicProjects: ProjectCardProps[] = [
     title: "Marlin Brokers",
     company: "Freelance",
     link: "https://marlinbrokers.co.za/",
-    imageSrc: "/images/project_thumbnails/marlinbrokers.png",
+    image: optimizedMarlinBrokersThumbnail,
     skills: [
       {
         skill: "Astro",
@@ -82,12 +209,11 @@ const publicProjects: ProjectCardProps[] = [
     description:
       "A complete rebuild of the Marlin Brokers website from scratch, transforming an outdated and slow WordPress site into a clean, fast, SEO-optimised website built with Astro, React, and Tailwind.",
   },
-
   {
     title: "Interactive CV",
     company: "Personal",
     link: "https://lukedekiewit-cv.vercel.app/",
-    imageSrc: "/images/project_thumbnails/cv.png",
+    image: optimizedInteractiveCvThumbnail,
     skills: [
       {
         skill: "Astro",
@@ -110,7 +236,7 @@ const publicProjects: ProjectCardProps[] = [
     title: "Marlin Cleaning Supplies",
     company: "Freelance",
     link: "https://marlincleaning.co.za/",
-    imageSrc: "/images/project_thumbnails/marlincleaning.png",
+    image: optimizedMarlinCleaningThumbnail,
     skills: [
       {
         skill: "Astro",
@@ -132,7 +258,7 @@ const publicProjects: ProjectCardProps[] = [
   {
     title: "Atomwave Component Library",
     company: "Personal",
-    imageSrc: "/images/project_thumbnails/atomwave.png",
+    image: optimizedAtomwaveThumbnail,
     skills: [
       {
         skill: "React",
@@ -149,13 +275,39 @@ const publicProjects: ProjectCardProps[] = [
       "A rewrite of shadcn/ui without a Tailwind dependency, offering additional components, greater flexibility, and built-in support for multiple themes.",
     isWip: true,
   },
+  {
+    title: "Summerwood Country Estate",
+    company: "Freelance",
+    image: optimizedSummerwoodThumbnail,
+    skills: [
+      {
+        skill: "Astro",
+      },
+      {
+        skill: "TypeScript",
+      },
+      {
+        skill: "React",
+      },
+      {
+        skill: "Tailwind CSS",
+      },
+      {
+        skill: "PHP",
+      },
+    ],
+    role: "Developer (Author)",
+    description:
+      "Full rewrite of the Summerwood Country Estate website from WordPress to Astro with React components. The project covers SEO and GEO optimization, responsive design, performance optimization, and a custom contact form rebuilt with PHPMailer.",
+    isWip: true,
+  },
 ];
 
 const confidentialProjects: ProjectCardProps[] = [
   {
     title: "Internal Platform",
     company: "Bitcube",
-    imageSrc: "/images/project_thumbnails/project_ccp.png",
+    image: optimizedProjectCcpThumbnail,
     skills: [
       {
         skill: "Next.js",
@@ -193,7 +345,7 @@ const confidentialProjects: ProjectCardProps[] = [
   {
     title: "Quotation Generator",
     company: "Bitcube",
-    imageSrc: "/images/project_thumbnails/project_greenpower.png",
+    image: optimizedProjectGreenpowerThumbnail,
     skills: [
       {
         skill: "Next.js",
@@ -216,7 +368,7 @@ const confidentialProjects: ProjectCardProps[] = [
   {
     title: "Prismic Site",
     company: "Bitcube",
-    imageSrc: "/images/project_thumbnails/project_floatyboat.png",
+    image: optimizedProjectFloatyboatThumbnail,
     skills: [
       {
         skill: "Prismic",
@@ -241,7 +393,7 @@ const confidentialProjects: ProjectCardProps[] = [
   {
     title: "Contemporary Fashion Storefront",
     company: "Bitcube",
-    imageSrc: "/images/project_thumbnails/project_kicks.png",
+    image: optimizedProjectKicksThumbnail,
     skills: [
       {
         skill: "Shopify",
@@ -260,7 +412,7 @@ const confidentialProjects: ProjectCardProps[] = [
   {
     title: "Bespoke Storefront",
     company: "Bitcube",
-    imageSrc: "/images/project_thumbnails/project_agentsauce.png",
+    image: optimizedProjectAgentsauceThumbnail,
     skills: [
       {
         skill: "Shopify",
@@ -285,7 +437,7 @@ const confidentialProjects: ProjectCardProps[] = [
   {
     title: "Bespoke Storefront",
     company: "Bitcube",
-    imageSrc: "/images/project_thumbnails/project_boomjacket.png",
+    image: optimizedProjectBoomjacketThumbnail,
     skills: [
       {
         skill: "Shopify",
@@ -310,7 +462,7 @@ const confidentialProjects: ProjectCardProps[] = [
   {
     title: "Wellness Brand Storefront",
     company: "Bitcube",
-    imageSrc: "/images/project_thumbnails/project_waxleprechaun.png",
+    image: optimizedProjectWaxleprechaunThumbnail,
     skills: [
       {
         skill: "Shopify",
@@ -329,7 +481,7 @@ const confidentialProjects: ProjectCardProps[] = [
   {
     title: "Lifestyle & Gifting Storefront",
     company: "Bitcube",
-    imageSrc: "/images/project_thumbnails/project_handyware.png",
+    image: optimizedProjectHandywareThumbnail,
     skills: [
       {
         skill: "Shopify",
@@ -348,7 +500,7 @@ const confidentialProjects: ProjectCardProps[] = [
   {
     title: "Arts-And-Crafts Storefront",
     company: "Bitcube",
-    imageSrc: "/images/project_thumbnails/project_inkydoing.png",
+    image: optimizedProjectInkydoingThumbnail,
     skills: [
       {
         skill: "Shopify",
@@ -364,11 +516,10 @@ const confidentialProjects: ProjectCardProps[] = [
     description: "US-based Arts-And-Crafts brand.",
     isNda: true,
   },
-
   {
     title: "Headless Shopify Storefront",
     company: "Bitcube",
-    imageSrc: "/images/project_thumbnails/project_aristro.png",
+    image: optimizedProjectAristroThumbnail,
     skills: [
       {
         skill: "Shopify",
@@ -394,7 +545,7 @@ const archivedProjects: ProjectCardProps[] = [
   {
     title: "Atomwave Brand Guide",
     company: "Personal",
-    imageSrc: "/images/project_thumbnails/atomwave_brand_guide.png",
+    image: optimizedAtomwaveBrandGuideThumbnail,
     skills: [
       {
         skill: "HTML",

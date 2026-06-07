@@ -11,6 +11,7 @@ import {
   siMysql,
   siNextdotjs,
   siNodedotjs,
+  siPhp,
   siPostgresql,
   siPreact,
   siPrismic,
@@ -298,6 +299,13 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
     colors: {
       foreground: "#fff",
       background: "#294dff",
+    },
+  },
+  PHP: {
+    icon: siPhp,
+    colors: {
+      foreground: "#fff",
+      background: siPhp.hex,
     },
   },
 };

@@ -6,7 +6,7 @@ export type ProjectsListProps = {
 
 export const ProjectsList = ({ projects }: ProjectsListProps) => {
   return (
-    <div className="flex flex-wrap gap-4 py-8">
+    <div className="grid grid-cols-1 gap-4 py-8 md:grid-cols-2 lg:grid-cols-3">
       {projects &&
         projects.map((project, index) => (
           <ProjectCard key={index} {...project} />

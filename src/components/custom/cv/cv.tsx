@@ -24,12 +24,19 @@ import clsx from "clsx";
 import { CVPageSectionTitle } from "./cv-page-section-title";
 import { CVPageContentBackground } from "./cv-page-content-background";
 import { SkillBadge, SkillBadgeIcon } from "../skill-badge";
+import type { GetImageResult } from "astro";
 
 export type CVProps = ComponentPropsWithoutRef<"main"> & {
+  avatar?: GetImageResult;
   backgroundImage?: string;
 };
 
-export const CV = ({ className, backgroundImage, ...props }: CVProps) => {
+export const CV = ({
+  className,
+  avatar,
+  backgroundImage,
+  ...props
+}: CVProps) => {
   const [caretBlink, setCaretBlink] = useState(false);
 
   const startCaretBlinking = () => {
@@ -443,7 +450,7 @@ export const CV = ({ className, backgroundImage, ...props }: CVProps) => {
               >
                 <CVAvatarImage
                   className="animate-in fade-in blur-in duration-200 select-none"
-                  src="/images/ldk_selfie_pfp_filter_200px.webp"
+                  src={avatar?.src}
                   alt="Profile picture"
                   height={128}
                   width={128}
