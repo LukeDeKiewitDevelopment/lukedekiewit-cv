@@ -279,6 +279,7 @@ export const CV = ({
                   <a
                     href="https://lukedekiewit-cv.vercel.app/projects"
                     className="hover:text-primary text-foreground/60 text-6pt hover:underline"
+                    aria-label="View all projects"
                   >
                     View all
                   </a>
@@ -430,6 +431,7 @@ export const CV = ({
                 <a
                   href="#contact-information"
                   className="hover:text-primary text-foreground/60 text-right underline transition-all hover:underline"
+                  aria-label="Contact me to request references"
                 >
                   upon request
                 </a>
