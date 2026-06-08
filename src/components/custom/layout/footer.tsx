@@ -1,7 +1,7 @@
 "use client";
 
 import clsx from "clsx";
-import { type ComponentPropsWithoutRef, type ReactNode } from "react";
+import { type ComponentPropsWithoutRef } from "react";
 
 export type FooterProps = ComponentPropsWithoutRef<"footer">;
 

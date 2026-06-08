@@ -92,7 +92,12 @@ export const ProjectCard = ({
               <img
                 className="h-full w-full touch-none object-contain select-none"
                 src={image.src}
+                {...(image?.srcSet.attribute && {
+                  srcSet: image?.srcSet.attribute,
+                })}
                 alt={imageAlt || "Project image"}
+                loading="lazy"
+                decoding="async"
               />
             )}
           </div>

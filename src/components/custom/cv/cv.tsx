@@ -28,7 +28,7 @@ import type { GetImageResult } from "astro";
 
 export type CVProps = ComponentPropsWithoutRef<"main"> & {
   avatar?: GetImageResult;
-  backgroundImage?: string;
+  backgroundImage: GetImageResult;
 };
 
 export const CV = ({
@@ -438,11 +438,12 @@ export const CV = ({
                 .
               </p>
             </CVPageSection>
-
-            <CVPageContentBackground
-              className="opacity-0 grayscale dark:opacity-5"
-              src={backgroundImage ?? "/images/backgrounds/laptop_code_3.jpg"}
-            />
+            {backgroundImage && (
+              <CVPageContentBackground
+                className="opacity-0 grayscale dark:opacity-5"
+                backgroundImage={backgroundImage}
+              />
+            )}
           </CVPageContent>
           <CVSidebar>
             <CVPageSection className="flex items-center justify-center">
@@ -453,10 +454,14 @@ export const CV = ({
                 <CVAvatarImage
                   className="animate-in fade-in blur-in duration-200 select-none"
                   src={avatar?.src}
+                  {...(avatar?.srcSet.attribute && {
+                    srcSet: avatar?.srcSet.attribute,
+                  })}
                   alt="Profile picture"
                   height={128}
                   width={128}
                   loading="eager"
+                  decoding="async"
                 />
                 <CVAvatarFallback />
               </CVAvatar>

@@ -103,10 +103,14 @@ export const Header = ({
               <AvatarImage
                 className="animate-in zoom-in fade-in blur-in duration-200"
                 src={lightModeLogo.src}
+                {...(lightModeLogo?.srcSet.attribute && {
+                  srcSet: lightModeLogo?.srcSet.attribute,
+                })}
                 alt={"Luke De Kiewit Logo"}
                 height={48}
                 width={48}
                 loading="eager"
+                decoding="async"
               />
             </Avatar>
           )}
@@ -115,10 +119,14 @@ export const Header = ({
               <AvatarImage
                 className="animate-in zoom-in fade-in blur-in duration-200"
                 src={darkModeLogo.src}
+                {...(darkModeLogo?.srcSet.attribute && {
+                  srcSet: darkModeLogo?.srcSet.attribute,
+                })}
                 alt={"Luke De Kiewit Logo"}
                 height={48}
                 width={48}
                 loading="eager"
+                decoding="async"
               />
             </Avatar>
           )}

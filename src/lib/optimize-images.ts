@@ -6,7 +6,6 @@ export const optimizeImage = async (
   format: ImageOutputFormat,
   width: number,
 ) => {
-
   if (!image) {
     throw new Error("No image provided for optimization.");
   }
@@ -15,6 +14,15 @@ export const optimizeImage = async (
     src: image,
     format: format,
     width: width,
+    widths: [
+      width / 5,
+      width / 4,
+      width / 3,
+      width / 2,
+      width,
+      width * 1.25,
+      width * 1.5,
+    ],
   });
 
   return optimizedImage;
@@ -26,6 +34,7 @@ export const optimizeImages = async (
   width: number,
 ) => {
   if (images.length === 0) {
+    console.warn("Empty array provided for image optimization.");
     return [];
   }
 
@@ -35,6 +44,15 @@ export const optimizeImages = async (
         src: image,
         format: format,
         width: width,
+        widths: [
+          width / 5,
+          width / 4,
+          width / 3,
+          width / 2,
+          width,
+          width * 1.25,
+          width * 1.5,
+        ],
       }),
     ),
   );
