@@ -21,6 +21,7 @@ import projectWaxleprechaunThumbnail from "@/assets/images/project_thumbnails/pr
 import projectHandywareThumbnail from "@/assets/images/project_thumbnails/project_handyware.png";
 import projectInkydoingThumbnail from "@/assets/images/project_thumbnails/project_inkydoing.png";
 import projectAristroThumbnail from "@/assets/images/project_thumbnails/project_aristro.png";
+import projectBraceletsThumbnail from "@/assets/images/project_thumbnails/project_bracelets.png";
 import atomwaveBrandGuideThumbnail from "@/assets/images/project_thumbnails/atomwave_brand_guide.png";
 
 const optimizedSteamPlayerSearchThumbnail = await optimizeImage(
@@ -127,6 +128,12 @@ const optimizedProjectAristroThumbnail = await optimizeImage(
 
 const optimizedAtomwaveBrandGuideThumbnail = await optimizeImage(
   atomwaveBrandGuideThumbnail,
+  "webp",
+  800,
+);
+
+const optimizedProjectBraceletsThumbnail = await optimizeImage(
+  projectBraceletsThumbnail,
   "webp",
   800,
 );
@@ -456,6 +463,28 @@ const confidentialProjects: ProjectCardProps[] = [
     ],
     role: "Developer",
     description: "UK-based luxury fashion and firearms brand.",
+    isNda: true,
+  },
+  {
+    title: "Bespoke Jewellery Storefront",
+    company: "Bitcube",
+    image: optimizedProjectBraceletsThumbnail,
+    skills: [
+      {
+        skill: "Shopify",
+      },
+      {
+        skill: "Shopify Liquid",
+      },
+      {
+        skill: "JavaScript",
+      },
+      {
+        skill: "CSS",
+      },
+    ],
+    role: "Developer",
+    description: "UK-based luxury jewellery brand.",
     isNda: true,
   },
   {
