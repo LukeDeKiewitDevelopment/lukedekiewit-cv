@@ -114,6 +114,7 @@ export const cvPageSEO: AstroSEO = {
     ],
   },
   removeTrailingSlashForRoot: true,
+ 
 };
 
 export const projectsPageSEO: AstroSEO = {
