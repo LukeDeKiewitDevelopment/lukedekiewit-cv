@@ -23,6 +23,7 @@ import projectInkydoingThumbnail from "@/assets/images/project_thumbnails/projec
 import projectAristroThumbnail from "@/assets/images/project_thumbnails/project_aristro.png";
 import projectBraceletsThumbnail from "@/assets/images/project_thumbnails/project_bracelets.png";
 import atomwaveBrandGuideThumbnail from "@/assets/images/project_thumbnails/atomwave_brand_guide.png";
+import { projectsPageSEO } from "@/lib/seo";
 
 const optimizedSteamPlayerSearchThumbnail = await optimizeImage(
   steamPlayerSearchThumbnail,
@@ -594,6 +595,7 @@ const archivedProjects: ProjectCardProps[] = [
 ---
 
 <Layout
+  seo={projectsPageSEO}
   hideDownloadButton
   hidePrintButton
   hideProjectsButton
