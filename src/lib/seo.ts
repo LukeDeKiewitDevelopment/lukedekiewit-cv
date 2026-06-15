@@ -62,6 +62,20 @@ export interface AstroSEO {
   };
   removeTrailingSlashForRoot?: boolean;
   surpressWarnings?: boolean;
+  jsonLd?: {
+    "@type"?: string;
+    name?: string;
+    jobTitle?: string;
+    url?: string;
+    email?: string;
+    sameAs?: string[];
+    address: {
+      "@type": string;
+      addressLocality?: string;
+      addressRegion?: string;
+      addressCountry?: string;
+    };
+  };
 }
 
 interface Link extends Omit<HTMLLinkElement, "sizes"> {
@@ -114,7 +128,23 @@ export const cvPageSEO: AstroSEO = {
     ],
   },
   removeTrailingSlashForRoot: true,
- 
+  jsonLd: {
+    "@type": "Person",
+    name: "Luke De Kiewit",
+    jobTitle: "Frontend Engineer",
+    url: "https://lukedekiewit-cv.vercel.app/",
+    email: "luke.dekiewit@yahoo.com",
+    sameAs: [
+      "https://github.com/lukedekiewit",
+      "https://www.linkedin.com/in/lukedekiewit/",
+    ],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Bloemfontein",
+      addressRegion: "Free State",
+      addressCountry: "ZA",
+    },
+  },
 };
 
 export const projectsPageSEO: AstroSEO = {
@@ -153,5 +183,22 @@ export const projectsPageSEO: AstroSEO = {
           "frontend engineer, frontend projects, React, Next.js, Astro, TypeScript, Tailwind CSS, Shopify, Shopify Liquid, component library, Atomwave, Steam Player Search, Topic LMS, web development portfolio, Luke De Kiewit, Bitcube, SOCO_ED",
       },
     ],
+  },
+  jsonLd: {
+    "@type": "Person",
+    name: "Luke De Kiewit",
+    jobTitle: "Frontend Engineer",
+    url: "https://lukedekiewit-cv.vercel.app/",
+    email: "luke.dekiewit@yahoo.com",
+    sameAs: [
+      "https://github.com/lukedekiewit",
+      "https://www.linkedin.com/in/lukedekiewit/",
+    ],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Bloemfontein",
+      addressRegion: "Free State",
+      addressCountry: "ZA",
+    },
   },
 };

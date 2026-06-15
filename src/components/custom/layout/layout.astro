@@ -39,6 +39,41 @@ const {
   showBackToCvButton,
   seo,
 } = Astro.props;
+
+const metaOg = seo?.openGraph
+  ? {
+      title: seo.openGraph.basic.title,
+      type: seo.openGraph.basic.type,
+      url: seo.openGraph.basic.url?.toString(),
+      image: seo.openGraph.basic.image,
+      description: seo.openGraph.optional?.description,
+      siteName: seo.openGraph.optional?.siteName,
+      locale: seo.openGraph.optional?.locale,
+    }
+  : undefined;
+
+const metaTags = [
+  ...(seo?.openGraph?.image?.alt
+    ? [{ property: "og:image:alt", content: seo.openGraph.image.alt }]
+    : []),
+  ...(seo?.openGraph?.image?.width
+    ? [
+        {
+          property: "og:image:width",
+          content: seo.openGraph.image.width.toString(),
+        },
+      ]
+    : []),
+  ...(seo?.openGraph?.image?.height
+    ? [
+        {
+          property: "og:image:height",
+          content: seo.openGraph.image.height.toString(),
+        },
+      ]
+    : []),
+  ...(seo?.extend?.meta || []),
+];
 ---
 
 <!doctype html>
@@ -52,56 +87,10 @@ const {
     <meta name="lang" content="en" />
     <meta name="author" content="Luke De Kiewit" />
 
-    <!-- 
-    Old, static implementation
-    
-    <AstroSEO
-      title="Luke De Kiewit | Frontend Engineer"
-      description="Luke De Kiewit is a Frontend Engineer specialising in high-quality frontend systems, websites, and UI libraries. Skilled in React, TypeScript, Astro, Tailwind CSS, and Shopify Liquid."
-      openGraph={{
-        title: "Luke De Kiewit | Frontend Engineer",
-        description:
-          "Luke De Kiewit is a Frontend Engineer specialising in high-quality frontend systems, websites, and UI libraries. Skilled in React, TypeScript, Astro, Tailwind CSS, and Shopify Liquid.",
-        image: "https://lukedekiewit-cv.vercel.app/images/ldk_selfie_pfp.webp",
-        type: "profile",
-      }}
-      jsonLd={{
-        "@type": "Person",
-        name: "Luke De Kiewit",
-        jobTitle: "Frontend Engineer",
-        url: "https://lukedekiewit-cv.vercel.app/",
-        email: "luke.dekiewit@yahoo.com",
-        sameAs: [
-          "https://github.com/lukedekiewit",
-          "https://www.linkedin.com/in/lukedekiewit/",
-        ],
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Bloemfontein",
-          addressRegion: "Free State",
-          addressCountry: "ZA",
-        },
-      }}
-      robots={{
-        index: true,
-        follow: true,
-        noarchive: false,
-        nosnippet: false,
-        maxSnippet: 150,
-      }}
-      additionalLinkTags={[{ rel: "canonical", href: Astro.url.href }]}
-      additionalMetaTags={[
-        {
-          name: "keywords",
-          content:
-            "Luke De Kiewit, Frontend Engineer, Web Developer, React, TypeScript, Astro, Tailwind CSS, Shopify Liquid, Shopify, JavaScript, CV, Resume, South Africa, Bloemfontein",
-        },
-      ]}
-    /> -->
     <link rel="icon" href="/images/favicon.ico" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <!-- Astro SEO  -->
-    <SEO {...seo} />
+    <SEO {...seo} openGraph={metaOg} additionalMetaTags={metaTags} />
     <!---------------->
     <script is:inline>
       const getThemePreference = () => {
