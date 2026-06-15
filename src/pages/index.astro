@@ -4,15 +4,16 @@ import Layout from "@/components/custom/layout/layout.astro";
 import laptopCodeBg from "@/assets/images/backgrounds/laptop_code_3.jpg";
 import avatar from "@/assets/images/ldk_selfie_pfp_filter_800px.png";
 import { optimizeImage } from "@/lib/optimize-images";
+import { cvPageSEO } from "@/lib/seo";
 
 const optimizedLaptopCodeBg = await optimizeImage(laptopCodeBg, "webp", 1920);
 const optimizedAvatarImage = await optimizeImage(avatar, "webp", 512);
 ---
 
-<Layout>
+<Layout seo={cvPageSEO}>
   <CV
-    client:load
     backgroundImage={optimizedLaptopCodeBg}
     avatar={optimizedAvatarImage}
+    client:load
   />
 </Layout>

@@ -5,11 +5,21 @@ import { Header } from "./header";
 import { Footer } from "./footer";
 import { SiteBackground } from "./site-background";
 import { BackToTop } from "../back-to-top";
-import { AstroSEO } from "astro-seo-plugin";
+import { SEO } from "astro-seo-plugin";
 import codeBackground from "@/assets/images/backgrounds/codeBackground.jpg";
 import lightmodeLogo from "@/assets/images/logos/ldk_logo_black_tilted_724px.png";
 import darkmodeLogo from "@/assets/images/logos/ldk_logo_atomwave_tilted_724px.png";
 import { optimizeImage } from "@/lib/optimize-images";
+import type { AstroSEO } from "@/lib/seo";
+
+interface Props {
+  hideNavbar?: boolean;
+  hideDownloadButton?: boolean;
+  hidePrintButton?: boolean;
+  hideProjectsButton?: boolean;
+  showBackToCvButton?: boolean;
+  seo?: AstroSEO;
+}
 
 const optimizedCodeBackground = await optimizeImage(
   codeBackground,
@@ -27,6 +37,7 @@ const {
   hidePrintButton,
   hideProjectsButton,
   showBackToCvButton,
+  seo,
 } = Astro.props;
 ---
 
@@ -41,6 +52,9 @@ const {
     <meta name="lang" content="en" />
     <meta name="author" content="Luke De Kiewit" />
 
+    <!-- 
+    Old, static implementation
+    
     <AstroSEO
       title="Luke De Kiewit | Frontend Engineer"
       description="Luke De Kiewit is a Frontend Engineer specialising in high-quality frontend systems, websites, and UI libraries. Skilled in React, TypeScript, Astro, Tailwind CSS, and Shopify Liquid."
@@ -83,10 +97,12 @@ const {
             "Luke De Kiewit, Frontend Engineer, Web Developer, React, TypeScript, Astro, Tailwind CSS, Shopify Liquid, Shopify, JavaScript, CV, Resume, South Africa, Bloemfontein",
         },
       ]}
-    />
+    /> -->
     <link rel="icon" href="/images/favicon.ico" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-
+    <!-- Astro SEO (new dynamic implementation)  -->
+    <SEO {...seo} />
+    <!---------------->
     <script is:inline>
       const getThemePreference = () => {
         if (
