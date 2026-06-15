@@ -75,8 +75,7 @@ interface Meta extends HTMLMetaElement {
 }
 
 export const cvPageSEO: AstroSEO = {
-  title: "Luke De Kiewit",
-  titleDefault: "Luke De Kiewit | Frontend Engineer",
+  title: "Luke De Kiewit | Frontend Engineer",
   description:
     "Frontend Engineer specialising in React, Next.js, and Astro. I build accessible, high-performance web applications and UI libraries — from platforms serving 200,000+ users to luxury Shopify storefronts for UK, EU, and US clients.",
   canonical: "https://lukedekiewit-cv.vercel.app/",
@@ -104,7 +103,6 @@ export const cvPageSEO: AstroSEO = {
       alt: "Luke De Kiewit — Frontend Engineer",
     },
   },
-
   extend: {
     meta: [
       { name: "author", content: "Luke De Kiewit" },
@@ -119,9 +117,7 @@ export const cvPageSEO: AstroSEO = {
 };
 
 export const projectsPageSEO: AstroSEO = {
-  title: "Projects",
-  titleTemplate: "%s | Luke De Kiewit",
-  titleDefault: "Projects | Luke De Kiewit",
+  title: "Projects | Luke De Kiewit",
   description:
     "Frontend projects by Luke De Kiewit — including Atomwave (a Tailwind-free shadcn/ui rewrite), Steam Player Search, and Topic LMS, an educational platform built for 200,000+ learners across South Africa.",
   canonical: "https://lukedekiewit-cv.vercel.app/projects",
@@ -138,7 +134,6 @@ export const projectsPageSEO: AstroSEO = {
       locale: "en_ZA",
       siteName: "Luke De Kiewit",
     },
-
     image: {
       url: "https://lukedekiewit-cv.vercel.app/images/ldk_og_image.png",
       secureUrl: "https://lukedekiewit-cv.vercel.app/images/ldk_og_image.png",
@@ -148,7 +143,6 @@ export const projectsPageSEO: AstroSEO = {
       alt: "Projects — Luke De Kiewit",
     },
   },
-
   extend: {
     meta: [
       { name: "author", content: "Luke De Kiewit" },
