@@ -84,8 +84,7 @@ export const cvPageSEO: AstroSEO = {
     basic: {
       title: "Luke De Kiewit | Frontend Engineer",
       type: "profile",
-      image:
-        "https://lukedekiewit-cv.vercel.app/images/logos/ldk_logo_atomwave_tilted_724px.png",
+      image: "https://lukedekiewit-cv.vercel.app/images/ldk_og_image.png",
       url: "https://lukedekiewit-cv.vercel.app/",
     },
 
@@ -97,9 +96,9 @@ export const cvPageSEO: AstroSEO = {
     },
 
     image: {
-      url: "https://lukedekiewit-cv.vercel.app/images/logos/ldk_logo_atomwave_tilted_724px.png",
-      width: 724,
-      height: 724,
+      url: "https://lukedekiewit-cv.vercel.app/images/ldk_og_image.png",
+      width: 1200,
+      height: 630,
       alt: "Luke De Kiewit — Frontend Engineer",
     },
   },
@@ -128,8 +127,7 @@ export const projectsPageSEO: AstroSEO = {
     basic: {
       title: "Projects | Luke De Kiewit",
       type: "website",
-      image:
-        "https://lukedekiewit-cv.vercel.app/images/logos/ldk_logo_atomwave_tilted_724px.png",
+      image: "https://lukedekiewit-cv.vercel.app/images/ldk_og_image.png",
       url: "https://lukedekiewit-cv.vercel.app/projects",
     },
     optional: {
@@ -140,9 +138,9 @@ export const projectsPageSEO: AstroSEO = {
     },
 
     image: {
-      url: "https://lukedekiewit-cv.vercel.app/images/logos/ldk_logo_atomwave_tilted_724px.png",
-      width: 724,
-      height: 724,
+      url: "https://lukedekiewit-cv.vercel.app/images/ldk_og_image.png",
+      width: 1200,
+      height: 630,
       alt: "Projects — Luke De Kiewit",
     },
   },
