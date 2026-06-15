@@ -97,6 +97,8 @@ export const cvPageSEO: AstroSEO = {
 
     image: {
       url: "https://lukedekiewit-cv.vercel.app/images/ldk_og_image.png",
+      secureUrl: "https://lukedekiewit-cv.vercel.app/images/ldk_og_image.png",
+      type: "image/png",
       width: 1200,
       height: 630,
       alt: "Luke De Kiewit — Frontend Engineer",
@@ -139,6 +141,8 @@ export const projectsPageSEO: AstroSEO = {
 
     image: {
       url: "https://lukedekiewit-cv.vercel.app/images/ldk_og_image.png",
+      secureUrl: "https://lukedekiewit-cv.vercel.app/images/ldk_og_image.png",
+      type: "image/png",
       width: 1200,
       height: 630,
       alt: "Projects — Luke De Kiewit",
