@@ -10,7 +10,7 @@ const optimizedLaptopCodeBg = await optimizeImage(laptopCodeBg, "webp", 1920);
 const optimizedAvatarImage = await optimizeImage(avatar, "webp", 512);
 ---
 
-<Layout seo={cvPageSEO}>
+<Layout seo={cvPageSEO} jsonLd={cvPageSEO.jsonLd}>
   <CV
     backgroundImage={optimizedLaptopCodeBg}
     avatar={optimizedAvatarImage}

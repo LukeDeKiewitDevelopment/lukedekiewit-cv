@@ -20,6 +20,7 @@ interface Props {
   hideProjectsButton?: boolean;
   showBackToCvButton?: boolean;
   seo?: AstroSEO;
+  jsonLd?: any;
 }
 
 const {
@@ -29,6 +30,7 @@ const {
   hidePrintButton,
   hideProjectsButton,
   showBackToCvButton,
+  jsonLd,
 } = Astro.props;
 
 const optimizedCodeBackground = await optimizeImage(
@@ -38,6 +40,7 @@ const optimizedCodeBackground = await optimizeImage(
 );
 const optimizedLightmodeLogo = await optimizeImage(lightmodeLogo, "webp", 512);
 const optimizedDarkmodeLogo = await optimizeImage(darkmodeLogo, "webp", 512);
+const jsonLdScript = jsonLd ? JSON.stringify(jsonLd, null, 2) : "";
 ---
 
 <!doctype html>
@@ -55,6 +58,7 @@ const optimizedDarkmodeLogo = await optimizeImage(darkmodeLogo, "webp", 512);
     <link rel="sitemap" href="/sitemap-index.xml" />
     <!-- Astro SEO  -->
     <SEO {...seo} />
+    {jsonLd && <script type="application/ld+json" set:html={jsonLdScript} />}
     <!---------------->
     <script is:inline>
       const getThemePreference = () => {
