@@ -17,9 +17,9 @@ export const Footer = ({ className, ...props }: FooterProps) => {
         className,
       )}
     >
-      <span className="text-muted-foreground text-7pt w-fit text-center align-middle">
-        <i className="not-italic">&copy;</i>&nbsp;
-        <time dateTime={String(currentYear)}>{currentYear}</time>&nbsp;
+      <span className="text-muted-foreground w-fit text-center align-middle text-[0.65rem]">
+        <i className="not-italic">&copy;</i>{" "}
+        <time dateTime={String(currentYear)}>{currentYear}</time>{" "}
         {`Luke De Kiewit. Built with `}
         <a
           className="hover:text-primary underline transition-colors"
