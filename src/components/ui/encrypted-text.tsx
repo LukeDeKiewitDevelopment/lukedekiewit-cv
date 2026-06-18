@@ -61,8 +61,13 @@ export const EncryptedText: React.FC<EncryptedTextProps> = ({
   const animationFrameRef = useRef<number | null>(null);
   const startTimeRef = useRef<number>(0);
   const lastFlipTimeRef = useRef<number>(0);
+  // Same determinism requirement as above: this must not depend on
+  // Math.random(), or the first client render's text won't match the
+  // server-rendered HTML and we're back to the hydration-mismatch crash
+  // this component used to cause. A fixed placeholder character keeps the
+  // pre-animation layout looking intentional instead of blank.
   const scrambleCharsRef = useRef<string[]>(
-    text ? generateGibberishPreservingSpaces(text, charset).split("") : [],
+    text ? text.split("").map((ch) => (ch === " " ? " " : "*")) : [],
   );
 
   useEffect(() => {
