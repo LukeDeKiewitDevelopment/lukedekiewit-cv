@@ -8,6 +8,7 @@ import {
   siGithub,
   siHtml5,
   siJavascript,
+  siMui,
   siMysql,
   siNextdotjs,
   siNodedotjs,
@@ -314,6 +315,13 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
     colors: {
       foreground: "#fff",
       background: "#005999",
+    },
+  },
+  MUI: {
+    icon: siMui,
+    colors: {
+      foreground: "#fff",
+      background: "#0079f5",
     },
   },
 };
