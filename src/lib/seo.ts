@@ -63,17 +63,34 @@ export interface AstroSEO {
   removeTrailingSlashForRoot?: boolean;
   surpressWarnings?: boolean;
   jsonLd?: {
+    "@context"?: string;
     "@type"?: string;
     name?: string;
-    jobTitle?: string;
     url?: string;
+    description?: string;
+    jobTitle?: string;
     email?: string;
     sameAs?: string[];
-    address: {
+    knowsAbout?: string[];
+    address?: {
       "@type": string;
       addressLocality?: string;
       addressRegion?: string;
       addressCountry?: string;
+    };
+    author?: {
+      "@type": string;
+      name?: string;
+      url?: string;
+      email?: string;
+      sameAs?: string[];
+      knowsAbout?: string[];
+      address?: {
+        "@type": string;
+        addressLocality?: string;
+        addressRegion?: string;
+        addressCountry?: string;
+      };
     };
   };
 }
@@ -100,14 +117,12 @@ export const cvPageSEO: AstroSEO = {
       image: "https://lukedekiewit-cv.vercel.app/images/ldk_og_image.png",
       url: "https://lukedekiewit-cv.vercel.app/",
     },
-
     optional: {
       description:
         "Frontend Engineer specialising in React, Next.js, and Astro. I build accessible, high-performance web applications and UI libraries — from platforms serving 200,000+ users to luxury Shopify storefronts for UK, EU, and US clients.",
       locale: "en_ZA",
       siteName: "Luke De Kiewit",
     },
-
     image: {
       url: "https://lukedekiewit-cv.vercel.app/images/ldk_og_image.png",
       secureUrl: "https://lukedekiewit-cv.vercel.app/images/ldk_og_image.png",
@@ -129,6 +144,7 @@ export const cvPageSEO: AstroSEO = {
   },
   removeTrailingSlashForRoot: true,
   jsonLd: {
+    "@context": "https://schema.org",
     "@type": "Person",
     name: "Luke De Kiewit",
     jobTitle: "Frontend Engineer",
@@ -136,7 +152,20 @@ export const cvPageSEO: AstroSEO = {
     email: "luke.dekiewit@yahoo.com",
     sameAs: [
       "https://github.com/lukedekiewit",
-      "https://www.linkedin.com/in/lukedekiewit/",
+      "https://www.linkedin.com/in/lukedekiewit",
+    ],
+    knowsAbout: [
+      "React",
+      "Next.js",
+      "Astro",
+      "TypeScript",
+      "Tailwind CSS",
+      "Shopify",
+      "Shopify Liquid",
+      "UI Libraries",
+      "Web Accessibility",
+      "Performance Optimisation",
+      "E-commerce Development",
     ],
     address: {
       "@type": "PostalAddress",
@@ -185,20 +214,41 @@ export const projectsPageSEO: AstroSEO = {
     ],
   },
   jsonLd: {
-    "@type": "Person",
-    name: "Luke De Kiewit",
-    jobTitle: "Frontend Engineer",
-    url: "https://lukedekiewit-cv.vercel.app/",
-    email: "luke.dekiewit@yahoo.com",
-    sameAs: [
-      "https://github.com/lukedekiewit",
-      "https://www.linkedin.com/in/lukedekiewit/",
-    ],
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Bloemfontein",
-      addressRegion: "Free State",
-      addressCountry: "ZA",
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Projects | Luke De Kiewit",
+    url: "https://lukedekiewit-cv.vercel.app/projects",
+    description:
+      "Frontend projects by Luke De Kiewit — including Atomwave (a Tailwind-free shadcn/ui rewrite), Steam Player Search, and Topic LMS, an educational platform built for 200,000+ learners across South Africa.",
+    author: {
+      "@type": "Person",
+      name: "Luke De Kiewit",
+      url: "https://lukedekiewit-cv.vercel.app/",
+      email: "luke.dekiewit@yahoo.com",
+      sameAs: [
+        "https://github.com/lukedekiewit",
+        "https://www.linkedin.com/in/lukedekiewit",
+      ],
+      knowsAbout: [
+        "React",
+        "Next.js",
+        "Astro",
+        "TypeScript",
+        "Tailwind CSS",
+        "Shopify",
+        "Shopify Liquid",
+        "UI Libraries",
+        "Web Accessibility",
+        "Performance Optimisation",
+        "E-commerce Development",
+      ],
+
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Bloemfontein",
+        addressRegion: "Free State",
+        addressCountry: "ZA",
+      },
     },
   },
 };
