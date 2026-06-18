@@ -57,10 +57,8 @@ const jsonLdScript = jsonLd ? JSON.stringify(jsonLd, null, 2) : "";
 
     <link rel="icon" href="/images/favicon.ico" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <!-- Astro SEO  -->
     <SEO {...seo} />
     {jsonLd && <script type="application/ld+json" set:html={jsonLdScript} />}
-    <!---------------->
     <script is:inline>
       const getThemePreference = () => {
         if (
