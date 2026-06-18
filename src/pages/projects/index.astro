@@ -10,6 +10,7 @@ import marlinBrokersThumbnail from "@/assets/images/project_thumbnails/marlinbro
 import marlinCleaningThumbnail from "@/assets/images/project_thumbnails/marlincleaning.png";
 import interactiveCvThumbnail from "@/assets/images/project_thumbnails/cv.png";
 import atomwaveThumbnail from "@/assets/images/project_thumbnails/atomwave.png";
+import atomwaveCssThumbnail from "@/assets/images/project_thumbnails/atomwave_css.png";
 import summerwoodThumbnail from "@/assets/images/project_thumbnails/summerwood_wip.png";
 import projectCcpThumbnail from "@/assets/images/project_thumbnails/project_ccp.png";
 import projectGreenpowerThumbnail from "@/assets/images/project_thumbnails/project_greenpower.png";
@@ -57,6 +58,12 @@ const optimizedInteractiveCvThumbnail = await optimizeImage(
 
 const optimizedAtomwaveThumbnail = await optimizeImage(
   atomwaveThumbnail,
+  "webp",
+  800,
+);
+
+const optimizedAtomwaveCssThumbnail = await optimizeImage(
+  atomwaveCssThumbnail,
   "webp",
   800,
 );
@@ -285,7 +292,21 @@ const publicProjects: ProjectCardProps[] = [
     ],
     role: "Developer (Author)",
     description:
-      "A rewrite of shadcn/ui without a Tailwind dependency, offering additional components, greater flexibility, and built-in support for multiple themes.",
+      "A lightweight, zero-dependency CSS foundation featuring a modern reset, design tokens, and utility classes. Built to power the Atomwave Component Library and usable standalone as an alternative to utility-first frameworks.",
+    isWip: true,
+  },
+  {
+    title: "Atomwave CSS",
+    company: "Personal",
+    image: optimizedAtomwaveCssThumbnail,
+    skills: [
+      {
+        skill: "CSS",
+      },
+    ],
+    role: "Developer (Author)",
+    description:
+      "A drop-in replacement for Tailwind CSS, offering a solid foundation and reset. Also serves as the basis for the Atomwave Component Library",
     isWip: true,
   },
   {
