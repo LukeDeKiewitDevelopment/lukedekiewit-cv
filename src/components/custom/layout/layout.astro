@@ -11,6 +11,7 @@ import lightmodeLogo from "@/assets/images/logos/ldk_logo_black_tilted_724px.png
 import darkmodeLogo from "@/assets/images/logos/ldk_logo_atomwave_tilted_724px.png";
 import { optimizeImage } from "@/lib/optimize-images";
 import type { AstroSEO } from "@/lib/seo";
+import Analytics from "@vercel/analytics/astro";
 import { ClientRouter } from "astro:transitions";
 
 interface Props {
@@ -133,5 +134,6 @@ const jsonLdScript = jsonLd ? JSON.stringify(jsonLd, null, 2) : "";
         src: optimizedCodeBackground.src,
       }}
     />
+    <Analytics />
   </body>
 </html>
