@@ -242,7 +242,6 @@ export const projectsPageSEO: AstroSEO = {
         "Performance Optimisation",
         "E-commerce Development",
       ],
-
       address: {
         "@type": "PostalAddress",
         addressLocality: "Bloemfontein",
