@@ -14,22 +14,22 @@ export default defineConfig({
       },
     },
   },
-  site: "https://lukedekiewit-cv.vercel.app",
+  site: "https://lukedekiewit.xyz",
   integrations: [
     react(),
     sitemap(),
     aiReadiness({
-      site: "https://lukedekiewit-cv.vercel.app",
+      site: "https://lukedekiewit.xyz",
       organization: {
         name: "Luke De Kiewit",
-        url: "https://lukedekiewit-cv.vercel.app",
-        logo: "https://lukedekiewit-cv.vercel.app/images/logos/ldk_logo_atomwave_tilted_724px.png",
+        url: "https://lukedekiewit.xyz",
+        logo: "https://lukedekiewit.xyz/images/logos/ldk_logo_atomwave_tilted_724px.png",
         founder: {
           name: "Luke De Kiewit",
           jobTitle: "Frontend Engineer",
           sameAs: [
-            "https://lukedekiewit-cv.vercel.app",
-            "https://lukedekiewit-cv.vercel.app/projects",
+            "https://lukedekiewit.xyz",
+            "https://lukedekiewit.xyz/projects",
             "https://www.linkedin.com/in/lukedekiewit",
             "https://github.com/lukedekiewit",
           ],
@@ -48,7 +48,7 @@ export default defineConfig({
             links: [
               {
                 title: "Luke De Kiewit - Interactive CV",
-                url: "https://lukedekiewit-cv.vercel.app",
+                url: "https://lukedekiewit.xyz",
               },
               {
                 title: "Luke De Kiewit - LinkedIn",
@@ -60,7 +60,7 @@ export default defineConfig({
               },
               {
                 title: "Luke De Kiewit - CV PDF",
-                url: "https://lukedekiewit-cv.vercel.app/files/Luke_De_Kiewit_FrontendEngineer_latest.pdf",
+                url: "https://lukedekiewit.xyz/files/Luke_De_Kiewit_FrontendEngineer_latest.pdf",
               },
             ],
           },
@@ -69,7 +69,7 @@ export default defineConfig({
             links: [
               {
                 title: "Projects Overview",
-                url: "https://lukedekiewit-cv.vercel.app/projects",
+                url: "https://lukedekiewit.xyz/projects",
               },
               {
                 title: "Steam Player Search",
@@ -100,19 +100,19 @@ export default defineConfig({
         links: [
           {
             title: "Interactive CV",
-            url: "https://lukedekiewit-cv.vercel.app/",
+            url: "https://lukedekiewit.xyz/",
             description:
               "Luke's full CV including work history, education, tech stack, and references",
           },
           {
             title: "Projects",
-            url: "https://lukedekiewit-cv.vercel.app/projects",
+            url: "https://lukedekiewit.xyz/projects",
             description:
               "Portfolio of public, freelance, and professional projects",
           },
           {
             title: "CV PDF Download",
-            url: "https://lukedekiewit-cv.vercel.app/files/Luke_De_Kiewit_FrontendEngineer_latest.pdf",
+            url: "https://lukedekiewit.xyz/files/Luke_De_Kiewit_FrontendEngineer_latest.pdf",
             description: "Downloadable PDF version of Luke's CV",
           },
           {

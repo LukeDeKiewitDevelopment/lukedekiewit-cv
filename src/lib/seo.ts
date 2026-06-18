@@ -109,13 +109,13 @@ export const cvPageSEO: AstroSEO = {
   title: "Luke De Kiewit | Frontend Engineer",
   description:
     "Frontend Engineer specialising in React, Next.js, and Astro. I build accessible, high-performance web applications and UI libraries — from platforms serving 200,000+ users to luxury Shopify storefronts for UK, EU, and US clients.",
-  canonical: "https://lukedekiewit-cv.vercel.app/",
+  canonical: "https://lukedekiewit.xyz/",
   openGraph: {
     basic: {
       title: "Luke De Kiewit | Frontend Engineer",
       type: "profile",
-      image: "https://lukedekiewit-cv.vercel.app/images/ldk_og_image.png",
-      url: "https://lukedekiewit-cv.vercel.app/",
+      image: "https://lukedekiewit.xyz/images/ldk_og_image.png",
+      url: "https://lukedekiewit.xyz/",
     },
     optional: {
       description:
@@ -124,8 +124,8 @@ export const cvPageSEO: AstroSEO = {
       siteName: "Luke De Kiewit",
     },
     image: {
-      url: "https://lukedekiewit-cv.vercel.app/images/ldk_og_image.png",
-      secureUrl: "https://lukedekiewit-cv.vercel.app/images/ldk_og_image.png",
+      url: "https://lukedekiewit.xyz/images/ldk_og_image.png",
+      secureUrl: "https://lukedekiewit.xyz/images/ldk_og_image.png",
       type: "image/png",
       width: 1200,
       height: 630,
@@ -148,7 +148,7 @@ export const cvPageSEO: AstroSEO = {
     "@type": "Person",
     name: "Luke De Kiewit",
     jobTitle: "Frontend Engineer",
-    url: "https://lukedekiewit-cv.vercel.app/",
+    url: "https://lukedekiewit.xyz/",
     email: "luke.dekiewit@yahoo.com",
     sameAs: [
       "https://github.com/lukedekiewit",
@@ -180,13 +180,13 @@ export const projectsPageSEO: AstroSEO = {
   title: "Projects | Luke De Kiewit",
   description:
     "Frontend projects by Luke De Kiewit — including Atomwave (a Tailwind-free shadcn/ui rewrite), Steam Player Search, and Topic LMS, an educational platform built for 200,000+ learners across South Africa.",
-  canonical: "https://lukedekiewit-cv.vercel.app/projects",
+  canonical: "https://lukedekiewit.xyz/projects",
   openGraph: {
     basic: {
       title: "Projects | Luke De Kiewit",
       type: "website",
-      image: "https://lukedekiewit-cv.vercel.app/images/ldk_og_image.png",
-      url: "https://lukedekiewit-cv.vercel.app/projects",
+      image: "https://lukedekiewit.xyz/images/ldk_og_image.png",
+      url: "https://lukedekiewit.xyz/projects",
     },
     optional: {
       description:
@@ -195,8 +195,8 @@ export const projectsPageSEO: AstroSEO = {
       siteName: "Luke De Kiewit",
     },
     image: {
-      url: "https://lukedekiewit-cv.vercel.app/images/ldk_og_image.png",
-      secureUrl: "https://lukedekiewit-cv.vercel.app/images/ldk_og_image.png",
+      url: "https://lukedekiewit.xyz/images/ldk_og_image.png",
+      secureUrl: "https://lukedekiewit.xyz/images/ldk_og_image.png",
       type: "image/png",
       width: 1200,
       height: 630,
@@ -217,13 +217,13 @@ export const projectsPageSEO: AstroSEO = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: "Projects | Luke De Kiewit",
-    url: "https://lukedekiewit-cv.vercel.app/projects",
+    url: "https://lukedekiewit.xyz/projects",
     description:
       "Frontend projects by Luke De Kiewit — including Atomwave (a Tailwind-free shadcn/ui rewrite), Steam Player Search, and Topic LMS, an educational platform built for 200,000+ learners across South Africa.",
     author: {
       "@type": "Person",
       name: "Luke De Kiewit",
-      url: "https://lukedekiewit-cv.vercel.app/",
+      url: "https://lukedekiewit.xyz/",
       email: "luke.dekiewit@yahoo.com",
       sameAs: [
         "https://github.com/lukedekiewit",

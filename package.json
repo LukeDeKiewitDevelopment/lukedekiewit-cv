@@ -3,10 +3,10 @@
   "author": {
     "name": "Luke De Kiewit",
     "email": "luke.dekiewit@yahoo.com",
-    "url": "https://www.lukedekiewit.co.za"
+    "url": "https://www.lukedekiewit.xyz"
   },
   "type": "module",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",

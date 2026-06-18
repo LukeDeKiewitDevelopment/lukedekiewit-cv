@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lukedekiewit-cv.vercel.app/sitemap-index.xml
+Sitemap: https://lukedekiewit.xyz/sitemap-index.xml

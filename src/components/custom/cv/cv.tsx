@@ -121,7 +121,7 @@ export const CV = ({
             >
               <a
                 target="_blank"
-                href="https://lukedekiewit-cv.vercel.app/"
+                href="https://lukedekiewit.xyz/"
                 className="hover:text-primary text-foreground absolute top-0 right-0 hidden print:block"
                 title="Interactive web version link"
               >
@@ -277,7 +277,7 @@ export const CV = ({
                 <span className="flex items-center gap-[2mm]">
                   <span>Featured Projects</span>
                   <a
-                    href="https://lukedekiewit-cv.vercel.app/projects"
+                    href="https://lukedekiewit.xyz/projects"
                     className="hover:text-primary text-foreground/60 text-6pt hover:underline"
                     aria-label="View all projects"
                   >
