@@ -30,7 +30,7 @@ export const SkillBadgeIcon = ({
       height={24}
       fill={fill}
       xmlns="http://www.w3.org/2000/svg"
-      className={cn("aspect-square h-auto w-3", className)}
+      className={cn("h-auto w-3", className)}
     >
       <title>{title}</title>
       <path d={path} />
