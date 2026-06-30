@@ -6,6 +6,7 @@ import {
 } from "../../lib/skills-mapper";
 import { validateCSSColor } from "@/lib/validate-css-color";
 import clsx from "clsx";
+import { cn } from "@/lib/utils";
 
 export type SkillBadgeIconProps = Omit<
   SimpleIcon,
@@ -29,7 +30,7 @@ export const SkillBadgeIcon = ({
       height={24}
       fill={fill}
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      className={cn("aspect-square h-auto w-3", className)}
     >
       <title>{title}</title>
       <path d={path} />
@@ -53,7 +54,7 @@ export const SkillBadge = ({ skill, className }: SkillBadgeProps) => {
   return (
     <Badge
       className={clsx(
-        "text-7pt [&_svg]:size-4pt! px-[1.25mm] py-[0.75mm] shadow-sm select-none",
+        "text-7pt px-[1.25mm] py-[0.75mm] shadow-sm select-none",
         className,
       )}
       title={skill}
