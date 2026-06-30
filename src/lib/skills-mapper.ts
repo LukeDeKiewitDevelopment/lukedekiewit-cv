@@ -321,7 +321,7 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
     icon: siMui,
     colors: {
       foreground: "#fff",
-      background: "#0079f5",
+      background: "#0057ad",
     },
   },
 };
