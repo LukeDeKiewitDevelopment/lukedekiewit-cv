@@ -54,7 +54,12 @@ const jsonLdScript = jsonLd ? JSON.stringify(jsonLd, null, 2) : "";
     <meta name="viewport" content="width=device-width" />
     <meta name="lang" content="en" />
     <meta name="author" content="Luke De Kiewit" />
-
+    <link
+      rel="preload"
+      as="image"
+      href={optimizedCodeBackground.src}
+      fetchpriority="high"
+    />
     <link rel="icon" href="/images/favicon.ico" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <SEO {...seo} />

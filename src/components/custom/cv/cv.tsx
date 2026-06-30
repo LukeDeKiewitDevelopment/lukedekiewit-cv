@@ -461,7 +461,8 @@ export const CV = ({
                   height={128}
                   width={128}
                   loading="eager"
-                  decoding="async"
+                  decoding="sync"
+                  fetchPriority="high"
                 />
                 <CVAvatarFallback />
               </CVAvatar>

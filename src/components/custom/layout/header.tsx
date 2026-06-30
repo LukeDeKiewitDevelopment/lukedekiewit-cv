@@ -110,7 +110,8 @@ export const Header = ({
                 height={48}
                 width={48}
                 loading="eager"
-                decoding="async"
+                decoding="sync"
+                fetchPriority="high"
               />
             </Avatar>
           )}
@@ -126,7 +127,8 @@ export const Header = ({
                 height={48}
                 width={48}
                 loading="eager"
-                decoding="async"
+                decoding="sync"
+                fetchPriority="high"
               />
             </Avatar>
           )}

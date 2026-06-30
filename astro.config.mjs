@@ -4,6 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import react from "@astrojs/react";
 import aiReadiness from "@obaronai/astro-ai-readiness";
 import sitemap from "@astrojs/sitemap";
+import critters from "@critters-rs/astro";
 
 export default defineConfig({
   vite: {
@@ -18,6 +19,7 @@ export default defineConfig({
   integrations: [
     react(),
     sitemap(),
+    critters(),
     aiReadiness({
       site: "https://lukedekiewit.xyz",
       organization: {
