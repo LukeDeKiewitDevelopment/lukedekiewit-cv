@@ -1,19 +1,88 @@
 ---
-import { CV } from "@/components/custom/cv/cv";
-import Layout from "@/components/custom/layout/layout.astro";
-import laptopCodeBg from "@/assets/images/backgrounds/laptop_code_3.jpg";
-import avatar from "@/assets/images/ldk_selfie_pfp_filter_800px.png";
-import { optimizeImage } from "@/lib/optimize-images";
-import { cvPageSEO } from "@/lib/seo";
+import Layout from '@/components/custom/layout/layout.astro'
+import avatar from '@/assets/images/ldk_selfie_pfp_filter_800px.png'
+import { optimizeImage } from '@/lib/optimize-images'
+import { cvPageSEO } from '@/lib/seo'
+import { SkillBadgeIcon } from '@/components/custom/skill-badge'
+import { skillBadgeIconMapper } from '@/lib/skills-mapper'
+import { Separator } from '@/components/ui/separator'
 
-const optimizedLaptopCodeBg = await optimizeImage(laptopCodeBg, "webp", 1920);
-const optimizedAvatarImage = await optimizeImage(avatar, "webp", 512);
+const optimizedAvatarImage = await optimizeImage(avatar, 'webp', 512)
+
+const heroSkills = ['Nuxt', 'VueJs', 'Next.js', 'React', 'Astro', 'Shopify']
 ---
 
-<Layout seo={cvPageSEO} jsonLd={cvPageSEO.jsonLd}>
-  <CV
+<Layout
+	seo={cvPageSEO}
+	jsonLd={cvPageSEO.jsonLd}
+>
+	<!-- <CV
     backgroundImage={optimizedLaptopCodeBg}
     avatar={optimizedAvatarImage}
     client:load
-  />
+  /> -->
+	<main class='w-full overflow-auto scroll-smooth p-4 md:p-6 lg:p-8 my-4'>
+		<div class='flex flex-col items-center gap-4'>
+			<img
+				src={optimizedAvatarImage.src}
+				alt='Luke de Kiewit - profile picture'
+				width='128'
+				height='128'
+				loading='eager'
+				fetchpriority='high'
+				decoding='sync'
+				class='bg-primary block aspect-square h-auto w-32 md:w-36 lg:w-42 rounded-full shadow-md'
+			/>
+			<div class='flex flex-col gap-4'>
+				<h1
+					class='uppercase text-2xl md:text-3xl lg:text-4xl text-primary mb-1 text-center'
+				>
+					Luke De Kiewit
+				</h1>
+				<h2
+					class='uppercase text-xl md:text-2xl lg:text-3xl opacity-90 mb-4 text-center'
+				>
+					Frontend Engineer
+				</h2>
+				<div class='flex items-center justify-evenly flex-wrap gap-2'>
+					{
+						heroSkills.map((skill) => {
+							const icon = skillBadgeIconMapper[skill]?.icon
+							return (
+								icon && (
+									<SkillBadgeIcon
+										hex='var(--primary)'
+										title={icon.title}
+										path={icon.path}
+										className='size-5 md:size-6 lg:size-8'
+									/>
+								)
+							)
+						})
+					}
+				</div>
+				<Separator className='my-6' />
+				<div class='text-xs max-w-prose text-center'>
+					<p>
+						I'm not looking for new roles at the moment, but feel free to
+						contact me over
+						<a
+							href='mailto:luke.dekiewit@yahoo.com'
+							class='underline underline-offset-2 text-primary'
+							>email</a
+						>
+						or
+						<a
+							href='https://www.linkedin.com/in/lukedekiewit/'
+							target='_blank'
+							class='underline underline-offset-2 text-primary'
+							rel='noopener noreferrer'
+							>LinkedIn</a
+						>.
+					</p>
+				</div>
+			</div>
+			<div></div>
+		</div>
+	</main>
 </Layout>

@@ -139,7 +139,7 @@ export const Header = ({
           {!hideProjectsButton && (
             <Button
               className="inline-flex md:hidden"
-              variant={"outline"}
+              variant={"default"}
               size={"sm"}
               title="Visit my projects page"
               asChild
@@ -170,7 +170,7 @@ export const Header = ({
           {!hideProjectsButton && (
             <Button
               className="hidden md:inline-flex"
-              variant={"ghost"}
+              variant={"default"}
               size={"sm"}
               title="Visit my projects page"
               asChild
@@ -181,11 +181,7 @@ export const Header = ({
             </Button>
           )}
           {showBackToCvButton && (
-            <Button
-              className="hidden md:inline-flex"
-              size={"sm"}
-              asChild
-            >
+            <Button className="hidden md:inline-flex" size={"sm"} asChild>
               <a href="/">
                 <span className="flex items-center gap-1">
                   <ArrowLeftIcon />
