@@ -21,7 +21,9 @@ const heroSkills = ['Nuxt', 'VueJs', 'Next.js', 'React', 'Astro', 'Shopify']
     avatar={optimizedAvatarImage}
     client:load
   /> -->
-	<main class='w-full overflow-auto scroll-smooth p-4 md:p-6 lg:p-8 my-4'>
+	<main
+		class='w-full overflow-auto scroll-smooth p-4 md:p-6 lg:p-8 my-4 md:my-6 lg:my-8 h-full'
+	>
 		<div class='flex flex-col items-center gap-4'>
 			<img
 				src={optimizedAvatarImage.src}
@@ -33,14 +35,14 @@ const heroSkills = ['Nuxt', 'VueJs', 'Next.js', 'React', 'Astro', 'Shopify']
 				decoding='sync'
 				class='bg-primary block aspect-square h-auto w-32 md:w-36 lg:w-42 rounded-full shadow-md'
 			/>
-			<div class='flex flex-col gap-4'>
+			<div class='flex flex-col'>
 				<h1
-					class='uppercase text-2xl md:text-3xl lg:text-4xl text-primary mb-1 text-center'
+					class='uppercase text-2xl md:text-3xl lg:text-4xl text-primary text-center'
 				>
 					Luke De Kiewit
 				</h1>
 				<h2
-					class='uppercase text-xl md:text-2xl lg:text-3xl opacity-90 mb-4 text-center'
+					class='uppercase text-xl md:text-2xl lg:text-3xl opacity-90 mb-6 text-center'
 				>
 					Frontend Engineer
 				</h2>
