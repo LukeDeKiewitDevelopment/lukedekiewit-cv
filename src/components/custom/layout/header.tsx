@@ -25,6 +25,9 @@ export type HeaderProps = {
   showBackToCvButton?: boolean;
 };
 
+/** Temporary: hides the Download, Copy link and Print buttons. Set to false to restore them. */
+const HIDE_ACTION_BUTTONS = true;
+
 export const copyLink = async (shareLink?: string) => {
   if (!shareLink) {
     return;
@@ -156,7 +159,7 @@ export const Header = ({
               <a href="/">
                 <span className="flex items-center gap-1">
                   <ArrowLeftIcon />
-                  <span>Back to CV</span>
+                  <span>Back</span>
                 </span>
               </a>
             </Button>
@@ -181,19 +184,18 @@ export const Header = ({
             <Button
               className="hidden md:inline-flex"
               size={"sm"}
-              title="Back to CV"
               asChild
             >
               <a href="/">
                 <span className="flex items-center gap-1">
                   <ArrowLeftIcon />
-                  <span> Back to CV</span>
+                  <span>Back</span>
                 </span>
               </a>
             </Button>
           )}
 
-          {!hideDownloadButton && pdfDownloadLink && (
+          {!HIDE_ACTION_BUTTONS && !hideDownloadButton && pdfDownloadLink && (
             <Button
               variant={"default"}
               size={"icon-sm"}
@@ -206,7 +208,7 @@ export const Header = ({
               </a>
             </Button>
           )}
-          {!hidePrintButton && shareLink && (
+          {!HIDE_ACTION_BUTTONS && !hidePrintButton && shareLink && (
             <Button
               variant={"outline"}
               size={"icon-sm"}
@@ -220,17 +222,19 @@ export const Header = ({
             </Button>
           )}
 
-          <Button
-            variant={"outline"}
-            size={"icon-sm"}
-            title="Click to print this CV"
-            onClick={() => {
-              printPage();
-            }}
-          >
-            <PrinterIcon />
-            <span className="sr-only">Print page</span>
-          </Button>
+          {!HIDE_ACTION_BUTTONS && (
+            <Button
+              variant={"outline"}
+              size={"icon-sm"}
+              title="Click to print this CV"
+              onClick={() => {
+                printPage();
+              }}
+            >
+              <PrinterIcon />
+              <span className="sr-only">Print page</span>
+            </Button>
+          )}
           <ThemeSwitcher />
         </div>
       </div>

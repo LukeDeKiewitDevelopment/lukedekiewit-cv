@@ -12,6 +12,7 @@ import {
   siMysql,
   siNextdotjs,
   siNodedotjs,
+  siNuxt,
   siPhp,
   siPostgresql,
   siPreact,
@@ -23,6 +24,7 @@ import {
   siSteam,
   siTailwindcss,
   siTypescript,
+  siVuedotjs,
   siWordpress,
   siZoho,
 } from "simple-icons";
@@ -319,6 +321,20 @@ export const skillBadgeIconMapper: Record<string, SkillBadgeMapperEntry> = {
   },
   MUI: {
     icon: siMui,
+    colors: {
+      foreground: "#fff",
+      background: "#0057ad",
+    },
+  },
+  Nuxt: {
+    icon: siNuxt,
+    colors: {
+      foreground: "#fff",
+      background: "#0057ad",
+    },
+  },
+  VueJs: {
+    icon: siVuedotjs,
     colors: {
       foreground: "#fff",
       background: "#0057ad",
